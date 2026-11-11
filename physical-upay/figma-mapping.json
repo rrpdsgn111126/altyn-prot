@@ -31,7 +31,8 @@
     "parentId references an element id in the same screen. instanceKey is globally unique.",
     "Country picker is an Input.mobile trigger plus a modal/list.mobile composition, with searchable=false; no standalone Figma Select component.",
     "Do not re-create old stock state or postal code: both are absent from current prototype. Network aliases normalize to #network.",
-    "Status error modals and support modal are custom HTML compositions; no original library modal ID verified. Altyn App references are patterns, not Altyn.Base components."
+    "Figma bottom sheets in the current Physical card section use the native Altyn App modal and its slots. The HTML implementations remain separate.",
+    "The screens array describes HTML states. For Figma corrections, use only frames currently present in the target section; do not restore removed states."
   ],
   "figmaComponentCatalog": {
     "nav": {
@@ -167,6 +168,49 @@
       "size": null,
       "verification": "unmapped",
       "source": null
+    },
+    "cardsBankYouPay": {
+      "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+      "figmaComponent": "cards bank",
+      "componentSetId": "6397:64385",
+      "componentId": "18870:19967",
+      "componentProperties": {
+        "Theme": "Green",
+        "Payment": "YouPay"
+      },
+      "state": "YouPay",
+      "size": "348 × 212 px source; 300 px instance width",
+      "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+      "verification": "verified",
+      "evidence": "Linked instances in Altyn App / Physical card"
+    },
+    "stateCardWait": {
+      "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+      "figmaComponent": "state_card",
+      "componentSetId": "6516:128060",
+      "componentId": "6516:128059",
+      "componentProperties": {
+        "Property 1": "wait"
+      },
+      "state": "wait",
+      "size": "32 px height",
+      "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6516-128059",
+      "verification": "verified",
+      "evidence": "Linked instances in Altyn App / Physical card"
+    },
+    "modalOff": {
+      "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+      "figmaComponent": "modal",
+      "componentSetId": "920:26457",
+      "componentId": "61:5034",
+      "componentProperties": {
+        "State": "off"
+      },
+      "state": "off",
+      "size": null,
+      "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=2883-44969",
+      "verification": "verified",
+      "evidence": "Linked instances in Altyn App / Physical card"
     }
   },
   "screens": [
@@ -257,19 +301,25 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": false
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Custom card rendering; 'card' icon component in Figma is not proof of a bank-card component"
+          "verification": "verified",
+          "notes": "Linked YouPay variant; mask and physical-type label hidden in the catalog"
         },
         {
           "id": "conditions",
@@ -289,7 +339,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Content group, not a component"
@@ -510,19 +561,25 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": false
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Custom card rendering; 'card' icon component in Figma is not proof of a bank-card component"
+          "verification": "verified",
+          "notes": "Linked YouPay variant; mask and physical-type label hidden in the catalog"
         },
         {
           "id": "conditions",
@@ -542,7 +599,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Content group, not a component"
@@ -786,19 +844,25 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": false
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Custom card rendering; 'card' icon component in Figma is not proof of a bank-card component"
+          "verification": "verified",
+          "notes": "Linked YouPay variant; mask and physical-type label hidden in the catalog"
         },
         {
           "id": "conditions",
@@ -818,7 +882,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Content group, not a component"
@@ -1667,7 +1732,12 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "docs/component-map.md; exact Filled variant properties not verified",
+            "trailingIcon": {
+              "figmaComponent": "Services icons / Flag",
+              "componentId": "15728:6254",
+              "scope": "Resolved in Altyn App"
+            }
           },
           "verification": "partial",
           "notes": "Input.mobile as selector trigger; source helper shared/select-sheet.js"
@@ -2352,19 +2422,24 @@
             "htmlSelector": ".ab-selection-overlay"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "modal",
+            "componentSetId": "920:26457",
+            "componentId": "61:5034",
+            "componentProperties": {
+              "State": "off",
+              "Slot#9844:3": true,
+              "Buttons.Vert#920:2": false,
+              "Image#940:0": false
+            },
+            "state": "off",
             "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=2883-44969",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Composition modal + list.mobile; no original standalone Select component ID"
+          "verification": "verified",
+          "notes": "Use the native title, handle and content slot. Status illustrations use the image slot."
         },
         {
           "id": "selection-handle",
@@ -2430,7 +2505,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14348-114250"
           },
           "verification": "unmapped",
           "notes": "Composite list container"
@@ -2447,18 +2523,26 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable",
+              "sIcon R#4128:24": true,
+              "sIcon.w R#4128:17": "15728:6254"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "List row variant and nested flag swap verified in Figma.",
+            "trailingIcon": {
+              "figmaComponent": "Round flags",
+              "componentId": "17:6007",
+              "scope": "Resolved in Altyn App"
+            }
           },
-          "verification": "partial",
-          "notes": "Original list.mobile variant/flag unspecified"
+          "verification": "verified",
+          "notes": "Use a linked list.mobile row and linked country-specific Round flags in its right slot."
         },
         {
           "id": "option-KZ",
@@ -2472,18 +2556,26 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable",
+              "sIcon R#4128:24": true,
+              "sIcon.w R#4128:17": "15728:6254"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "List row variant and nested flag swap verified in Figma.",
+            "trailingIcon": {
+              "figmaComponent": "Round flags",
+              "componentId": "17:5471",
+              "scope": "Resolved in Altyn App"
+            }
           },
-          "verification": "partial",
-          "notes": "Original list.mobile variant/flag unspecified"
+          "verification": "verified",
+          "notes": "Use a linked list.mobile row and linked country-specific Round flags in its right slot."
         },
         {
           "id": "option-AE",
@@ -2497,18 +2589,26 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable",
+              "sIcon R#4128:24": true,
+              "sIcon.w R#4128:17": "15728:6254"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "List row variant and nested flag swap verified in Figma.",
+            "trailingIcon": {
+              "figmaComponent": "Round flags",
+              "componentId": "17:6465",
+              "scope": "Resolved in Altyn App"
+            }
           },
-          "verification": "partial",
-          "notes": "Original list.mobile variant/flag unspecified"
+          "verification": "verified",
+          "notes": "Use a linked list.mobile row and linked country-specific Round flags in its right slot."
         }
       ]
     },
@@ -2855,7 +2955,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "First review group"
@@ -2878,7 +2979,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Second review group"
@@ -3233,7 +3335,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "First review group"
@@ -3256,7 +3359,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Second review group"
@@ -3625,19 +3729,26 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": true,
+              "layerBlur": true
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Blurred bank card; no verified cards bank component ID"
+          "verification": "verified",
+          "notes": "Linked YouPay variant with the scenario card mask"
         },
         {
           "id": "plastic-tag",
@@ -3648,19 +3759,21 @@
             "htmlSelector": "#view [data-figma-id=\"plastic-status-tag\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "state_card",
+            "componentSetId": "6516:128060",
+            "componentId": "6516:128059",
+            "componentProperties": {
+              "Property 1": "wait"
+            },
+            "state": "wait",
+            "size": "32 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6516-128059",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Status tag is not ToggleButton.mobile; mapping unavailable"
+          "verification": "verified",
+          "notes": "Use state_card / wait with the HTML status copy as a text override."
         },
         {
           "id": "add-card",
@@ -3797,19 +3910,26 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": true,
+              "layerBlur": true
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Blurred bank card; no verified cards bank component ID"
+          "verification": "verified",
+          "notes": "Linked YouPay variant with the scenario card mask"
         },
         {
           "id": "plastic-tag",
@@ -3820,19 +3940,21 @@
             "htmlSelector": "#view [data-figma-id=\"plastic-status-tag\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "state_card",
+            "componentSetId": "6516:128060",
+            "componentId": "6516:128059",
+            "componentProperties": {
+              "Property 1": "wait"
+            },
+            "state": "wait",
+            "size": "32 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6516-128059",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Status tag is not ToggleButton.mobile; mapping unavailable"
+          "verification": "verified",
+          "notes": "Use state_card / wait with the HTML status copy as a text override."
         },
         {
           "id": "add-card",
@@ -3978,7 +4100,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "First review group"
@@ -4001,7 +4124,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Second review group"
@@ -4240,19 +4364,24 @@
             "htmlSelector": "#modal [data-figma-id=\"order-status-modal\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "modal",
+            "componentSetId": "920:26457",
+            "componentId": "61:5034",
+            "componentProperties": {
+              "State": "off",
+              "Slot#9844:3": true,
+              "Buttons.Vert#920:2": true,
+              "Image#940:0": true
+            },
+            "state": "off",
             "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=2883-44969",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Error modal composition for failed"
+          "verification": "verified",
+          "notes": "Use the native title, handle and content slot. Status illustrations use the image slot."
         },
         {
           "id": "status-icon",
@@ -4444,7 +4573,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "First review group"
@@ -4467,7 +4597,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Second review group"
@@ -4706,19 +4837,24 @@
             "htmlSelector": "#modal [data-figma-id=\"order-status-modal\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "modal",
+            "componentSetId": "920:26457",
+            "componentId": "61:5034",
+            "componentProperties": {
+              "State": "off",
+              "Slot#9844:3": true,
+              "Buttons.Vert#920:2": true,
+              "Image#940:0": true
+            },
+            "state": "off",
             "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=2883-44969",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Error modal composition for cancelled"
+          "verification": "verified",
+          "notes": "Use the native title, handle and content slot. Status illustrations use the image slot."
         },
         {
           "id": "status-icon",
@@ -4910,7 +5046,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "First review group"
@@ -4933,7 +5070,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Second review group"
@@ -5172,19 +5310,24 @@
             "htmlSelector": "#modal [data-figma-id=\"order-status-modal\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "modal",
+            "componentSetId": "920:26457",
+            "componentId": "61:5034",
+            "componentProperties": {
+              "State": "off",
+              "Slot#9844:3": true,
+              "Buttons.Vert#920:2": true,
+              "Image#940:0": true
+            },
+            "state": "off",
             "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=2883-44969",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Error modal composition for network"
+          "verification": "verified",
+          "notes": "Use the native title, handle and content slot. Status illustrations use the image slot."
         },
         {
           "id": "status-icon",
@@ -5367,19 +5510,25 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": true
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Custom YouPay card graphic; real library card source unverified"
+          "verification": "verified",
+          "notes": "Linked YouPay variant with the scenario card mask"
         },
         {
           "id": "add-card",
@@ -5445,7 +5594,9 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153",
+            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111323"
           },
           "verification": "unmapped",
           "notes": "Limit card container"
@@ -5591,7 +5742,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Security group container"
@@ -5881,19 +6033,25 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": true
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Custom YouPay card graphic; real library card source unverified"
+          "verification": "verified",
+          "notes": "Linked YouPay variant with the scenario card mask"
         },
         {
           "id": "add-card",
@@ -5959,7 +6117,9 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153",
+            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111323"
           },
           "verification": "unmapped",
           "notes": "Limit card container"
@@ -6105,7 +6265,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Security group container"
@@ -6395,19 +6556,25 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": true
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Custom YouPay card graphic; real library card source unverified"
+          "verification": "verified",
+          "notes": "Linked YouPay variant with the scenario card mask"
         },
         {
           "id": "add-card",
@@ -6473,7 +6640,9 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153",
+            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111323"
           },
           "verification": "unmapped",
           "notes": "Limit card container"
@@ -6619,7 +6788,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Security group container"
@@ -6909,19 +7079,25 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": true
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Custom YouPay card graphic; real library card source unverified"
+          "verification": "verified",
+          "notes": "Linked YouPay variant with the scenario card mask"
         },
         {
           "id": "plastic-tag",
@@ -6932,19 +7108,21 @@
             "htmlSelector": "#view [data-figma-id=\"plastic-status-tag\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "state_card",
+            "componentSetId": "6516:128060",
+            "componentId": "6516:128059",
+            "componentProperties": {
+              "Property 1": "wait"
+            },
+            "state": "wait",
+            "size": "32 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6516-128059",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Pending status tag; not an interactive toggle"
+          "verification": "verified",
+          "notes": "Use state_card / wait with the HTML status copy as a text override."
         },
         {
           "id": "add-card",
@@ -7010,7 +7188,9 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153",
+            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111323"
           },
           "verification": "unmapped",
           "notes": "Limit card container"
@@ -7156,7 +7336,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Security group container"
@@ -7446,19 +7627,25 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": true
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Custom YouPay card graphic; real library card source unverified"
+          "verification": "verified",
+          "notes": "Linked YouPay variant with the scenario card mask"
         },
         {
           "id": "add-card",
@@ -7524,7 +7711,9 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153",
+            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111323"
           },
           "verification": "unmapped",
           "notes": "Limit card container"
@@ -7570,7 +7759,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Security group container"
@@ -7860,19 +8050,25 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": true
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Custom YouPay card graphic; real library card source unverified"
+          "verification": "verified",
+          "notes": "Linked YouPay variant with the scenario card mask"
         },
         {
           "id": "add-card",
@@ -7938,7 +8134,9 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153",
+            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111323"
           },
           "verification": "unmapped",
           "notes": "Limit card container"
@@ -8084,7 +8282,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Security group container"
@@ -8294,19 +8493,24 @@
             "htmlSelector": "#modal [data-figma-id=\"info-modal\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "modal",
+            "componentSetId": "920:26457",
+            "componentId": "61:5034",
+            "componentProperties": {
+              "State": "off",
+              "Slot#9844:3": true,
+              "Buttons.Vert#920:2": true,
+              "Image#940:0": false
+            },
+            "state": "off",
             "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=2883-44969",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Information Bottom Sheet not confirmed as independent Altyn.Base component"
+          "verification": "verified",
+          "notes": "Use the native title, handle and content slot. Status illustrations use the image slot."
         },
         {
           "id": "info-title",
@@ -8581,19 +8785,26 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": true,
+              "layerBlur": true
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Blurred bank card; no verified cards bank component ID"
+          "verification": "verified",
+          "notes": "Linked YouPay variant with the scenario card mask"
         },
         {
           "id": "plastic-tag",
@@ -8604,19 +8815,21 @@
             "htmlSelector": "#view [data-figma-id=\"plastic-status-tag\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "state_card",
+            "componentSetId": "6516:128060",
+            "componentId": "6516:128059",
+            "componentProperties": {
+              "Property 1": "wait"
+            },
+            "state": "wait",
+            "size": "32 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6516-128059",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Status tag is not ToggleButton.mobile; mapping unavailable"
+          "verification": "verified",
+          "notes": "Use state_card / wait with the HTML status copy as a text override."
         },
         {
           "id": "add-card",
@@ -8960,19 +9173,25 @@
             "htmlSelector": "#view [data-figma-id=\"card-artwork\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": null,
-            "componentSetId": null,
-            "componentId": null,
-            "componentProperties": {},
-            "state": null,
-            "size": null,
-            "referenceUrl": null,
-            "verification": "unmapped",
-            "evidence": null
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "cards bank",
+            "componentSetId": "6397:64385",
+            "componentId": "18870:19967",
+            "componentProperties": {
+              "Theme": "Green",
+              "Payment": "YouPay"
+            },
+            "instanceOverrides": {
+              "numberMaskVisible": true
+            },
+            "state": "YouPay",
+            "size": "348 × 212 px source; 300 px instance width",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
+            "verification": "verified",
+            "evidence": "Linked instances in Altyn App / Physical card"
           },
-          "verification": "unmapped",
-          "notes": "Custom YouPay card graphic; real library card source unverified"
+          "verification": "verified",
+          "notes": "Linked YouPay variant with the scenario card mask"
         },
         {
           "id": "add-card",
@@ -9038,7 +9257,9 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153",
+            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111323"
           },
           "verification": "unmapped",
           "notes": "Limit card container"
@@ -9184,7 +9405,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Security group container"
@@ -9552,7 +9774,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "First review group"
@@ -9575,7 +9798,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Second review group"
@@ -10041,7 +10265,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "First review group"
@@ -10064,7 +10289,8 @@
             "size": null,
             "referenceUrl": null,
             "verification": "unmapped",
-            "evidence": null
+            "evidence": null,
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
           },
           "verification": "unmapped",
           "notes": "Second review group"
@@ -10462,16 +10688,19 @@
     "screenStates": 26,
     "elementInstances": 419,
     "verification": {
-      "verified": 27,
-      "partial": 229,
-      "unmapped": 163
+      "verified": 52,
+      "partial": 226,
+      "unmapped": 141
     },
     "componentSets": [
       "3741:4350",
+      "6397:64385",
+      "2015:12843",
       "2168:7054",
       "77:12680",
-      "2015:12843",
       "4228:12406",
+      "920:26457",
+      "6516:128060",
       "3254:14282"
     ]
   }
