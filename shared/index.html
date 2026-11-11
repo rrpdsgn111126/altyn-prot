@@ -49,7 +49,7 @@ document.getElementById("demo-checkbox").append(UI.createCheckbox({label:"Сог
 document.getElementById("demo-buttons").append(UI.createButton({label:"Secondary",type:"secondary",size:"M",onClick:()=>{document.getElementById("feedback").textContent="Secondary";}}),UI.createButton({label:"Tertiary",type:"tertiary",size:"M",onClick:()=>{document.getElementById("feedback").textContent="Tertiary";}}));
 const switches=document.getElementById("demo-switches");
 switches.append(UI.createSwitch({label:"Уведомления",checked:true,size:"XL",theme:"success",onChange:(on)=>{document.getElementById("feedback").textContent="Уведомления: "+(on?"включены":"выключены");}}));
-switches.append(document.createElement("div")).className="demo-divider";
+const switchGap=document.createElement("div");switchGap.className="demo-divider";switches.append(switchGap);
 switches.append(UI.createSwitch({label:"Дополнительная защита",checked:false,size:"L",theme:"info",icon:true}));
 const radios=document.getElementById("demo-radios");
 radios.append(UI.createRadioGroup({name:"paymethod",label:"Способ оплаты",value:"card",options:[{label:"Банковская карта",value:"card"},{label:"Банковский перевод",value:"bank",description:"Средства поступят после подтверждения банком."}],onChange:(v)=>{document.getElementById("feedback").textContent="Метод: "+v;}}));
