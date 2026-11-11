@@ -189,17 +189,18 @@ var step='catalog',form={},errors={},notice='',plasticPending=false,limitEnabled
 function safe(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function api(method,path,payload){logEntries.push(method+' '+path+(payload?'\n'+JSON.stringify(payload,null,2):''));$('log').textContent=logEntries.slice(-6).join('\n\n')}
 function button(text,action,disabled,secondary){return '<button class="'+(secondary?'secondary':'primary')+'" type="button" data-action="'+action+'"'+(disabled?' disabled':'')+'>'+text+'</button>'}
-function card(issued){return '<div class="plastic" role="img" aria-label="Зелёная карта YouPay"><span class="mark">A</span>'+(issued?'<span class="number">•••• 2823</span>':'')+'<span class="bottom-name">YouPay</span></div>'}
-function info(key,value,small){return '<div class="info-row"><span class="key">'+key+'</span><span class="value'+(small?' sm':'')+'">'+safe(value)+'</span></div>'}
-function line(key,value){return '<div class="summary-row"><span class="key">'+key+'</span><span class="value">'+safe(value)+'</span></div>'}
-function errorBanner(){return notice?'<div class="error-message" role="alert">'+safe(notice)+'</div>':''}
+function card(issued){return '<div class="plastic" data-figma-id="card-artwork" role="img" aria-label="Зелёная карта YouPay"><span class="mark">A</span>'+(issued?'<span class="number">•••• 2823</span>':'')+'<span class="bottom-name">YouPay</span></div>'}
+function rowToken(key){return ({'Где можно платить':'usage','Тип карты':'type','Стоимость выпуска':'price','Доставка':'delivery','Карта':'card','ФИО получателя':'recipient','Номер телефона':'phone','Страна':'country','Город':'city','Адрес доставки':'address'})[key]||'other'}
+function info(key,value,small){return '<div class="info-row" data-figma-id="catalog-'+rowToken(key)+'"><span class="key">'+key+'</span><span class="value'+(small?' sm':'')+'">'+safe(value)+'</span></div>'}
+function line(key,value){return '<div class="summary-row" data-figma-id="review-'+rowToken(key)+'"><span class="key">'+key+'</span><span class="value">'+safe(value)+'</span></div>'}
+function errorBanner(){return notice?'<div class="error-message" data-figma-id="review-error" role="alert">'+safe(notice)+'</div>':''}
 function field(id,label,placeholder,max,opt){
 var value=form[id]||'';
-return '<label class="field"><span class="input-mobile'+(value?' is-filled':'')+(errors[id]?' is-invalid':'')+'" data-figma-component="input.mobile"><span class="input-mobile__label">'+safe(label+(opt?' (необязательно)':''))+'</span><input class="input-mobile__control'+(errors[id]?' invalid':'')+'" type="text" data-field="'+id+'" maxlength="'+max+'" value="'+safe(value)+'" placeholder="'+safe(placeholder)+'"></span>'+(errors[id]?'<span class="field-error">'+safe(errors[id])+'</span>':'')+'</label>'
+return '<label class="field"><span class="input-mobile'+(value?' is-filled':'')+(errors[id]?' is-invalid':'')+'" data-figma-component="input.mobile" data-figma-id="delivery-input-'+id+'"><span class="input-mobile__label">'+safe(label+(opt?' (необязательно)':''))+'</span><input class="input-mobile__control'+(errors[id]?' invalid':'')+'" type="text" data-field="'+id+'" maxlength="'+max+'" value="'+safe(value)+'" placeholder="'+safe(placeholder)+'"></span>'+(errors[id]?'<span class="field-error">'+safe(errors[id])+'</span>':'')+'</label>'
 }
 function catalog(){
 return '<div class="stage-inner wide"><div class="card-chooser">'+card(false)+'</div><div class="stage-inner">'
-+'<div class="main-box">'
++'<div class="main-box" data-figma-id="catalog-summary">'
 +info('Где можно платить','Онлайн-оплата доступна сразу после заказа. Пластиковой картой можно пользоваться после получения',true)
 +info('Тип карты','Физическая Upay')
 +info('Стоимость выпуска',model.price)
@@ -214,9 +215,9 @@ function delivery(){
 return '<div class="stage-inner"><div class="delivery-form">'
 +field('recipient_name','ФИО получателя','Как в паспорте',255,false)
 +field('phone','Номер телефона','Код страны и номер',32,false)
-+'<div id="country-select-slot" class="country-picker-slot" data-figma-component="Input.mobile + selection sheet"></div>'
++'<div id="country-select-slot" data-figma-id="delivery-country" class="country-picker-slot" data-figma-component="Input.mobile + selection sheet"></div>'
 +field('city','Город','Укажите город',128,false)+field('address','Адрес доставки','Улица, дом, квартира',512,false)
-+'<div class="warning" data-figma-component="Notification" data-figma-variant="Type=Yellow" data-figma-node-id="4228:12405" data-figma-reference="https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12406">Доставка входит в стоимость выпуска. Изменить адрес после создания заказа нельзя</div></div></div>';
++'<div class="warning" data-figma-id="delivery-notification" data-figma-component="Notification" data-figma-variant="Type=Yellow" data-figma-node-id="4228:12405" data-figma-reference="https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12406">Доставка входит в стоимость выпуска. Изменить адрес после создания заказа нельзя</div></div></div>';
 }
 function mountCountrySelector(){
 var slot=$('country-select-slot');if(!slot)return;
@@ -242,22 +243,22 @@ slot.append(picker);
 }
 function review(){
 return '<div class="stage-inner">'
-+'<div class="list-group">'+line('Карта','Физическая Upay')+line('Где можно платить','Онлайн-оплата доступна сразу после заказа. Пластиковой картой можно пользоваться после получения')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
-+'<div class="list-group">'+line('ФИО получателя',form.recipient_name)+line('Номер телефона',form.phone)+line('Страна',countryNames[form.country_code]||'')+line('Город',form.city)+line('Адрес доставки',form.address)+'</div>'
++'<div class="list-group" data-figma-id="review-card-summary">'+line('Карта','Физическая Upay')+line('Где можно платить','Онлайн-оплата доступна сразу после заказа. Пластиковой картой можно пользоваться после получения')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
++'<div class="list-group" data-figma-id="review-recipient-summary">'+line('ФИО получателя',form.recipient_name)+line('Номер телефона',form.phone)+line('Страна',countryNames[form.country_code]||'')+line('Город',form.city)+line('Адрес доставки',form.address)+'</div>'
 +errorBanner()
 +'</div>';
 }
 function awaitingCard(){
 return '<div class="card-detail awaiting-card">'
-+'<div class="issued-card-hero"><div class="card-chooser">'+card(true)+'<div class="card-production-tag">Скоро будет готова <span class="clock" aria-hidden="true">◷</span></div></div></div>'
-+'<div class="quick-actions"><button class="add-card" type="button" data-action="reset">Добавить ещё одну карту</button><button class="how-card" type="button" data-action="open-info">Как пользоваться</button></div>'
++'<div class="issued-card-hero" data-figma-id="card-hero"><div class="card-chooser">'+card(true)+'<div class="card-production-tag" data-figma-id="plastic-status-tag">Скоро будет готова <span class="clock" aria-hidden="true">◷</span></div></div></div>'
++'<div class="quick-actions" data-figma-id="card-quick-actions"><button class="add-card" type="button" data-action="reset">Добавить ещё одну карту</button><button class="how-card" type="button" data-action="open-info">Как пользоваться</button></div>'
 +'</div>';
 }
 function isErrorStatus(){return step==='status'&&['failed','cancelled','network'].includes(orderStatus)}
 function errorTitle(){return {failed:'Не удалось выпустить карту',cancelled:'Выпуск отменён',network:'Сбой сети'}[orderStatus]||''}
 function statusDialog(){
 return '<div class="sheet-back status-modal-back" data-action="dismiss-status">'
-+'<section class="sheet status-sheet" role="dialog" aria-modal="true" aria-labelledby="status-modal-title" aria-describedby="status-modal-copy">'
++'<section class="sheet status-sheet" data-figma-id="order-status-modal" role="dialog" aria-modal="true" aria-labelledby="status-modal-title" aria-describedby="status-modal-copy">'
 +'<div class="handle" aria-hidden="true"></div>'
 +'<div class="status-illustration" aria-hidden="true"><div class="status-illustration__circle"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="25"/><path d="M32 18v19M32 46v1"/></svg></div></div>'
 +'<h2 id="status-modal-title">'+safe(errorTitle())+'</h2>'
@@ -268,11 +269,11 @@ return '<div class="sheet-back status-modal-back" data-action="dismiss-status">'
 function showStatusDialog(){modal.dataset.kind='status';modal.innerHTML=statusDialog()}
 function openSupport(){
 modal.dataset.kind='support';
-modal.innerHTML='<div class="sheet-back" data-action="close-support"><section class="sheet support-sheet" role="dialog" aria-modal="true" aria-labelledby="support-title">'
+modal.innerHTML='<div class="sheet-back" data-action="close-support"><section class="sheet support-sheet" data-figma-id="support-modal" role="dialog" aria-modal="true" aria-labelledby="support-title">'
 +'<div class="handle" aria-hidden="true"></div>'
 +'<div class="support-sheet__header"><h2 id="support-title">Поддержка</h2><button type="button" class="support-sheet__close" aria-label="Закрыть чат" data-action="close-support">×</button></div>'
-+'<div class="support-messages" id="support-messages" aria-live="polite">'+supportMessages.map(function(t){return '<div class="support-message">'+safe(t)+'</div>'}).join('')+'</div>'
-+'<form class="support-compose" id="support-form"><textarea id="support-input" aria-label="Сообщение" placeholder="Сообщение" rows="2" maxlength="1000" required></textarea><button type="submit">Отправить</button></form>'
++'<div class="support-messages" data-figma-id="support-thread" id="support-messages" aria-live="polite">'+supportMessages.map(function(t){return '<div class="support-message">'+safe(t)+'</div>'}).join('')+'</div>'
++'<form class="support-compose" data-figma-id="support-compose" id="support-form"><textarea id="support-input" aria-label="Сообщение" placeholder="Сообщение" rows="2" maxlength="1000" required></textarea><button type="submit" data-figma-id="support-send">Отправить</button></form>'
 +'</section></div>';
 var composer=$('support-input');if(composer)composer.focus();
 }
@@ -292,20 +293,20 @@ pin:'<path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/>',
 freeze:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 1 1 8 0v3M12 15v2"/>',
 close:'<path d="M4 4l16 16M20 4 4 20"/>'};
 return '<span class="detail-symbol"><svg viewBox="0 0 24 24" aria-hidden="true">'+(shapes[kind]||'')+'</svg></span>'}
-function detailItem(label,kind){return '<button type="button" class="detail-row" data-action="detail-action" data-title="'+safe(label)+'">'+detailIcon(kind)+'<span class="detail-text">'+safe(label)+'</span></button>'}
+function detailItem(label,kind){return '<button type="button" class="detail-row" data-figma-id="issued-action-'+safe(kind)+'" data-action="detail-action" data-title="'+safe(label)+'">'+detailIcon(kind)+'<span class="detail-text">'+safe(label)+'</span></button>'}
 function issued(){
 return '<div class="card-detail">'
-+'<div class="issued-card-hero"><div class="card-chooser">'+card(true)+(plasticPending?'<div class="card-production-tag">Пластиковая карта скоро будет готова <span class="clock" aria-hidden="true">◷</span></div>':'')+'</div></div>'
-+'<div class="quick-actions"><button class="add-card" type="button" data-action="detail-action" data-title="Добавить карту">Добавить карту</button><button class="how-card" type="button" data-action="open-info">Как пользоваться</button></div>'
-+'<div class="detail-panel"><div class="limit-row"><div style="flex:1;min-width:0"><div class="limit-header">'+detailIcon('limits')+'<span class="detail-text" style="font-size:16px">Лимит на операции</span><button type="button" id="limit-switch" role="switch" class="limit-toggle" aria-checked="'+(limitEnabled?'true':'false')+'" aria-label="Лимит на операции" data-action="toggle-limit"></button></div>'
-+(limitEnabled?'<div class="limit-lines"><div class="limit-line"><span>В месяц</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line"><span>В неделю</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line"><span>В час</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line"><span>На операцию</span><span class="amount">150 000 ₽</span></div></div>':'')
++'<div class="issued-card-hero" data-figma-id="card-hero"><div class="card-chooser">'+card(true)+(plasticPending?'<div class="card-production-tag" data-figma-id="plastic-status-tag">Пластиковая карта скоро будет готова <span class="clock" aria-hidden="true">◷</span></div>':'')+'</div></div>'
++'<div class="quick-actions" data-figma-id="card-quick-actions"><button class="add-card" type="button" data-action="detail-action" data-title="Добавить карту">Добавить карту</button><button class="how-card" type="button" data-action="open-info">Как пользоваться</button></div>'
++'<div class="detail-panel" data-figma-id="issued-limit-panel"><div class="limit-row" data-figma-id="issued-limit"><div style="flex:1;min-width:0"><div class="limit-header">'+detailIcon('limits')+'<span class="detail-text" style="font-size:16px">Лимит на операции</span><button type="button" id="limit-switch" role="switch" class="limit-toggle" aria-checked="'+(limitEnabled?'true':'false')+'" aria-label="Лимит на операции" data-action="toggle-limit"></button></div>'
++(limitEnabled?'<div class="limit-lines"><div class="limit-line" data-figma-id="limit-month"><span>В месяц</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line" data-figma-id="limit-week"><span>В неделю</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line" data-figma-id="limit-hour"><span>В час</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line" data-figma-id="limit-transaction"><span>На операцию</span><span class="amount">150 000 ₽</span></div></div>':'')
 +'</div></div>'
 +detailItem('Реквизиты','details')+detailItem('Тарифы и лимиты','tariff')+detailItem('Управление балансом','balance')+'</div>'
-+'<h2 class="security-heading">Безопасность</h2><div class="detail-panel">'+detailItem('Установить ПИН-код','pin')+detailItem('Заморозить карту','freeze')+detailItem('Закрыть карту','close')+'</div>'
++'<h2 class="security-heading">Безопасность</h2><div class="detail-panel" data-figma-id="issued-security-panel">'+detailItem('Установить ПИН-код','pin')+detailItem('Заморозить карту','freeze')+detailItem('Закрыть карту','close')+'</div>'
 +'<div class="detail-note">Кошелек Банк Пэйджин</div>'
 +'</div>';
 }
-function showDetail(title){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" role="dialog" aria-modal="true" aria-label="'+safe(title)+'"><div class="handle"></div><h2>'+safe(title)+'</h2>'+button('Закрыть','close-modal')+'</div></div>'}
+function showDetail(title){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" data-figma-id="detail-modal" role="dialog" aria-modal="true" aria-label="'+safe(title)+'"><div class="handle"></div><h2>'+safe(title)+'</h2>'+button('Закрыть','close-modal')+'</div></div>'}
 function refreshFooter(){
 if(step==='catalog')footer.innerHTML=button('Создать карту','choose',!model.available||!model.kyc);
 else if(step==='delivery')footer.innerHTML=button('Продолжить','validate');
@@ -370,7 +371,7 @@ poll();
 },600);
 }
 function reset(){++session;step='catalog';form={};errors={};notice='';plasticPending=false;limitEnabled=true;busy=false;orderId=null;orderStatus='';requestSnapshot=null;retryNeeded=false;logEntries=[];supportMessages=[];modal.innerHTML='';modal.dataset.kind='';api('GET','/cards/templates/');render();view.scrollTop=0}
-function openInfo(){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" role="dialog" aria-modal="true" aria-label="Как пользоваться картой"><div class="handle"></div><h2>Как пользоваться картой</h2><h3>Онлайн-платежи</h3><p>Онлайн-оплата доступна сразу после заказа</p><h3>Пластиковая карта</h3><p>Пластиковую карту доставляют отдельно, после получения ей можно пользоваться</p><h3>Данные доставки</h3><p>После создания заказа изменить адрес доставки нельзя</p>'+button('Понятно','close-modal')+'</div></div>'}
+function openInfo(){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" data-figma-id="info-modal" role="dialog" aria-modal="true" aria-label="Как пользоваться картой"><div class="handle"></div><h2>Как пользоваться картой</h2><h3 data-figma-id="info-online-title">Онлайн-платежи</h3><p data-figma-id="info-online-text">Онлайн-оплата доступна сразу после заказа</p><h3 data-figma-id="info-plastic-title">Пластиковая карта</h3><p data-figma-id="info-plastic-text">Пластиковую карту доставляют отдельно, после получения ей можно пользоваться</p><h3 data-figma-id="info-delivery-title">Данные доставки</h3><p data-figma-id="info-delivery-text">После создания заказа изменить адрес доставки нельзя</p>'+button('Понятно','close-modal')+'</div></div>'}
 function syncInputMobileState(element){var wrapper=element.closest('.input-mobile');if(wrapper)wrapper.classList.toggle('is-filled',Boolean(element.value))}
 document.addEventListener('input',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key];syncInputMobileState(event.target)}});
 document.addEventListener('change',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key];syncInputMobileState(event.target)}});
