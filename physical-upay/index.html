@@ -203,18 +203,18 @@ return '<div class="stage-inner wide"><div class="card-chooser">'+card(false)+'<
 }
 function delivery(){
 return '<div class="stage-inner"><div class="delivery-form">'
-+field('recipient_name','ФИО получателя','Фамилия Имя Отчество',255,false)
-+field('phone','Номер телефона','+7 999 000-00-00',32,false)
++field('recipient_name','ФИО получателя','Как в паспорте',255,false)
++field('phone','Номер телефона','Код страны и номер',32,false)
 +'<label class="field"><span class="input-mobile'+(form.country_code?' is-filled':'')+(errors.country_code?' is-invalid':'')+'" data-figma-component="input.mobile"><span class="input-mobile__label">Страна доставки</span><select class="input-mobile__control input-mobile__select'+(errors.country_code?' invalid':'')+'" data-field="country_code" required><option value="">Выберите страну</option>'
 +Object.keys(countryNames).map(function(k){return '<option value="'+k+'"'+(form.country_code===k?' selected':'')+'>'+countryNames[k]+'</option>'}).join('')+'</select></span>'
 +(errors.country_code?'<span class="field-error">'+safe(errors.country_code)+'</span>':'')+'</label>'
-+field('city','Город','Город',128,false)+field('address','Адрес доставки','Улица, дом, корпус, квартира',512,false)+field('postal_code','Почтовый индекс','Индекс',32,true)
++field('city','Город','Укажите город',128,false)+field('address','Адрес доставки','Улица, дом, квартира',512,false)
 +'<div class="warning">Доставка входит в стоимость выпуска. Изменить адрес после создания заказа нельзя</div></div></div>';
 }
 function review(){
 return '<div class="stage-inner">'
 +'<div class="list-group">'+line('Карта','Физическая Upay')+line('Где можно платить','Онлайн-оплата доступна сразу после заказа. Пластиковой картой можно пользоваться после получения')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
-+'<div class="list-group">'+line('ФИО получателя',form.recipient_name)+line('Номер телефона',form.phone)+line('Страна',countryNames[form.country_code]||'')+line('Город',form.city)+line('Адрес доставки',form.address)+(form.postal_code?line('Почтовый индекс',form.postal_code):'')+'</div>'
++'<div class="list-group">'+line('ФИО получателя',form.recipient_name)+line('Номер телефона',form.phone)+line('Страна',countryNames[form.country_code]||'')+line('Город',form.city)+line('Адрес доставки',form.address)+'</div>'
 +errorBanner()
 +'</div>';
 }
@@ -314,12 +314,10 @@ if(!str)errors[item[0]]='Заполните поле';
 else if(str.length>item[1])errors[item[0]]='Максимум '+item[1]+' символов';
 }
 if(!countryNames[form.country_code])errors.country_code='Выберите страну';
-if((form.postal_code||'').length>32)errors.postal_code='Максимум 32 символа';
 return !Object.keys(errors).length;
 }
 function payload(){
 var delivery={recipient_name:(form.recipient_name||'').trim(),phone:(form.phone||'').trim(),country_code:form.country_code,city:(form.city||'').trim(),address:(form.address||'').trim()};
-if((form.postal_code||'').trim())delivery.postal_code=form.postal_code.trim();
 var body={template_id:model.templateId,delivery:delivery};
 return body;
 }
@@ -386,7 +384,7 @@ $('price').addEventListener('input',function(e){model.price=e.target.value||'—
 $('template').addEventListener('change',function(e){var n=Number(e.target.value);model.templateId=Number.isSafeInteger(n)&&n>0?n:123;e.target.value=model.templateId});
 $('kyc').addEventListener('change',function(e){model.kyc=e.target.checked;if(step==='catalog')render()});
 $('available').addEventListener('change',function(e){model.available=e.target.checked;if(step==='catalog')render()});
-$('fill').addEventListener('click',function(){form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2',postal_code:'101000'};errors={};notice='';if(step==='catalog')move('delivery');else render()});
+$('fill').addEventListener('click',function(){form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2'};errors={};notice='';if(step==='catalog')move('delivery');else render()});
 $('reset').addEventListener('click',reset);
 function previewCallback(state){
 if(state==='network_known'||state==='network_unknown'){
@@ -400,7 +398,7 @@ if(state==='stock'){reset();history.replaceState(null,'',location.pathname+locat
 return;
 }
 ++session;busy=false;modal.innerHTML='';modal.dataset.kind='';notice='';errors={};retryNeeded=false;orderId=456;orderStatus=state;
-if(!form.recipient_name)form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2',postal_code:'101000'};
+if(!form.recipient_name)form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2'};
 if(screens.includes(state)){step=state;plasticPending=false}
 else if(state==='success'||state==='exists'){step='issued';plasticPending=false}
 else if(['pending','processing','failed','cancelled','network'].includes(state)){step='status';plasticPending=false}
