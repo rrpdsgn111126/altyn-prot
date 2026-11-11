@@ -67,6 +67,7 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 .toolbox button{border:0;border-radius:9px;background:#242e25;color:white;min-height:38px;font-size:12px;font-weight:600}.toolbox button.subtle{background:#eef0ee;color:#465345}
 .toolbox pre{margin:0;max-height:160px;min-height:100px;overflow:auto;border-radius:8px;background:#f5f6f5;padding:11px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:10px;line-height:1.45}
 .toolbox a{font-size:11px;color:#9c7400;text-decoration:none}
+.callback-links{display:flex;flex-direction:column;gap:0;border:1px solid #e5e8e9;border-radius:10px;overflow:hidden}.callback-links h4{font-size:12px;margin:0;padding:10px 12px;background:#f5f6f5}.callback-links a{display:block;padding:8px 12px;border-top:1px solid #e5e8e9;font-size:12px;color:#6b5400;text-decoration:none}.callback-links a:hover,.callback-links a:focus-visible{background:#fff7d4}
 .annotation{width:260px;flex-shrink:0;align-self:flex-start;background:#fff;border:1px solid #e5e8e9;border-radius:17px;padding:18px;margin-top:12px;max-height:calc(100vh - 54px);overflow:auto;font-size:12px;line-height:1.45;order:2}.mobile{order:1}.toolbox{order:3}
 .annotation h2{font-size:16px;margin:0 0 10px}.annotation h3{font-size:13px;margin:16px 0 7px}.annotation p{color:#68726e;margin:0 0 10px}.annotation ul{padding-left:17px;margin:0}.annotation li{margin:0 0 7px}.annotation .candidate{font-weight:650;color:#27342d}.annotation a{color:#866600;text-decoration:none}
 @media(max-width:1150px) and (min-width:751px){.scene{gap:12px;padding:18px 12px}.annotation{width:235px}.toolbox{width:255px}}@media(max-width:950px) and (min-width:751px){.toolbox{display:none}.scene{gap:16px}.annotation{width:270px}}@media(max-width:750px){html,body{background:white}.scene{padding:0;display:block}.mobile{width:100%;height:100dvh;min-height:610px;border-radius:0;box-shadow:none;flex:none}.toolbox,.annotation{display:none}.plastic{max-width:calc(100vw - 48px)}}
@@ -85,11 +86,23 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 <h3>Тестовые сценарии</h3><p>Панель вне экранов приложения. Данные и статусы симулируются.</p>
 <label>Результат оформления<select id="outcome">
 <option value="success">Успешный выпуск</option><option value="failed">Ошибка выпуска</option><option value="cancelled">Заказ отменён</option><option value="stock">Нет карт для страны доставки</option><option value="network_known">Сбой сети, ID известен</option><option value="network_unknown">Сбой сети, ID неизвестен</option><option value="conflict">Данные доставки отличаются</option><option value="exists">Карта уже выпущена</option></select></label>
-<div class="two"><label>Цена выпуска<input id="price" value="1 000 ₽"></label><label>Template ID<input id="template" type="number" min="1" value="123"></label></div>
-<label>Сценарий промокода<select id="promo-mode"><option value="applied">Применён</option><option value="invalid">Не подошёл</option></select></label>
+<div class="two"><label>Цена выпуска<input id="price" value="50 USD"></label><label>Template ID<input id="template" type="number" min="1" value="123"></label></div>
 <label class="check"><input type="checkbox" id="kyc" checked> Полная идентификация пройдена</label>
 <label class="check"><input type="checkbox" id="available" checked> Шаблон доступен</label>
 <button id="fill" type="button">Заполнить тестовые реквизиты</button><button id="reset" class="subtle" type="button">Сбросить</button>
+<nav class="callback-links" aria-label="Быстрые ссылки на экраны статусов">
+<h4>Быстрый переход к состояниям</h4>
+<a href="#pending">Ожидается</a>
+<a href="#processing">В обработке</a>
+<a href="#success">Успешно</a>
+<a href="#failed">Ошибка выпуска</a>
+<a href="#cancelled">Отменено</a>
+<a href="#network_known">Сбой сети · номер заказа известен</a>
+<a href="#network_unknown">Сбой сети · номер заказа неизвестен</a>
+<a href="#stock">Нет карт для доставки</a>
+<a href="#conflict">Конфликт адреса</a>
+<a href="#exists">Карта уже выпущена</a>
+</nav>
 <p><strong>Модель вызовов API</strong> — без реальных запросов</p><pre id="log"></pre>
 <a href="https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/?node-id=14348-101393" target="_blank" rel="noreferrer">Исходный flow Figma ↗</a>
 </aside>
@@ -101,8 +114,8 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 var $=function(x){return document.getElementById(x)};
 var view=$('view'),footer=$('bottom'),modal=$('modal');
 var countryNames={RU:'Россия',KZ:'Казахстан',AE:'ОАЭ'};
-var model={price:'1 000 ₽',templateId:123,outcome:'success',promoMode:'applied',kyc:true,available:true};
-var step='catalog',form={},errors={},notice='',promoState='',busy=false,orderId=null,orderStatus='',requestSnapshot=null,retryNeeded=false,session=0,logEntries=[];
+var model={price:'50 USD',templateId:123,outcome:'success',kyc:true,available:true};
+var step='catalog',form={},errors={},notice='',busy=false,orderId=null,orderStatus='',requestSnapshot=null,retryNeeded=false,session=0,logEntries=[];
 function safe(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function api(method,path,payload){logEntries.push(method+' '+path+(payload?'\n'+JSON.stringify(payload,null,2):''));$('log').textContent=logEntries.slice(-6).join('\n\n')}
 function button(text,action,disabled,secondary){return '<button class="'+(secondary?'secondary':'primary')+'" type="button" data-action="'+action+'"'+(disabled?' disabled':'')+'>'+text+'</button>'}
@@ -119,8 +132,6 @@ return '<div class="stage-inner wide"><div class="card-chooser">'+card(false)+'<
 +info('Стоимость выпуска',model.price)
 +info('Доставка','Включена в стоимость')
 +'</div>'
-+'<div class="promo"><input id="promo-entry" aria-label="Промокод" maxlength="32" placeholder="Промокод" value="'+safe(form.promo_code||'')+'"><button type="button" data-action="apply-promo">Применить</button></div>'
-+(promoState?'<div class="promo-note'+(promoState==='invalid'?' bad':'')+'">'+(promoState==='invalid'?'Промокод не подошёл':'Промокод применён')+'</div>':'')
 
 +(!model.available?'<div class="error-message">Карта временно недоступна для выпуска</div>':'')
 +(!model.kyc?'<div class="error-message">Для выпуска карты требуется полная идентификация</div>':'')
@@ -140,7 +151,6 @@ function review(){
 return '<div class="stage-inner">'
 +'<div class="list-group">'+line('Карта','Физическая Upay')+line('Где можно платить','Онлайн-оплата доступна сразу после заказа'+String.fromCharCode(10)+'Пластиковой картой можно пользоваться после получения')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
 +'<div class="list-group">'+line('ФИО получателя',form.recipient_name)+line('Номер телефона',form.phone)+line('Страна',countryNames[form.country_code]||'')+line('Город',form.city)+line('Адрес доставки',form.address)+(form.postal_code?line('Почтовый индекс',form.postal_code):'')+'</div>'
-+(form.promo_code?'<div class="list-group">'+line('Промокод',form.promo_code)+'</div>':'')
 +errorBanner()
 +'</div>';
 }
@@ -157,11 +167,11 @@ return '<div class="card-detail"><div class="card-chooser">'+card(true)+'</div><
 function refreshFooter(){
 if(step==='catalog')footer.innerHTML=button('Создать карту','choose',!model.available||!model.kyc);
 else if(step==='delivery')footer.innerHTML=button('Продолжить','validate');
-else if(step==='review')footer.innerHTML=button(retryNeeded?'Повторить запрос':'Подтвердить',retryNeeded?'retry':'submit',busy)+'<p class="foot-note">Доставка включена в стоимость выпуска</p>';
+else if(step==='review')footer.innerHTML=button(retryNeeded?'Повторить запрос':'Подтвердить',retryNeeded?'retry':'submit',busy);
 else if(step==='status')footer.innerHTML=orderStatus==='network_known'?button('Проверить статус','check'):orderStatus==='failed'||orderStatus==='cancelled'?button('Вернуться к картам','reset'):button('Проверить статус','poll',false,true);
 else footer.innerHTML='';
 }
-function updateAnnotations(){var steps={catalog:[['navbar','Верхняя навигация'],['cards bank','Зелёная карта YouPay · референс Altyn App'],['list.mobile','Условия использования и стоимость'],['input.mobile','Поле промокода'],['Button.mobile','Кнопка создания карты · вариант уточнить']],delivery:[['navbar','Верхняя навигация'],['input.mobile','ФИО, телефон, город, адрес, индекс'],['Select · проверить','Страна доставки'],['Button.mobile','Продолжить · вариант уточнить']],review:[['navbar','Верхняя навигация'],['list.mobile','Детали карты, оплаты и доставки'],['Button.mobile','Подтвердить · вариант уточнить']],status:[['navbar','Верхняя навигация'],['Status · проверить','Обработка, ошибка, отмена'],['Button.mobile','Проверить статус · вариант уточнить']],issued:[['navbar','Верхняя навигация'],['cards bank','Выпущенная карта YouPay'],['list.mobile','Данные заказа'],['Bottom sheet · проверить','Информация о карте']]};var names={catalog:'Выбор карты',delivery:'Доставка',review:'Подтверждение',status:'Статус заказа',issued:'Карта'};var target=$('component-map');if(!target)return;target.innerHTML='<h3>'+names[step]+'</h3><ul>'+(steps[step]||[]).map(function(item){return '<li><span class="candidate">'+item[0]+'</span><div>'+item[1]+'</div></li>'}).join('')+'</ul><p>Названия без подтверждённого варианта требуют сверки с Altyn.Base</p>'}
+function updateAnnotations(){var steps={catalog:[['navbar','Верхняя навигация'],['cards bank','Зелёная карта YouPay · референс Altyn App'],['list.mobile','Условия использования и стоимость'],['Button.mobile','Кнопка создания карты · вариант уточнить']],delivery:[['navbar','Верхняя навигация'],['input.mobile','ФИО, телефон, город, адрес, индекс'],['Select · проверить','Страна доставки'],['Button.mobile','Продолжить · вариант уточнить']],review:[['navbar','Верхняя навигация'],['list.mobile','Детали карты, оплаты и доставки'],['Button.mobile','Подтвердить · вариант уточнить']],status:[['navbar','Верхняя навигация'],['Status · проверить','Обработка, ошибка, отмена'],['Button.mobile','Проверить статус · вариант уточнить']],issued:[['navbar','Верхняя навигация'],['cards bank','Выпущенная карта YouPay'],['list.mobile','Данные заказа'],['Bottom sheet · проверить','Информация о карте']]};var names={catalog:'Выбор карты',delivery:'Доставка',review:'Подтверждение',status:'Статус заказа',issued:'Карта'};var target=$('component-map');if(!target)return;target.innerHTML='<h3>'+names[step]+'</h3><ul>'+(steps[step]||[]).map(function(item){return '<li><span class="candidate">'+item[0]+'</span><div>'+item[1]+'</div></li>'}).join('')+'</ul><p>Названия без подтверждённого варианта требуют сверки с Altyn.Base</p>'}
 function render(){
 updateAnnotations();
 $('title').textContent={catalog:'Оформление карты',delivery:'Доставка карты',review:'Выпуск карты',status:'Выпуск карты',issued:'Карта Алтын'}[step];
@@ -185,7 +195,6 @@ function payload(){
 var delivery={recipient_name:(form.recipient_name||'').trim(),phone:(form.phone||'').trim(),country_code:form.country_code,city:(form.city||'').trim(),address:(form.address||'').trim()};
 if((form.postal_code||'').trim())delivery.postal_code=form.postal_code.trim();
 var body={template_id:model.templateId,delivery:delivery};
-if((form.promo_code||'').trim())body.promo_code=form.promo_code.trim();
 return body;
 }
 function move(to){step=to;render();view.scrollTop=0}
@@ -208,9 +217,9 @@ if(model.outcome==='network_known'&&!isRetry){orderStatus='network_known';move('
 poll();
 },600);
 }
-function reset(){++session;step='catalog';form={};errors={};notice='';promoState='';busy=false;orderId=null;orderStatus='';requestSnapshot=null;retryNeeded=false;logEntries=[];api('GET','/cards/templates/');render();view.scrollTop=0}
+function reset(){++session;step='catalog';form={};errors={};notice='';busy=false;orderId=null;orderStatus='';requestSnapshot=null;retryNeeded=false;logEntries=[];api('GET','/cards/templates/');render();view.scrollTop=0}
 function openInfo(){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" role="dialog" aria-modal="true" aria-label="Как пользоваться картой"><div class="handle"></div><h2>Как пользоваться картой</h2><h3>Онлайн-платежи</h3><p>Онлайн-оплата доступна сразу после заказа</p><h3>Пластиковая карта</h3><p>Пластиковую карту доставляют отдельно, после получения ей можно пользоваться</p><h3>Данные доставки</h3><p>После создания заказа изменить адрес доставки нельзя</p>'+button('Понятно','close-modal')+'</div></div>'}
-document.addEventListener('input',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key]}if(event.target.id==='promo-entry'){form.promo_code=event.target.value;promoState=''}});
+document.addEventListener('input',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key]}});
 document.addEventListener('change',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key]}});
 document.addEventListener('click',function(event){
 var btnTarget=event.target.closest('[data-action]');if(!btnTarget)return;
@@ -223,19 +232,35 @@ if(action==='submit'||action==='retry'){if(step==='review'&&!busy)submit(action=
 if(action==='check'){poll();return}
 if(action==='poll'){api('GET','/cards/order/'+orderId+'/status/');return}
 if(action==='reset'){reset();return}
-if(action==='apply-promo'){if((form.promo_code||'').trim())promoState=model.promoMode==='invalid'?'invalid':'applied';else promoState='';render();return}
 });
 $('back').addEventListener('click',function(){if(step==='review'&&!retryNeeded)move('delivery');else if(step==='delivery')move('catalog')});
 $('help').addEventListener('click',openInfo);
 $('outcome').addEventListener('change',function(e){model.outcome=e.target.value});
 $('price').addEventListener('input',function(e){model.price=e.target.value||'—';if(step==='catalog'||step==='review')render()});
 $('template').addEventListener('change',function(e){var n=Number(e.target.value);model.templateId=Number.isSafeInteger(n)&&n>0?n:123;e.target.value=model.templateId});
-$('promo-mode').addEventListener('change',function(e){model.promoMode=e.target.value});
 $('kyc').addEventListener('change',function(e){model.kyc=e.target.checked;if(step==='catalog')render()});
 $('available').addEventListener('change',function(e){model.available=e.target.checked;if(step==='catalog')render()});
-$('fill').addEventListener('click',function(){form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2',postal_code:'101000',promo_code:''};errors={};notice='';if(step==='catalog')move('delivery');else render()});
+$('fill').addEventListener('click',function(){form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2',postal_code:'101000'};errors={};notice='';if(step==='catalog')move('delivery');else render()});
 $('reset').addEventListener('click',reset);
+function previewCallback(state){
+var validStates=['pending','processing','success','failed','cancelled','network_known','network_unknown','stock','conflict','exists'];
+if(validStates.indexOf(state)===-1)return;
+++session;busy=false;modal.innerHTML='';notice='';errors={};retryNeeded=false;orderId=456;orderStatus=state;
+if(!form.recipient_name)form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2',postal_code:'101000'};
+if(state==='success'||state==='exists')step='issued';
+else if(['pending','processing','failed','cancelled','network_known'].includes(state))step='status';
+else{step='review';if(state==='network_unknown'){retryNeeded=true;notice='Не удалось получить номер заказа. Повторите запрос с теми же данными'}
+else if(state==='stock')notice='В выбранную страну сейчас нет доступных карт для доставки';
+else if(state==='conflict')notice='Адрес отличается от уже оформленного заказа. Изменить существующий заказ нельзя'}
+render();view.scrollTop=0;
+}
+window.addEventListener('hashchange',function(){previewCallback(location.hash.slice(1))});
+document.querySelector('.callback-links').addEventListener('click',function(event){
+var link=event.target.closest('a[href^="#"]');
+if(link&&location.hash===link.getAttribute('href')){event.preventDefault();previewCallback(link.hash.slice(1))}
+});
 reset();
+previewCallback(location.hash.slice(1));
 })();
 </script>
 </body>
