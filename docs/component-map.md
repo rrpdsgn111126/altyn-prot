@@ -85,3 +85,14 @@
 **HTML-реализация:** `AltynBase.openModal` из `shared/modal.js` + `shared/modal.css`. Использует `AltynBase.createButton({size:"M"})`, для списка композицию `list.mobile` и CSS-токены `--ab-modal-bg-secondary`, `--ab-modal-list-bg`, `--ab-modal-list-radius`. Существующий поисковый `openSelectionSheet` также использует эти токены поверхности (сохраняя радиус списка 12 px, как в его отдельном референсе).
 
 **Статус:** сверены по Figma цвет, размеры M, отступы и радиус. Эквивалентность всех вариантов модалки и всех внутренних состояний не проверена.
+
+## Physical Card — связанные компоненты Altyn App в Figma
+
+| Элемент | Компонент | Свойства |
+| --- | --- | --- |
+| Изображение YouPay | [cards bank](https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6397-64385) → [вариант YouPay](https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967) | `Theme=Green, Payment=YouPay`. Исходник 348 × 212 px, экземпляр 300 px в мобильном кадре. Маска номера скрывается override в каталоге |
+| Ожидание | [state_card](https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6516-128060) → [wait](https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6516-128059) | `Property 1=wait` с текстом текущего состояния |
+| Нижняя панель | [modal](https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=920-26457) → [State=off](https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=61-5034) | Нативные заголовок, handle, контентные слоты и кнопочный блок |
+| Строки выбора страны | [list.mobile в референсе](https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14348-114250) | `Property 1=1`, `🎚️ State=Enable`, правый слот иконки с экземпляром Round flags для RU, KZ или AE |
+
+Эти соответствия относятся к Figma-экранам. Геометрия контейнеров описана в [mobile-screen-layout.md](./mobile-screen-layout.md).
