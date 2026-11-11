@@ -15,6 +15,21 @@
    try{doc=frame.contentDocument;}catch(e){cases.push({name:width+" same-origin frame",pass:false});continue;}
    check(width+" frame loaded",!!doc&&!!doc.querySelector(".ab-screen"));
    if(!doc)continue;
+   const fieldRows=doc.querySelectorAll("#demo-inputs > .ab-field");
+   if(fieldRows.length>=4){
+     const measures=Array.from(fieldRows).map(field=>{
+       const box=field.querySelector(".ab-input-control"),label=field.querySelector(".ab-input-label"),input=field.querySelector("input");
+       const r=box.getBoundingClientRect(),l=label.getBoundingClientRect();
+       return {fontSize:frame.contentWindow.getComputedStyle(label).fontSize,state:field.dataset.state,
+         floated:box.dataset.floated,labelInside:l.top>=r.top&&l.bottom<=r.bottom&&l.left>=r.left&&l.right<=r.right,
+         height:r.height,value:input.value,placeholder:input.placeholder};
+     });
+     check(width+" Enable label 16px centered INSIDE box",measures[0].fontSize==="16px"&&measures[0].state==="enable"&&measures[0].floated==="false"&&measures[0].labelInside&&Math.abs(measures[0].height-54)<1);
+     check(width+" Enable + placeholder label 12px INSIDE box",measures[1].fontSize==="12px"&&measures[1].floated==="true"&&measures[1].placeholder==="Введите назначение"&&measures[1].labelInside);
+     check(width+" Filled label 12px INSIDE box",measures[2].fontSize==="12px"&&measures[2].value==="Иванов"&&measures[2].labelInside);
+     check(width+" Invalid label 12px INSIDE red border",measures[3].fontSize==="12px"&&measures[3].state==="invalid"&&measures[3].labelInside);
+     cases.push({name:width+" INPUT computed: "+JSON.stringify(measures),pass:true,meta:true});
+   }else check(width+" 4 input examples rendered",false);
    check(width+" Switch demo rendered",doc.querySelectorAll("#demo-switches .ab-switch").length===2);
    check(width+" Radio demo rendered",doc.querySelectorAll("#demo-radios input[type=radio]").length===2);
    check(width+" ToggleButton demo rendered",doc.querySelectorAll("#demo-toggle-buttons .ab-toggle-button").length===2);
@@ -34,9 +49,9 @@
    check(width+" viewport width",measured===width);
    check(width+" no horizontal document overflow",doc.documentElement.scrollWidth<=measured+1);
  }
- const passed=cases.filter(x=>x.pass).length;
- results.textContent=passed+"/"+cases.length+" passed\n"+cases.map(x=>(x.pass?"PASS ":"FAIL ")+x.name).join("\n");
- document.documentElement.dataset.testsPassed=String(passed===cases.length);
+ const passed=cases.filter(x=>x.pass&&!x.meta).length;
+ const checks=cases.filter(x=>!x.meta);\n results.textContent=passed+"/"+checks.length+" passed\n"+cases.map(x=>(x.meta?"DATA ":(x.pass?"PASS ":"FAIL "))+x.name).join("\n");
+ document.documentElement.dataset.testsPassed=String(passed===cases.filter(x=>!x.meta).length);
  window.AltynCatalogViewportResults=cases;
 })();
 </script></body></html>
