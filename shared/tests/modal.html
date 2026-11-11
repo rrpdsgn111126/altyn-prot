@@ -1,0 +1,41 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modal pattern tests</title>
+<link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../components.css"><link rel="stylesheet" href="../modal.css">
+<style>body{margin:0}.ab-screen{height:812px;width:min(100%,375px);background:#fff}.ab-main{padding:16px}</style></head>
+<body><section class="ab-screen"><div class="ab-statusbar">9:30</div><main class="ab-main" id="area"></main><div class="ab-bottom-system"></div></section>
+<pre id="result" role="status">Проверка...</pre>
+<script src="../components.js"></script><script src="../modal.js"></script><script>
+(function(){
+ const UI=window.AltynBase,area=document.getElementById("area"),checks=[];
+ const test=(name,fn)=>{try{if(!fn())throw Error("Expected true");checks.push({name,ok:true});}catch(e){checks.push({name,ok:false,error:String(e)});}};
+ const trigger=UI.createButton({label:"Открыть",size:"M"});area.append(trigger);trigger.focus();
+ let onCloseReason=null;
+ let modal=UI.openModal({trigger,title:"Документы для банка",items:["Брокерский договор","Подтверждение открытия брокерского счета"],actions:[{label:"Закрыть",type:"primary"}],onClose:r=>{onCloseReason=r;}});
+ const get=(s)=>document.querySelector(s);
+ test("modal dialog opens inside mobile screen",()=>get(".ab-screen > .ab-modal-overlay")!==null&&get(".ab-modal-sheet").getAttribute("aria-modal")==="true");
+ test("modal default surface Secondary #F6F7F8",()=>getComputedStyle(get(".ab-modal-sheet")).backgroundColor==="rgb(246, 247, 248)");
+ test("list container white Primary #FFFFFF",()=>getComputedStyle(get(".ab-modal-list")).backgroundColor==="rgb(255, 255, 255)");
+ test("list radius 16px",()=>getComputedStyle(get(".ab-modal-list")).borderTopLeftRadius==="16px");
+ test("two list rows",()=>get(".ab-modal-list").children.length===2);
+ test("list row at least 54px",()=>get(".ab-modal-list-row").getBoundingClientRect().height>=54);
+ test("modal action is Button.mobile Size=M",()=>get(".ab-modal-actions .ab-button").dataset.size==="M");
+ test("modal Primary/M button exactly 44px",()=>get(".ab-modal-actions .ab-button").getBoundingClientRect().height===44);
+ test("actions top padding 24px",()=>getComputedStyle(get(".ab-modal-actions")).paddingTop==="24px");
+ test("handle 56×4px",()=>get(".ab-modal-handle").getBoundingClientRect().width===56&&get(".ab-modal-handle").getBoundingClientRect().height===4);
+ test("underlying content inert",()=>area.inert);
+ get(".ab-modal-actions button").click();
+ test("action closes sheet",()=>!get(".ab-modal-overlay")&&onCloseReason==="action");
+ test("inert restored",()=>!area.inert);
+ test("focus restored to trigger",()=>document.activeElement===trigger);
+ modal=UI.openModal({title:"White exception",surface:"primary",content:document.createTextNode("Текст"),actions:[{label:"Понятно"}]});
+ test("Primary override allowed",()=>getComputedStyle(get(".ab-modal-sheet")).backgroundColor==="rgb(255, 255, 255)");
+ document.dispatchEvent(new KeyboardEvent("keydown",{key:"Escape",bubbles:true}));
+ test("Escape closes",()=>!get(".ab-modal-overlay"));
+ modal=UI.openModal({title:"Закрыть",actions:[{label:"Закрыть"}]});
+ get(".ab-modal-backdrop").click();
+ test("backdrop closes",()=>!get(".ab-modal-overlay"));
+ const passed=checks.filter(v=>v.ok).length;
+ get("#result").textContent=passed+"/"+checks.length+" passed\n"+checks.map(v=>(v.ok?"PASS ":"FAIL ")+v.name+(v.error?" "+v.error:"")).join("\n");
+ document.documentElement.dataset.testsPassed=String(passed===checks.length);
+})();
+</script></body></html>

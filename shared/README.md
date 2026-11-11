@@ -113,3 +113,32 @@ document.querySelector("#fields").append(picker);
 Прямое открытие: `UI.openSelectionSheet({host,trigger,title,items,kind,searchable,searchPlaceholder,onSelect,onClose})`, возвращает объект `{close,overlay,sheet,searchInput,getVisibleCount}`. Если список без поиска, задайте `searchable:false`. Список элементов — локальные данные для витрины, API не вызывается. Файлы `physical-upay` не меняются.
 
 **Контроль качества:** `shared/tests/select-sheet.html`. В Figma это составной паттерн `modal + Input.mobile + list.mobile`, а не новый компонент под вымышленным Figma ID.
+
+## Обычная модалка: композиция и правила оформления
+
+Источник: [Altyn App / 18443:138108](https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/?node-id=18443-138108).
+
+- **Фон Bottom Sheet по умолчанию:** `bg/neutral/secondary`, `#F6F7F8`
+- **Список внутри:** отдельная белая поверхность `bg/neutral/primary`, `#FFFFFF`, радиус 16 px, по 16 px внутренние горизонтальные поля; строки `list.mobile`, 54 px
+- **Все action-кнопки модалки:** `Button.mobile` размера **M** (основной вариант 44 px), отступ от содержимого до зоны кнопок — 24 px
+- Боковые поля содержимого 16 px, grab-handle 56×4 px
+- Если конкретный макет содержит модалку с `Primary` фоном, укажите `surface:"primary"`, не меняйте дизайн-систему глобально
+
+Подключение (после `components.js`):
+```html
+<link rel="stylesheet" href="../shared/modal.css">
+<script src="../shared/modal.js"></script>
+```
+
+Пример:
+```js
+AltynBase.openModal({
+  title:"Документы для банка",
+  items:[{label:"Брокерский договор"},{label:"Подтверждение открытия брокерского счета"}],
+  actions:[{label:"Закрыть",type:"primary"}]
+});
+```
+
+`openModal({host,trigger,title,items,content,surface,actions,onClose})` возвращает `{close,overlay,sheet}`; для прикладного содержимого можно передать существующий DOM-узел в `content`. Если указан `items`, строки формируются внутри белого списка. Action-кнопки всегда создаются с `size:"M"`, если у действия нет `onClick` — оно просто закрывает модалку. Для иных действий укажите `onClick(api)`, опционально `closeOnClick:false`.
+
+Проверка: `shared/tests/modal.html`. Составной модальный паттерн, не новый Figma Component Set.

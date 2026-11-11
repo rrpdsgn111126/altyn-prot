@@ -2,7 +2,7 @@
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Altyn.Base — HTML-компоненты</title>
-<link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./components.css?v=input-box-v2"><link rel="stylesheet" href="./choices.css"><link rel="stylesheet" href="./select-sheet.css">
+<link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./components.css?v=input-box-v2"><link rel="stylesheet" href="./choices.css"><link rel="stylesheet" href="./select-sheet.css"><link rel="stylesheet" href="./modal.css">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#e9ebee;font:14px/1.5 var(--ab-font);color:var(--ab-ink)}
 .catalog{display:flex;justify-content:center;align-items:flex-start;gap:28px;padding:24px}
@@ -22,6 +22,7 @@
 <h2 class="demo-heading">Input.mobile — состояния</h2>
 <div class="ab-input-stack" id="demo-inputs"></div>
 <div class="demo-divider"></div>
+<h2 class="demo-heading">Модалка</h2><div id="demo-modal"></div><div class="demo-divider"></div>
 <h2 class="demo-heading">Выбор из списка</h2><div id="demo-selects" class="ab-input-stack"></div><div class="demo-divider"></div>
 <h2 class="demo-heading">Список</h2><div class="demo-card"><div class="ab-list-group" id="demo-list" style="background:transparent;padding:0"></div></div>
 <div class="demo-divider"></div><div id="demo-checkbox"></div>
@@ -36,7 +37,7 @@
 <p>Проверка: переключите Switch, выберите Radio, нажмите ToggleButton/ToggleBank. Демонстрационная логика локальная; API не вызывается.</p>
 <p><code>../shared/tokens.css</code><br><code>../shared/components.css</code><br><code>../shared/components.js</code></p>
 </aside></div>
-<script src="./components.js?v=input-box-v2"></script><script src="./choices.js"></script><script src="./select-sheet.js"></script>
+<script src="./components.js?v=input-box-v2"></script><script src="./choices.js"></script><script src="./select-sheet.js"></script><script src="./modal.js"></script>
 <script>
 (function(){const UI=window.AltynBase;
 document.getElementById("demo-nav").append(UI.createNavbar({title:"Компоненты",onBack:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Назад»";},onHelp:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Помощь»";}}));
@@ -46,6 +47,12 @@ inputs.append(UI.createInput({label:"Назначение",placeholder:"Введ
 inputs.append(UI.createInput({label:"Фамилия",value:"Иванов",name:"surname"}));
 inputs.append(UI.createInput({label:"Номер карты",value:"1234",error:"Проверьте номер карты",name:"card"}));
 
+const modalDemo=document.getElementById("demo-modal");
+modalDemo.append(UI.createButton({label:"Открыть модалку",type:"secondary",size:"M",block:true,
+ onClick:()=>UI.openModal({title:"Документы для банка",items:[
+ {label:"Брокерский договор"},{label:"Подтверждение открытия брокерского счета"}
+ ],actions:[{label:"Закрыть",type:"primary"}]})
+}));
 const selectRoot=document.getElementById("demo-selects");
 const baseAssets=new URL("./assets/",document.baseURI);
 const countries=[

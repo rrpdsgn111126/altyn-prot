@@ -9,7 +9,7 @@
 | --- | --- | --- | --- |
 | 1 | Базовые: navbar, Button.mobile, Input.mobile, list.mobile, Checkbox | navbar, button, Input, list, checkbox | Частичная реализация, не все варианты |
 | 2 | Выбор: Switch.mob, RadioButton, RadioButton Label, Radio Button with Description, ToggleButton.mobile, ToggleBank | switch, radio, toggle | Основные состояния + размерные варианты перенесены в choices.js / choices.css |
-| 3 | Составной паттерн выбора через Bottom Sheet: searchable / plain, category icons | Altyn App modal + Input.mobile + list.mobile | Функциональная версия перенесена (частичная визуальная сверка) |\n| 4 | Расширенные формы: Input-phone.app, select-code, Helper text / S, Link | input-phone, Input, link | Не начато |
+| 3 | Составной паттерн выбора через Bottom Sheet: searchable / plain, category icons; **базовая модалка Secondary + белый список + Button.mobile/M** | Altyn App modal + Input.mobile + list.mobile | Функциональная версия перенесена (частичная визуальная сверка) |\n| 4 | Расширенные формы: Input-phone.app, select-code, Helper text / S, Link | input-phone, Input, link | Не начато |
 | 5 | Навигация: Tabs, Tabitem-button, TabBar / Item, TabBar / Center, Step, Wizard | tab, tabbar, steps | Не начато |
 | 6 | Состояния: tag 1.0, Badge, Notification, Spinner.mobile, verification.mobile | tag, Notification, loader, verification | Не начато |
 | 7 | Транзакции: trans.mobile, trans_v2.mobile, multilist.mobile | list | Не начато |

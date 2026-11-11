@@ -1,0 +1,44 @@
+/* Altyn App modal 18443:138108: Secondary surface, Primary list, Button.mobile/M */
+.ab-screen{position:relative}
+.ab-modal-overlay{
+  position:absolute;inset:0;z-index:1010;display:flex;align-items:flex-end;
+  isolation:isolate;overflow:hidden;box-sizing:border-box;
+}
+.ab-modal-backdrop{position:absolute;inset:0;background:rgba(33,30,29,.2)}
+.ab-modal-sheet{
+  box-sizing:border-box;position:relative;display:flex;flex-direction:column;width:100%;
+  max-height:calc(100% - var(--ab-status-height));min-height:0;overflow:hidden;
+  border-radius:var(--ab-radius-l) var(--ab-radius-l) 0 0;
+  background:var(--ab-modal-bg-secondary);color:var(--ab-ink);font-family:var(--ab-font);
+  box-shadow:0 -4px 5px rgba(0,0,0,.08);outline:0;
+}
+.ab-modal-sheet[data-surface="primary"]{background:var(--ab-white)}
+.ab-modal-handle-area{height:20px;flex:none;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y}
+.ab-modal-handle{width:56px;height:4px;border-radius:12px;background:#a09e9d}
+.ab-modal-header{flex:none;padding:0 var(--ab-screen-gutter) 16px}
+.ab-modal-title{margin:0;font:600 18px/27px var(--ab-font);overflow-wrap:anywhere}
+.ab-modal-scroll{min-height:0;flex:0 1 auto;overflow-y:auto;overscroll-behavior:contain}
+.ab-modal-content{padding:0 var(--ab-screen-gutter)}
+.ab-modal-list{
+  box-sizing:border-box;display:flex;flex-direction:column;overflow:hidden;
+  padding:0 16px;border-radius:var(--ab-modal-list-radius);
+  background:var(--ab-modal-list-bg);
+}
+.ab-modal-list-row{
+  box-sizing:border-box;display:flex;align-items:center;gap:16px;min-height:54px;width:100%;
+  padding:8px 0;border:0;border-bottom:1px solid var(--ab-border);
+  background:transparent;color:var(--ab-ink);text-align:left;
+  font:400 16px/24px var(--ab-font);
+}
+.ab-modal-list-row:last-child{border-bottom:0}
+button.ab-modal-list-row{cursor:pointer}
+button.ab-modal-list-row:focus-visible{outline:2px solid var(--ab-brand);outline-offset:-2px}
+.ab-modal-list-row__text{flex:1;min-width:0;overflow-wrap:anywhere}
+.ab-modal-list-row__icon{width:16px;height:16px;flex:none;object-fit:contain;display:grid;place-items:center}
+.ab-modal-actions{
+  box-sizing:border-box;flex:none;display:flex;flex-direction:column;gap:10px;
+  padding:24px var(--ab-screen-gutter) 16px;
+}
+.ab-modal-actions .ab-button[data-size="M"]{width:100%}
+.ab-modal-system{height:var(--ab-bottom-system-height);flex:none;display:grid;place-items:center}
+.ab-modal-system-handle{width:108px;height:4px;border-radius:4px;background:var(--ab-ink)}
