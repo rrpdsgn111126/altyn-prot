@@ -31,9 +31,12 @@
   function createInput(opts = {}) {
     const wrap = node("div","ab-field");
     wrap.dataset.figmaId = "77:12680";
+    const control = node("div","ab-input-control");
+    control.dataset.hasLabel = String(Boolean(opts.label));
     const input = node("input","ab-input");
     input.type = opts.type || "text";
-    if (opts.id) input.id = opts.id;
+    // A stable id is necessary both for an accessible in-field label and helper text.
+    input.id = opts.id || "ab-input-" + Math.random().toString(36).slice(2,10);
     if (opts.name) input.name = opts.name;
     if (opts.placeholder) input.placeholder = opts.placeholder;
     if (opts.value != null) input.value = String(opts.value);
@@ -41,22 +44,34 @@
     if (opts.disabled) input.disabled = true;
     if (opts.readOnly) input.readOnly = true;
     if (opts.error) input.setAttribute("aria-invalid","true");
+    control.append(input);
     if (opts.label) {
-      const caption = node("label","ab-field__caption",opts.label);
-      if (!input.id) input.id = "ab-input-" + Math.random().toString(36).slice(2,10);
+      const caption = node("label","ab-input-label",opts.label);
       caption.htmlFor = input.id;
-      wrap.append(caption);
+      control.append(caption);
     }
-    wrap.append(input);
+    wrap.append(control);
     const helperText = opts.error || opts.helper;
     if (helperText) {
       const helper = node("div","ab-field__helper",helperText);
       if (opts.error) helper.dataset.error = "true";
+      helper.id = input.id + "-helper";
       wrap.append(helper);
-      if (!helper.id) helper.id = input.id + "-helper";
       input.setAttribute("aria-describedby",helper.id);
     }
-    listen(input,"input",opts.onInput);
+    const updateState = () => {
+      const focused = document.activeElement === input;
+      const filled = input.value.length > 0;
+      // In Figma: Enable -> centered 16px label; Focus/Filled/Invalid -> 12px label above value.
+      control.dataset.floated = String(Boolean(opts.label) && (focused || filled || Boolean(opts.error)));
+      wrap.dataset.state = opts.disabled || opts.readOnly ? "disabled" :
+        opts.error ? "invalid" : focused ? "focus" : filled ? "filled" : "enable";
+    };
+    listen(input,"focus",updateState);
+    listen(input,"blur",updateState);
+    listen(input,"change",updateState);
+    listen(input,"input",() => { updateState(); if (typeof opts.onInput === "function") opts.onInput(input); });
+    updateState();
     return wrap;
   }
   function createNavbar(opts = {}) {

@@ -19,7 +19,7 @@
 <div class="ab-statusbar"><span>9:30</span><span>◆ ◢ ▰</span></div>
 <div id="demo-nav"></div>
 <main class="ab-main"><div class="ab-section" style="padding-top:16px;padding-bottom:16px">
-<h2 class="demo-heading">Компоненты формы</h2>
+<h2 class="demo-heading">Input.mobile — состояния</h2>
 <div class="ab-input-stack" id="demo-inputs"></div>
 <div class="demo-divider"></div>
 <h2 class="demo-heading">Список</h2><div class="demo-card"><div class="ab-list-group" id="demo-list" style="background:transparent;padding:0"></div></div>
@@ -28,7 +28,7 @@
 </div></main>
 <div class="ab-action-area" id="demo-action"></div><div class="ab-bottom-system"><span class="ab-bottom-system__handle"></span></div>
 </section></div>
-<aside class="sidebar"><h1>Altyn.Base / HTML</h1>
+<aside class="sidebar"><p><a href="../">Главная</a> · <a href="../physical-upay/">Прототип Upay</a></p><h1>Altyn.Base / HTML</h1>
 <p>Начальный кодовый слой. Не является полным экспортом дизайн-системы Figma.</p>
 <p>В дополнение к базовым элементам перенесены Switch.mob, RadioButton, ToggleButton.mobile, ToggleBank. Поддерживается функциональное подмножество вариантов; некоторые визуальные состояния ещё требуют сверки.</p>
 <p><a href="../docs/component-map.md">Карта компонентов</a> · <a href="../docs/design-system-migration-plan.md">План переноса</a> · <a href="../docs/mobile-screen-layout.md">Спецификация экранов</a> · <a href="./README.md">Подключение</a></p>
@@ -41,6 +41,7 @@
 document.getElementById("demo-nav").append(UI.createNavbar({title:"Компоненты",onBack:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Назад»";},onHelp:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Помощь»";}}));
 const inputs=document.getElementById("demo-inputs");
 inputs.append(UI.createInput({label:"Имя получателя",placeholder:"Введите имя",name:"recipient",helper:"Поле ввода"}));
+inputs.append(UI.createInput({label:"Фамилия",value:"Иванов",name:"surname"}));
 inputs.append(UI.createInput({label:"Номер карты",value:"1234",error:"Проверьте номер карты",name:"card"}));
 const list=document.getElementById("demo-list");
 list.append(UI.createListRow({label:"Страна",value:"Казахстан",onClick:()=>{document.getElementById("feedback").textContent="Выбрана страна";}}));

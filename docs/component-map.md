@@ -8,7 +8,7 @@
 | --- | --- | --- | --- |
 | `AltynBase.createNavbar`, `.ab-navbar` | [navbar](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=3741-4350) `3741:4350` | `State=left/Centr/centr+arrow`, `right icons` | базовые left/center, back/help |
 | `AltynBase.createButton`, `.ab-button` | [Button.mobile](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=2168-7054) `2168:7054` | 90 вариантов: Type=Primary/Secondary/Tertiary; State=Enable/Disabled/Focused/Loading/Pressed; Size=L/M/S; Lable=yes/no | Type, Size, Disabled, Loading; режим icon-only и точная анимация Loading не реализованы |
-| `AltynBase.createInput`, `.ab-input` | [Input.mobile](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=77-12680) `77:12680` | 14 вариантов: Enable, placeholder, Active/Focus, Filled, Invalid, Invalid+Active, Disabled; secondary Off/on | простой ввод, focus, filled browser-native, invalid, disabled, helper; встроенные иконки/secondary не реализованы |
+| `AltynBase.createInput`, `.ab-input` | [Input.mobile](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=77-12680) `77:12680` | 14 вариантов: Enable, placeholder, Active/Focus, Filled, Invalid, Invalid+Active, Disabled; secondary Off/on | label внутри 54px поля; при Enable пустом — 16px по центру, при Focus/Filled/Invalid — 12px сверху; placeholder/значение ниже, disabled, helper; иконки/secondary не реализованы |
 | `AltynBase.createListRow`, `.ab-list-row` | [list.mobile](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=2015-12843) `2015:12843` | 6 вариантов: Property 1=1/2/3, State=Enable/Disabled; иконки/радио/переключатель | строки с label/value, disabled, переход; сложные слоты отсутствуют |
 | `AltynBase.createCheckbox`, `.ab-checkbox-input` | [Checkbox](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=2983-17757) `2983:17757` | 72 варианта: Style=Default/Alternative/Positive/Negative; Enabled=Off/On/Mixed; Size=L/M; State=Default/Focused/Disabled | Default / On-Off / L / Focused / Disabled; Mixed и остальные Style не реализованы |
 
@@ -29,7 +29,7 @@
 
 - `Button.mobile`, Primary / L / Enable: 54 px; radius 12 px; horizontal padding 24 px; Inter 16 Semi Bold; заливка `#FFD119`, текст `#211E1D`.
 - Secondary / L / Enable: чёрный `#000000`, текст белый. Tertiary: прозрачный фон, рамка `#B9B7B7`. Disabled у кнопки: opacity 0.4.
-- `Input.mobile`, Enable: 54 px; radius 12 px; белый фон, рамка `#E9ECF0`; Focus — рамка `#FFD119`; Invalid — рамка `#DD4014`, фон `#FFF4F8`.
+- `Input.mobile`, Enable: 54 px; radius 12 px; белый фон, рамка `#E9ECF0`. **Label внутри поля:** пустой Enable — 16/24 px по центру; Focus/Filled/Invalid — 12/16 px с верхним отступом 8 px, значение/placeholder — 16/24 px под ним. Focus — рамка `#FFD119`; Invalid — рамка `#DD4014`, фон `#FFF4F8`. HTML переключает состояние по focus/input/blur, статическая Figma `secondary` пока не реализована.
 - `list.mobile`, базовая строка: 54 px; label Inter 12/16, value Inter 16/24; нижний бордер `#E9ECF0`.
 - `navbar`: 54 px; боковые поля 16 px; title Inter 18/24 Medium.
 - SVG `arrow-back.svg`, `chat.svg`, `check.svg` экспортированы из экземпляров Figma, а не перерисованы вручную.

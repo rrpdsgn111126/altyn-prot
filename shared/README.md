@@ -69,3 +69,9 @@ document.querySelector("#choices").append(
 ### Smoke tests
 
 `shared/tests/choices.html` выполняет браузерные проверки переключения, семантики и отключенных состояний; отчёт находится в элементе `#result`. Для полноценной визуальной регрессии нужны дополнительные скриншотные тесты на 375 и 390 px.
+
+## Input.mobile: label и состояния (2026-11-11)
+
+`createInput({label,placeholder,value,error,...})` размещает **label внутри 54px поля**: при пустом Enable — центрированный текст 16/24; при focus, заполненном значении или ошибке — верхний label 12/16 и место для value/placeholder снизу. Функция возвращает `.ab-field` (не отдельный `input`); настоящий HTML input доступен через `field.querySelector("input")` и сохраняет `name` / `id` / `required`. Состояния доступны как `field.dataset.state` и `.ab-input-control.dataset.floated`.
+
+При клике на label фокус передаётся связанному полю. `onInput(input)` получает оригинальный input DOM-узел. Дополнительные иконки и `secondary` пока не реализованы. Автотесты: `shared/tests/input.html`.

@@ -1,0 +1,31 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Input.mobile — regression</title><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../components.css"></head>
+<body><main id="area" style="max-width:343px;margin:16px"></main><pre id="result" role="status"></pre>
+<script src="../components.js"></script><script>
+(function(){
+const UI=window.AltynBase,area=document.getElementById("area"),results=[];
+const test=(name,check)=>{try{if(!check())throw Error("assertion failed");results.push("PASS "+name)}catch(e){results.push("FAIL "+name+" — "+e.message)}};
+const empty=UI.createInput({label:"ФИО",placeholder:"Введите ФИО",name:"fio",helper:"Подсказка"});area.append(empty);
+const filled=UI.createInput({label:"Счёт",name:"account",value:"1234"});area.append(filled);
+const invalid=UI.createInput({label:"Номер карты",name:"card",value:"123",error:"Неверный номер"});area.append(invalid);
+const disabled=UI.createInput({label:"Страна",name:"country",value:"Казахстан",disabled:true});area.append(disabled);
+const input=empty.querySelector("input");
+test("Empty: label is INSIDE 54px input control",()=>empty.querySelector(".ab-input-control > label")!==null&&empty.querySelector(".ab-field > label")===null&&empty.querySelector(".ab-input-control").dataset.floated==="false");
+test("Empty: label has correct accessible association",()=>empty.querySelector("label").htmlFor===input.id);
+test("Empty: 54px control height",()=>Math.abs(empty.querySelector(".ab-input-control").getBoundingClientRect().height-54)<1);
+test("Empty: 16px centered label",()=>{const l=empty.querySelector("label"),r=l.getBoundingClientRect(),c=empty.querySelector(".ab-input-control").getBoundingClientRect(),s=getComputedStyle(l);return s.fontSize==="16px"&&Math.abs((r.top+r.height/2)-(c.top+c.height/2))<=1;});
+test("Empty: placeholder hidden until focused",()=>getComputedStyle(input,"::placeholder").color==="rgba(0, 0, 0, 0)"||getComputedStyle(input,"::placeholder").color==="rgb(0, 0, 0, 0)");
+input.focus();
+test("Focus: label floats inside field",()=>empty.dataset.state==="focus"&&empty.querySelector(".ab-input-control").dataset.floated==="true"&&getComputedStyle(empty.querySelector("label")).fontSize==="12px");
+test("Focus: placeholder displayed",()=>getComputedStyle(input,"::placeholder").color!=="rgba(0, 0, 0, 0)");
+input.value="Петров";input.dispatchEvent(new Event("input",{bubbles:true}));input.blur();
+test("Filled: label remains floated after blur",()=>empty.dataset.state==="filled"&&empty.querySelector(".ab-input-control").dataset.floated==="true");
+input.value="";input.dispatchEvent(new Event("input",{bubbles:true}));
+test("Cleared: label returns to center",()=>empty.dataset.state==="enable"&&empty.querySelector(".ab-input-control").dataset.floated==="false");
+test("Value on init is floated",()=>filled.dataset.state==="filled"&&filled.querySelector(".ab-input-control").dataset.floated==="true");
+test("Invalid state retains floated label and error",()=>invalid.dataset.state==="invalid"&&invalid.querySelector("input").getAttribute("aria-invalid")==="true"&&invalid.querySelector(".ab-field__helper").dataset.error==="true");
+test("Disabled keeps filled label and cannot focus",()=>disabled.dataset.state==="disabled"&&disabled.querySelector("input").disabled);
+test("Field name and helper association preserved",()=>input.name==="fio"&&input.getAttribute("aria-describedby")===empty.querySelector(".ab-field__helper").id);
+const passed=results.filter(x=>x.startsWith("PASS")).length;
+document.getElementById("result").textContent=passed+"/"+results.length+" passed\n"+results.join("\n");document.documentElement.dataset.testsPassed=String(passed===results.length);
+})();
+</script></body></html>
