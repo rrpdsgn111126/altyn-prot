@@ -144,7 +144,7 @@
         "Type": "Yellow"
       },
       "state": "Yellow",
-      "size": "341×56 reference; multiline adaptive",
+      "size": "341×56 px in referenced Figma variant; multiline resizing unverified",
       "verification": "verified",
       "source": "Figma MCP verified actual component set, component and Type=Yellow"
     },
@@ -1195,7 +1195,7 @@
               "Type": "Yellow"
             },
             "state": "Yellow",
-            "size": "341×56 reference; multiline adaptive",
+            "size": "341×56 px in referenced Figma variant; multiline resizing unverified",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12405",
             "verification": "verified",
             "evidence": "Figma MCP verified actual component set, component and Type=Yellow"
@@ -1442,7 +1442,7 @@
               "Type": "Yellow"
             },
             "state": "Yellow",
-            "size": "341×56 reference; multiline adaptive",
+            "size": "341×56 px in referenced Figma variant; multiline resizing unverified",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12405",
             "verification": "verified",
             "evidence": "Figma MCP verified actual component set, component and Type=Yellow"
@@ -1689,7 +1689,7 @@
               "Type": "Yellow"
             },
             "state": "Yellow",
-            "size": "341×56 reference; multiline adaptive",
+            "size": "341×56 px in referenced Figma variant; multiline resizing unverified",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12405",
             "verification": "verified",
             "evidence": "Figma MCP verified actual component set, component and Type=Yellow"
@@ -1936,7 +1936,7 @@
               "Type": "Yellow"
             },
             "state": "Yellow",
-            "size": "341×56 reference; multiline adaptive",
+            "size": "341×56 px in referenced Figma variant; multiline resizing unverified",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12405",
             "verification": "verified",
             "evidence": "Figma MCP verified actual component set, component and Type=Yellow"
@@ -2308,7 +2308,7 @@
               "Type": "Yellow"
             },
             "state": "Yellow",
-            "size": "341×56 reference; multiline adaptive",
+            "size": "341×56 px in referenced Figma variant; multiline resizing unverified",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12405",
             "verification": "verified",
             "evidence": "Figma MCP verified actual component set, component and Type=Yellow"
@@ -2722,7 +2722,7 @@
               "Type": "Yellow"
             },
             "state": "Yellow",
-            "size": "341×56 reference; multiline adaptive",
+            "size": "341×56 px in referenced Figma variant; multiline resizing unverified",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12405",
             "verification": "verified",
             "evidence": "Figma MCP verified actual component set, component and Type=Yellow"
