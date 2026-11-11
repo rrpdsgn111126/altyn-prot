@@ -1240,7 +1240,8 @@
             "componentSetId": "77:12680",
             "componentId": null,
             "componentProperties": {
-              "State": "Enable"
+              "State": "Enable",
+              "sIcon R#2179:0": false
             },
             "state": "Enable",
             "size": "54 px",
@@ -1735,16 +1736,40 @@
             "figmaComponent": "Input.mobile",
             "componentSetId": "77:12680",
             "componentId": null,
-            "componentProperties": {},
+            "componentProperties": {
+              "🎚️ State": "Filled",
+              "secondary": "Off",
+              "sIcon R#2179:0": true,
+              "sIcon.w R#2179:8": "15728:6254"
+            },
             "state": "Filled",
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified",
+            "evidence": "Verified native trailing flag in the Filled Input.mobile instance in Altyn App.",
             "trailingIcon": {
               "figmaComponent": "Services icons / Flag",
               "componentId": "15728:6254",
-              "scope": "Resolved in Altyn App"
+              "scope": "Resolved in Altyn App",
+              "slot": "Addons",
+              "selectionProperty": "sIcon.w R#2179:8",
+              "nestedComponent": "Round flags",
+              "nestedVariantProperty": "Property 1",
+              "variants": {
+                "RU": {
+                  "value": "russia",
+                  "componentId": "17:6007"
+                },
+                "KZ": {
+                  "value": "kazakhstan",
+                  "componentId": "17:5471"
+                },
+                "AE": {
+                  "value": "united arab emirates",
+                  "componentId": "17:6465"
+                }
+              },
+              "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18863-18621"
             }
           },
           "verification": "partial",
@@ -2358,7 +2383,8 @@
             "componentSetId": "77:12680",
             "componentId": null,
             "componentProperties": {
-              "State": "Enable"
+              "State": "Enable",
+              "sIcon R#2179:0": false
             },
             "state": "Enable",
             "size": "54 px",
