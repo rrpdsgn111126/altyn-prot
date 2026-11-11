@@ -152,7 +152,7 @@ function field(id,label,placeholder,max,opt){return '<label class="field"><span 
 function catalog(){
 return '<div class="stage-inner wide"><div class="card-chooser">'+card(false)+'</div><div class="stage-inner">'
 +'<div class="main-box">'
-+info('Где можно платить','Онлайн-оплата доступна сразу после заказа.'+String.fromCharCode(10)+'Пластиковой картой можно пользоваться после получения',true)
++info('Где можно платить','Онлайн-оплата доступна сразу после заказа. Пластиковой картой можно пользоваться после получения',true)
 +info('Тип карты','Физическая Upay')
 +info('Стоимость выпуска',model.price)
 +info('Доставка','Включена в стоимость')
@@ -174,7 +174,7 @@ return '<div class="stage-inner">'
 }
 function review(){
 return '<div class="stage-inner">'
-+'<div class="list-group">'+line('Карта','Физическая Upay')+line('Где можно платить','Онлайн-оплата доступна сразу после заказа.'+String.fromCharCode(10)+'Пластиковой картой можно пользоваться после получения')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
++'<div class="list-group">'+line('Карта','Физическая Upay')+line('Где можно платить','Онлайн-оплата доступна сразу после заказа. Пластиковой картой можно пользоваться после получения')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
 +'<div class="list-group">'+line('ФИО получателя',form.recipient_name)+line('Номер телефона',form.phone)+line('Страна',countryNames[form.country_code]||'')+line('Город',form.city)+line('Адрес доставки',form.address)+(form.postal_code?line('Почтовый индекс',form.postal_code):'')+'</div>'
 +errorBanner()
 +'</div>';
