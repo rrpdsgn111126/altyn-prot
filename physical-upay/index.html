@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Altyn · Выпуск физической карты Upay</title>
+<link rel="stylesheet" href="../shared/tokens.css">
+<link rel="stylesheet" href="../shared/components.css">
+<link rel="stylesheet" href="../shared/select-sheet.css">
 <style>
 :root{--yellow:#ffd119;--bg:#f6f7f8;--white:#fff;--ink:#211e1d;--muted:#837f7f;--border:#e9ecf0;--error:#c44837;--accent:#d69500}
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;font:14px/1.4 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#e9ebee}
@@ -58,6 +61,10 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 .input-mobile:not(.is-filled):not(:focus-within) .input-mobile__select{color:transparent}
 .input-mobile__select option{color:var(--ink)}
 .delivery-form .field-error{display:block;margin:4px 0 0 16px;color:var(--error);font-size:12px;line-height:16px}
+.country-picker-slot{width:100%;min-width:0}
+.country-picker-slot .ab-field{width:100%}
+.country-picker-slot .ab-select-trigger{font-family:var(--ab-font)}
+.country-picker-slot .ab-field__helper[data-error="true"]{display:block;margin-top:0;padding-inline:16px;color:var(--ab-error)}
 .delivery-form .warning{margin:4px 0 0}
 .headline{font-size:19px;line-height:25px;font-weight:650;margin:2px 0 12px}.intro{font-size:13px;color:var(--muted);line-height:19px;margin:0 0 20px}
 .list-group{background:var(--bg);border-radius:12px;padding:0 16px;margin-bottom:12px}.list-group h2{font-size:13px;font-weight:700;padding-top:15px;margin:0 0 2px}
@@ -169,6 +176,8 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 </aside>
 <aside class="annotation" aria-label="Аннотации компонентов"><h2>Компоненты Figma</h2><p>Разметка активного экрана — справа от прототипа</p><div id="component-map"></div><p style="margin-top:16px"><a href="https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=58-7058" target="_blank" rel="noreferrer">Библиотека Altyn.Base</a></p></aside>
 </main>
+<script src="../shared/components.js"></script>
+<script src="../shared/select-sheet.js"></script>
 <script>
 (function(){
 'use strict';
@@ -205,11 +214,31 @@ function delivery(){
 return '<div class="stage-inner"><div class="delivery-form">'
 +field('recipient_name','ФИО получателя','Как в паспорте',255,false)
 +field('phone','Номер телефона','Код страны и номер',32,false)
-+'<label class="field"><span class="input-mobile'+(form.country_code?' is-filled':'')+(errors.country_code?' is-invalid':'')+'" data-figma-component="input.mobile"><span class="input-mobile__label">Страна доставки</span><select class="input-mobile__control input-mobile__select'+(errors.country_code?' invalid':'')+'" data-field="country_code" required><option value="">Выберите страну</option>'
-+Object.keys(countryNames).map(function(k){return '<option value="'+k+'"'+(form.country_code===k?' selected':'')+'>'+countryNames[k]+'</option>'}).join('')+'</select></span>'
-+(errors.country_code?'<span class="field-error">'+safe(errors.country_code)+'</span>':'')+'</label>'
++'<div id="country-select-slot" class="country-picker-slot" data-figma-component="Input.mobile + selection sheet"></div>'
 +field('city','Город','Укажите город',128,false)+field('address','Адрес доставки','Улица, дом, квартира',512,false)
 +'<div class="warning" data-figma-component="Notification" data-figma-variant="Type=Yellow" data-figma-node-id="4228:12405" data-figma-reference="https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12406">Доставка входит в стоимость выпуска. Изменить адрес после создания заказа нельзя</div></div></div>';
+}
+function mountCountrySelector(){
+var slot=$('country-select-slot');if(!slot)return;
+var picker=AltynBase.createSelectField({
+ id:'country_code',name:'country_code',label:'Страна доставки',title:'Выберите страну',kind:'country',
+ value:form.country_code||'',host:$('mobile'),searchable:false,
+ items:[{id:'RU',value:'RU',label:countryNames.RU,icon:'🇷🇺'},{id:'KZ',value:'KZ',label:countryNames.KZ,icon:'🇰🇿'},{id:'AE',value:'AE',label:countryNames.AE,icon:'🇦🇪'}],
+ onChange:function(item,value){
+  form.country_code=value;delete errors.country_code;
+  var control=picker.querySelector('.ab-select-trigger');
+  if(control){control.dataset.invalid='false';control.removeAttribute('aria-invalid');control.classList.remove('invalid')}
+  var helper=picker.querySelector('.ab-field__helper[data-error="true"]');if(helper)helper.remove();
+ }
+});
+var control=picker.querySelector('.ab-select-trigger');
+control.setAttribute('aria-required','true');
+if(errors.country_code){
+ control.dataset.invalid='true';control.setAttribute('aria-invalid','true');control.classList.add('invalid');
+ var helper=document.createElement('span');helper.className='ab-field__helper';helper.dataset.error='true';helper.textContent=errors.country_code;
+ helper.id='country-code-error';control.setAttribute('aria-describedby',helper.id);picker.append(helper);
+}
+slot.append(picker);
 }
 function review(){
 return '<div class="stage-inner">'
@@ -286,7 +315,7 @@ else footer.innerHTML='';
 }
 function updateAnnotations(){
 var steps={catalog:[['navbar','Верхняя навигация'],['cards bank','Зелёная карта YouPay'],['list.mobile','Условия и стоимость'],['Button.mobile','Создать карту']],
-delivery:[['navbar','Верхняя навигация'],['input.mobile','Данные получателя и доставки'],['Notification · Type=Yellow','Условия доставки · Altyn.Base 4228:12405'],['Button.mobile','Продолжить']],
+delivery:[['navbar','Верхняя навигация'],['input.mobile','ФИО, телефон, город, адрес'],['Input.mobile + modal + list.mobile','Страна доставки · AltynBase.createSelectField'],['Notification · Type=Yellow','Условия доставки · Altyn.Base 4228:12405'],['Button.mobile','Продолжить']],
 review:[['navbar','Верхняя навигация'],['list.mobile','Данные карты и получателя'],['Button.mobile','Подтвердить']],
 status:isErrorStatus()?[['modal / Pop up','Нижнее модальное окно статуса'],['Button.mobile','Связаться с поддержкой']]:[['cards bank','Размытая карта'],['ToggleButton.mobile','Скоро будет готова'],['Button.mobile','Добавить ещё одну карту и Как пользоваться']],
 issued:[['cards bank','Выпущенная карта'],['Button.mobile','Действия с картой'],['list.mobile','Лимиты и реквизиты'],['Switch.Value','Лимит на операции']]};
@@ -302,6 +331,7 @@ $('title').textContent=waiting?'Карта Алтын':{catalog:'Оформле�
 $('back').style.visibility=['catalog','status','issued'].includes(step)?'hidden':'visible';
 $('help').style.visibility=step==='issued'||waiting?'visible':'hidden';
 view.innerHTML=step==='catalog'?catalog():step==='delivery'?delivery():step==='review'?review():step==='status'?orderView():issued();
+if(step==='delivery')mountCountrySelector();
 refreshFooter();
 if(isErrorStatus())showStatusDialog();
 else if(modal.dataset.kind==='status'){modal.innerHTML='';modal.dataset.kind=''}
