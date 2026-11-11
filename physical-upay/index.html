@@ -43,9 +43,22 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 .primary{background:var(--yellow);color:var(--ink)}.primary:hover:not(:disabled){background:#f2c610}
 .secondary{background:var(--bg);color:var(--ink)}
 .foot-note{font-size:11px;text-align:center;color:var(--muted);margin:8px 4px 0;line-height:1.45}
-.field{margin:0 0 12px;display:block}.label{display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600;margin:0 0 7px}.label .optional{font-size:11px;font-weight:400;color:var(--muted)}
-.input{display:block;width:100%;height:54px;border-radius:12px;border:1px solid var(--border);padding:0 14px;background:white;font-size:15px;color:var(--ink)}
-.input::placeholder{color:#a5a5a5}.input.invalid{border-color:var(--error);background:#fffafa}.field-error{font-size:11px;color:var(--error);margin:4px 0 0;display:block}
+.delivery-form{display:flex;flex-direction:column;gap:12px}
+.delivery-form .field{display:block;min-width:0}
+.input-mobile{position:relative;display:block;width:100%;height:54px;border:1px solid var(--border);border-radius:12px;background:#fff}
+.input-mobile:focus-within{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.input-mobile.is-invalid{border-color:var(--error);background:#fffafa}
+.input-mobile__label{position:absolute;left:16px;top:14px;right:16px;color:var(--muted);font-size:16px;font-weight:400;line-height:24px;pointer-events:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.input-mobile:focus-within .input-mobile__label,.input-mobile.is-filled .input-mobile__label{top:7px;font-size:12px;line-height:16px}
+.input-mobile__control{position:absolute;top:23px;left:16px;width:calc(100% - 32px);height:24px;border:0;border-radius:0;padding:0;margin:0;background:transparent;color:var(--ink);font-size:16px;font-weight:400;line-height:24px;min-width:0;outline:none}
+.input-mobile__control:focus-visible{outline:none}
+.input-mobile__control::placeholder{color:var(--muted);opacity:0}
+.input-mobile:focus-within .input-mobile__control::placeholder{opacity:1}
+.input-mobile__select{width:calc(100% - 32px);padding-right:0;cursor:pointer}
+.input-mobile:not(.is-filled):not(:focus-within) .input-mobile__select{color:transparent}
+.input-mobile__select option{color:var(--ink)}
+.delivery-form .field-error{display:block;margin:4px 0 0 16px;color:var(--error);font-size:12px;line-height:16px}
+.delivery-form .warning{margin:4px 0 0}
 .headline{font-size:19px;line-height:25px;font-weight:650;margin:2px 0 12px}.intro{font-size:13px;color:var(--muted);line-height:19px;margin:0 0 20px}
 .list-group{background:var(--bg);border-radius:12px;padding:0 16px;margin-bottom:12px}.list-group h2{font-size:13px;font-weight:700;padding-top:15px;margin:0 0 2px}
 .summary-row{padding:8px 0;border-bottom:1px solid var(--border);min-height:54px;display:flex;flex-direction:column;justify-content:center;gap:2px}
@@ -148,7 +161,10 @@ function card(issued){return '<div class="plastic" role="img" aria-label="Зел
 function info(key,value,small){return '<div class="info-row"><span class="key">'+key+'</span><span class="value'+(small?' sm':'')+'">'+safe(value)+'</span></div>'}
 function line(key,value){return '<div class="summary-row"><span class="key">'+key+'</span><span class="value">'+safe(value)+'</span></div>'}
 function errorBanner(){return notice?'<div class="error-message" role="alert">'+safe(notice)+'</div>':''}
-function field(id,label,placeholder,max,opt){return '<label class="field"><span class="label">'+label+(opt?'<span class="optional">Необязательно</span>':'')+'</span><input class="input'+(errors[id]?' invalid':'')+'" type="text" data-field="'+id+'" maxlength="'+max+'" value="'+safe(form[id]||'')+'" placeholder="'+safe(placeholder)+'">'+(errors[id]?'<span class="field-error">'+safe(errors[id])+'</span>':'')+'</label>'}
+function field(id,label,placeholder,max,opt){
+var value=form[id]||'';
+return '<label class="field"><span class="input-mobile'+(value?' is-filled':'')+(errors[id]?' is-invalid':'')+'" data-figma-component="input.mobile"><span class="input-mobile__label">'+safe(label+(opt?' (необязательно)':''))+'</span><input class="input-mobile__control'+(errors[id]?' invalid':'')+'" type="text" data-field="'+id+'" maxlength="'+max+'" value="'+safe(value)+'" placeholder="'+safe(placeholder)+'"></span>'+(errors[id]?'<span class="field-error">'+safe(errors[id])+'</span>':'')+'</label>'
+}
 function catalog(){
 return '<div class="stage-inner wide"><div class="card-chooser">'+card(false)+'</div><div class="stage-inner">'
 +'<div class="main-box">'
@@ -163,14 +179,14 @@ return '<div class="stage-inner wide"><div class="card-chooser">'+card(false)+'<
 +errorBanner()+'</div></div>';
 }
 function delivery(){
-return '<div class="stage-inner">'
+return '<div class="stage-inner"><div class="delivery-form">'
 +field('recipient_name','ФИО получателя','Фамилия Имя Отчество',255,false)
 +field('phone','Номер телефона','+7 999 000-00-00',32,false)
-+'<label class="field"><span class="label">Страна доставки</span><select class="input'+(errors.country_code?' invalid':'')+'" data-field="country_code"><option value="">Выберите страну</option>'
-+Object.keys(countryNames).map(function(k){return '<option value="'+k+'"'+(form.country_code===k?' selected':'')+'>'+countryNames[k]+'</option>'}).join('')+'</select>'
++'<label class="field"><span class="input-mobile'+(form.country_code?' is-filled':'')+(errors.country_code?' is-invalid':'')+'" data-figma-component="input.mobile"><span class="input-mobile__label">Страна доставки</span><select class="input-mobile__control input-mobile__select'+(errors.country_code?' invalid':'')+'" data-field="country_code" required><option value="">Выберите страну</option>'
++Object.keys(countryNames).map(function(k){return '<option value="'+k+'"'+(form.country_code===k?' selected':'')+'>'+countryNames[k]+'</option>'}).join('')+'</select></span>'
 +(errors.country_code?'<span class="field-error">'+safe(errors.country_code)+'</span>':'')+'</label>'
 +field('city','Город','Город',128,false)+field('address','Адрес доставки','Улица, дом, корпус, квартира',512,false)+field('postal_code','Почтовый индекс','Индекс',32,true)
-+'<div class="warning">Доставка входит в стоимость выпуска. Изменить адрес после создания заказа нельзя</div></div>';
++'<div class="warning">Доставка входит в стоимость выпуска. Изменить адрес после создания заказа нельзя</div></div></div>';
 }
 function review(){
 return '<div class="stage-inner">'
@@ -270,8 +286,9 @@ poll();
 }
 function reset(){++session;step='catalog';form={};errors={};notice='';plasticPending=false;limitEnabled=true;busy=false;orderId=null;orderStatus='';requestSnapshot=null;retryNeeded=false;logEntries=[];api('GET','/cards/templates/');render();view.scrollTop=0}
 function openInfo(){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" role="dialog" aria-modal="true" aria-label="Как пользоваться картой"><div class="handle"></div><h2>Как пользоваться картой</h2><h3>Онлайн-платежи</h3><p>Онлайн-оплата доступна сразу после заказа</p><h3>Пластиковая карта</h3><p>Пластиковую карту доставляют отдельно, после получения ей можно пользоваться</p><h3>Данные доставки</h3><p>После создания заказа изменить адрес доставки нельзя</p>'+button('Понятно','close-modal')+'</div></div>'}
-document.addEventListener('input',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key]}});
-document.addEventListener('change',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key]}});
+function syncInputMobileState(element){var wrapper=element.closest('.input-mobile');if(wrapper)wrapper.classList.toggle('is-filled',Boolean(element.value))}
+document.addEventListener('input',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key];syncInputMobileState(event.target)}});
+document.addEventListener('change',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key];syncInputMobileState(event.target)}});
 document.addEventListener('click',function(event){
 var btnTarget=event.target.closest('[data-action]');if(!btnTarget)return;
 var action=btnTarget.dataset.action;
