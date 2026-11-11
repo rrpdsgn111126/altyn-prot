@@ -12,6 +12,19 @@
 | `AltynBase.createListRow`, `.ab-list-row` | [list.mobile](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=2015-12843) `2015:12843` | 6 вариантов: Property 1=1/2/3, State=Enable/Disabled; иконки/радио/переключатель | строки с label/value, disabled, переход; сложные слоты отсутствуют |
 | `AltynBase.createCheckbox`, `.ab-checkbox-input` | [Checkbox](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=2983-17757) `2983:17757` | 72 варианта: Style=Default/Alternative/Positive/Negative; Enabled=Off/On/Mixed; Size=L/M; State=Default/Focused/Disabled | Default / On-Off / L / Focused / Disabled; Mixed и остальные Style не реализованы |
 
+## Группа выбора: реализовано в choices.js / choices.css
+
+| Реализация | Компонент Figma и ID | Варианты | HTML |
+| --- | --- | --- | --- |
+| `AltynBase.createSwitch` | [Switch.mob](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=3254-14282) `3254:14282` | 20: XL/L/M × On/Off × success/info, с иконкой для XL/L | Семантика `checkbox[role=switch]`, смена состояния, размеры и темы |
+| `AltynBase.createRadio` | [RadioButton](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=2307-8237) `2307:8237` | 24: Primary/Alternative × Regular/Small × On/Off × Default/Focused/Disabled | Нативный radio, стили, disabled, focus |
+| `AltynBase.createRadio({label})` | [RadioButton Label](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=2307-8344) `2307:8344` | 24 варианта | Подпись, выбор по клику по label |
+| `AltynBase.createRadio({description})` | [Radio Button with Description](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=2307-8499) `2307:8499` | Regular/Small | Текст описания с отступом 32px |
+| `AltynBase.createToggleButton` | [ToggleButton.mobile](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=2360-8748) `2360:8748` | 36: L/M/S × Enable/Active/Pressed/Focused/Disabled/Loading × Label yes/no | `aria-pressed`, размеры, Active/Disabled/Loading, оригинальная иконка Tile |
+| `AltynBase.createToggleBank` | [ToggleBank](https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/?node-id=4545-3398) `4545:3398` | 18: L/M/S × Enable/Active/Pressed/Focused/Disabled/Loading | `aria-pressed`, размеры, локальная банковская иконка, подмена iconSrc |
+
+`createRadioGroup` — **новый HTML-хелпер**, не оригинальный Figma-компонент. Все новые элементы работают без обращения к API. Внешняя идентичность всех 20/24/36/18 Figma-вариантов пока не подтверждена по пикселям; запланирован отдельный визуальный аудит.
+
 ## Проверенные визуальные параметры
 
 - `Button.mobile`, Primary / L / Enable: 54 px; radius 12 px; horizontal padding 24 px; Inter 16 Semi Bold; заливка `#FFD119`, текст `#211E1D`.
@@ -24,7 +37,7 @@
 
 ## Ещё не перенесено
 
-В Altyn.Base также есть `Button vertical.mobile`, `trans_v2.mobile`, `Input-phone.app`, `Tabitem-button`, `tag 1.0`, `pin.mobile`, `Switch.mob`, `ToggleBank`, `Statusbar`, `radio` и другие компоненты. Их **нельзя считать реализованными** на основании настоящего каталога.
+В Altyn.Base также есть `Button vertical.mobile`, `trans_v2.mobile`, `Input-phone.app`, `Tabitem-button`, `tag 1.0`, `pin.mobile`, `Statusbar` и другие компоненты. Их **нельзя считать реализованными** на основании настоящего каталога.
 
 Иконки для будущих компонентов экспортировать в локальные SVG с указанием Figma node ID. Не использовать временные ссылки `/api/mcp/asset/` в коде: они имеют ограниченный срок действия.
 

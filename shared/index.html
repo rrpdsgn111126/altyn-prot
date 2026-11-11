@@ -2,7 +2,7 @@
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Altyn.Base — HTML-компоненты</title>
-<link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./components.css">
+<link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./components.css"><link rel="stylesheet" href="./choices.css">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#e9ebee;font:14px/1.5 var(--ab-font);color:var(--ab-ink)}
 .catalog{display:flex;justify-content:center;align-items:flex-start;gap:28px;padding:24px}
@@ -24,18 +24,18 @@
 <div class="demo-divider"></div>
 <h2 class="demo-heading">Список</h2><div class="demo-card"><div class="ab-list-group" id="demo-list" style="background:transparent;padding:0"></div></div>
 <div class="demo-divider"></div><div id="demo-checkbox"></div>
-<div class="demo-mini" id="demo-buttons"></div>
+<div class="demo-divider"></div><h2 class="demo-heading">Элементы выбора</h2><div id="demo-switches" class="demo-card"></div><div class="demo-divider"></div><div id="demo-radios" class="demo-card"></div><div class="demo-divider"></div><div id="demo-toggle-buttons" class="demo-mini" style="flex-wrap:wrap"></div><div id="demo-toggle-banks" class="demo-mini"></div><div class="demo-divider"></div><h2 class="demo-heading">Действия</h2><div class="demo-mini" id="demo-buttons"></div>
 </div></main>
 <div class="ab-action-area" id="demo-action"></div><div class="ab-bottom-system"><span class="ab-bottom-system__handle"></span></div>
 </section></div>
 <aside class="sidebar"><h1>Altyn.Base / HTML</h1>
 <p>Начальный кодовый слой. Не является полным экспортом дизайн-системы Figma.</p>
-<p>Из Figma перенесены референсы для navbar, Button.mobile, Input.mobile, list.mobile и Checkbox; реализовано базовое подмножество их свойств.</p>
-<p><a href="../docs/component-map.md">Карта компонентов</a> · <a href="../docs/mobile-screen-layout.md">Спецификация экранов</a> · <a href="./README.md">Подключение</a></p>
-<p>Проверка: измените текст инпута, отметьте чекбокс, нажмите основную кнопку. Демонстрационная логика работает локально и не вызывает API.</p>
+<p>В дополнение к базовым элементам перенесены Switch.mob, RadioButton, ToggleButton.mobile, ToggleBank. Поддерживается функциональное подмножество вариантов; некоторые визуальные состояния ещё требуют сверки.</p>
+<p><a href="../docs/component-map.md">Карта компонентов</a> · <a href="../docs/design-system-migration-plan.md">План переноса</a> · <a href="../docs/mobile-screen-layout.md">Спецификация экранов</a> · <a href="./README.md">Подключение</a></p>
+<p>Проверка: переключите Switch, выберите Radio, нажмите ToggleButton/ToggleBank. Демонстрационная логика локальная; API не вызывается.</p>
 <p><code>../shared/tokens.css</code><br><code>../shared/components.css</code><br><code>../shared/components.js</code></p>
 </aside></div>
-<script src="./components.js"></script>
+<script src="./components.js"></script><script src="./choices.js"></script>
 <script>
 (function(){const UI=window.AltynBase;
 document.getElementById("demo-nav").append(UI.createNavbar({title:"Компоненты",onBack:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Назад»";},onHelp:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Помощь»";}}));
@@ -47,6 +47,18 @@ list.append(UI.createListRow({label:"Страна",value:"Казахстан",on
 list.append(UI.createListRow({label:"Метод",value:"Банковская карта"}));
 document.getElementById("demo-checkbox").append(UI.createCheckbox({label:"Согласен с условиями",name:"consent",onChange:()=>{document.getElementById("feedback").textContent="Согласие изменено";}}));
 document.getElementById("demo-buttons").append(UI.createButton({label:"Secondary",type:"secondary",size:"M",onClick:()=>{document.getElementById("feedback").textContent="Secondary";}}),UI.createButton({label:"Tertiary",type:"tertiary",size:"M",onClick:()=>{document.getElementById("feedback").textContent="Tertiary";}}));
+const switches=document.getElementById("demo-switches");
+switches.append(UI.createSwitch({label:"Уведомления",checked:true,size:"XL",theme:"success",onChange:(on)=>{document.getElementById("feedback").textContent="Уведомления: "+(on?"включены":"выключены");}}));
+switches.append(document.createElement("div")).className="demo-divider";
+switches.append(UI.createSwitch({label:"Дополнительная защита",checked:false,size:"L",theme:"info",icon:true}));
+const radios=document.getElementById("demo-radios");
+radios.append(UI.createRadioGroup({name:"paymethod",label:"Способ оплаты",value:"card",options:[{label:"Банковская карта",value:"card"},{label:"Банковский перевод",value:"bank",description:"Средства поступят после подтверждения банком."}],onChange:(v)=>{document.getElementById("feedback").textContent="Метод: "+v;}}));
+const toggleWrap=document.getElementById("demo-toggle-buttons");
+toggleWrap.append(UI.createToggleButton({label:"Основной",size:"M",active:true,icon:false,onChange:(v)=>{document.getElementById("feedback").textContent="Основной: "+v;}}));
+toggleWrap.append(UI.createToggleButton({label:"Дополнительный",size:"M",icon:false,onChange:(v)=>{document.getElementById("feedback").textContent="Дополнительный: "+v;}}));
+const bankWrap=document.getElementById("demo-toggle-banks");
+bankWrap.append(UI.createToggleBank({label:"Банк",size:"L",active:true}));
+bankWrap.append(UI.createToggleBank({label:"Другой",size:"S",onChange:(v)=>{document.getElementById("feedback").textContent="Другой банк: "+v;}}));
 const action=document.getElementById("demo-action");
 action.append(UI.createButton({label:"Продолжить",type:"primary",block:true,onClick:()=>{const f=inputs.querySelector('input[name="recipient"]'); const checkbox=document.querySelector('input[name="consent"]');document.getElementById("feedback").textContent=f.value.trim()&&checkbox.checked?"Поля заполнены":"Заполните имя и отметьте согласие";}}));
 const msg=document.createElement("div");msg.id="feedback";msg.setAttribute("role","status");msg.style="font:12px/16px var(--ab-font);color:var(--ab-muted);margin-top:8px;text-align:center;min-height:16px";action.append(msg);

@@ -1,0 +1,33 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Altyn selection controls — smoke tests</title></head>
+<body><main id="mount"></main><pre id="result" role="status"></pre>
+<script src="../components.js"></script><script src="../choices.js"></script>
+<script>
+(function(){
+  const U=window.AltynBase, mount=document.getElementById("mount"), result=[];
+  const test=(name,fn)=>{try{fn();result.push({name,pass:true});}catch(e){result.push({name,pass:false,error:String(e)});}};
+  const assert=(cond,msg)=>{if(!cond)throw Error(msg);};
+  test("Methods registered alongside original components",()=>assert(typeof U.createButton==="function"&&typeof U.createSwitch==="function"&&typeof U.createToggleBank==="function","missing methods"));
+  let swCall=null;
+  const sw=U.createSwitch({label:"Test",onChange:(v)=>swCall=v}); mount.append(sw);
+  test("Switch initial role, size, unchecked",()=>{const i=sw.querySelector("input"); assert(i.getAttribute("role")==="switch"&&sw.dataset.size==="XL"&&!i.checked,"role/size/value");});
+  test("Switch change updates callback",()=>{const i=sw.querySelector("input");i.click();assert(i.checked&&swCall===true,"switch not toggled");});
+  test("Disabled Switch prevents click",()=>{const s=U.createSwitch({disabled:true,checked:false});mount.append(s);s.querySelector("input").click();assert(!s.querySelector("input").checked,"disabled switch toggled");});
+  let choice="";
+  const group=U.createRadioGroup({name:"smokeRadio",label:"Choose",options:[{label:"A",value:"a"},{label:"B",value:"b"}],value:"a",onChange:(v)=>choice=v});mount.append(group);
+  test("Radio group exactly one initially selected",()=>assert(group.querySelectorAll('input[type="radio"]:checked').length===1,"selection"));
+  test("Radio mutual exclusion and callback",()=>{const i=group.querySelectorAll('input[type="radio"]');i[1].click();assert(i[1].checked&&!i[0].checked&&choice==="b","group mutual exclusion");});
+  test("Radio description and alternative style",()=>{const r=U.createRadio({label:"Test",description:"Extra",style:"Alternative",size:"Small"});mount.append(r);assert(r.dataset.figmaId==="2307:8499"&&r.dataset.style==="Alternative"&&r.dataset.size==="Small"&&!!r.querySelector(".ab-radio__description"),"description/style");});
+  let tbValue=null;const tb=U.createToggleButton({label:"X",active:false,onChange:(v)=>tbValue=v});mount.append(tb);
+  test("ToggleButton aria-pressed and onChange",()=>{tb.click();assert(tb.getAttribute("aria-pressed")==="true"&&tbValue===true,"toggle button");});
+  const tbd=U.createToggleButton({label:"X",disabled:true}); mount.append(tbd);
+  test("Disabled ToggleButton remains off",()=>{tbd.click();assert(tbd.getAttribute("aria-pressed")==="false","disabled");});
+  let bankV=null;const bank=U.createToggleBank({label:"Банк",onChange:(v)=>bankV=v});mount.append(bank);
+  test("ToggleBank click, bank asset and callback",()=>{bank.click();assert(bankV===true&&bank.getAttribute("aria-pressed")==="true"&&bank.querySelector('img').getAttribute("src").endsWith("/assets/bank.svg"),"bank");});
+  test("Bank Loading blocks input",()=>{const n=U.createToggleBank({loading:true});mount.append(n);n.click();assert(n.disabled&&n.getAttribute("aria-pressed")==="false"&&n.getAttribute("aria-busy")==="true","loading");});
+  test("No temporary asset URLs",()=>assert(!mount.innerHTML.includes("/api/mcp/asset/"),"temporary asset URL"));
+  const passed=result.filter(x=>x.pass).length;
+  document.getElementById("result").textContent=passed+"/"+result.length+" passed\n"+result.map(x=>(x.pass?"PASS ":"FAIL ")+x.name+(x.error?" "+x.error:"")).join("\n");
+  document.documentElement.dataset.testsPassed=String(passed===result.length);
+  window.AltynBaseSmokeTests=result;
+})();
+</script></body></html>

@@ -32,3 +32,40 @@ API: `createButton({label,type, size,block,disabled,loading,onClick})`, `createI
 **Витрина:** `shared/index.html`, прямой адрес после публикации GitHub Pages: `https://rrpdsgn111126.github.io/altyn-prot/shared/`.
 
 **Спецификации:** [карта соответствий](../docs/component-map.md), [правила экранов](../docs/mobile-screen-layout.md). Не путать подсистему CSS с нативной библиотекой Figma: пока это частичная реализация.
+
+## Выбор и переключатели (дополнительный модуль)
+
+Подключайте после базовой библиотеки:
+
+```html
+<link rel="stylesheet" href="../shared/choices.css">
+<script src="../shared/choices.js"></script>
+```
+
+```js
+const UI = window.AltynBase;
+document.querySelector("#switches").append(
+  UI.createSwitch({label:"Уведомления",size:"XL",theme:"success",checked:true,onChange:(checked)=>console.log(checked)})
+);
+document.querySelector("#method").append(
+  UI.createRadioGroup({name:"method",label:"Метод",value:"card",options:[
+    {label:"Карта",value:"card"},
+    {label:"Перевод",value:"transfer",description:"Дополнительное описание"}
+  ],onChange:(value)=>console.log(value)})
+);
+document.querySelector("#choices").append(
+  UI.createToggleButton({label:"Основной",size:"M",active:false,onChange:(active)=>console.log(active)})
+);
+```
+
+Дополнительные методы: `createSwitch({label,ariaLabel,id,name,size:"M"|"L"|"XL",theme:"success"|"info",icon,checked,disabled,onChange})`,
+`createRadio({label,ariaLabel,name,value,checked,disabled,size:"Regular"|"Small",style:"Primary"|"Alternative",description,onChange})`,
+`createRadioGroup({label,name,value,options,onChange})`,
+`createToggleButton({label,size,active,disabled,loading,icon,iconSrc,onChange})`,
+`createToggleBank({label,size,active,disabled,loading,icon,iconSrc,extraIcon,onChange})`.
+
+Исходная банка-иконка в `assets/bank.svg` — **конкретный Figma-пример**, заменяйте `iconSrc` при другом банке. `createRadioGroup` — кодовая композиция, а не компонент Altyn.Base. Подробные статусы реализации — в [плане миграции](../docs/design-system-migration-plan.md).
+
+### Smoke tests
+
+`shared/tests/choices.html` выполняет браузерные проверки переключения, семантики и отключенных состояний; отчёт находится в элементе `#result`. Для полноценной визуальной регрессии нужны дополнительные скриншотные тесты на 375 и 390 px.
