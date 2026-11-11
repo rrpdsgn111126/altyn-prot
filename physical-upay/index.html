@@ -410,7 +410,11 @@ render();view.scrollTop=0;
 window.addEventListener('hashchange',function(){previewCallback(location.hash.slice(1))});
 document.querySelector('.callback-links').addEventListener('click',function(event){
 var link=event.target.closest('a[href^="#"]');
-if(link&&location.hash===link.getAttribute('href')){event.preventDefault();previewCallback(link.hash.slice(1))}
+if(!link)return;
+event.preventDefault();
+var nextHash=link.getAttribute('href');
+if(location.hash!==nextHash)history.pushState(null,'',location.pathname+location.search+nextHash);
+previewCallback(nextHash.slice(1));
 });
 reset();
 previewCallback(location.hash.slice(1));
