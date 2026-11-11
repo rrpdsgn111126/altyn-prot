@@ -209,7 +209,7 @@ return '<div class="stage-inner"><div class="delivery-form">'
 +Object.keys(countryNames).map(function(k){return '<option value="'+k+'"'+(form.country_code===k?' selected':'')+'>'+countryNames[k]+'</option>'}).join('')+'</select></span>'
 +(errors.country_code?'<span class="field-error">'+safe(errors.country_code)+'</span>':'')+'</label>'
 +field('city','Город','Укажите город',128,false)+field('address','Адрес доставки','Улица, дом, квартира',512,false)
-+'<div class="warning">Доставка входит в стоимость выпуска. Изменить адрес после создания заказа нельзя</div></div></div>';
++'<div class="warning" data-figma-component="Notification" data-figma-variant="Type=Yellow" data-figma-node-id="4228:12405" data-figma-reference="https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12406">Доставка входит в стоимость выпуска. Изменить адрес после создания заказа нельзя</div></div></div>';
 }
 function review(){
 return '<div class="stage-inner">'
@@ -286,7 +286,7 @@ else footer.innerHTML='';
 }
 function updateAnnotations(){
 var steps={catalog:[['navbar','Верхняя навигация'],['cards bank','Зелёная карта YouPay'],['list.mobile','Условия и стоимость'],['Button.mobile','Создать карту']],
-delivery:[['navbar','Верхняя навигация'],['input.mobile','Данные получателя и доставки'],['Button.mobile','Продолжить']],
+delivery:[['navbar','Верхняя навигация'],['input.mobile','Данные получателя и доставки'],['Notification · Type=Yellow','Условия доставки · Altyn.Base 4228:12405'],['Button.mobile','Продолжить']],
 review:[['navbar','Верхняя навигация'],['list.mobile','Данные карты и получателя'],['Button.mobile','Подтвердить']],
 status:isErrorStatus()?[['modal / Pop up','Нижнее модальное окно статуса'],['Button.mobile','Связаться с поддержкой']]:[['cards bank','Размытая карта'],['ToggleButton.mobile','Скоро будет готова'],['Button.mobile','Добавить ещё одну карту и Как пользоваться']],
 issued:[['cards bank','Выпущенная карта'],['Button.mobile','Действия с картой'],['list.mobile','Лимиты и реквизиты'],['Switch.Value','Лимит на операции']]};
