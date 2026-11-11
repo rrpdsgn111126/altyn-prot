@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Altyn.Base — HTML-компоненты</title>
+<link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./components.css">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e9ebee;font:14px/1.5 var(--ab-font);color:var(--ab-ink)}
+.catalog{display:flex;justify-content:center;align-items:flex-start;gap:28px;padding:24px}
+.phone{width:375px;height:812px;flex:0 0 375px;background:white;border-radius:20px;overflow:hidden;box-shadow:0 16px 50px #0002}
+.sidebar{width:320px;max-width:100%;background:#fff;border-radius:12px;padding:20px}
+.sidebar h1{font-size:22px;line-height:1.2;margin:0 0 8px}.sidebar p{font-size:13px;color:var(--ab-muted)}
+.sidebar a{color:#987300}.sidebar code{word-break:break-all}
+.demo-heading{font-size:18px;font-weight:600;margin:0 0 12px}.demo-card{background:#f6f7f8;padding:12px 16px;border-radius:12px}
+.demo-divider{height:24px}.demo-mini{display:flex;gap:8px;margin-top:12px}.demo-mini>*{flex:1}
+@media(max-width:750px){body{background:white}.catalog{display:block;padding:0}.phone{width:100%;height:100dvh;border-radius:0;box-shadow:none}.sidebar{width:100%;border-radius:0}}
+</style></head>
+<body><div class="catalog"><div class="phone">
+<section class="ab-screen" aria-label="Витрина компонентов Altyn.Base">
+<div class="ab-statusbar"><span>9:30</span><span>◆ ◢ ▰</span></div>
+<div id="demo-nav"></div>
+<main class="ab-main"><div class="ab-section" style="padding-top:16px;padding-bottom:16px">
+<h2 class="demo-heading">Компоненты формы</h2>
+<div class="ab-input-stack" id="demo-inputs"></div>
+<div class="demo-divider"></div>
+<h2 class="demo-heading">Список</h2><div class="demo-card"><div class="ab-list-group" id="demo-list" style="background:transparent;padding:0"></div></div>
+<div class="demo-divider"></div><div id="demo-checkbox"></div>
+<div class="demo-mini" id="demo-buttons"></div>
+</div></main>
+<div class="ab-action-area" id="demo-action"></div><div class="ab-bottom-system"><span class="ab-bottom-system__handle"></span></div>
+</section></div>
+<aside class="sidebar"><h1>Altyn.Base / HTML</h1>
+<p>Начальный кодовый слой. Не является полным экспортом дизайн-системы Figma.</p>
+<p>Из Figma перенесены референсы для navbar, Button.mobile, Input.mobile, list.mobile и Checkbox; реализовано базовое подмножество их свойств.</p>
+<p><a href="../docs/component-map.md">Карта компонентов</a> · <a href="../docs/mobile-screen-layout.md">Спецификация экранов</a> · <a href="./README.md">Подключение</a></p>
+<p>Проверка: измените текст инпута, отметьте чекбокс, нажмите основную кнопку. Демонстрационная логика работает локально и не вызывает API.</p>
+<p><code>../shared/tokens.css</code><br><code>../shared/components.css</code><br><code>../shared/components.js</code></p>
+</aside></div>
+<script src="./components.js"></script>
+<script>
+(function(){const UI=window.AltynBase;
+document.getElementById("demo-nav").append(UI.createNavbar({title:"Компоненты",onBack:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Назад»";},onHelp:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Помощь»";}}));
+const inputs=document.getElementById("demo-inputs");
+inputs.append(UI.createInput({label:"Имя получателя",placeholder:"Введите имя",name:"recipient",helper:"Поле ввода"}));
+inputs.append(UI.createInput({label:"Номер карты",value:"1234",error:"Проверьте номер карты",name:"card"}));
+const list=document.getElementById("demo-list");
+list.append(UI.createListRow({label:"Страна",value:"Казахстан",onClick:()=>{document.getElementById("feedback").textContent="Выбрана страна";}}));
+list.append(UI.createListRow({label:"Метод",value:"Банковская карта"}));
+document.getElementById("demo-checkbox").append(UI.createCheckbox({label:"Согласен с условиями",name:"consent",onChange:()=>{document.getElementById("feedback").textContent="Согласие изменено";}}));
+document.getElementById("demo-buttons").append(UI.createButton({label:"Secondary",type:"secondary",size:"M",onClick:()=>{document.getElementById("feedback").textContent="Secondary";}}),UI.createButton({label:"Tertiary",type:"tertiary",size:"M",onClick:()=>{document.getElementById("feedback").textContent="Tertiary";}}));
+const action=document.getElementById("demo-action");
+action.append(UI.createButton({label:"Продолжить",type:"primary",block:true,onClick:()=>{const f=inputs.querySelector('input[name="recipient"]'); const checkbox=document.querySelector('input[name="consent"]');document.getElementById("feedback").textContent=f.value.trim()&&checkbox.checked?"Поля заполнены":"Заполните имя и отметьте согласие";}}));
+const msg=document.createElement("div");msg.id="feedback";msg.setAttribute("role","status");msg.style="font:12px/16px var(--ab-font);color:var(--ab-muted);margin-top:8px;text-align:center;min-height:16px";action.append(msg);
+})();
+</script></body></html>

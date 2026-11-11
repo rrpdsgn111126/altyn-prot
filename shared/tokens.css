@@ -1,0 +1,31 @@
+/* Altyn.Base — verified subset from Figma, 2026-11-11.
+   Source: https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/
+   Screen-layout values: ../docs/mobile-screen-layout.md
+   Not a complete export of Figma variables (the file has no local variable collections). */
+:root {
+  --ab-brand: #ffd119;
+  --ab-link: #fec200;
+  --ab-ink: #211e1d;
+  --ab-muted: #837f7f;
+  --ab-border: #e9ecf0;
+  --ab-border-tertiary: #b9b7b7;
+  --ab-error: #dd4014;
+  --ab-error-bg: #fff4f8;
+  --ab-black: #000000;
+  --ab-white: #ffffff;
+  --ab-input-brand: #fff2c8;
+  --ab-radius-l: 12px;
+  --ab-radius-m: 8px;
+  --ab-font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ab-screen-gutter: 16px;
+  --ab-input-stack-gap: 12px;
+  --ab-list-group-gap: 12px;
+  --ab-row-gap: 0px;
+  --ab-status-height: 40px;
+  --ab-navbar-height: 54px;
+  --ab-button-height-l: 54px;
+  --ab-button-height-m: 44px;
+  --ab-button-height-s: 32px;
+  --ab-input-height: 54px;
+  --ab-bottom-system-height: 48px;
+}

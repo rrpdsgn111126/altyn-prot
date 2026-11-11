@@ -1,0 +1,59 @@
+/* Shared Altyn.Base HTML layer. All selectors are prefixed ab- to avoid affecting existing prototypes. */
+.ab-screen, .ab-screen *, .ab-screen *::before, .ab-screen *::after,
+.ab-button, .ab-field, .ab-field *, .ab-list-group, .ab-list-group *,
+.ab-navbar, .ab-navbar *, .ab-check, .ab-check * { box-sizing: border-box; }
+.ab-screen { font-family:var(--ab-font); color:var(--ab-ink); background:var(--ab-white); display:flex; flex-direction:column; width:100%; min-height:0; height:100%; overflow:hidden; }
+.ab-statusbar { flex:none; height:var(--ab-status-height); display:flex; align-items:center; justify-content:space-between; padding-inline:var(--ab-screen-gutter); font:600 13px/20px var(--ab-font); }
+.ab-navbar { display:flex; align-items:center; flex:none; min-height:var(--ab-navbar-height); padding:0 var(--ab-screen-gutter); gap:18px; font-family:var(--ab-font); color:var(--ab-ink); background:var(--ab-white); }
+.ab-navbar__title { flex:1; min-width:0; font:500 18px/24px var(--ab-font); overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.ab-navbar[data-align="center"] { display:grid; grid-template-columns:24px minmax(0,1fr) 24px; gap:12px; }
+.ab-navbar[data-align="center"] .ab-navbar__title { text-align:center; }
+.ab-navbar__action { flex:none; display:grid; place-items:center; border:0; background:none; width:24px; height:24px; padding:0; cursor:pointer; }
+.ab-navbar__action img { width:24px; height:24px; display:block; }
+.ab-navbar__action:focus-visible, .ab-button:focus-visible, .ab-list-row:focus-visible, .ab-checkbox-input:focus-visible { outline:2px solid var(--ab-link); outline-offset:3px; }
+.ab-navbar__placeholder { width:24px; height:24px; flex:none; }
+.ab-main { flex:1 1 auto; min-height:0; overflow-y:auto; overflow-x:hidden; }
+.ab-section, .ab-action-area { padding-inline:var(--ab-screen-gutter); }
+.ab-input-stack, .ab-list-group-stack { display:flex; flex-direction:column; gap:12px; }
+.ab-list-group-stack { gap:var(--ab-list-group-gap); }
+.ab-bottom-system { flex:none; height:var(--ab-bottom-system-height); background:var(--ab-white); display:grid; place-items:center; }
+.ab-bottom-system__handle { background:var(--ab-ink); width:108px; height:4px; border-radius:3px; }
+.ab-action-area { flex:none; padding-block:12px 16px; background:var(--ab-white); }
+.ab-button { display:inline-flex; align-items:center; justify-content:center; gap:4px; min-width:0; height:var(--ab-button-height-l); border:0; border-radius:var(--ab-radius-l); padding:0 24px; font:600 16px/24px var(--ab-font); text-align:center; cursor:pointer; white-space:nowrap; transition:filter 100ms ease; }
+.ab-button[data-type="primary"] { background:var(--ab-brand); color:var(--ab-ink); }
+.ab-button[data-type="secondary"] { background:var(--ab-black); color:var(--ab-white); }
+.ab-button[data-type="tertiary"] { background:transparent; color:var(--ab-ink); border:1px solid var(--ab-border-tertiary); }
+.ab-button[data-size="M"] { height:var(--ab-button-height-m); padding-inline:16px; }
+.ab-button[data-size="S"] { height:var(--ab-button-height-s); padding-inline:12px; font-size:14px; line-height:20px; }
+.ab-button[data-type="tertiary"][data-size="M"] { height:48px; }
+.ab-button[data-block="true"] { width:100%; }
+.ab-button:not(:disabled):active { filter:brightness(.96); }
+.ab-button:disabled, .ab-button[aria-busy="true"] { opacity:.4; cursor:default; }
+.ab-button[aria-busy="true"] { opacity:1; cursor:progress; }
+.ab-button__spinner { display:none; width:18px; height:18px; border:2px solid currentColor; border-top-color:transparent; border-radius:50%; animation:ab-spin .8s linear infinite; }
+.ab-button[aria-busy="true"] .ab-button__spinner { display:block; }
+@keyframes ab-spin { to { transform:rotate(360deg); } }
+.ab-field { display:flex; flex-direction:column; gap:4px; font-family:var(--ab-font); color:var(--ab-ink); min-width:0; }
+.ab-field__caption { font:400 12px/16px var(--ab-font); }
+.ab-input { display:block; width:100%; height:var(--ab-input-height); border:1px solid var(--ab-border); border-radius:var(--ab-radius-l); padding:8px 16px; background:var(--ab-white); color:var(--ab-ink); font:400 16px/24px var(--ab-font); outline:none; }
+.ab-input::placeholder { color:var(--ab-muted); opacity:1; }
+.ab-input:focus { border-color:var(--ab-brand); }
+.ab-input[aria-invalid="true"] { border-color:var(--ab-error); background:var(--ab-error-bg); }
+.ab-input:disabled, .ab-input:read-only { opacity:.5; cursor:default; }
+.ab-field__helper { min-height:16px; color:var(--ab-muted); font:400 12px/16px var(--ab-font); padding-inline:16px; }
+.ab-field__helper[data-error="true"] { color:var(--ab-error); }
+.ab-list-group { background:var(--ab-white); padding:0 16px; border-radius:var(--ab-radius-l); display:flex; flex-direction:column; gap:var(--ab-row-gap); overflow:hidden; }
+.ab-list-row { display:flex; align-items:center; gap:16px; width:100%; min-height:54px; padding:8px 0; border:0; border-bottom:1px solid var(--ab-border); background:none; text-align:left; color:var(--ab-ink); font-family:var(--ab-font); }
+button.ab-list-row { cursor:pointer; }
+.ab-list-row:last-child { border-bottom:0; }
+.ab-list-row:disabled { opacity:.4; cursor:default; }
+.ab-list-row__content { display:flex; flex:1; min-width:0; flex-direction:column; }
+.ab-list-row__label { color:var(--ab-muted); font:400 12px/16px var(--ab-font); }
+.ab-list-row__value { font:400 16px/24px var(--ab-font); overflow-wrap:anywhere; }
+.ab-list-row__chevron { flex:none; font-size:18px; line-height:20px; color:var(--ab-link); }
+.ab-check { display:inline-flex; gap:10px; align-items:flex-start; font:400 14px/20px var(--ab-font); color:var(--ab-ink); cursor:pointer; }
+.ab-check:has(.ab-checkbox-input:disabled) { opacity:.4; cursor:default; }
+.ab-checkbox-input { appearance:none; -webkit-appearance:none; flex:none; width:20px; height:20px; margin:0; border:2px solid var(--ab-border); border-radius:4px; background:var(--ab-white); cursor:pointer; }
+.ab-checkbox-input:checked { background:var(--ab-brand) url("./assets/check.svg") center / 12px 12px no-repeat; border-color:var(--ab-brand); }
+.ab-checkbox-input:disabled { cursor:default; }
+@media (prefers-reduced-motion:reduce) { .ab-button { transition:none; } .ab-button__spinner { animation-duration:1.6s; } }
