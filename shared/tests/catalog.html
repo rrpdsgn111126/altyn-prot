@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Altyn.Base catalog — viewport smoke tests</title>
+<style>body{font:14px/1.5 system-ui,sans-serif;padding:16px;margin:0;background:#f6f7f8}h1{font-size:19px}pre{white-space:pre-wrap;background:#fff;padding:12px;border-radius:8px}iframe{border:1px solid #ddd;background:white;margin:8px 0;display:block;max-width:none}</style></head>
+<body><h1>Altyn.Base — тест витрины (375, 390, 1440 px)</h1><pre id="results" role="status">Идёт проверка...</pre><div id="frames"></div>
+<script>
+(async function(){
+ const cases=[], results=document.getElementById("results"), container=document.getElementById("frames");
+ const check=(name,condition)=>cases.push({name,pass:Boolean(condition)});
+ for(const width of [375,390,1440]){
+   const frame=document.createElement("iframe");frame.width=String(width);frame.height="812";frame.title="Catalog "+width;frame.src="../index.html";
+   container.append(frame);
+   await new Promise((resolve)=>{frame.addEventListener("load",resolve,{once:true});frame.addEventListener("error",resolve,{once:true});});
+   let doc;
+   try{doc=frame.contentDocument;}catch(e){cases.push({name:width+" same-origin frame",pass:false});continue;}
+   check(width+" frame loaded",!!doc&&!!doc.querySelector(".ab-screen"));
+   if(!doc)continue;
+   check(width+" Switch demo rendered",doc.querySelectorAll("#demo-switches .ab-switch").length===2);
+   check(width+" Radio demo rendered",doc.querySelectorAll("#demo-radios input[type=radio]").length===2);
+   check(width+" ToggleButton demo rendered",doc.querySelectorAll("#demo-toggle-buttons .ab-toggle-button").length===2);
+   check(width+" ToggleBank demo rendered",doc.querySelectorAll("#demo-toggle-banks .ab-toggle-bank").length===2);
+   check(width+" primary action rendered",!!doc.querySelector("#demo-action .ab-button"));
+   const sw=doc.querySelector("#demo-switches .ab-switch__input"), feedback=doc.querySelector("#feedback");
+   if(sw&&feedback){const initial=sw.checked;sw.click();check(width+" switch click feedback",sw.checked!==initial&&feedback.textContent.includes("Уведомления"));}else check(width+" switch click feedback",false);
+   const radios=doc.querySelectorAll("#demo-radios input[type=radio]");
+   if(radios.length===2){radios[1].click();check(width+" Radio selection",radios[1].checked&&!radios[0].checked);}else check(width+" Radio selection",false);
+   const toggle=doc.querySelector("#demo-toggle-buttons .ab-toggle-button:not([aria-pressed=true])");
+   if(toggle){toggle.click();check(width+" toggle click",toggle.getAttribute("aria-pressed")==="true");}else check(width+" toggle click",false);
+   const bank=doc.querySelector("#demo-toggle-banks .ab-toggle-bank:not([aria-pressed=true])");
+   if(bank){bank.click();check(width+" bank click",bank.getAttribute("aria-pressed")==="true");}else check(width+" bank click",false);
+   const images=Array.from(doc.querySelectorAll("img"));
+   check(width+" image assets",images.length>=3&&images.every(i=>i.complete&&i.naturalWidth>0));
+   const measured=frame.contentWindow.innerWidth;
+   check(width+" viewport width",measured===width);
+   check(width+" no horizontal document overflow",doc.documentElement.scrollWidth<=measured+1);
+ }
+ const passed=cases.filter(x=>x.pass).length;
+ results.textContent=passed+"/"+cases.length+" passed\n"+cases.map(x=>(x.pass?"PASS ":"FAIL ")+x.name).join("\n");
+ document.documentElement.dataset.testsPassed=String(passed===cases.length);
+ window.AltynCatalogViewportResults=cases;
+})();
+</script></body></html>
