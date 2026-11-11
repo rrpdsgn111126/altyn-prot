@@ -56,9 +56,34 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 .consent input{width:17px;height:17px;accent-color:var(--yellow);flex-shrink:0;margin-top:1px}
 .center-state{text-align:center;padding:95px 15px 15px}.state-circle{height:80px;width:80px;border-radius:24px;background:#eff8d5;color:#4f8614;display:grid;place-items:center;font-size:38px;font-weight:700;margin:0 auto 21px}.state-circle.bad{color:#ad3e2c;background:#fae9e6}
 .center-state h1{font-size:22px;margin:0 0 11px;font-weight:650}.center-state p{color:var(--muted);font-size:14px;line-height:21px;margin:0 0 10px}.order-number{font-size:12px;color:var(--muted);margin-top:17px}
-.card-detail{padding:16px}.card-detail .card-chooser{padding:0 0 18px;background:transparent}.card-detail .plastic{width:300px}
-.quick-actions{display:flex;gap:8px;justify-content:center;margin:14px 0 24px}.quick-actions button{background:var(--yellow);border:0;border-radius:12px;font-size:12px;font-weight:600;padding:11px 15px}
-.card-badge{color:#5c7a2b;font-size:12px;background:#edf4dc;border-radius:20px;padding:6px 10px;display:inline-block;margin-bottom:13px}
+.card-detail{padding:0 16px 24px;background:#fff;min-height:100%}
+.mobile.issued-mode .statusbar,.mobile.issued-mode .nav{background:var(--bg)}
+.issued-card-hero{margin:0 -16px;padding:16px 16px 0;background:linear-gradient(to bottom,var(--bg) 0,var(--bg) calc(100% - 32px),white calc(100% - 32px),white 100%)}
+.card-detail .card-chooser{padding:0;background:transparent;position:relative;max-width:300px;margin:0 auto;display:flex;align-items:center;justify-content:center}
+.card-detail .plastic{width:300px;flex-shrink:0}
+.card-detail .plastic:after{content:'Физическая';position:absolute;right:20px;top:27px;font-size:10px;line-height:14px;font-weight:500;color:rgba(255,255,255,.95)}
+.card-production-tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;display:flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;border-radius:30px;background:#000;color:#fff;font-size:12px;line-height:18px;padding:5px 11px}
+.card-production-tag .clock{width:15px;height:15px;display:inline-block;flex:0 0 15px;border-radius:50%;background:#fff;color:#111;text-align:center;font-size:11px;line-height:15px}
+.quick-actions{display:flex;gap:8px;justify-content:center;margin:0 -16px;padding:16px 16px 24px;background:white}
+.quick-actions button{border:0;border-radius:12px;min-height:32px;padding:7px 12px;font-size:12px;font-weight:600;line-height:16px}
+.quick-actions .add-card{background:var(--yellow);color:#211e1d}.quick-actions .how-card{background:#000;color:#fff}
+.detail-panel{background:var(--bg);border-radius:12px;padding:0 16px;overflow:hidden}
+.detail-row{display:flex;align-items:center;gap:12px;width:100%;min-height:54px;padding:8px 0;border:0;border-bottom:1px solid var(--border);background:transparent;color:var(--ink);text-align:left;font-size:16px;line-height:24px}
+.detail-panel>.detail-row:last-child{border-bottom:0}
+.detail-panel button.detail-row{cursor:pointer}.detail-panel button.detail-row:hover{opacity:.72}
+.detail-symbol{width:28px;min-width:28px;height:26px;display:flex;align-items:center;justify-content:center;color:#837f7f}
+.detail-symbol svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.detail-text{flex:1;min-width:0}
+.limit-row{display:flex;gap:12px;padding:9px 0 8px;border-bottom:1px solid var(--border)}
+.limit-header{display:flex;align-items:center;min-height:30px;gap:12px}
+.limit-lines{padding:8px 0 0 40px}
+.limit-line{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:14px;line-height:20px;padding:1px 0;color:var(--muted)}
+.limit-line .amount{color:var(--ink);text-align:right;white-space:nowrap}
+.limit-line .amount small{font-size:11px;color:var(--muted)}
+.limit-toggle{position:relative;margin-left:auto;flex-shrink:0;width:44px;height:24px;border:0;border-radius:999px;background:#ccc;cursor:pointer;padding:0}
+.limit-toggle[aria-checked=true]{background:var(--yellow)}.limit-toggle:after{content:'';position:absolute;left:2px;top:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .15s}.limit-toggle[aria-checked=true]:after{transform:translateX(20px)}
+.security-heading{font-size:16px;line-height:24px;font-weight:600;margin:24px 0 10px}
+.detail-note{text-align:center;color:#b9b7b7;font-size:13px;margin:30px 0 2px}
 .sheet-back{position:absolute;inset:0;background:#0009;display:flex;justify-content:flex-end;flex-direction:column;z-index:20}.sheet{background:white;border-radius:18px 18px 0 0;padding:16px 16px 24px;max-height:78%;overflow:auto}.handle{background:#d6d9d9;width:56px;height:4px;border-radius:10px;margin:0 auto 20px}.sheet h2{font-size:16px;margin:0 0 16px}.sheet h3{font-size:14px;margin:18px 0 8px}.sheet p{font-size:13px;line-height:20px;color:var(--muted);margin:0 0 10px}
 .toolbox{width:310px;flex-shrink:0;background:white;border:1px solid #e5e8e9;border-radius:17px;padding:18px;display:flex;flex-direction:column;gap:12px;margin-top:12px}
 .toolbox h3{margin:0;font-size:16px}.toolbox p{margin:0;font-size:11px;color:#78817d}.toolbox label{font-size:11px;color:#5c6660;font-weight:650;display:block}
@@ -93,7 +118,7 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 <nav class="callback-links" aria-label="Быстрые ссылки на экраны статусов">
 <h4>Быстрый переход к состояниям</h4>
 <a href="#pending">Ожидается</a>
-<a href="#processing">В обработке</a>
+<a href="#processing">Пластик выпускается</a>
 <a href="#success">Успешно</a>
 <a href="#failed">Ошибка выпуска</a>
 <a href="#cancelled">Отменено</a>
@@ -115,7 +140,7 @@ var $=function(x){return document.getElementById(x)};
 var view=$('view'),footer=$('bottom'),modal=$('modal');
 var countryNames={RU:'Россия',KZ:'Казахстан',AE:'ОАЭ'};
 var model={price:'50 USD',templateId:123,outcome:'success',kyc:true,available:true};
-var step='catalog',form={},errors={},notice='',busy=false,orderId=null,orderStatus='',requestSnapshot=null,retryNeeded=false,session=0,logEntries=[];
+var step='catalog',form={},errors={},notice='',plasticPending=false,limitEnabled=true,busy=false,orderId=null,orderStatus='',requestSnapshot=null,retryNeeded=false,session=0,logEntries=[];
 function safe(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function api(method,path,payload){logEntries.push(method+' '+path+(payload?'\n'+JSON.stringify(payload,null,2):''));$('log').textContent=logEntries.slice(-6).join('\n\n')}
 function button(text,action,disabled,secondary){return '<button class="'+(secondary?'secondary':'primary')+'" type="button" data-action="'+action+'"'+(disabled?' disabled':'')+'>'+text+'</button>'}
@@ -159,11 +184,29 @@ if(orderStatus==='network_known')return '<div class="stage-inner"><div class="ce
 if(orderStatus==='failed'||orderStatus==='cancelled')return '<div class="stage-inner"><div class="center-state"><div class="state-circle bad">!</div><h1>'+(orderStatus==='failed'?'Не удалось выпустить карту':'Выпуск отменён')+'</h1><p>'+(orderStatus==='failed'?'Оформление не завершилось. Попробуйте позже':'Заказ отменён')+'</p><div class="order-number">Заказ №'+safe(orderId)+'</div></div></div>';
 return '<div class="stage-inner"><div class="center-state"><div class="state-circle">◌</div><h1>'+(orderStatus==='processing'?'Карта выпускается':'Ожидаем выпуск карты')+'</h1><p>Онлайн-оплата доступна сразу после заказа</p><div class="order-number">Заказ №'+safe(orderId)+'</div></div><div class="warning">Доставка пластикового экземпляра оформляется отдельно от его выпуска.</div></div>';
 }
+function detailIcon(kind){var shapes={
+limits:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 9h12M8 13h5"/>',
+details:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 15h5"/>',
+tariff:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h4"/>',
+balance:'<path d="M4 6h17v14H4a2 2 0 0 1-2-2V7a3 3 0 0 1 3-3h14"/><path d="M15 12h6M15 15h6"/>',
+pin:'<path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/>',
+freeze:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 1 1 8 0v3M12 15v2"/>',
+close:'<path d="M4 4l16 16M20 4 4 20"/>'};
+return '<span class="detail-symbol"><svg viewBox="0 0 24 24" aria-hidden="true">'+(shapes[kind]||'')+'</svg></span>'}
+function detailItem(label,kind){return '<button type="button" class="detail-row" data-action="detail-action" data-title="'+safe(label)+'">'+detailIcon(kind)+'<span class="detail-text">'+safe(label)+'</span></button>'}
 function issued(){
-return '<div class="card-detail"><div class="card-chooser">'+card(true)+'</div><div class="card-badge">Карта активна · Онлайн-платежи доступны</div><div class="quick-actions"><button type="button" data-action="open-info">Как пользоваться</button></div>'
-+'<div class="main-box">'+info('Тип карты','Физическая Upay')+info('Статус выпуска','Успешно')+info('Заказ',orderId)+info('Доставка','Пластик отправляют отдельно')+'</div>'
-+'<div class="card-explainer"><div class="key">Информация</div><div class="body">Онлайн-оплата доступна сразу после заказа, пластиковой картой можно пользоваться после получения</div></div></div>';
+return '<div class="card-detail">'
++'<div class="issued-card-hero"><div class="card-chooser">'+card(true)+(plasticPending?'<div class="card-production-tag">Скоро будет готова <span class="clock" aria-hidden="true">◷</span></div>':'')+'</div></div>'
++'<div class="quick-actions"><button class="add-card" type="button" data-action="detail-action" data-title="Добавить карту">Добавить карту</button><button class="how-card" type="button" data-action="open-info">Как пользоваться</button></div>'
++'<div class="detail-panel"><div class="limit-row"><div style="flex:1;min-width:0"><div class="limit-header">'+detailIcon('limits')+'<span class="detail-text" style="font-size:16px">Лимит на операции</span><button type="button" id="limit-switch" role="switch" class="limit-toggle" aria-checked="'+(limitEnabled?'true':'false')+'" aria-label="Лимит на операции" data-action="toggle-limit"></button></div>'
++(limitEnabled?'<div class="limit-lines"><div class="limit-line"><span>В месяц</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line"><span>В неделю</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line"><span>В час</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line"><span>На операцию</span><span class="amount">150 000 ₽</span></div></div>':'')
++'</div></div>'
++detailItem('Реквизиты','details')+detailItem('Тарифы и лимиты','tariff')+detailItem('Управление балансом','balance')+'</div>'
++'<h2 class="security-heading">Безопасность</h2><div class="detail-panel">'+detailItem('Установить ПИН-код','pin')+detailItem('Заморозить карту','freeze')+detailItem('Закрыть карту','close')+'</div>'
++'<div class="detail-note">Кошелек Банк Пэйджин</div>'
++'</div>';
 }
+function showDetail(title){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" role="dialog" aria-modal="true" aria-label="'+safe(title)+'"><div class="handle"></div><h2>'+safe(title)+'</h2>'+button('Закрыть','close-modal')+'</div></div>'}
 function refreshFooter(){
 if(step==='catalog')footer.innerHTML=button('Создать карту','choose',!model.available||!model.kyc);
 else if(step==='delivery')footer.innerHTML=button('Продолжить','validate');
@@ -171,8 +214,9 @@ else if(step==='review')footer.innerHTML=button(retryNeeded?'Повторить 
 else if(step==='status')footer.innerHTML=orderStatus==='network_known'?button('Проверить статус','check'):orderStatus==='failed'||orderStatus==='cancelled'?button('Вернуться к картам','reset'):button('Проверить статус','poll',false,true);
 else footer.innerHTML='';
 }
-function updateAnnotations(){var steps={catalog:[['navbar','Верхняя навигация'],['cards bank','Зелёная карта YouPay · референс Altyn App'],['list.mobile','Условия использования и стоимость'],['Button.mobile','Кнопка создания карты · вариант уточнить']],delivery:[['navbar','Верхняя навигация'],['input.mobile','ФИО, телефон, город, адрес, индекс'],['Select · проверить','Страна доставки'],['Button.mobile','Продолжить · вариант уточнить']],review:[['navbar','Верхняя навигация'],['list.mobile','Детали карты, оплаты и доставки'],['Button.mobile','Подтвердить · вариант уточнить']],status:[['navbar','Верхняя навигация'],['Status · проверить','Обработка, ошибка, отмена'],['Button.mobile','Проверить статус · вариант уточнить']],issued:[['navbar','Верхняя навигация'],['cards bank','Выпущенная карта YouPay'],['list.mobile','Данные заказа'],['Bottom sheet · проверить','Информация о карте']]};var names={catalog:'Выбор карты',delivery:'Доставка',review:'Подтверждение',status:'Статус заказа',issued:'Карта'};var target=$('component-map');if(!target)return;target.innerHTML='<h3>'+names[step]+'</h3><ul>'+(steps[step]||[]).map(function(item){return '<li><span class="candidate">'+item[0]+'</span><div>'+item[1]+'</div></li>'}).join('')+'</ul><p>Названия без подтверждённого варианта требуют сверки с Altyn.Base</p>'}
+function updateAnnotations(){var steps={catalog:[['navbar','Верхняя навигация'],['cards bank','Зелёная карта YouPay · референс Altyn App'],['list.mobile','Условия использования и стоимость'],['Button.mobile','Кнопка создания карты · вариант уточнить']],delivery:[['navbar','Верхняя навигация'],['input.mobile','ФИО, телефон, город, адрес, индекс'],['Select · проверить','Страна доставки'],['Button.mobile','Продолжить · вариант уточнить']],review:[['navbar','Верхняя навигация'],['list.mobile','Детали карты, оплаты и доставки'],['Button.mobile','Подтвердить · вариант уточнить']],status:[['navbar','Верхняя навигация'],['Status · проверить','Обработка, ошибка, отмена'],['Button.mobile','Проверить статус · вариант уточнить']],issued:[['navbar','Верхняя навигация'],['cards bank','Физическая карта YouPay и тег выпуска'],['Button.mobile','Добавить карту и Как пользоваться'],['list.mobile','Лимиты, реквизиты, тарифы, баланс, безопасность'],['Switch.Value','Лимит на операции']]};var names={catalog:'Выбор карты',delivery:'Доставка',review:'Подтверждение',status:'Статус заказа',issued:'Карта'};var target=$('component-map');if(!target)return;target.innerHTML='<h3>'+names[step]+'</h3><ul>'+(steps[step]||[]).map(function(item){return '<li><span class="candidate">'+item[0]+'</span><div>'+item[1]+'</div></li>'}).join('')+'</ul><p>Названия без подтверждённого варианта требуют сверки с Altyn.Base</p>'}
 function render(){
+$('mobile').classList.toggle('issued-mode',step==='issued');
 updateAnnotations();
 $('title').textContent={catalog:'Оформление карты',delivery:'Доставка карты',review:'Выпуск карты',status:'Выпуск карты',issued:'Карта Алтын'}[step];
 $('back').style.visibility=['catalog','status','issued'].includes(step)?'hidden':'visible';
@@ -201,7 +245,7 @@ function move(to){step=to;render();view.scrollTop=0}
 function poll(){
 var current=++session;orderStatus='pending';move('status');
 setTimeout(function(){if(current!==session||step!=='status')return;api('GET','/cards/order/'+orderId+'/status/');orderStatus='processing';render()},950);
-setTimeout(function(){if(current!==session||step!=='status')return;api('GET','/cards/order/'+orderId+'/status/');orderStatus=model.outcome==='failed'?'failed':model.outcome==='cancelled'?'cancelled':'success';if(orderStatus==='success'){api('GET','/cards/');move('issued')}else render()},2450);
+setTimeout(function(){if(current!==session||step!=='status')return;api('GET','/cards/order/'+orderId+'/status/');orderStatus=model.outcome==='failed'?'failed':model.outcome==='cancelled'?'cancelled':'success';if(orderStatus==='success'){api('GET','/cards/');plasticPending=true;move('issued')}else render()},2450);
 }
 function submit(isRetry){
 if(busy)return;if(!isRetry)requestSnapshot=payload();
@@ -210,14 +254,14 @@ setTimeout(function(){
 busy=false;
 if(model.outcome==='stock'){notice='В выбранную страну сейчас нет доступных карт для доставки';move('review');return}
 if(model.outcome==='conflict'){notice='Адрес отличается от уже оформленного заказа. Изменить существующий заказ нельзя';move('review');return}
-if(model.outcome==='exists'){orderId=456;api('GET','/cards/');move('issued');return}
+if(model.outcome==='exists'){orderId=456;plasticPending=false;api('GET','/cards/');move('issued');return}
 if(model.outcome==='network_unknown'&&!isRetry){retryNeeded=true;notice='Не удалось получить номер заказа. Повторите запрос с теми же данными';move('review');return}
 orderId=456;
 if(model.outcome==='network_known'&&!isRetry){orderStatus='network_known';move('status');return}
 poll();
 },600);
 }
-function reset(){++session;step='catalog';form={};errors={};notice='';busy=false;orderId=null;orderStatus='';requestSnapshot=null;retryNeeded=false;logEntries=[];api('GET','/cards/templates/');render();view.scrollTop=0}
+function reset(){++session;step='catalog';form={};errors={};notice='';plasticPending=false;limitEnabled=true;busy=false;orderId=null;orderStatus='';requestSnapshot=null;retryNeeded=false;logEntries=[];api('GET','/cards/templates/');render();view.scrollTop=0}
 function openInfo(){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" role="dialog" aria-modal="true" aria-label="Как пользоваться картой"><div class="handle"></div><h2>Как пользоваться картой</h2><h3>Онлайн-платежи</h3><p>Онлайн-оплата доступна сразу после заказа</p><h3>Пластиковая карта</h3><p>Пластиковую карту доставляют отдельно, после получения ей можно пользоваться</p><h3>Данные доставки</h3><p>После создания заказа изменить адрес доставки нельзя</p>'+button('Понятно','close-modal')+'</div></div>'}
 document.addEventListener('input',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key]}});
 document.addEventListener('change',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key]}});
@@ -226,6 +270,8 @@ var btnTarget=event.target.closest('[data-action]');if(!btnTarget)return;
 var action=btnTarget.dataset.action;
 if(action==='close-modal'){if(event.target.closest('.sheet')&&event.target!==btnTarget)return;modal.innerHTML='';return}
 if(action==='open-info'){openInfo();return}
+if(action==='detail-action'){showDetail(btnTarget.dataset.title||'');return}
+if(action==='toggle-limit'){limitEnabled=!limitEnabled;render();return}
 if(action==='choose'){if(model.kyc&&model.available){notice='';move('delivery')}return}
 if(action==='validate'){if(valid()){notice='';move('review')}else{render();view.querySelector('.invalid')?.focus()}return}
 if(action==='submit'||action==='retry'){if(step==='review'&&!busy)submit(action==='retry');return}
@@ -247,8 +293,8 @@ var validStates=['pending','processing','success','failed','cancelled','network_
 if(validStates.indexOf(state)===-1)return;
 ++session;busy=false;modal.innerHTML='';notice='';errors={};retryNeeded=false;orderId=456;orderStatus=state;
 if(!form.recipient_name)form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2',postal_code:'101000'};
-if(state==='success'||state==='exists')step='issued';
-else if(['pending','processing','failed','cancelled','network_known'].includes(state))step='status';
+if(state==='success'||state==='exists'||state==='processing'){step='issued';plasticPending=state==='processing'}
+else if(['pending','failed','cancelled','network_known'].includes(state)){step='status';plasticPending=false}
 else{step='review';if(state==='network_unknown'){retryNeeded=true;notice='Не удалось получить номер заказа. Повторите запрос с теми же данными'}
 else if(state==='stock')notice='В выбранную страну сейчас нет доступных карт для доставки';
 else if(state==='conflict')notice='Адрес отличается от уже оформленного заказа. Изменить существующий заказ нельзя'}
