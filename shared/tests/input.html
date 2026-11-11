@@ -4,7 +4,8 @@
 (function(){
 const UI=window.AltynBase,area=document.getElementById("area"),results=[];
 const test=(name,check)=>{try{if(!check())throw Error("assertion failed");results.push("PASS "+name)}catch(e){results.push("FAIL "+name+" — "+e.message)}};
-const empty=UI.createInput({label:"ФИО",placeholder:"Введите ФИО",name:"fio",helper:"Подсказка"});area.append(empty);
+const empty=UI.createInput({label:"ФИО",name:"fio",helper:"Подсказка"});area.append(empty);
+const withPlaceholder=UI.createInput({label:"Назначение",placeholder:"Введите назначение",name:"purpose"});area.append(withPlaceholder);
 const filled=UI.createInput({label:"Счёт",name:"account",value:"1234"});area.append(filled);
 const invalid=UI.createInput({label:"Номер карты",name:"card",value:"123",error:"Неверный номер"});area.append(invalid);
 const disabled=UI.createInput({label:"Страна",name:"country",value:"Казахстан",disabled:true});area.append(disabled);
@@ -13,10 +14,13 @@ test("Empty: label is INSIDE 54px input control",()=>empty.querySelector(".ab-in
 test("Empty: label has correct accessible association",()=>empty.querySelector("label").htmlFor===input.id);
 test("Empty: 54px control height",()=>Math.abs(empty.querySelector(".ab-input-control").getBoundingClientRect().height-54)<1);
 test("Empty: 16px centered label",()=>{const l=empty.querySelector("label"),r=l.getBoundingClientRect(),c=empty.querySelector(".ab-input-control").getBoundingClientRect(),s=getComputedStyle(l);return s.fontSize==="16px"&&Math.abs((r.top+r.height/2)-(c.top+c.height/2))<=1;});
-test("Empty: placeholder hidden until focused",()=>getComputedStyle(input,"::placeholder").color==="rgba(0, 0, 0, 0)"||getComputedStyle(input,"::placeholder").color==="rgb(0, 0, 0, 0)");
+test("Empty Enable: no placeholder and centered label",()=>input.getAttribute("placeholder")===null&&empty.querySelector(".ab-input-control").dataset.floated==="false");
+test("Enable+placeholder: small label and placeholder inside box",()=>{const control=withPlaceholder.querySelector(".ab-input-control"),label=withPlaceholder.querySelector(".ab-input-label"),input=withPlaceholder.querySelector("input");return control.dataset.floated==="true"&&getComputedStyle(label).fontSize==="12px"&&input.placeholder==="Введите назначение";});
+test("Border belongs to shared field container",()=>getComputedStyle(empty.querySelector(".ab-input-control")).borderTopStyle==="solid"&&getComputedStyle(empty.querySelector("input")).borderTopStyle==="none");
+test("Every label rectangle is inside its bordered container",()=>[empty,withPlaceholder,filled,invalid,disabled].every(field=>{const c=field.querySelector(".ab-input-control").getBoundingClientRect(),l=field.querySelector(".ab-input-label").getBoundingClientRect();return l.left>=c.left&&l.right<=c.right&&l.top>=c.top&&l.bottom<=c.bottom;}));
 input.focus();
 test("Focus: label floats inside field",()=>empty.dataset.state==="focus"&&empty.querySelector(".ab-input-control").dataset.floated==="true"&&getComputedStyle(empty.querySelector("label")).fontSize==="12px");
-test("Focus: placeholder displayed",()=>getComputedStyle(input,"::placeholder").color!=="rgba(0, 0, 0, 0)");
+test("Focus: empty text row is below the small label",()=>{const label=empty.querySelector(".ab-input-label").getBoundingClientRect(),c=empty.querySelector(".ab-input-control").getBoundingClientRect();return label.top>=c.top&&label.bottom < c.bottom-12;});
 input.value="Петров";input.dispatchEvent(new Event("input",{bubbles:true}));input.blur();
 test("Filled: label remains floated after blur",()=>empty.dataset.state==="filled"&&empty.querySelector(".ab-input-control").dataset.floated==="true");
 input.value="";input.dispatchEvent(new Event("input",{bubbles:true}));

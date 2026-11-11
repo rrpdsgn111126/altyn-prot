@@ -33,6 +33,8 @@
     wrap.dataset.figmaId = "77:12680";
     const control = node("div","ab-input-control");
     control.dataset.hasLabel = String(Boolean(opts.label));
+    control.dataset.invalid = String(Boolean(opts.error));
+    control.dataset.disabled = String(Boolean(opts.disabled || opts.readOnly));
     const input = node("input","ab-input");
     input.type = opts.type || "text";
     // A stable id is necessary both for an accessible in-field label and helper text.
@@ -63,7 +65,10 @@
       const focused = document.activeElement === input;
       const filled = input.value.length > 0;
       // In Figma: Enable -> centered 16px label; Focus/Filled/Invalid -> 12px label above value.
-      control.dataset.floated = String(Boolean(opts.label) && (focused || filled || Boolean(opts.error)));
+      // Figma has two different empty variants:
+      // Enable: centered label only. Enable + placeholder: small label above placeholder.
+      control.dataset.floated = String(Boolean(opts.label) &&
+        (focused || filled || Boolean(opts.placeholder) || Boolean(opts.error)));
       wrap.dataset.state = opts.disabled || opts.readOnly ? "disabled" :
         opts.error ? "invalid" : focused ? "focus" : filled ? "filled" : "enable";
     };

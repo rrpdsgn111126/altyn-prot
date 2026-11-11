@@ -75,3 +75,13 @@ document.querySelector("#choices").append(
 `createInput({label,placeholder,value,error,...})` размещает **label внутри 54px поля**: при пустом Enable — центрированный текст 16/24; при focus, заполненном значении или ошибке — верхний label 12/16 и место для value/placeholder снизу. Функция возвращает `.ab-field` (не отдельный `input`); настоящий HTML input доступен через `field.querySelector("input")` и сохраняет `name` / `id` / `required`. Состояния доступны как `field.dataset.state` и `.ab-input-control.dataset.floated`.
 
 При клике на label фокус передаётся связанному полю. `onInput(event)` получает DOM InputEvent, как и в прежней версии компонента. Дополнительные иконки и `secondary` пока не реализованы. Автотесты: `shared/tests/input.html`.
+
+### Уточнение Input.mobile: общий контейнер с рамкой
+
+В исправленной реализации граница, фон и радиус принадлежат `.ab-input-control`. Его дочерние элементы — `input.ab-input` и `label.ab-input-label`: обе строки физически находятся внутри **одной и той же рамки**, без вынесенного label сверху.
+
+- `createInput({label:"ФИО"})`: Figma `2152:12365` / Enable, label 16/24px внутри по центру.
+- `createInput({label:"ФИО",placeholder:"Введите ФИО"})`: Figma `2190:18818` / Enable + placeholder, label 12/16px внутри сверху, placeholder 16/24px прямо под ним **сразу**, без необходимости ставить фокус.
+- `createInput({label:"ФИО",value:"Иванов"})`: Figma `2014:9857` / Filled, та же раскладка с введённым значением.
+
+Для автоматических тестов важна не только семантика, но и визуальная геометрия: `.ab-input-control` содержит border, а `.ab-input-label` целиком лежит внутри его прямоугольника.

@@ -2,7 +2,7 @@
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Altyn.Base — HTML-компоненты</title>
-<link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./components.css"><link rel="stylesheet" href="./choices.css">
+<link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./components.css?v=input-box-v2"><link rel="stylesheet" href="./choices.css">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#e9ebee;font:14px/1.5 var(--ab-font);color:var(--ab-ink)}
 .catalog{display:flex;justify-content:center;align-items:flex-start;gap:28px;padding:24px}
@@ -35,12 +35,13 @@
 <p>Проверка: переключите Switch, выберите Radio, нажмите ToggleButton/ToggleBank. Демонстрационная логика локальная; API не вызывается.</p>
 <p><code>../shared/tokens.css</code><br><code>../shared/components.css</code><br><code>../shared/components.js</code></p>
 </aside></div>
-<script src="./components.js"></script><script src="./choices.js"></script>
+<script src="./components.js?v=input-box-v2"></script><script src="./choices.js"></script>
 <script>
 (function(){const UI=window.AltynBase;
 document.getElementById("demo-nav").append(UI.createNavbar({title:"Компоненты",onBack:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Назад»";},onHelp:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Помощь»";}}));
 const inputs=document.getElementById("demo-inputs");
-inputs.append(UI.createInput({label:"Имя получателя",placeholder:"Введите имя",name:"recipient",helper:"Поле ввода"}));
+inputs.append(UI.createInput({label:"Имя получателя",name:"recipient"}));
+inputs.append(UI.createInput({label:"Назначение",placeholder:"Введите назначение",name:"purpose"}));
 inputs.append(UI.createInput({label:"Фамилия",value:"Иванов",name:"surname"}));
 inputs.append(UI.createInput({label:"Номер карты",value:"1234",error:"Проверьте номер карты",name:"card"}));
 const list=document.getElementById("demo-list");
