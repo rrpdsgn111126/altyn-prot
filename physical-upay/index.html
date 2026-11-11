@@ -63,7 +63,7 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 .card-detail .plastic{width:300px;flex-shrink:0}
 .card-detail .plastic:after{content:'Физическая';position:absolute;right:20px;top:27px;font-size:10px;line-height:14px;font-weight:500;color:rgba(255,255,255,.95)}
 .card-production-tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;display:flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;border-radius:30px;background:#000;color:#fff;font-size:12px;line-height:18px;padding:5px 11px}
-.awaiting-card .card-chooser{overflow:hidden;border-radius:17px}.awaiting-card .plastic{filter:blur(7px) brightness(.72);transform:scale(1.035)}.awaiting-card .card-production-tag{z-index:5}.card-production-tag .clock{width:15px;height:15px;display:inline-block;flex:0 0 15px;border-radius:50%;background:#fff;color:#111;text-align:center;font-size:11px;line-height:15px}
+.awaiting-card .card-chooser{overflow:hidden;border-radius:17px}.awaiting-card .plastic{filter:blur(7px) brightness(.72);transform:scale(1.035)}.awaiting-card .card-production-tag{z-index:5}.awaiting-card .quick-actions{flex-wrap:wrap}.card-production-tag .clock{width:15px;height:15px;display:inline-block;flex:0 0 15px;border-radius:50%;background:#fff;color:#111;text-align:center;font-size:11px;line-height:15px}
 .quick-actions{display:flex;gap:8px;justify-content:center;margin:0 -16px;padding:16px 16px 24px;background:white}
 .quick-actions button{border:0;border-radius:12px;min-height:32px;padding:7px 12px;font-size:12px;font-weight:600;line-height:16px}
 .quick-actions .add-card{background:var(--yellow);color:#211e1d}.quick-actions .how-card{background:#000;color:#fff}
@@ -179,7 +179,12 @@ return '<div class="stage-inner">'
 +errorBanner()
 +'</div>';
 }
-function awaitingCard(){return '<div class="card-detail awaiting-card"><div class="issued-card-hero"><div class="card-chooser">'+card(true)+'<div class="card-production-tag">Скоро будет готова <span class="clock" aria-hidden="true">◷</span></div></div></div><div class="quick-actions"><button class="add-card" type="button" data-action="detail-action" data-title="Добавить карту">Добавить карту</button><button class="how-card" type="button" data-action="open-info">Как пользоваться</button></div></div>'}
+function awaitingCard(){
+return '<div class="card-detail awaiting-card">'
++'<div class="issued-card-hero"><div class="card-chooser">'+card(true)+'<div class="card-production-tag">Скоро будет готова <span class="clock" aria-hidden="true">◷</span></div></div></div>'
++'<div class="quick-actions"><button class="add-card" type="button" data-action="reset">Добавить ещё одну карту</button><button class="how-card" type="button" data-action="open-info">Как пользоваться</button></div>'
++'</div>';
+}
 function orderView(){
 if(orderStatus==='network_known')return '<div class="stage-inner"><div class="center-state"><div class="state-circle bad">!</div><h1>Не удалось проверить статус</h1><p>Номер заказа известен. Проверим его статус без повторного оформления</p><div class="order-number">Заказ №'+safe(orderId)+'</div></div></div>';
 if(orderStatus==='failed'||orderStatus==='cancelled')return '<div class="stage-inner"><div class="center-state"><div class="state-circle bad">!</div><h1>'+(orderStatus==='failed'?'Не удалось выпустить карту':'Выпуск отменён')+'</h1><p>'+(orderStatus==='failed'?'Оформление не завершилось. Попробуйте позже':'Заказ отменён')+'</p><div class="order-number">Заказ №'+safe(orderId)+'</div></div></div>';
@@ -215,7 +220,7 @@ else if(step==='review')footer.innerHTML=button(retryNeeded?'Повторить 
 else if(step==='status')footer.innerHTML=orderStatus==='network_known'?button('Проверить статус','check'):orderStatus==='failed'||orderStatus==='cancelled'?button('Вернуться к картам','reset'):'';
 else footer.innerHTML='';
 }
-function updateAnnotations(){var steps={catalog:[['navbar','Верхняя навигация'],['cards bank','Зелёная карта YouPay · референс Altyn App'],['list.mobile','Условия использования и стоимость'],['Button.mobile','Кнопка создания карты · вариант уточнить']],delivery:[['navbar','Верхняя навигация'],['input.mobile','ФИО, телефон, город, адрес, индекс'],['Select · проверить','Страна доставки'],['Button.mobile','Продолжить · вариант уточнить']],review:[['navbar','Верхняя навигация'],['list.mobile','Детали карты, оплаты и доставки'],['Button.mobile','Подтвердить · вариант уточнить']],status:[['navbar','Верхняя навигация'],['cards bank','Размытая карта YouPay'],['ToggleButton.mobile','Тег «Скоро будет готова»'],['Button.mobile','Добавить карту и Как пользоваться'],['Status · проверить','Ошибки и отмена']],issued:[['navbar','Верхняя навигация'],['cards bank','Физическая карта YouPay и тег выпуска'],['Button.mobile','Добавить карту и Как пользоваться'],['list.mobile','Лимиты, реквизиты, тарифы, баланс, безопасность'],['Switch.Value','Лимит на операции']]};var names={catalog:'Выбор карты',delivery:'Доставка',review:'Подтверждение',status:'Статус заказа',issued:'Карта'};var target=$('component-map');if(!target)return;target.innerHTML='<h3>'+names[step]+'</h3><ul>'+(steps[step]||[]).map(function(item){return '<li><span class="candidate">'+item[0]+'</span><div>'+item[1]+'</div></li>'}).join('')+'</ul><p>Названия без подтверждённого варианта требуют сверки с Altyn.Base</p>'}
+function updateAnnotations(){var steps={catalog:[['navbar','Верхняя навигация'],['cards bank','Зелёная карта YouPay · референс Altyn App'],['list.mobile','Условия использования и стоимость'],['Button.mobile','Кнопка создания карты · вариант уточнить']],delivery:[['navbar','Верхняя навигация'],['input.mobile','ФИО, телефон, город, адрес, индекс'],['Select · проверить','Страна доставки'],['Button.mobile','Продолжить · вариант уточнить']],review:[['navbar','Верхняя навигация'],['list.mobile','Детали карты, оплаты и доставки'],['Button.mobile','Подтвердить · вариант уточнить']],status:[['navbar','Верхняя навигация'],['cards bank','Размытая карта YouPay'],['ToggleButton.mobile','Тег «Скоро будет готова»'],['Button.mobile','Добавить ещё одну карту и Как пользоваться'],['Status · проверить','Ошибки и отмена']],issued:[['navbar','Верхняя навигация'],['cards bank','Физическая карта YouPay и тег выпуска'],['Button.mobile','Добавить карту и Как пользоваться'],['list.mobile','Лимиты, реквизиты, тарифы, баланс, безопасность'],['Switch.Value','Лимит на операции']]};var names={catalog:'Выбор карты',delivery:'Доставка',review:'Подтверждение',status:'Статус заказа',issued:'Карта'};var target=$('component-map');if(!target)return;target.innerHTML='<h3>'+names[step]+'</h3><ul>'+(steps[step]||[]).map(function(item){return '<li><span class="candidate">'+item[0]+'</span><div>'+item[1]+'</div></li>'}).join('')+'</ul><p>Названия без подтверждённого варианта требуют сверки с Altyn.Base</p>'}
 function render(){
 var waiting=step==='status'&&(orderStatus==='pending'||orderStatus==='processing');
 $('mobile').classList.toggle('issued-mode',step==='issued'||waiting);
@@ -295,8 +300,8 @@ var validStates=['pending','processing','success','failed','cancelled','network_
 if(validStates.indexOf(state)===-1)return;
 ++session;busy=false;modal.innerHTML='';notice='';errors={};retryNeeded=false;orderId=456;orderStatus=state;
 if(!form.recipient_name)form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2',postal_code:'101000'};
-if(state==='success'||state==='exists'||state==='processing'){step='issued';plasticPending=state==='processing'}
-else if(['pending','failed','cancelled','network_known'].includes(state)){step='status';plasticPending=false}
+if(state==='success'||state==='exists'){step='issued';plasticPending=false}
+else if(['pending','processing','failed','cancelled','network_known'].includes(state)){step='status';plasticPending=false}
 else{step='review';if(state==='network_unknown'){retryNeeded=true;notice='Не удалось получить номер заказа. Повторите запрос с теми же данными'}
 else if(state==='stock')notice='В выбранную страну сейчас нет доступных карт для доставки';
 else if(state==='conflict')notice='Адрес отличается от уже оформленного заказа. Изменить существующий заказ нельзя'}
