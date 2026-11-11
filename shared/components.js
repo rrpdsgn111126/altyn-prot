@@ -70,7 +70,7 @@
     listen(input,"focus",updateState);
     listen(input,"blur",updateState);
     listen(input,"change",updateState);
-    listen(input,"input",() => { updateState(); if (typeof opts.onInput === "function") opts.onInput(input); });
+    listen(input,"input",(event) => { updateState(); if (typeof opts.onInput === "function") opts.onInput(event); });
     updateState();
     return wrap;
   }

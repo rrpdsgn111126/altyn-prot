@@ -74,4 +74,4 @@ document.querySelector("#choices").append(
 
 `createInput({label,placeholder,value,error,...})` размещает **label внутри 54px поля**: при пустом Enable — центрированный текст 16/24; при focus, заполненном значении или ошибке — верхний label 12/16 и место для value/placeholder снизу. Функция возвращает `.ab-field` (не отдельный `input`); настоящий HTML input доступен через `field.querySelector("input")` и сохраняет `name` / `id` / `required`. Состояния доступны как `field.dataset.state` и `.ab-input-control.dataset.floated`.
 
-При клике на label фокус передаётся связанному полю. `onInput(input)` получает оригинальный input DOM-узел. Дополнительные иконки и `secondary` пока не реализованы. Автотесты: `shared/tests/input.html`.
+При клике на label фокус передаётся связанному полю. `onInput(event)` получает DOM InputEvent, как и в прежней версии компонента. Дополнительные иконки и `secondary` пока не реализованы. Автотесты: `shared/tests/input.html`.
