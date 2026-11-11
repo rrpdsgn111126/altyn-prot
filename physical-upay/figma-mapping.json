@@ -9857,7 +9857,7 @@
           "parentId": "support-modal",
           "htmlSource": {
             "file": "physical-upay/index.html",
-            "htmlSelector": "#modal [data-action=\"close-support\"]"
+            "htmlSelector": "#modal .support-sheet__close[data-action=\"close-support\"]"
           },
           "figmaTarget": {
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
@@ -10346,7 +10346,7 @@
           "parentId": "support-modal",
           "htmlSource": {
             "file": "physical-upay/index.html",
-            "htmlSelector": "#modal [data-action=\"close-support\"]"
+            "htmlSelector": "#modal .support-sheet__close[data-action=\"close-support\"]"
           },
           "figmaTarget": {
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
