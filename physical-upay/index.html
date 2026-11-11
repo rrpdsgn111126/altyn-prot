@@ -1,40 +1,239 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Upay — выпуск карты</title><style>
-*{box-sizing:border-box}body{margin:0;background:#eef0ed;color:#161714;font:14px/1.45 Inter,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.45}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #8ba83f;outline-offset:2px}.stage{display:flex;justify-content:center;align-items:flex-start;gap:35px;padding:32px 16px}.phone{width:430px;height:825px;flex:none;display:flex;flex-direction:column;position:relative;background:#f6f7f8;border-radius:34px;box-shadow:0 20px 60px #24372325,0 0 0 6px #262d29;overflow:hidden}.statusbar{height:45px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:12px 26px 0;font-weight:700}.nav{height:63px;flex:none;display:flex;align-items:center;padding:0 20px;gap:12px;font-size:18px;font-weight:700}.back{width:40px;height:40px;border:0;border-radius:50%;background:white;font-size:27px}.nav span{flex:1;text-align:center}.nav i{width:40px}.scroll{flex:1;min-height:0;overflow-y:auto;padding:17px 20px 24px}.footer{padding:14px 20px 27px;flex:none;border-top:1px solid #e6e9e7}.home{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);background:#161714;width:130px;height:5px;border-radius:9px}h1{font-size:27px;line-height:1.17;letter-spacing:-.7px;margin:0 0 13px}h2{font-size:17px;margin:20px 0 12px}.lead{font-size:13px;color:#737971;line-height:1.5;margin:0 0 20px}.art{height:215px;border-radius:22px;background:radial-gradient(ellipse at 93% 0%,#e7ffa3,transparent 54%),linear-gradient(132deg,#bcd86b,#789c37);padding:22px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 8px 22px #61763530}.art b{font-size:29px;letter-spacing:-1.5px}.art .chip{width:35px;height:26px;border-radius:6px;background:linear-gradient(135deg,#e2cc92,#f1e1b0);border:1px solid #cfb783}.art small{font-weight:700;letter-spacing:2px}.line{display:flex;justify-content:space-between;gap:14px;align-items:center}.card-title{margin-top:17px}.card-title strong{font-size:16px}.sub{display:block;color:#878b87;font-size:12px;margin-top:3px}.tag{background:#e6f3d1;color:#4d692e;padding:6px 12px;border-radius:30px;font-size:11px;font-weight:700}.price{background:#fff;border-radius:14px;padding:16px;margin:17px 0}.price span{color:#737971}.price strong{font-size:19px}.notice{padding:14px;border-radius:15px;background:#e9eced;color:#59605c;font-size:12px;margin:12px 0}.notice.error{background:#fbe8e3;color:#a23d20}.notice.warn{background:#fff0db;color:#815820}.primary,.secondary{width:100%;border:0;min-height:53px;border-radius:15px;background:#cbf14a;font-weight:750;color:#151a0c;font-size:14px}.secondary{background:#e8ebea}.text-btn{display:block;width:100%;background:none;border:0;padding:12px;color:#577333;font-weight:700}.steps{display:flex;gap:6px;margin:0 0 20px}.steps b{height:4px;flex:1;background:#e0e3e1;border-radius:6px}.steps b.on{background:#a0bd46}.field{display:block;margin:0 0 16px}.label{display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:7px}.label small{font-size:11px;font-weight:400;color:#858e87}.input{background:#fff;border:1px solid #dfe4e1;border-radius:14px;width:100%;height:54px;padding:0 14px;font-size:15px;color:#161714}.input.bad{border-color:#ad4c37}.error-text{display:block;color:#b3482b;font-size:11px;margin-top:5px}.summary{background:white;border:1px solid #e9edeb;border-radius:16px;padding:0 15px}.summary .item{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #ecf0ed}.summary .item:last-child{border:0}.summary .item span{color:#777e77;font-size:12px;white-space:nowrap}.summary .item b{font-size:12px;text-align:right;max-width:68%;overflow-wrap:anywhere}.center{text-align:center;padding-top:44px}.icon{display:grid;place-items:center;width:76px;height:76px;margin:0 auto 22px;border-radius:25px;background:#e6efd4;color:#5b862c;font-size:36px;font-weight:700}.icon.bad{background:#f9e7e4;color:#a44b2a}.center p{font-size:13px;color:#737971;line-height:1.5}.demo{width:305px;background:#fff;border:1px solid #e0e6e0;border-radius:20px;padding:20px;display:grid;gap:12px;margin-top:15px}.demo h3{margin:0;font-size:17px}.demo p{margin:0;font-size:11px;color:#879087}.demo label{font-size:11px;font-weight:700;color:#657265;display:grid;gap:5px}.demo select,.demo input:not([type=checkbox]){height:39px;width:100%;padding:8px;border:1px solid #dae2dc;border-radius:9px;background:#fff;color:#222;font-size:12px}.demo .pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}.demo .check{display:flex;align-items:center;gap:8px;font-weight:500}.demo button{border:0;background:#26382b;color:#fff;border-radius:10px;min-height:38px;font-size:12px;font-weight:700}.demo button.light{background:#eaf0e8;color:#536e4c}.demo pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f2f6f2;padding:11px;border-radius:9px;margin:0;font-size:10px;max-height:180px;overflow:auto}.demo a{font-size:11px;color:#587038;text-decoration:none}@media(max-width:760px){body{background:#f6f7f8}.stage{display:block;padding:0}.phone{width:100%;height:100dvh;min-height:600px;border-radius:0;box-shadow:none}.demo{display:none}}
-</style></head><body><main class="stage"><section class="phone"><div class="statusbar"><span>9:41</span><span>●●● ▰</span></div><header class="nav"><button class="back" id="back" aria-label="Назад">‹</button><span id="title">Выпуск карты</span><i></i></header><div class="scroll" id="screen" aria-live="polite"></div><footer class="footer" id="footer"></footer><div class="home"></div></section><aside class="demo"><h3>Тестовые сценарии</h3><p>Управление вне интерфейса приложения</p><label>Результат заказа<select id="scenario"><option value="success">Успешный выпуск</option><option value="failed">Ошибка выпуска</option><option value="cancelled">Заказ отменён</option><option value="stock">Нет карт в выбранной стране</option><option value="networkId">Сбой сети, ID известен</option><option value="networkNoId">Сбой сети, ID неизвестен</option><option value="conflict">Конфликт адреса</option><option value="exists">Карта уже выпущена</option></select></label><div class="pair"><label>Цена из каталога<input id="priceInput" value="50 USD"></label><label>Template ID<input id="templateInput" type="number" min="1" value="123"></label></div><label class="check"><input type="checkbox" id="kyc" checked>Полная идентификация</label><label class="check"><input type="checkbox" id="available" checked>Доступно в каталоге</label><button id="fill">Заполнить тестовые данные</button><button class="light" id="reset">Сброс</button><p>Модель API — без реальных запросов</p><pre id="log"></pre><a href="https://rrpdsgn111126.github.io/wallet-ui-prototypes/ui-kit/" target="_blank" rel="noreferrer">Отдельный UI kit ↗</a></aside></main>
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Altyn · Выпуск физической карты Upay</title>
+<style>
+:root{--yellow:#ffd119;--bg:#f6f7f8;--white:#fff;--ink:#211e1d;--muted:#837f7f;--border:#e9ecf0;--error:#c44837;--accent:#d69500}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font:14px/1.4 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#e9ebee}
+button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.45}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #d69500;outline-offset:2px}
+.scene{min-height:100vh;display:flex;justify-content:center;align-items:flex-start;gap:42px;padding:30px 20px}
+.mobile{width:375px;height:820px;flex:0 0 375px;background:white;display:flex;flex-direction:column;border-radius:20px;overflow:hidden;box-shadow:0 12px 44px #26312122;position:relative}
+.statusbar{flex:0 0 40px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:13px;font-weight:600;background:inherit}
+.camera{height:24px;width:24px;border-radius:50%;background:var(--ink);position:absolute;top:8px;left:calc(50% - 12px)}
+.nav{height:54px;flex:0 0 54px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:inherit;gap:12px}
+.nav .back,.nav .chat{border:0;background:transparent;width:24px;height:24px;display:grid;place-items:center;padding:0;flex-shrink:0;color:var(--accent)}
+.nav .back{font-size:30px;font-weight:300;line-height:15px}.nav .chat{font-size:20px}
+.nav-title{flex:1;text-align:center;font-size:18px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.scroll{min-height:0;flex:1;overflow:auto;scrollbar-width:thin;scrollbar-color:#d0d3d0 transparent}
+.stage-inner{padding:16px}.stage-inner.wide{padding:0}
+.bottom{flex:none;padding:12px 16px 14px;background:white}.bottom:empty{display:none}
+.android-nav{height:37px;flex:0 0 37px;display:flex;justify-content:space-evenly;align-items:center;background:white;color:#211e1d}.android-nav span{display:inline-block}.android-nav span:nth-child(1){width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-right:9px solid var(--ink)}.android-nav span:nth-child(2){width:10px;height:10px;background:var(--ink);border-radius:50%}.android-nav span:nth-child(3){width:10px;height:10px;background:var(--ink);border-radius:1px}
+.card-chooser{background:white;padding:16px 0;display:flex;justify-content:center}
+.plastic{height:183px;width:300px;border-radius:17px;background:var(--yellow);position:relative;overflow:hidden;color:#221e15;box-shadow:0 2px 8px #00000012}
+.plastic:before{content:"A";font-size:280px;position:absolute;left:14px;top:-101px;font-family:Arial,sans-serif;font-weight:900;color:#fff4b8;opacity:.63;line-height:1}
+.plastic .mark{width:31px;height:31px;display:grid;place-items:center;position:absolute;top:21px;left:21px;border-radius:50%;border:2px solid #fff9df;background:#ffffff30;color:white;font-weight:750;font-size:19px}
+.plastic .product{position:absolute;right:18px;top:22px;font-size:14px;font-weight:800;letter-spacing:.5px}
+.plastic .kind{position:absolute;top:68px;right:18px;font-size:11px;font-weight:600}
+.plastic .number{position:absolute;bottom:19px;left:20px;font-size:15px;font-weight:550;letter-spacing:.7px}
+.plastic .bottom-name{position:absolute;bottom:19px;right:20px;font-size:14px;font-weight:800}
+.main-box{background:var(--bg);border-radius:12px;padding:0 16px;overflow:hidden}
+.info-row{min-height:54px;padding:8px 0;border-bottom:1px solid #e9ecf0;display:flex;flex-direction:column;justify-content:center;gap:3px}.info-row:last-child{border-bottom:0}
+.info-row .key{font-size:12px;line-height:16px;color:var(--muted)}.info-row .value{font-size:16px;line-height:23px;overflow-wrap:anywhere}
+.info-row .value.sm{font-size:14px;line-height:20px}.info-row .value.link{color:var(--accent)}
+.group-title{font-size:18px;font-weight:600;margin:0 0 14px}
+.card-explainer{padding:16px;background:#fcf8ec;border-radius:12px;margin-top:24px}
+.card-explainer .key{color:var(--muted);font-size:12px;margin-bottom:5px}.card-explainer .body{font-size:14px;line-height:21px}
+.promo{margin:16px 0 0;display:flex;gap:8px;align-items:center}
+.promo input{min-width:0;flex:1;border-radius:11px;border:1px solid var(--border);height:54px;padding:0 13px;background:#fff;font-size:14px}
+.promo button{border:0;background:var(--bg);border-radius:10px;height:46px;padding:0 12px;font-size:12px;font-weight:600}
+.promo-note{font-size:12px;color:var(--accent);margin-top:7px;line-height:1.4}.promo-note.bad{color:var(--error)}
+.primary,.secondary{border:0;border-radius:12px;min-height:54px;width:100%;padding:12px;font-size:14px;font-weight:600}
+.primary{background:var(--yellow);color:var(--ink)}.primary:hover:not(:disabled){background:#f2c610}
+.secondary{background:var(--bg);color:var(--ink)}
+.foot-note{font-size:11px;text-align:center;color:var(--muted);margin:8px 4px 0;line-height:1.45}
+.field{margin:0 0 16px;display:block}.label{display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600;margin:0 0 7px}.label .optional{font-size:11px;font-weight:400;color:var(--muted)}
+.input{display:block;width:100%;height:54px;border-radius:12px;border:1px solid var(--border);padding:0 14px;background:white;font-size:15px;color:var(--ink)}
+.input::placeholder{color:#a5a5a5}.input.invalid{border-color:var(--error);background:#fffafa}.field-error{font-size:11px;color:var(--error);margin:4px 0 0;display:block}
+.headline{font-size:19px;line-height:25px;font-weight:650;margin:2px 0 12px}.intro{font-size:13px;color:var(--muted);line-height:19px;margin:0 0 20px}
+.list-group{background:var(--bg);border-radius:12px;padding:0 16px;margin-bottom:16px}.list-group h2{font-size:13px;font-weight:700;padding-top:15px;margin:0 0 2px}
+.summary-row{padding:8px 0;border-bottom:1px solid var(--border);min-height:54px;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.summary-row:last-child{border-bottom:0}.summary-row .key{font-size:12px;color:var(--muted)}.summary-row .value{font-size:16px;line-height:23px;overflow-wrap:anywhere}
+.warning{padding:14px 16px;background:#fcf8ec;border-radius:12px;font-size:13px;line-height:20px;margin:16px 0}
+.error-message{padding:12px 14px;background:#fff0ef;color:#aa4432;border-radius:10px;font-size:13px;line-height:19px;margin:12px 0}
+.consent{display:flex;align-items:flex-start;gap:9px;background:#fcf8ec;padding:16px;border-radius:12px;font-size:12px;line-height:18px;margin:16px 0}
+.consent input{width:17px;height:17px;accent-color:var(--yellow);flex-shrink:0;margin-top:1px}
+.center-state{text-align:center;padding:95px 15px 15px}.state-circle{height:80px;width:80px;border-radius:24px;background:#eff8d5;color:#4f8614;display:grid;place-items:center;font-size:38px;font-weight:700;margin:0 auto 21px}.state-circle.bad{color:#ad3e2c;background:#fae9e6}
+.center-state h1{font-size:22px;margin:0 0 11px;font-weight:650}.center-state p{color:var(--muted);font-size:14px;line-height:21px;margin:0 0 10px}.order-number{font-size:12px;color:var(--muted);margin-top:17px}
+.card-detail{padding:16px}.card-detail .card-chooser{padding:0 0 18px;background:transparent}.card-detail .plastic{width:300px}
+.quick-actions{display:flex;gap:8px;justify-content:center;margin:14px 0 24px}.quick-actions button{background:var(--yellow);border:0;border-radius:12px;font-size:12px;font-weight:600;padding:11px 15px}
+.card-badge{color:#5c7a2b;font-size:12px;background:#edf4dc;border-radius:20px;padding:6px 10px;display:inline-block;margin-bottom:13px}
+.sheet-back{position:absolute;inset:0;background:#0009;display:flex;justify-content:flex-end;flex-direction:column;z-index:20}.sheet{background:white;border-radius:18px 18px 0 0;padding:16px 16px 24px;max-height:78%;overflow:auto}.handle{background:#d6d9d9;width:56px;height:4px;border-radius:10px;margin:0 auto 20px}.sheet h2{font-size:16px;margin:0 0 16px}.sheet h3{font-size:14px;margin:18px 0 8px}.sheet p{font-size:13px;line-height:20px;color:var(--muted);margin:0 0 10px}
+.toolbox{width:310px;flex-shrink:0;background:white;border:1px solid #e5e8e9;border-radius:17px;padding:18px;display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.toolbox h3{margin:0;font-size:16px}.toolbox p{margin:0;font-size:11px;color:#78817d}.toolbox label{font-size:11px;color:#5c6660;font-weight:650;display:block}
+.toolbox select,.toolbox input:not([type=checkbox]){margin-top:5px;width:100%;padding:8px 10px;min-height:40px;border:1px solid #dae0de;border-radius:9px;color:#232a25;background:white;font-size:12px}
+.toolbox .two{display:grid;grid-template-columns:1fr 1fr;gap:9px}.toolbox .check{display:flex;align-items:center;gap:8px;font-weight:500}.toolbox input[type=checkbox]{accent-color:#c2a000;height:15px;width:15px}
+.toolbox button{border:0;border-radius:9px;background:#242e25;color:white;min-height:38px;font-size:12px;font-weight:600}.toolbox button.subtle{background:#eef0ee;color:#465345}
+.toolbox pre{margin:0;max-height:160px;min-height:100px;overflow:auto;border-radius:8px;background:#f5f6f5;padding:11px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:10px;line-height:1.45}
+.toolbox a{font-size:11px;color:#9c7400;text-decoration:none}
+@media(max-width:750px){html,body{background:white}.scene{padding:0;display:block}.mobile{width:100%;height:100dvh;min-height:610px;border-radius:0;box-shadow:none;flex:none}.toolbox{display:none}.plastic{max-width:calc(100vw - 48px)}}
+</style>
+</head>
+<body>
+<main class="scene">
+<section class="mobile" id="mobile" aria-label="Интерактивный прототип выпуска физической карты Upay">
+<div class="statusbar"><span>9:30</span><span>◆ ◢ ▰</span></div><div class="camera" aria-hidden="true"></div>
+<header class="nav"><button class="back" type="button" id="back" aria-label="Назад">‹</button><span class="nav-title" id="title">Оформление карты</span><button class="chat" id="help" type="button" aria-label="Помощь">▢</button></header>
+<div class="scroll" id="view" aria-live="polite"></div>
+<footer class="bottom" id="bottom"></footer><div class="android-nav" aria-hidden="true"><span></span><span></span><span></span></div>
+<div id="modal"></div>
+</section>
+<aside class="toolbox">
+<h3>Тестовые сценарии</h3><p>Панель вне экранов приложения. Данные и статусы симулируются.</p>
+<label>Результат оформления<select id="outcome">
+<option value="success">Успешный выпуск</option><option value="failed">Ошибка выпуска</option><option value="cancelled">Заказ отменён</option><option value="stock">Нет карт для страны доставки</option><option value="network_known">Сбой сети, ID известен</option><option value="network_unknown">Сбой сети, ID неизвестен</option><option value="conflict">Данные доставки отличаются</option><option value="exists">Карта уже выпущена</option></select></label>
+<div class="two"><label>Цена выпуска<input id="price" value="1 000 ₽"></label><label>Template ID<input id="template" type="number" min="1" value="123"></label></div>
+<label>Сценарий промокода<select id="promo-mode"><option value="applied">Применён</option><option value="invalid">Не подошёл</option></select></label>
+<label class="check"><input type="checkbox" id="kyc" checked> Полная идентификация пройдена</label>
+<label class="check"><input type="checkbox" id="available" checked> Шаблон доступен</label>
+<button id="fill" type="button">Заполнить тестовые реквизиты</button><button id="reset" class="subtle" type="button">Сбросить</button>
+<p><strong>Модель вызовов API</strong> — без реальных запросов</p><pre id="log"></pre>
+<a href="https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/?node-id=14348-101393" target="_blank" rel="noreferrer">Исходный flow Figma ↗</a>
+</aside>
+</main>
 <script>
-(()=>{'use strict';const $=id=>document.getElementById(id),screen=$('screen'),foot=$('footer'),countries={RU:'Россия',KZ:'Казахстан',AE:'ОАЭ'};
-let stage='catalog',form={},errors={},message='',id=null,status='',saved=null,lock=false,retry=false,timer=0,logs=[];const cfg={price:'50 USD',template:123,kyc:true,available:true,scenario:'success'};
-const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const api=(m,url,body)=>{logs.push(m+' '+url+(body?'\n'+JSON.stringify(body,null,2):''));$('log').textContent=logs.slice(-6).join('\n\n')};
-const btn=(t,a,secondary=false,disabled=false)=>'<button class="'+(secondary?'secondary':'primary')+'" data-action="'+a+'"'+(disabled?' disabled':'')+'>'+t+'</button>';
-const notice=(t,kind='')=>'<div role="status" class="notice '+kind+'">'+esc(t)+'</div>';
-const steps=n=>'<div class="steps">'+[1,2,3].map(i=>'<b class="'+(i<=n?'on':'')+'"></b>').join('')+'</div>';
-const art=()=>'<div class="art"><b>upay.</b><div class="chip"></div><small>PHYSICAL CARD</small></div>';
-const line=(k,v)=>'<div class="item"><span>'+k+'</span><b>'+esc(v)+'</b></div>';
-function field(k,label,placeholder,max,opt=false){return '<label class="field"><span class="label">'+label+(opt?'<small>Необязательно</small>':'')+'</span><input class="input'+(errors[k]?' bad':'')+'" maxlength="'+max+'" data-field="'+k+'" placeholder="'+esc(placeholder)+'" value="'+esc(form[k]||'')+'">'+(errors[k]?'<span class="error-text">'+esc(errors[k])+'</span>':'')+'</label>'}
+(function(){
+'use strict';
+var $=function(x){return document.getElementById(x)};
+var view=$('view'),footer=$('bottom'),modal=$('modal');
+var countryNames={RU:'Россия',KZ:'Казахстан',AE:'ОАЭ'};
+var model={price:'1 000 ₽',templateId:123,outcome:'success',promoMode:'applied',kyc:true,available:true};
+var step='catalog',form={},errors={},notice='',promoState='',consent=false,busy=false,orderId=null,orderStatus='',requestSnapshot=null,retryNeeded=false,session=0,logEntries=[];
+function safe(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function api(method,path,payload){logEntries.push(method+' '+path+(payload?'\n'+JSON.stringify(payload,null,2):''));$('log').textContent=logEntries.slice(-6).join('\n\n')}
+function button(text,action,disabled,secondary){return '<button class="'+(secondary?'secondary':'primary')+'" type="button" data-action="'+action+'"'+(disabled?' disabled':'')+'>'+text+'</button>'}
+function card(issued){return '<div class="plastic" role="img" aria-label="Физическая карта Upay"><span class="mark">A</span><span class="product">ALTYN</span><span class="kind">Физическая</span>'+(issued?'<span class="number">•••• 2823</span>':'')+'<span class="bottom-name">UPAY</span></div>'}
+function info(key,value,small){return '<div class="info-row"><span class="key">'+key+'</span><span class="value'+(small?' sm':'')+'">'+safe(value)+'</span></div>'}
+function line(key,value){return '<div class="summary-row"><span class="key">'+key+'</span><span class="value">'+safe(value)+'</span></div>'}
+function errorBanner(){return notice?'<div class="error-message" role="alert">'+safe(notice)+'</div>':''}
+function field(id,label,placeholder,max,opt){return '<label class="field"><span class="label">'+label+(opt?'<span class="optional">Необязательно</span>':'')+'</span><input class="input'+(errors[id]?' invalid':'')+'" type="text" data-field="'+id+'" maxlength="'+max+'" value="'+safe(form[id]||'')+'" placeholder="'+safe(placeholder)+'">'+(errors[id]?'<span class="field-error">'+safe(errors[id])+'</span>':'')+'</label>'}
+function catalog(){
+return '<div class="stage-inner wide"><div class="card-chooser">'+card(false)+'</div><div class="stage-inner">'
++'<div class="main-box">'
++info('Где можно платить','Онлайн — после выпуска, пластиковой картой — после получения',true)
++info('Тип карты','Физическая Upay')
++info('Стоимость выпуска',model.price)
++info('Доставка','Включена в стоимость')
++'</div>'
++'<div class="promo"><input id="promo-entry" aria-label="Промокод" maxlength="32" placeholder="Промокод" value="'+safe(form.promo_code||'')+'"><button type="button" data-action="apply-promo">Применить</button></div>'
++(promoState?'<div class="promo-note'+(promoState==='invalid'?' bad':'')+'">'+(promoState==='invalid'?'Промокод не подошёл':'Промокод применён')+'</div>':'')
++'<div class="card-explainer"><div class="key">Условия оформления</div><div class="body">Для выпуска нужна полная идентификация. После оформления изменить адрес доставки нельзя.</div></div>'
++(!model.available?'<div class="error-message">Карта временно недоступна для выпуска</div>':'')
++(!model.kyc?'<div class="error-message">Для выпуска карты требуется полная идентификация</div>':'')
++errorBanner()+'</div></div>';
+}
+function delivery(){
+return '<div class="stage-inner"><h1 class="headline">Доставка карты</h1><p class="intro">Укажите получателя и адрес, по которому нужно доставить пластиковую карту.</p>'
++field('recipient_name','ФИО получателя','Фамилия Имя Отчество',255,false)
++field('phone','Номер телефона','+7 999 000-00-00',32,false)
++'<label class="field"><span class="label">Страна доставки</span><select class="input'+(errors.country_code?' invalid':'')+'" data-field="country_code"><option value="">Выберите страну</option>'
++Object.keys(countryNames).map(function(k){return '<option value="'+k+'"'+(form.country_code===k?' selected':'')+'>'+countryNames[k]+'</option>'}).join('')+'</select>'
++(errors.country_code?'<span class="field-error">'+safe(errors.country_code)+'</span>':'')+'</label>'
++field('city','Город','Город',128,false)+field('address','Адрес доставки','Улица, дом, корпус, квартира',512,false)+field('postal_code','Почтовый индекс','Индекс',32,true)
++'<div class="warning">Доставка входит в стоимость выпуска. Изменить адрес после создания заказа нельзя.</div></div>';
+}
+function review(){
+return '<div class="stage-inner"><h1 class="headline">Подтверждение выпуска</h1>'
++'<div class="list-group">'+line('Карта','Физическая Upay')+line('Где можно платить','Онлайн сразу после выпуска')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
++'<div class="list-group">'+line('ФИО получателя',form.recipient_name)+line('Номер телефона',form.phone)+line('Страна',countryNames[form.country_code]||'')+line('Город',form.city)+line('Адрес доставки',form.address)+(form.postal_code?line('Почтовый индекс',form.postal_code):'')+'</div>'
++(form.promo_code?'<div class="list-group">'+line('Промокод',form.promo_code)+'</div>':'')
++'<div class="list-group">'+line('Ограничения','После создания заказа адрес изменить нельзя')+'</div>'
++errorBanner()
++'<label class="consent"><input type="checkbox" id="consent" '+(consent?'checked':'')+'><span>Проверил данные доставки и понимаю, что изменить адрес после оформления заказа нельзя.</span></label>'
++'</div>';
+}
+function orderView(){
+if(orderStatus==='network_known')return '<div class="stage-inner"><div class="center-state"><div class="state-circle bad">!</div><h1>Не удалось проверить статус</h1><p>Номер заказа известен. Проверим его статус без повторного оформления.</p><div class="order-number">Заказ №'+safe(orderId)+'</div></div></div>';
+if(orderStatus==='failed'||orderStatus==='cancelled')return '<div class="stage-inner"><div class="center-state"><div class="state-circle bad">!</div><h1>'+(orderStatus==='failed'?'Не удалось выпустить карту':'Выпуск отменён')+'</h1><p>'+(orderStatus==='failed'?'Оформление не завершилось. Попробуйте позже.':'Заказ отменён.')+'</p><div class="order-number">Заказ №'+safe(orderId)+'</div></div></div>';
+return '<div class="stage-inner"><div class="center-state"><div class="state-circle">◌</div><h1>'+(orderStatus==='processing'?'Карта выпускается':'Ожидаем выпуск карты')+'</h1><p>Проверяем статус заказа. После выпуска карта будет доступна для онлайн-платежей.</p><div class="order-number">Заказ №'+safe(orderId)+'</div></div><div class="warning">Доставка пластикового экземпляра оформляется отдельно от его выпуска.</div></div>';
+}
+function issued(){
+return '<div class="card-detail"><div class="card-chooser">'+card(true)+'</div><div class="card-badge">Карта активна · Онлайн-платежи доступны</div><div class="quick-actions"><button type="button" data-action="open-info">Как пользоваться</button></div>'
++'<div class="main-box">'+info('Тип карты','Физическая Upay')+info('Статус выпуска','Успешно')+info('Заказ',orderId)+info('Доставка','Пластик отправляют отдельно')+'</div>'
++'<div class="card-explainer"><div class="key">Информация</div><div class="body">Статус выпуска не означает, что пластиковая карта уже отправлена или доставлена.</div></div></div>';
+}
+function refreshFooter(){
+if(step==='catalog')footer.innerHTML=button('Создать карту','choose',!model.available||!model.kyc);
+else if(step==='delivery')footer.innerHTML=button('Продолжить','validate');
+else if(step==='review')footer.innerHTML=button(retryNeeded?'Повторить запрос':'Подтвердить',retryNeeded?'retry':'submit',busy||(!consent&&!retryNeeded))+'<p class="foot-note">Доставка включена в стоимость выпуска</p>';
+else if(step==='status')footer.innerHTML=orderStatus==='network_known'?button('Проверить статус','check'):orderStatus==='failed'||orderStatus==='cancelled'?button('Вернуться к картам','reset'):button('Проверить статус','poll',false,true);
+else footer.innerHTML='';
+}
 function render(){
-$('title').textContent={catalog:'Выпуск карты',delivery:'Доставка',review:'Подтверждение',status:'Выпуск карты',issued:'Моя карта'}[stage];$('back').style.visibility=['catalog','status','issued'].includes(stage)?'hidden':'visible';
-let h='';
-if(stage==='catalog'){h='<h1>Физическая карта Upay</h1><p class="lead">Оплачивайте покупки онлайн сразу после выпуска. Пластиковую карту доставят отдельно.</p>'+art()+'<div class="line card-title"><div><strong>Upay · Пластиковая</strong><span class="sub">Выпуск и доставка</span></div><span class="tag">Физическая</span></div><div class="line price"><span>Стоимость выпуска</span><strong>'+esc(cfg.price)+'</strong></div>'+notice('Доставка включена в стоимость выпуска.')+(!cfg.available?notice('Карта временно недоступна.','warn'):'')+(!cfg.kyc?notice('Для заказа нужна полная идентификация.','warn'):'')+(message?notice(message,'error'):'');foot.innerHTML=btn('Продолжить','choose',false,!cfg.available)}
-if(stage==='delivery'){h=steps(2)+'<h1>Адрес доставки</h1><p class="lead">Укажите получателя и полный адрес для доставки карты.</p>'+field('recipient_name','ФИО получателя','Как в документе',255)+field('phone','Номер телефона','+7 999 000 00 00',32)+'<label class="field"><span class="label">Страна доставки</span><select class="input'+(errors.country_code?' bad':'')+'" data-field="country_code"><option value="">Выберите страну</option>'+Object.entries(countries).map(([k,v])=>'<option value="'+k+'"'+(form.country_code===k?' selected':'')+'>'+v+'</option>').join('')+'</select>'+(errors.country_code?'<span class="error-text">'+errors.country_code+'</span>':'')+'</label>'+field('city','Город','Город доставки',128)+field('address','Адрес','Улица, дом, корпус, квартира',512)+field('postal_code','Почтовый индекс','Индекс',32,true)+field('promo_code','Промокод','Если есть',32,true);foot.innerHTML=btn('Продолжить','validate')}
-if(stage==='review'){h=steps(3)+'<h1>Проверьте данные</h1><p class="lead">После оформления изменить адрес доставки нельзя.</p><h2>Карта и оплата</h2><div class="summary">'+line('Тип','Физическая Upay')+line('Выпуск',cfg.price)+line('Доставка','Включена в стоимость')+'</div><h2>Доставка</h2><div class="summary">'+line('Получатель',form.recipient_name)+line('Телефон',form.phone)+line('Страна',countries[form.country_code])+line('Город',form.city)+line('Адрес',form.address)+(form.postal_code?line('Индекс',form.postal_code):'')+'</div>'+(form.promo_code?'<h2>Промокод</h2><div class="summary">'+line('Код',form.promo_code)+'</div>':'')+(message?notice(message,'error'):'')+'<div class="line price"><span>Итого к оплате</span><strong>'+esc(cfg.price)+'</strong></div>';foot.innerHTML=btn(retry?'Повторить запрос':'Оплатить выпуск',retry?'retry':'submit',false,lock)+'<button class="text-btn" data-action="edit"'+(lock?' disabled':'')+'>Изменить данные</button>'}
-if(stage==='status'){if(status==='networkId'){h='<div class="center"><div class="icon bad">!</div><h1>Нет связи с сервером</h1><p>Номер заказа сохранён. Проверим его статус без повторного заказа.</p></div>';foot.innerHTML=btn('Проверить статус','check')}else if(['failed','cancelled'].includes(status)){h='<div class="center"><div class="icon bad">!</div><h1>'+(status==='failed'?'Не удалось выпустить карту':'Выпуск отменён')+'</h1><p>'+(status==='failed'?'Оформление не завершилось.':'Заказ был отменён.')+'</p></div>';foot.innerHTML=btn('Вернуться к картам','reset')}else{h='<div class="center"><div class="icon">◌</div><h1>'+(status==='processing'?'Выпускаем карту':'Ожидаем выпуск карты')+'</h1><p>Проверяем статус заказа. После выпуска карта станет доступна для онлайн-платежей.</p></div>'+notice('Данные доставки сохранены. Изменить адрес текущего заказа нельзя.');foot.innerHTML=btn('Проверить статус','poll',true)}h+='<p class="center" style="padding-top:10px;font-size:12px;color:#888">Заказ №'+esc(id)+'</p>'}
-if(stage==='issued'){h='<div class="center" style="padding-top:14px"><div class="icon">✓</div><h1>Карта выпущена</h1><p>Карта активна для онлайн-платежей.</p></div><div style="margin:24px 0">'+art()+'</div><div class="summary">'+line('Карта','Физическая Upay')+line('Статус','Активна')+line('Заказ №',id)+'</div>'+notice('Пластиковую карту отправляют отдельно. Статус отправки и трек-номер здесь недоступны.');foot.innerHTML=btn('К выбору карт','reset')}
-screen.innerHTML=h}
-function validate(){errors={};for(let [key,n] of Object.entries({recipient_name:255,phone:32,city:128,address:512})){let v=(form[key]||'').trim();if(!v)errors[key]='Заполните поле';else if(v.length>n)errors[key]='Максимум '+n+' символов'}if(!countries[form.country_code])errors.country_code='Выберите страну';return !Object.keys(errors).length}
-function payload(){let delivery={recipient_name:form.recipient_name.trim(),phone:form.phone.trim(),country_code:form.country_code,city:form.city.trim(),address:form.address.trim()};if((form.postal_code||'').trim())delivery.postal_code=form.postal_code.trim();let body={template_id:cfg.template,delivery};if((form.promo_code||'').trim())body.promo_code=form.promo_code.trim();return body}
-function polling(){let t=++timer;stage='status';status='pending';render();setTimeout(()=>{if(t!==timer||stage!=='status')return;api('GET','/cards/order/'+id+'/status/');status='processing';render()},1000);setTimeout(()=>{if(t!==timer||stage!=='status')return;api('GET','/cards/order/'+id+'/status/');status=cfg.scenario==='failed'?'failed':cfg.scenario==='cancelled'?'cancelled':'success';if(status==='success'){api('GET','/cards/');stage='issued'}render()},2500)}
-function submit(isRetry){if(lock)return;if(!isRetry)saved=payload();lock=true;message='';render();api('POST','/cards/order/',saved);setTimeout(()=>{lock=false;if(cfg.scenario==='stock'){message='Для выбранной страны нет доступных пластиковых карт.';render();return}if(cfg.scenario==='conflict'){message='Адрес отличается от уже оформленного заказа. Изменить его нельзя.';render();return}if(cfg.scenario==='exists'){id=456;api('GET','/cards/');stage='issued';render();return}if(cfg.scenario==='networkNoId'&&!isRetry){retry=true;message='Номер заказа не получен. Повторите запрос с теми же данными.';render();return}id=456;if(cfg.scenario==='networkId'&&!isRetry){stage='status';status='networkId';render();return}polling()},550)}
-function reset(){timer++;stage='catalog';form={};errors={};message='';id=null;status='';saved=null;lock=false;retry=false;logs=[];api('GET','/cards/templates/');render()}
-screen.addEventListener('input',ev=>{let k=ev.target.dataset.field;if(k){form[k]=ev.target.value;delete errors[k]}});screen.addEventListener('change',ev=>{let k=ev.target.dataset.field;if(k){form[k]=ev.target.value;delete errors[k]}});
-document.addEventListener('click',ev=>{let b=ev.target.closest('[data-action]');if(!b)return;let a=b.dataset.action;if(a==='choose'){if(!cfg.kyc){message='Для заказа нужна полная идентификация.';render();return}stage='delivery';message='';render()}if(a==='back'){stage=stage==='review'?'delivery':'catalog';render()}if(a==='validate'){if(validate()){stage='review';screen.scrollTop=0}render();if(stage==='delivery'&&Object.keys(errors).length)screen.querySelector('.bad')?.focus()}if(a==='edit'){stage='delivery';render()}if(a==='submit')submit(false);if(a==='retry')submit(true);if(a==='check')polling();if(a==='poll')api('GET','/cards/order/'+id+'/status/');if(a==='reset')reset()});
-$('back').onclick=()=>{if(stage==='delivery'||stage==='review'){stage=stage==='review'?'delivery':'catalog';render()}};
-$('scenario').onchange=ev=>cfg.scenario=ev.target.value;
-$('priceInput').oninput=ev=>{cfg.price=ev.target.value||'—';if(['catalog','review'].includes(stage))render()};
-$('templateInput').onchange=ev=>{cfg.template=Math.max(1,Number(ev.target.value)||123)};
-$('kyc').onchange=ev=>{cfg.kyc=ev.target.checked;if(stage==='catalog')render()};
-$('available').onchange=ev=>{cfg.available=ev.target.checked;if(stage==='catalog')render()};
-$('fill').onclick=()=>{form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2',postal_code:'101000',promo_code:''};errors={};message='';if(stage==='catalog')stage='delivery';render()};
-$('reset').onclick=reset;reset();
+$('title').textContent={catalog:'Оформление карты',delivery:'Доставка карты',review:'Выпуск карты',status:'Выпуск карты',issued:'Карта Алтын'}[step];
+$('back').style.visibility=['catalog','status','issued'].includes(step)?'hidden':'visible';
+$('help').style.visibility=step==='issued'?'visible':'hidden';
+view.innerHTML=step==='catalog'?catalog():step==='delivery'?delivery():step==='review'?review():step==='status'?orderView():issued();
+refreshFooter();
+}
+function valid(){
+errors={};
+for(var item of Object.entries({recipient_name:255,phone:32,city:128,address:512})){
+var str=(form[item[0]]||'').trim();
+if(!str)errors[item[0]]='Заполните поле';
+else if(str.length>item[1])errors[item[0]]='Максимум '+item[1]+' символов';
+}
+if(!countryNames[form.country_code])errors.country_code='Выберите страну';
+if((form.postal_code||'').length>32)errors.postal_code='Максимум 32 символа';
+return !Object.keys(errors).length;
+}
+function payload(){
+var delivery={recipient_name:(form.recipient_name||'').trim(),phone:(form.phone||'').trim(),country_code:form.country_code,city:(form.city||'').trim(),address:(form.address||'').trim()};
+if((form.postal_code||'').trim())delivery.postal_code=form.postal_code.trim();
+var body={template_id:model.templateId,delivery:delivery};
+if((form.promo_code||'').trim())body.promo_code=form.promo_code.trim();
+return body;
+}
+function move(to){step=to;render();view.scrollTop=0}
+function poll(){
+var current=++session;orderStatus='pending';move('status');
+setTimeout(function(){if(current!==session||step!=='status')return;api('GET','/cards/order/'+orderId+'/status/');orderStatus='processing';render()},950);
+setTimeout(function(){if(current!==session||step!=='status')return;api('GET','/cards/order/'+orderId+'/status/');orderStatus=model.outcome==='failed'?'failed':model.outcome==='cancelled'?'cancelled':'success';if(orderStatus==='success'){api('GET','/cards/');move('issued')}else render()},2450);
+}
+function submit(isRetry){
+if(busy)return;if(!isRetry)requestSnapshot=payload();
+busy=true;notice='';refreshFooter();api('POST','/cards/order/',requestSnapshot);
+setTimeout(function(){
+busy=false;
+if(model.outcome==='stock'){notice='В выбранную страну сейчас нет доступных карт для доставки.';move('review');return}
+if(model.outcome==='conflict'){notice='Адрес отличается от уже оформленного заказа. Изменить существующий заказ нельзя.';move('review');return}
+if(model.outcome==='exists'){orderId=456;api('GET','/cards/');move('issued');return}
+if(model.outcome==='network_unknown'&&!isRetry){retryNeeded=true;notice='Не удалось получить номер заказа. Повторите запрос с теми же данными.';move('review');return}
+orderId=456;
+if(model.outcome==='network_known'&&!isRetry){orderStatus='network_known';move('status');return}
+poll();
+},600);
+}
+function reset(){++session;step='catalog';form={};errors={};notice='';promoState='';consent=false;busy=false;orderId=null;orderStatus='';requestSnapshot=null;retryNeeded=false;logEntries=[];api('GET','/cards/templates/');render();view.scrollTop=0}
+function openInfo(){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" role="dialog" aria-modal="true" aria-label="Как пользоваться картой"><div class="handle"></div><h2>Как пользоваться картой</h2><h3>Онлайн-платежи</h3><p>После успешного выпуска карта активна и доступна для онлайн-платежей.</p><h3>Пластиковая карта</h3><p>Пластиковую карту доставляют отдельно. Успешный выпуск не означает, что отправка или доставка завершена.</p><h3>Данные доставки</h3><p>После создания заказа изменить адрес доставки нельзя. Трек-номер и статус отправки через текущий API недоступны.</p>'+button('Понятно','close-modal')+'</div></div>'}
+document.addEventListener('input',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key]}if(event.target.id==='promo-entry'){form.promo_code=event.target.value;promoState=''}});
+document.addEventListener('change',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key]}if(event.target.id==='consent'){consent=event.target.checked;refreshFooter()}});
+document.addEventListener('click',function(event){
+var btnTarget=event.target.closest('[data-action]');if(!btnTarget)return;
+var action=btnTarget.dataset.action;
+if(action==='close-modal'){if(event.target.closest('.sheet')&&event.target!==btnTarget)return;modal.innerHTML='';return}
+if(action==='open-info'){openInfo();return}
+if(action==='choose'){if(model.kyc&&model.available){notice='';move('delivery')}return}
+if(action==='validate'){if(valid()){consent=false;notice='';move('review')}else{render();view.querySelector('.invalid')?.focus()}return}
+if(action==='submit'||action==='retry'){if(consent||retryNeeded)submit(action==='retry');return}
+if(action==='check'){poll();return}
+if(action==='poll'){api('GET','/cards/order/'+orderId+'/status/');return}
+if(action==='reset'){reset();return}
+if(action==='apply-promo'){if((form.promo_code||'').trim())promoState=model.promoMode==='invalid'?'invalid':'applied';else promoState='';render();return}
+});
+$('back').addEventListener('click',function(){if(step==='review'&&!retryNeeded)move('delivery');else if(step==='delivery')move('catalog')});
+$('help').addEventListener('click',openInfo);
+$('outcome').addEventListener('change',function(e){model.outcome=e.target.value});
+$('price').addEventListener('input',function(e){model.price=e.target.value||'—';if(step==='catalog'||step==='review')render()});
+$('template').addEventListener('change',function(e){var n=Number(e.target.value);model.templateId=Number.isSafeInteger(n)&&n>0?n:123;e.target.value=model.templateId});
+$('promo-mode').addEventListener('change',function(e){model.promoMode=e.target.value});
+$('kyc').addEventListener('change',function(e){model.kyc=e.target.checked;if(step==='catalog')render()});
+$('available').addEventListener('change',function(e){model.available=e.target.checked;if(step==='catalog')render()});
+$('fill').addEventListener('click',function(){form={recipient_name:'Иван Иванов',phone:'+79990000000',country_code:'RU',city:'Москва',address:'ул. Примерная, д. 1, кв. 2',postal_code:'101000',promo_code:''};errors={};notice='';if(step==='catalog')move('delivery');else render()});
+$('reset').addEventListener('click',reset);
+reset();
 })();
-</script></body></html>
+</script>
+</body>
+</html>
