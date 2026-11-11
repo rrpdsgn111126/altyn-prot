@@ -152,7 +152,7 @@ function field(id,label,placeholder,max,opt){return '<label class="field"><span 
 function catalog(){
 return '<div class="stage-inner wide"><div class="card-chooser">'+card(false)+'</div><div class="stage-inner">'
 +'<div class="main-box">'
-+info('Где можно платить','Онлайн-оплата доступна сразу после заказа'+String.fromCharCode(10)+'Пластиковой картой можно пользоваться после получения',true)
++info('Где можно платить','Онлайн-оплата доступна сразу после заказа.'+String.fromCharCode(10)+'Пластиковой картой можно пользоваться после получения',true)
 +info('Тип карты','Физическая Upay')
 +info('Стоимость выпуска',model.price)
 +info('Доставка','Включена в стоимость')
@@ -174,7 +174,7 @@ return '<div class="stage-inner">'
 }
 function review(){
 return '<div class="stage-inner">'
-+'<div class="list-group">'+line('Карта','Физическая Upay')+line('Где можно платить','Онлайн-оплата доступна сразу после заказа'+String.fromCharCode(10)+'Пластиковой картой можно пользоваться после получения')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
++'<div class="list-group">'+line('Карта','Физическая Upay')+line('Где можно платить','Онлайн-оплата доступна сразу после заказа.'+String.fromCharCode(10)+'Пластиковой картой можно пользоваться после получения')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
 +'<div class="list-group">'+line('ФИО получателя',form.recipient_name)+line('Номер телефона',form.phone)+line('Страна',countryNames[form.country_code]||'')+line('Город',form.city)+line('Адрес доставки',form.address)+(form.postal_code?line('Почтовый индекс',form.postal_code):'')+'</div>'
 +errorBanner()
 +'</div>';
@@ -196,7 +196,7 @@ return '<span class="detail-symbol"><svg viewBox="0 0 24 24" aria-hidden="true">
 function detailItem(label,kind){return '<button type="button" class="detail-row" data-action="detail-action" data-title="'+safe(label)+'">'+detailIcon(kind)+'<span class="detail-text">'+safe(label)+'</span></button>'}
 function issued(){
 return '<div class="card-detail">'
-+'<div class="issued-card-hero"><div class="card-chooser">'+card(true)+(plasticPending?'<div class="card-production-tag">Скоро будет готова <span class="clock" aria-hidden="true">◷</span></div>':'')+'</div></div>'
++'<div class="issued-card-hero"><div class="card-chooser">'+card(true)+(plasticPending?'<div class="card-production-tag">Пластиковая карта скоро будет готова <span class="clock" aria-hidden="true">◷</span></div>':'')+'</div></div>'
 +'<div class="quick-actions"><button class="add-card" type="button" data-action="detail-action" data-title="Добавить карту">Добавить карту</button><button class="how-card" type="button" data-action="open-info">Как пользоваться</button></div>'
 +'<div class="detail-panel"><div class="limit-row"><div style="flex:1;min-width:0"><div class="limit-header">'+detailIcon('limits')+'<span class="detail-text" style="font-size:16px">Лимит на операции</span><button type="button" id="limit-switch" role="switch" class="limit-toggle" aria-checked="'+(limitEnabled?'true':'false')+'" aria-label="Лимит на операции" data-action="toggle-limit"></button></div>'
 +(limitEnabled?'<div class="limit-lines"><div class="limit-line"><span>В месяц</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line"><span>В неделю</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line"><span>В час</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line"><span>На операцию</span><span class="amount">150 000 ₽</span></div></div>':'')
