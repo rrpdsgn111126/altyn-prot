@@ -357,18 +357,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Catalog metadata line; exact Figma Property 1 unverified"
+          "verification": "verified",
+          "notes": "Catalog metadata line"
         },
         {
           "id": "condition-type",
@@ -382,18 +383,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Catalog metadata line; exact Figma Property 1 unverified"
+          "verification": "verified",
+          "notes": "Catalog metadata line"
         },
         {
           "id": "condition-price",
@@ -407,18 +409,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Catalog metadata line; exact Figma Property 1 unverified"
+          "verification": "verified",
+          "notes": "Catalog metadata line"
         },
         {
           "id": "condition-delivery",
@@ -432,18 +435,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Catalog metadata line; exact Figma Property 1 unverified"
+          "verification": "verified",
+          "notes": "Catalog metadata line"
         },
         {
           "id": "create-card",
@@ -900,18 +904,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Catalog metadata line; exact Figma Property 1 unverified"
+          "verification": "verified",
+          "notes": "Catalog metadata line"
         },
         {
           "id": "condition-type",
@@ -925,18 +930,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Catalog metadata line; exact Figma Property 1 unverified"
+          "verification": "verified",
+          "notes": "Catalog metadata line"
         },
         {
           "id": "condition-price",
@@ -950,18 +956,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Catalog metadata line; exact Figma Property 1 unverified"
+          "verification": "verified",
+          "notes": "Catalog metadata line"
         },
         {
           "id": "condition-delivery",
@@ -975,18 +982,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Catalog metadata line; exact Figma Property 1 unverified"
+          "verification": "verified",
+          "notes": "Catalog metadata line"
         },
         {
           "id": "create-card",
@@ -2997,17 +3005,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Карта"
         },
         {
@@ -3022,17 +3031,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Где можно платить"
         },
         {
@@ -3047,17 +3057,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Стоимость выпуска"
         },
         {
@@ -3072,17 +3083,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Доставка"
         },
         {
@@ -3097,17 +3109,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row ФИО"
         },
         {
@@ -3122,17 +3135,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Телефон"
         },
         {
@@ -3147,17 +3161,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Страна"
         },
         {
@@ -3172,17 +3187,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Город"
         },
         {
@@ -3197,17 +3213,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Адрес"
         },
         {
@@ -4142,17 +4159,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Карта"
         },
         {
@@ -4167,17 +4185,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Где можно платить"
         },
         {
@@ -4192,17 +4211,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Стоимость выпуска"
         },
         {
@@ -4217,17 +4237,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Доставка"
         },
         {
@@ -4242,17 +4263,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row ФИО"
         },
         {
@@ -4267,17 +4289,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Телефон"
         },
         {
@@ -4292,17 +4315,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Страна"
         },
         {
@@ -4317,17 +4341,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Город"
         },
         {
@@ -4342,17 +4367,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Адрес"
         },
         {
@@ -4615,17 +4641,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Карта"
         },
         {
@@ -4640,17 +4667,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Где можно платить"
         },
         {
@@ -4665,17 +4693,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Стоимость выпуска"
         },
         {
@@ -4690,17 +4719,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Доставка"
         },
         {
@@ -4715,17 +4745,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row ФИО"
         },
         {
@@ -4740,17 +4771,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Телефон"
         },
         {
@@ -4765,17 +4797,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Страна"
         },
         {
@@ -4790,17 +4823,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Город"
         },
         {
@@ -4815,17 +4849,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Адрес"
         },
         {
@@ -5088,17 +5123,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Карта"
         },
         {
@@ -5113,17 +5149,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Где можно платить"
         },
         {
@@ -5138,17 +5175,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Стоимость выпуска"
         },
         {
@@ -5163,17 +5201,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Доставка"
         },
         {
@@ -5188,17 +5227,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row ФИО"
         },
         {
@@ -5213,17 +5253,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Телефон"
         },
         {
@@ -5238,17 +5279,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Страна"
         },
         {
@@ -5263,17 +5305,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Город"
         },
         {
@@ -5288,17 +5331,18 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
+          "verification": "verified",
           "notes": "Review row Адрес"
         },
         {
@@ -5595,8 +5639,8 @@
             "referenceUrl": null,
             "verification": "unmapped",
             "evidence": null,
-            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153",
-            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111323"
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6502-127511",
+            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-18938"
           },
           "verification": "unmapped",
           "notes": "Limit card container"
@@ -5614,12 +5658,17 @@
             "figmaComponent": "Switch.mob",
             "componentSetId": "3254:14282",
             "componentId": null,
-            "componentProperties": {},
+            "componentProperties": {
+              "checked": "true",
+              "icon": "false",
+              "theme": "success",
+              "size": "24 height - XL"
+            },
             "state": null,
             "size": null,
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3254-14282",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-18956",
             "verification": "partial",
-            "evidence": "docs/component-map.md; HTML annotation Switch.Value does not establish exact match"
+            "evidence": "Existing enabled Switch.Value preserved by cloning the reference limit block."
           },
           "verification": "partial",
           "notes": "Switch.mob candidate, exact variant unresolved"
@@ -5633,21 +5682,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-month\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19107",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Месяц; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "limit-week",
@@ -5658,21 +5707,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-week\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19108",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Неделя; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "limit-hour",
@@ -5683,21 +5732,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-hour\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19109",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Час; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "limit-transaction",
@@ -5708,21 +5757,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-transaction\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19110",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Операция; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "security-panel",
@@ -5743,7 +5792,7 @@
             "referenceUrl": null,
             "verification": "unmapped",
             "evidence": null,
-            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6518-150069"
           },
           "verification": "unmapped",
           "notes": "Security group container"
@@ -5760,18 +5809,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-tariff",
@@ -5785,18 +5835,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-balance",
@@ -5807,21 +5858,19 @@
             "htmlSelector": "#view [data-figma-id=\"issued-action-balance\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": null,
+            "componentSetId": null,
             "componentId": null,
-            "componentProperties": {
-              "State": "Enable"
-            },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "componentProperties": {},
+            "state": null,
+            "size": null,
+            "referenceUrl": null,
+            "verification": "unmapped",
+            "evidence": null
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "unmapped",
+          "notes": "HTML source only. This element is absent from the selected Figma lower-content reference 6502:127493."
         },
         {
           "id": "action-pin",
@@ -5835,18 +5884,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-freeze",
@@ -5860,18 +5910,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-close",
@@ -5885,18 +5936,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "security-heading",
@@ -5930,7 +5982,7 @@
             "htmlSelector": "#view .detail-note"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": null,
             "componentSetId": null,
             "componentId": null,
@@ -5942,7 +5994,7 @@
             "evidence": null
           },
           "verification": "unmapped",
-          "notes": "Bank attribution"
+          "notes": "HTML source only. This element is absent from the selected Figma lower-content reference 6502:127493."
         }
       ]
     },
@@ -7189,8 +7241,8 @@
             "referenceUrl": null,
             "verification": "unmapped",
             "evidence": null,
-            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153",
-            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111323"
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6502-127511",
+            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-18938"
           },
           "verification": "unmapped",
           "notes": "Limit card container"
@@ -7208,12 +7260,17 @@
             "figmaComponent": "Switch.mob",
             "componentSetId": "3254:14282",
             "componentId": null,
-            "componentProperties": {},
+            "componentProperties": {
+              "checked": "true",
+              "icon": "false",
+              "theme": "success",
+              "size": "24 height - XL"
+            },
             "state": null,
             "size": null,
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3254-14282",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-18956",
             "verification": "partial",
-            "evidence": "docs/component-map.md; HTML annotation Switch.Value does not establish exact match"
+            "evidence": "Existing enabled Switch.Value preserved by cloning the reference limit block."
           },
           "verification": "partial",
           "notes": "Switch.mob candidate, exact variant unresolved"
@@ -7227,21 +7284,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-month\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19107",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Месяц; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "limit-week",
@@ -7252,21 +7309,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-week\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19108",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Неделя; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "limit-hour",
@@ -7277,21 +7334,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-hour\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19109",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Час; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "limit-transaction",
@@ -7302,21 +7359,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-transaction\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19110",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Операция; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "security-panel",
@@ -7337,7 +7394,7 @@
             "referenceUrl": null,
             "verification": "unmapped",
             "evidence": null,
-            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6518-150069"
           },
           "verification": "unmapped",
           "notes": "Security group container"
@@ -7354,18 +7411,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-tariff",
@@ -7379,18 +7437,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-balance",
@@ -7401,21 +7460,19 @@
             "htmlSelector": "#view [data-figma-id=\"issued-action-balance\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": null,
+            "componentSetId": null,
             "componentId": null,
-            "componentProperties": {
-              "State": "Enable"
-            },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "componentProperties": {},
+            "state": null,
+            "size": null,
+            "referenceUrl": null,
+            "verification": "unmapped",
+            "evidence": null
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "unmapped",
+          "notes": "HTML source only. This element is absent from the selected Figma lower-content reference 6502:127493."
         },
         {
           "id": "action-pin",
@@ -7429,18 +7486,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-freeze",
@@ -7454,18 +7512,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-close",
@@ -7479,18 +7538,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "security-heading",
@@ -7524,7 +7584,7 @@
             "htmlSelector": "#view .detail-note"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": null,
             "componentSetId": null,
             "componentId": null,
@@ -7536,7 +7596,7 @@
             "evidence": null
           },
           "verification": "unmapped",
-          "notes": "Bank attribution"
+          "notes": "HTML source only. This element is absent from the selected Figma lower-content reference 6502:127493."
         }
       ]
     },
@@ -8135,8 +8195,8 @@
             "referenceUrl": null,
             "verification": "unmapped",
             "evidence": null,
-            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153",
-            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111323"
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6502-127511",
+            "firstRowPattern": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-18938"
           },
           "verification": "unmapped",
           "notes": "Limit card container"
@@ -8154,12 +8214,17 @@
             "figmaComponent": "Switch.mob",
             "componentSetId": "3254:14282",
             "componentId": null,
-            "componentProperties": {},
+            "componentProperties": {
+              "checked": "true",
+              "icon": "false",
+              "theme": "success",
+              "size": "24 height - XL"
+            },
             "state": null,
             "size": null,
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3254-14282",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-18956",
             "verification": "partial",
-            "evidence": "docs/component-map.md; HTML annotation Switch.Value does not establish exact match"
+            "evidence": "Existing enabled Switch.Value preserved by cloning the reference limit block."
           },
           "verification": "partial",
           "notes": "Switch.mob candidate, exact variant unresolved"
@@ -8173,21 +8238,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-month\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19107",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Месяц; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "limit-week",
@@ -8198,21 +8263,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-week\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19108",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Неделя; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "limit-hour",
@@ -8223,21 +8288,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-hour\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19109",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Час; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "limit-transaction",
@@ -8248,21 +8313,21 @@
             "htmlSelector": "#view [data-figma-id=\"limit-transaction\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
-            "componentId": null,
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": "string",
+            "componentSetId": null,
+            "componentId": "17510:106277",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "14"
             },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "state": null,
+            "size": "20 px height",
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6754-19110",
+            "verification": "verified",
+            "evidence": "Nested linked instance in lower content copied from Altyn App 6502:127493."
           },
-          "verification": "partial",
-          "notes": "Limit Операция; exact row variant unverified"
+          "verification": "verified",
+          "notes": "Limit label and value from the Physical Card scenario, using the source reference typography."
         },
         {
           "id": "security-panel",
@@ -8283,7 +8348,7 @@
             "referenceUrl": null,
             "verification": "unmapped",
             "evidence": null,
-            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111153"
+            "compositionReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6518-150069"
           },
           "verification": "unmapped",
           "notes": "Security group container"
@@ -8300,18 +8365,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-tariff",
@@ -8325,18 +8391,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-balance",
@@ -8347,21 +8414,19 @@
             "htmlSelector": "#view [data-figma-id=\"issued-action-balance\"]"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-            "figmaComponent": "list.mobile",
-            "componentSetId": "2015:12843",
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+            "figmaComponent": null,
+            "componentSetId": null,
             "componentId": null,
-            "componentProperties": {
-              "State": "Enable"
-            },
-            "state": "Enable",
-            "size": "min 54 px",
-            "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "componentProperties": {},
+            "state": null,
+            "size": null,
+            "referenceUrl": null,
+            "verification": "unmapped",
+            "evidence": null
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "unmapped",
+          "notes": "HTML source only. This element is absent from the selected Figma lower-content reference 6502:127493."
         },
         {
           "id": "action-pin",
@@ -8375,18 +8440,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-freeze",
@@ -8400,18 +8466,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "action-close",
@@ -8425,18 +8492,19 @@
             "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
             "figmaComponent": "list.mobile",
             "componentSetId": "2015:12843",
-            "componentId": null,
+            "componentId": "2157:9993",
             "componentProperties": {
-              "State": "Enable"
+              "Property 1": "1",
+              "🎚️ State": "Enable"
             },
             "state": "Enable",
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
-            "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "verification": "verified",
+            "evidence": "Property 1=1, Enable confirmed on linked instances in Physical card."
           },
-          "verification": "partial",
-          "notes": "Interactive detail action; exact variant unknown"
+          "verification": "verified",
+          "notes": "Interactive detail action"
         },
         {
           "id": "security-heading",
@@ -8470,7 +8538,7 @@
             "htmlSelector": "#view .detail-note"
           },
           "figmaTarget": {
-            "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+            "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": null,
             "componentSetId": null,
             "componentId": null,
@@ -8482,7 +8550,7 @@
             "evidence": null
           },
           "verification": "unmapped",
-          "notes": "Bank attribution"
+          "notes": "HTML source only. This element is absent from the selected Figma lower-content reference 6502:127493."
         },
         {
           "id": "info-modal",
@@ -10688,9 +10756,9 @@
     "screenStates": 26,
     "elementInstances": 419,
     "verification": {
-      "verified": 52,
-      "partial": 226,
-      "unmapped": 141
+      "verified": 123,
+      "partial": 152,
+      "unmapped": 144
     },
     "componentSets": [
       "3741:4350",
