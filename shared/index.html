@@ -2,7 +2,7 @@
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Altyn.Base — HTML-компоненты</title>
-<link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./components.css?v=input-box-v2"><link rel="stylesheet" href="./choices.css">
+<link rel="stylesheet" href="./tokens.css"><link rel="stylesheet" href="./components.css?v=input-box-v2"><link rel="stylesheet" href="./choices.css"><link rel="stylesheet" href="./select-sheet.css">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#e9ebee;font:14px/1.5 var(--ab-font);color:var(--ab-ink)}
 .catalog{display:flex;justify-content:center;align-items:flex-start;gap:28px;padding:24px}
@@ -22,6 +22,7 @@
 <h2 class="demo-heading">Input.mobile — состояния</h2>
 <div class="ab-input-stack" id="demo-inputs"></div>
 <div class="demo-divider"></div>
+<h2 class="demo-heading">Выбор из списка</h2><div id="demo-selects" class="ab-input-stack"></div><div class="demo-divider"></div>
 <h2 class="demo-heading">Список</h2><div class="demo-card"><div class="ab-list-group" id="demo-list" style="background:transparent;padding:0"></div></div>
 <div class="demo-divider"></div><div id="demo-checkbox"></div>
 <div class="demo-divider"></div><h2 class="demo-heading">Элементы выбора</h2><div id="demo-switches" class="demo-card"></div><div class="demo-divider"></div><div id="demo-radios" class="demo-card"></div><div class="demo-divider"></div><div id="demo-toggle-buttons" class="demo-mini" style="flex-wrap:wrap"></div><div id="demo-toggle-banks" class="demo-mini"></div><div class="demo-divider"></div><h2 class="demo-heading">Действия</h2><div class="demo-mini" id="demo-buttons"></div>
@@ -35,7 +36,7 @@
 <p>Проверка: переключите Switch, выберите Radio, нажмите ToggleButton/ToggleBank. Демонстрационная логика локальная; API не вызывается.</p>
 <p><code>../shared/tokens.css</code><br><code>../shared/components.css</code><br><code>../shared/components.js</code></p>
 </aside></div>
-<script src="./components.js?v=input-box-v2"></script><script src="./choices.js"></script>
+<script src="./components.js?v=input-box-v2"></script><script src="./choices.js"></script><script src="./select-sheet.js"></script>
 <script>
 (function(){const UI=window.AltynBase;
 document.getElementById("demo-nav").append(UI.createNavbar({title:"Компоненты",onBack:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Назад»";},onHelp:()=>{document.getElementById("feedback").textContent="Нажата кнопка «Помощь»";}}));
@@ -44,6 +45,23 @@ inputs.append(UI.createInput({label:"Имя получателя",name:"recipien
 inputs.append(UI.createInput({label:"Назначение",placeholder:"Введите назначение",name:"purpose"}));
 inputs.append(UI.createInput({label:"Фамилия",value:"Иванов",name:"surname"}));
 inputs.append(UI.createInput({label:"Номер карты",value:"1234",error:"Проверьте номер карты",name:"card"}));
+
+const selectRoot=document.getElementById("demo-selects");
+const baseAssets=new URL("./assets/",document.baseURI);
+const countries=[
+ {id:"kz",label:"Казахстан",icon:"🇰🇿",searchText:"Kazakhstan"},
+ {id:"ru",label:"Россия",icon:"🇷🇺",searchText:"Russia"},
+ {id:"kg",label:"Кыргызстан",icon:"🇰🇬"},
+ {id:"uz",label:"Узбекистан",icon:"🇺🇿"},
+ {id:"ge",label:"Грузия",icon:"🇬🇪"},
+ {id:"tr",label:"Турция",icon:"🇹🇷"}
+];
+const bankItems=[{id:"sber",label:"Сбербанк",iconSrc:baseAssets.href+"bank.svg"}, {id:"another",label:"Другой банк",icon:"🏦"}];
+const chainItems=[{id:"tron",label:"TRON",subtitle:"TRC20"},{id:"eth",label:"Ethereum",subtitle:"ERC20"},{id:"polygon",label:"Polygon"}];
+const countrySelect=UI.createSelectField({label:"Страна",title:"Выберите страну",kind:"country",items:countries,name:"country",searchPlaceholder:"Найти страну",onChange:(item)=>{document.getElementById("feedback").textContent="Страна: "+item.label;}});
+const bankSelect=UI.createSelectField({label:"Банк",title:"Выберите банк",kind:"bank",items:bankItems,name:"bank",value:"sber",searchPlaceholder:"Найти банк",onChange:(item)=>{document.getElementById("feedback").textContent="Банк: "+item.label;}});
+const chainSelect=UI.createSelectField({label:"Сеть",title:"Выберите сеть",kind:"network",items:chainItems,name:"network",value:"tron",searchPlaceholder:"Найти сеть",onChange:(item)=>{document.getElementById("feedback").textContent="Сеть: "+item.label;}});
+selectRoot.append(countrySelect,bankSelect,chainSelect);
 const list=document.getElementById("demo-list");
 list.append(UI.createListRow({label:"Страна",value:"Казахстан",onClick:()=>{document.getElementById("feedback").textContent="Выбрана страна";}}));
 list.append(UI.createListRow({label:"Метод",value:"Банковская карта"}));

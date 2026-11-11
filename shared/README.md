@@ -85,3 +85,31 @@ document.querySelector("#choices").append(
 - `createInput({label:"ФИО",value:"Иванов"})`: Figma `2014:9857` / Filled, та же раскладка с введённым значением.
 
 Для автоматических тестов важна не только семантика, но и визуальная геометрия: `.ab-input-control` содержит border, а `.ab-input-label` целиком лежит внутри его прямоугольника.
+
+## Searchable selection Bottom Sheet (2026-11-11)
+
+Подключать **после** `components.js`:
+
+```html
+<link rel="stylesheet" href="../shared/select-sheet.css">
+<script src="../shared/select-sheet.js"></script>
+```
+
+```js
+const UI=window.AltynBase;
+const picker=UI.createSelectField({
+  label:"Страна", title:"Выберите страну", name:"country", kind:"country",
+  searchPlaceholder:"Найти страну", searchable:true,
+  items:[{id:"kz",label:"Казахстан",icon:"🇰🇿"},{id:"ru",label:"Россия",icon:"🇷🇺"}],
+  onChange:(item,value)=>console.log(item.label,value)
+});
+document.querySelector("#fields").append(picker);
+```
+
+Вспомогательные методы DOM-контейнера: `picker.open()`, `picker.close()`, `picker.getValue()`, `picker.setValue(id,{silent?})`, `picker.setItems(items)`. Скрытое поле `input[name]` получает выбранный `value` и вызывает `change`.
+
+`kind:"country"|"bank"|"network"`; на строках и в выбранном поле иконка справа. `icon:"🇰🇿"` — флаг/emoji, `iconSrc:"../assets/bank.svg"` — конкретное изображение/логотип, `subtitle`, `searchText`, `disabled` — дополнительные свойства элемента.
+
+Прямое открытие: `UI.openSelectionSheet({host,trigger,title,items,kind,searchable,searchPlaceholder,onSelect,onClose})`, возвращает объект `{close,overlay,sheet,searchInput,getVisibleCount}`. Если список без поиска, задайте `searchable:false`. Список элементов — локальные данные для витрины, API не вызывается. Файлы `physical-upay` не меняются.
+
+**Контроль качества:** `shared/tests/select-sheet.html`. В Figma это составной паттерн `modal + Input.mobile + list.mobile`, а не новый компонент под вымышленным Figma ID.

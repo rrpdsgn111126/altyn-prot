@@ -1,0 +1,45 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8">
+<title>Selection sheet smoke tests</title><link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../components.css"><link rel="stylesheet" href="../select-sheet.css">
+<style>body{margin:0;font-family:Inter,sans-serif;background:#eee}.ab-screen{width:375px;height:812px;background:white}.ab-main{padding:16px}</style></head><body>
+<section class="ab-screen"><div class="ab-statusbar">9:30</div><main class="ab-main" id="testarea"></main><div class="ab-bottom-system"></div></section><pre id="result" role="status"></pre>
+<script src="../components.js"></script><script src="../select-sheet.js"></script>
+<script>
+(async function(){
+const U=window.AltynBase,area=document.getElementById("testarea"),out=[];
+const test=(name,fn)=>{try{if(!fn())throw Error("Assertion");out.push({name,pass:true});}catch(e){out.push({name,pass:false,error:String(e)});}};
+const items=[{id:"kz",label:"Казахстан",icon:"🇰🇿",searchText:"Kazakhstan"},{id:"ru",label:"Россия",icon:"🇷🇺",searchText:"Russia"},{id:"us",label:"США",icon:"🇺🇸",disabled:true}];
+let changes=0,latest=null;
+const country=U.createSelectField({label:"Страна",kind:"country",items,name:"country",title:"Выберите страну",searchPlaceholder:"Найти страну",onChange:(item,value)=>{changes++;latest={item,value};}});
+area.append(country);
+test("DOM trigger and hidden input",()=>!!country.querySelector('button[aria-haspopup="dialog"]')&&!!country.querySelector('input[type="hidden"][name="country"]'));
+test("Unselected label centered in 54px control",()=>country.dataset.state==="enable"&&country.querySelector("button").dataset.floated==="false"&&Math.abs(country.querySelector("button").getBoundingClientRect().height-54)<1);
+country.open();
+test("Modal opened inside mobile screen",()=>!!document.querySelector(".ab-screen > .ab-selection-overlay")&&document.querySelector(".ab-selection-sheet").getAttribute("aria-modal")==="true");
+test("Search placeholder and Figma search icon",()=>document.querySelector(".ab-selection-search").placeholder==="Найти страну"&&document.querySelector(".ab-selection-search-icon").src.includes("/assets/search.svg"));
+test("Rows include trailing category flags",()=>document.querySelectorAll(".ab-selection-row__icon").length===3);
+let search=document.querySelector(".ab-selection-search");search.value="каз";search.dispatchEvent(new Event("input",{bubbles:true}));
+test("Search filters entries by name",()=>document.querySelectorAll(".ab-selection-row").length===1&&document.querySelector(".ab-selection-row__label").textContent==="Казахстан");
+search.value="не существует";search.dispatchEvent(new Event("input",{bubbles:true}));
+test("No results state shows and list hides",()=>!document.querySelector(".ab-selection-empty").hidden&&document.querySelector(".ab-selection-list").hidden);
+search.value="Каз";search.dispatchEvent(new Event("input",{bubbles:true}));document.querySelector(".ab-selection-row").click();
+test("Selection closes sheet and updates value",()=>!document.querySelector(".ab-selection-overlay")&&country.getValue()==="kz"&&country.dataset.state==="filled");
+test("Selection keeps icon on right",()=>country.querySelector(".ab-select-trigger__trailing").textContent.includes("🇰🇿"));
+test("One change event fired with item payload",()=>changes===1&&latest.value==="kz"&&latest.item.label==="Казахстан");
+country.open();document.dispatchEvent(new KeyboardEvent("keydown",{key:"Escape",bubbles:true}));
+test("Escape closes without overwriting value",()=>!document.querySelector(".ab-selection-overlay")&&country.getValue()==="kz"&&changes===1);
+country.open();document.querySelector(".ab-selection-backdrop").click();
+test("Backdrop closes without overwriting value",()=>!document.querySelector(".ab-selection-overlay")&&country.getValue()==="kz");
+country.open();const disabled=document.querySelector('.ab-selection-row[data-value="us"]');disabled.click();
+test("Disabled row cannot change selection",()=>country.getValue()==="kz"&&!!document.querySelector(".ab-selection-overlay"));
+country.close();
+const bank=U.createSelectField({label:"Банк",kind:"bank",items:[{id:"sber",label:"Сбербанк",iconSrc:"../assets/bank.svg"}],value:"sber"});area.append(bank);
+test("Bank icon selected",()=>bank.querySelector(".ab-select-icon__img")?.src.includes("bank.svg")&&bank.getValue()==="sber");
+const net=U.createSelectField({label:"Сеть",kind:"network",items:[{id:"tron",label:"TRON"}],value:"tron",searchable:false});area.append(net);
+test("Network trailing asset",()=>net.querySelector(".ab-select-icon__img")?.src.includes("network-generic.svg"));
+net.open();test("Non-searchable bottom sheet",()=>!document.querySelector(".ab-selection-search")&&!!document.querySelector(".ab-selection-sheet"));net.close();
+const old=country.getValue();country.setItems([{id:"new",label:"Новая страна",icon:"🌐"}]);
+test("New items can be set and stale selection reset",()=>country.getValue()===""&&old==="kz");
+const passed=out.filter(v=>v.pass).length;document.getElementById("result").textContent=passed+"/"+out.length+" passed\n"+out.map(v=>(v.pass?"PASS ":"FAIL ")+v.name+(v.error?" "+v.error:"")).join("\n");
+document.documentElement.dataset.testsPassed=String(passed===out.length);
+})();
+</script></body></html>
