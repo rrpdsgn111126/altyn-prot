@@ -10796,5 +10796,32 @@
       "Activation UX and API",
       "Currency and source of spending limits"
     ]
+  },
+  "scenarioAssemblyNotes": {
+    "scope": "Physical Upay only — moved out of common mobile-screen-layout.md",
+    "sourceReferences": {
+      "notificationYellow": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12406",
+      "physicalCardBase": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6414-111135",
+      "cardArtwork": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+      "cardDetails": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6502-127493",
+      "stateCard": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=6516-128060",
+      "countryPicker": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14348-114250"
+    },
+    "decisions": [
+      "Delivery Notification uses linked Altyn.Base Notification / Type=Yellow; do not apply this match to all notifications.",
+      "Card composition: status/navbar on Secondary, physical card near top/content boundary, below-actions block from 6502:127493. Copy existing nested linked instances and Auto Layout instead of recreating.",
+      "Physical card: green Altyn physical USD design, no YouPay, 300px HTML artwork; unknown amounts remain dashes, do not invent balances.",
+      "State overlay: state_card / Property 1=wait for issuance and plastic delivery; freese and empty limit variants exist but use only for actual scenario.",
+      "Four spending-limit values in the details block use string / Property 1=14 inside a switch row; limit currency has not been approved.",
+      "Country selector: original Altyn App modal / State=off and native slots; list of RU/KZ/UAE with connected right-side Round flags and no search in this scenario. Input.mobile flag in right Addons via sIcon R and sIcon.w R.",
+      "No online or physical card payment before activation. Do not equate issuance with activation or invent an activation UX.",
+      "No automatic new stock state, postal code, or deleted cards/screens. Preserve present screens and unresolved support-chat mappings.",
+      "Empty/alert/chat structural wrappers may be Custom / Unmapped, but known nested controls should remain linked original component instances."
+    ],
+    "unresolved": [
+      "Exact Altyn.Base cards bank variant simultaneously supporting green physical artwork, no YouPay, USD balance.",
+      "Activation flow, action availability and API.",
+      "Currency of limits and source of the limit values."
+    ]
   }
 }

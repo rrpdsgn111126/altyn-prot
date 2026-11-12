@@ -1031,7 +1031,7 @@
         "name": "1. Пополнить — новый способ"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48587",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#01-methods",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#01-methods",
       "visualDescription": "Список методов пополнения. Новый пункт «Получить перевод» с логотипом ЧБР; есть отключённый метод и нижнее меню.",
       "dimensions": {
         "width": 430,
@@ -1507,7 +1507,7 @@
         "name": "2. Инструкция"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48778",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#02-instruction",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#02-instruction",
       "visualDescription": "Заголовок, текст инструкции, три пронумерованных шага, предупреждение и две кнопки: «У меня есть номер перевода» и переход во внешний браузер.",
       "dimensions": {
         "width": 430,
@@ -2068,7 +2068,7 @@
         "name": "3. Ввод КНП"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48539",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#03-knp",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#03-knp",
       "visualDescription": "Поле контрольного номера в фокусе, ссылка «Где найти номер перевода?» и кнопка продолжения.",
       "dimensions": {
         "width": 430,
@@ -2309,7 +2309,7 @@
         "name": "3a. Ввод КНП — ошибки"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48607",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#03a-errors",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#03a-errors",
       "visualDescription": "Невалидный номер с ошибкой под полем; ниже показаны возможные причины. Исправление номера без ухода со страницы.",
       "dimensions": {
         "width": 430,
@@ -2524,7 +2524,7 @@
         "name": "4. Подтверждение — выплата через ЧБР"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48799",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#04-confirm",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#04-confirm",
       "visualDescription": "Сводка банка выплаты, отправителя, получателя, номера и расчёта, кнопка «Получить 5 000 ₽».",
       "dimensions": {
         "width": 430,
@@ -2853,7 +2853,7 @@
         "name": "5. Проверяем перевод"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48622",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#05-check",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#05-check",
       "visualDescription": "Нейтральная иллюстрация состояния и текст о проверке; кнопки «На главную» и «В историю».",
       "dimensions": {
         "width": 430,
@@ -3087,7 +3087,7 @@
         "name": "6. Успех"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48708",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#06-success",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#06-success",
       "visualDescription": "Зелёная иллюстрация успеха, сумма +5 000 ₽, описание зачисления и две кнопки.",
       "dimensions": {
         "width": 430,
@@ -3321,7 +3321,7 @@
         "name": "7. Отказ — нужна поддержка"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48731",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#07-failure",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#07-failure",
       "visualDescription": "Красная иллюстрация ошибки, сообщение о невозможности получить перевод, кнопки поддержки и возврата на главную.",
       "dimensions": {
         "width": 430,
@@ -3551,7 +3551,7 @@
         "name": "8. История — запись"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48605",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#08-history",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#08-history",
       "visualDescription": "История операций со строкой входящего перевода ЧБР, фильтром и группировкой по дням.",
       "dimensions": {
         "width": 430,
@@ -4001,7 +4001,7 @@
         "name": "9. Детали операции"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48606",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#09-details",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#09-details",
       "visualDescription": "Сумма, статус, реквизиты, сведения о переводе и банк выплаты ЧБР, кнопка квитанции. Экран длиннее остальных.",
       "dimensions": {
         "width": 430,
@@ -4458,7 +4458,7 @@
         "name": "Где найти номер перевода?"
       },
       "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48755",
-      "annotatedScreenshotReference": "figma-migration-review/index.html#10-help",
+      "annotatedScreenshotReference": "https://rrpdsgn111126.github.io/altyn-prot/figma-migration-review/#10-help",
       "visualDescription": "Страница-подсказка: откуда взять номер, как он выглядит и какой номер не подходит.",
       "dimensions": {
         "width": 430,
@@ -4817,7 +4817,8 @@
       "The documented Input.mobile, Bottom Sheet, and selector rules from docs/mobile-screen-layout.md sections 9-12 are attached as componentGuidance; these are rules, not approval of ChBR-specific mapping.",
       "Новая секция собрана и проверена через снимки Figma MCP. Согласование результата пользователем ожидается.",
       "Обновлены модалки инструкции и справки, navbar, Secondary-описания и детали операции. Референс нумерации 18793:18799 недоступен.",
-      "Нумерация шагов пересобрана по 18732:21072. Проверены стили Typography, цветовые токены, разделители, отступы и центровка номера."
+      "Нумерация шагов пересобрана по 18732:21072. Проверены стили Typography, цветовые токены, разделители, отступы и центровка номера.",
+      "Component guidance is linked to docs/mobile-screen-layout.md; scenario mapping does not duplicate global component parameters."
     ]
   },
   "dataContract": {
@@ -4865,264 +4866,36 @@
       "Do not edit Figma during annotation stage"
     ]
   },
-  "componentGuidance": [
+  "scenarioAssemblyNotes": {
+    "source": "Migration ChBR from Altyn App to Altyn.Base",
+    "references": {
+      "statusScreenComposition": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18395-54663",
+      "numberedBottomSheetSteps": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18732-21072",
+      "operationDetails": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=16085-37632"
+    },
+    "decisions": [
+      "Adapt waiting, success and failure screens to status reference 18395:54663 while retaining ChBR-specific content and behavior.",
+      "Consecutive list.mobile in confirmation and operation details: paddingTop=0, paddingBottom=0, itemSpacing=0.",
+      "Operation details: date and status beside amount in top summary; bank transfer details and fee/total are separate white groups with 12px gap on Secondary.",
+      "Numbered instructions in modal: white container radius 12px, horizontal padding 16px, vertical padding 0, gap 0; number icon / S aligned in 32px slot, text starts after 16px, typography 16/24.",
+      "Do not show Multitransfer in method, payout, history or details; only in instruction subject to partner approval."
+    ]
+  },
+  "componentRuleRefs": [
     {
-      "ruleId": "INPUT_MOBILE",
-      "title": "Input.mobile — label, geometry, states",
-      "sourceDocument": {
-        "path": "docs/mobile-screen-layout.md",
-        "url": "https://github.com/rrpdsgn111126/altyn-prot/blob/main/docs/mobile-screen-layout.md",
-        "section": 9,
-        "sourceBlobSha": "da444f9f10c77863d7ee469a8f08104f22527f5b"
-      },
-      "master": {
-        "name": "Input.mobile",
-        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
-        "nodeId": "77:12680",
-        "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
-        "componentSetKey": "43304a4f9493c7432147f04ff55e66b8a778bf74"
-      },
-      "status": "documented",
-      "appliesTo": [
-        "M_INPUT_FOCUS",
-        "M_INPUT_INVALID",
-        "M_FILTER (only if selection input is used)"
-      ],
-      "geometry": {
-        "heightPx": 54,
-        "radiusPx": 12,
-        "stackGapPx": 12,
-        "layout": "One outer border wraps label and value. Label stays inside; stack gap is between fields, not within a field."
-      },
-      "states": [
-        {
-          "state": "Enable",
-          "nodeId": "2152:12365",
-          "name": "🎚️ State=Enable, secondary=Off",
-          "label": "16px/24px centered vertically",
-          "value": null
-        },
-        {
-          "state": "Enable + placeholder",
-          "nodeId": "2190:18818",
-          "name": "🎚️ State=Enable + placeholder, secondary=Off",
-          "label": "12px/16px upper",
-          "value": "placeholder 16px/24px below even when not focused"
-        },
-        {
-          "state": "Filled",
-          "nodeId": "2014:9857",
-          "name": "🎚️ State=Filled, secondary=Off",
-          "label": "12px/16px upper",
-          "value": "16px/24px below"
-        },
-        {
-          "state": "Focus / Active",
-          "nodeId": "2054:7637",
-          "name": "🎚️ State=Active/Focus, secondary=Off",
-          "label": "Inside field; active outline",
-          "value": "Depends on filled/focused presentation"
-        },
-        {
-          "state": "Invalid",
-          "nodeId": "2014:9846",
-          "name": "🎚️ State=Invalid, secondary=Off",
-          "label": "Same interior geometry",
-          "value": "error helper below field"
-        },
-        {
-          "state": "Disabled",
-          "nodeId": "2014:10042",
-          "name": "🎚️ State=Read-only / Disabled, secondary=Off",
-          "label": "Same geometry",
-          "value": "not editable"
-        }
-      ],
-      "colors": {
-        "enableOutline": "#E9ECF0",
-        "focusOutline": "#FFD119",
-        "invalidOutline": "#DD4014",
-        "invalidBackground": "#FFF4F8"
-      },
-      "constraints": [
-        "Do not place label as external text above field",
-        "Do not confuse total legacy source 68px block including helper with component height 54px",
-        "Error message stays associated with the field and doesn't change the 54px base geometry"
-      ]
+      "id": "INPUT_MOBILE",
+      "source": "docs/mobile-screen-layout.md",
+      "section": 9
     },
     {
-      "ruleId": "BOTTOM_SHEET",
-      "title": "Modal / Bottom Sheet — layout, backgrounds, buttons",
-      "sourceDocument": {
-        "path": "docs/mobile-screen-layout.md",
-        "url": "https://github.com/rrpdsgn111126/altyn-prot/blob/main/docs/mobile-screen-layout.md",
-        "section": 10,
-        "sourceBlobSha": "da444f9f10c77863d7ee469a8f08104f22527f5b"
-      },
-      "sourceComponent": {
-        "name": "modal",
-        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
-        "nodeId": "920:26457",
-        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=920-26457",
-        "componentKey": null,
-        "variantProperties": {
-          "State": "off"
-        },
-        "verifiedFrom": "documented source; master properties and key not revalidated this turn"
-      },
-      "status": "documented",
-      "appliesTo": [
-        "Reusable selector/choice overlays; no confirmed bottom-sheet instance in current ChBR screen list"
-      ],
-      "geometry": {
-        "backgroundDefault": "#F6F7F8",
-        "backgroundToken": "bg/neutral/secondary",
-        "primaryException": "#FFFFFF",
-        "primaryExceptionExample": "17511:164381",
-        "upperCornerRadiusPx": 12,
-        "handlePx": {
-          "width": 56,
-          "height": 4,
-          "zoneHeight": 20
-        },
-        "horizontalPaddingPx": 16,
-        "titleTypography": {
-          "sizePx": 18,
-          "lineHeightPx": 27,
-          "weight": "Semi Bold",
-          "scope": "documents modal reference only"
-        },
-        "listContainer": {
-          "background": "#FFFFFF",
-          "token": "bg/neutral/primary",
-          "radiusPx": {
-            "documents": 16,
-            "selector": 12
-          },
-          "horizontalPaddingPx": 16
-        },
-        "listRow": {
-          "name": "list.mobile",
-          "nodeId": "2015:12843",
-          "property1": "1",
-          "heightPx": 54,
-          "gapPx": 0,
-          "separator": "#E9ECF0"
-        },
-        "actionArea": {
-          "topGapPx": 24,
-          "slot": "Buttons-vert",
-          "componentName": "Button.mobile",
-          "size": "M",
-          "primaryHeightPx": 44,
-          "primaryVariantNodeId": "2168:7065"
-        },
-        "systemBottomExamplePx": 48
-      },
-      "behavior": [
-        "Anchored to bottom; only inner long content scrolls",
-        "Preserve access to actions and device safe-area",
-        "Keep native handle, Slot, imageWrapper and Buttons-vert; do not rebuild an available original modal instance"
-      ],
-      "constraints": [
-        "Secondary background does not make inner list grey",
-        "Do not generalize 16px document-list radius to selector list",
-        "Only Primary/M measured 44px, other M button types may differ",
-        "No full screen/modal UI inferred for ChBR unless source actually requires one"
-      ]
+      "id": "BOTTOM_SHEET",
+      "source": "docs/mobile-screen-layout.md",
+      "section": 10
     },
     {
-      "ruleId": "SELECTOR",
-      "title": "Selector — input → bottom sheet → list → chosen value",
-      "sourceDocument": {
-        "path": "docs/mobile-screen-layout.md",
-        "url": "https://github.com/rrpdsgn111126/altyn-prot/blob/main/docs/mobile-screen-layout.md",
-        "section": 11,
-        "sourceBlobSha": "da444f9f10c77863d7ee469a8f08104f22527f5b"
-      },
-      "status": "documented_composition",
-      "mappingType": "composition",
-      "isStandaloneFigmaComponentSet": false,
-      "appliesTo": [
-        "Selection controls when the source interaction specifically opens a Bottom Sheet"
-      ],
-      "components": [
-        {
-          "name": "Input.mobile",
-          "nodeId": "77:12680",
-          "usage": "trigger/search field and Filled selected value"
-        },
-        {
-          "name": "modal",
-          "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
-          "nodeId": "920:26457",
-          "usage": "Bottom Sheet"
-        },
-        {
-          "name": "list.mobile",
-          "nodeId": "2015:12843",
-          "variant": "Property 1=1",
-          "usage": "options, 54px rows with gap 0"
-        }
-      ],
-      "examples": [
-        {
-          "name": "country with search",
-          "sourceNodeId": "17511:236855"
-        },
-        {
-          "name": "number selector without search",
-          "sourceNodeId": "17511:164381"
-        },
-        {
-          "name": "Physical Card country list without search",
-          "sourceNodeId": "14348:114250"
-        }
-      ],
-      "behavior": [
-        "Tap selector to open Bottom Sheet",
-        "Search is present only where scenario needs it; uses Input.mobile height 54px with search icon on right",
-        "Options are in a white list container; long list scrolls inside sheet",
-        "Selecting enabled row updates input text and right icon and closes sheet",
-        "Closing without selecting (outside, Escape, swipe handle) preserves last value and input data",
-        "Disabled row not selectable; no-search-results is explicit empty state",
-        "Keyboard navigation, accessible names and focus return are required"
-      ],
-      "iconRules": {
-        "side": "right for option and selected field",
-        "types": {
-          "country": "flag",
-          "bank": "official bank icon",
-          "network": "specific network icon"
-        },
-        "selectedInput": {
-          "component": "Input.mobile",
-          "slot": "Addons / right",
-          "propertyToggle": "sIcon R",
-          "propertySwap": "sIcon.w R",
-          "countryIcon": "Services icons / Flag",
-          "countryVariant": "Round flags",
-          "examples": [
-            "russia",
-            "kazakhstan",
-            "united arab emirates"
-          ],
-          "emptyValue": "sIcon R = false"
-        },
-        "constraints": [
-          "Use bound components, no overlaid emoji/SVG stand-ins for country flag",
-          "Do not invent bank/network logos or backend data"
-        ]
-      },
-      "geometry": {
-        "searchInputHeightPx": 54,
-        "optionRowHeightPx": 54,
-        "optionRowGapPx": 0,
-        "listBackground": "#FFFFFF",
-        "listRadiusPx": 12,
-        "sidePaddingPx": 16
-      },
-      "verificationCaveat": "History filter Select / I in ChBR cannot be assumed to be this Bottom Sheet pattern without checking that specific interaction."
+      "id": "SELECTOR",
+      "source": "docs/mobile-screen-layout.md",
+      "section": 11
     }
   ]
 }
