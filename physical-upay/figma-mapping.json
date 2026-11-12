@@ -19,7 +19,7 @@
       "shared/components.js",
       "shared/select-sheet.js"
     ],
-    "componentReferences": "docs/component-map.md",
+    "componentReferences": "shared/README.md",
     "layoutRules": "docs/mobile-screen-layout.md",
     "uxWriting": "docs/ux-writing-guidelines.md"
   },
@@ -44,7 +44,7 @@
       "state": null,
       "size": "54 px",
       "verification": "partial",
-      "source": "docs/component-map.md; Figma"
+      "source": "shared/README.md; Figma"
     },
     "btnL": {
       "figmaComponent": "Button.mobile",
@@ -58,7 +58,7 @@
       "state": "Enable",
       "size": "L; 54 px",
       "verification": "verified",
-      "source": "docs/component-map.md"
+      "source": "shared/README.md"
     },
     "btnOff": {
       "figmaComponent": "Button.mobile",
@@ -72,7 +72,7 @@
       "state": "Disabled",
       "size": "L; 54 px",
       "verification": "verified",
-      "source": "docs/component-map.md"
+      "source": "shared/README.md"
     },
     "btnUnknown": {
       "figmaComponent": "Button.mobile",
@@ -82,7 +82,7 @@
       "state": null,
       "size": null,
       "verification": "partial",
-      "source": "docs/component-map.md; exact variant not established"
+      "source": "shared/README.md; exact variant not established"
     },
     "inpEmpty": {
       "figmaComponent": "Input.mobile",
@@ -94,7 +94,7 @@
       "state": "Enable",
       "size": "54 px",
       "verification": "verified",
-      "source": "docs/component-map.md; docs/mobile-screen-layout.md"
+      "source": "shared/README.md; docs/mobile-screen-layout.md"
     },
     "inpFilled": {
       "figmaComponent": "Input.mobile",
@@ -104,7 +104,7 @@
       "state": "Filled",
       "size": "54 px",
       "verification": "partial",
-      "source": "docs/component-map.md; exact Filled variant properties not verified"
+      "source": "shared/README.md; exact Filled variant properties not verified"
     },
     "inpFocused": {
       "figmaComponent": "Input.mobile",
@@ -124,7 +124,7 @@
       "state": "Invalid",
       "size": "54 px",
       "verification": "partial",
-      "source": "docs/component-map.md; exact Invalid variant properties not verified"
+      "source": "shared/README.md; exact Invalid variant properties not verified"
     },
     "list": {
       "figmaComponent": "list.mobile",
@@ -136,7 +136,7 @@
       "state": "Enable",
       "size": "min 54 px",
       "verification": "partial",
-      "source": "docs/component-map.md; Property 1 option unknown"
+      "source": "shared/README.md; Property 1 option unknown"
     },
     "notify": {
       "figmaComponent": "Notification",
@@ -158,7 +158,7 @@
       "state": null,
       "size": null,
       "verification": "partial",
-      "source": "docs/component-map.md; HTML annotation Switch.Value does not establish exact match"
+      "source": "shared/README.md; HTML annotation Switch.Value does not establish exact match"
     },
     "none": {
       "figmaComponent": null,
@@ -280,7 +280,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -484,7 +484,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Primary L create-card action"
@@ -541,7 +541,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -639,7 +639,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Catalog metadata line; exact Figma Property 1 unverified"
@@ -664,7 +664,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Catalog metadata line; exact Figma Property 1 unverified"
@@ -689,7 +689,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Catalog metadata line; exact Figma Property 1 unverified"
@@ -714,7 +714,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Catalog metadata line; exact Figma Property 1 unverified"
@@ -741,7 +741,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Primary L create-card action"
@@ -821,7 +821,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -1025,7 +1025,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Primary L create-card action"
@@ -1105,7 +1105,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -1153,7 +1153,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "verified",
-            "evidence": "docs/component-map.md; docs/mobile-screen-layout.md"
+            "evidence": "shared/README.md; docs/mobile-screen-layout.md"
           },
           "verification": "verified",
           "notes": "Field control: [data-field=\"recipient_name\"]; label inside frame"
@@ -1178,7 +1178,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "verified",
-            "evidence": "docs/component-map.md; docs/mobile-screen-layout.md"
+            "evidence": "shared/README.md; docs/mobile-screen-layout.md"
           },
           "verification": "verified",
           "notes": "Field control: [data-field=\"phone\"]; label inside frame"
@@ -1203,7 +1203,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "verified",
-            "evidence": "docs/component-map.md; docs/mobile-screen-layout.md"
+            "evidence": "shared/README.md; docs/mobile-screen-layout.md"
           },
           "verification": "verified",
           "notes": "Field control: [data-field=\"city\"]; label inside frame"
@@ -1228,7 +1228,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "verified",
-            "evidence": "docs/component-map.md; docs/mobile-screen-layout.md"
+            "evidence": "shared/README.md; docs/mobile-screen-layout.md"
           },
           "verification": "verified",
           "notes": "Field control: [data-field=\"address\"]; label inside frame"
@@ -1254,7 +1254,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "verified",
-            "evidence": "docs/component-map.md; docs/mobile-screen-layout.md"
+            "evidence": "shared/README.md; docs/mobile-screen-layout.md"
           },
           "verification": "verified",
           "notes": "Input.mobile as selector trigger; source helper shared/select-sheet.js"
@@ -1306,7 +1306,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Continue to review"
@@ -1363,7 +1363,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -1501,7 +1501,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Input.mobile as selector trigger; source helper shared/select-sheet.js"
@@ -1553,7 +1553,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Continue to review"
@@ -1610,7 +1610,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -1656,7 +1656,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"recipient_name\"]; label inside frame"
@@ -1679,7 +1679,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"phone\"]; label inside frame"
@@ -1702,7 +1702,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"city\"]; label inside frame"
@@ -1725,7 +1725,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"address\"]; label inside frame"
@@ -1829,7 +1829,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Continue to review"
@@ -1886,7 +1886,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -1932,7 +1932,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Invalid variant properties not verified"
+            "evidence": "shared/README.md; exact Invalid variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"recipient_name\"]; label inside frame"
@@ -1955,7 +1955,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Invalid variant properties not verified"
+            "evidence": "shared/README.md; exact Invalid variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"phone\"]; label inside frame"
@@ -1978,7 +1978,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Invalid variant properties not verified"
+            "evidence": "shared/README.md; exact Invalid variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"city\"]; label inside frame"
@@ -2001,7 +2001,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Invalid variant properties not verified"
+            "evidence": "shared/README.md; exact Invalid variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"address\"]; label inside frame"
@@ -2024,7 +2024,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Invalid variant properties not verified"
+            "evidence": "shared/README.md; exact Invalid variant properties not verified"
           },
           "verification": "partial",
           "notes": "Input.mobile as selector trigger; source helper shared/select-sheet.js"
@@ -2076,7 +2076,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Continue to review"
@@ -2248,7 +2248,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -2296,7 +2296,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "verified",
-            "evidence": "docs/component-map.md; docs/mobile-screen-layout.md"
+            "evidence": "shared/README.md; docs/mobile-screen-layout.md"
           },
           "verification": "verified",
           "notes": "Field control: [data-field=\"recipient_name\"]; label inside frame"
@@ -2321,7 +2321,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "verified",
-            "evidence": "docs/component-map.md; docs/mobile-screen-layout.md"
+            "evidence": "shared/README.md; docs/mobile-screen-layout.md"
           },
           "verification": "verified",
           "notes": "Field control: [data-field=\"phone\"]; label inside frame"
@@ -2346,7 +2346,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "verified",
-            "evidence": "docs/component-map.md; docs/mobile-screen-layout.md"
+            "evidence": "shared/README.md; docs/mobile-screen-layout.md"
           },
           "verification": "verified",
           "notes": "Field control: [data-field=\"city\"]; label inside frame"
@@ -2371,7 +2371,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "verified",
-            "evidence": "docs/component-map.md; docs/mobile-screen-layout.md"
+            "evidence": "shared/README.md; docs/mobile-screen-layout.md"
           },
           "verification": "verified",
           "notes": "Field control: [data-field=\"address\"]; label inside frame"
@@ -2397,7 +2397,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "verified",
-            "evidence": "docs/component-map.md; docs/mobile-screen-layout.md"
+            "evidence": "shared/README.md; docs/mobile-screen-layout.md"
           },
           "verification": "verified",
           "notes": "Input.mobile as selector trigger; source helper shared/select-sheet.js"
@@ -2449,7 +2449,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Continue to review"
@@ -2703,7 +2703,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -2749,7 +2749,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"recipient_name\"]; label inside frame"
@@ -2772,7 +2772,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"phone\"]; label inside frame"
@@ -2795,7 +2795,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"city\"]; label inside frame"
@@ -2818,7 +2818,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Field control: [data-field=\"address\"]; label inside frame"
@@ -2841,7 +2841,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Input.mobile as selector trigger; source helper shared/select-sheet.js"
@@ -2893,7 +2893,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Continue to review"
@@ -2950,7 +2950,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -3282,7 +3282,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Submit order"
@@ -3339,7 +3339,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -3435,7 +3435,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Карта"
@@ -3460,7 +3460,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Где можно платить"
@@ -3485,7 +3485,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Стоимость выпуска"
@@ -3510,7 +3510,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Доставка"
@@ -3535,7 +3535,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row ФИО"
@@ -3560,7 +3560,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Телефон"
@@ -3585,7 +3585,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Страна"
@@ -3610,7 +3610,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Город"
@@ -3635,7 +3635,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Адрес"
@@ -3662,7 +3662,7 @@
             "size": "L; 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "verified",
-            "evidence": "docs/component-map.md"
+            "evidence": "shared/README.md"
           },
           "verification": "verified",
           "notes": "Submit order"
@@ -3742,7 +3742,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -3840,7 +3840,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Reset/new card; size unverified"
@@ -3863,7 +3863,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Open usage information; size unverified"
@@ -3920,7 +3920,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -4018,7 +4018,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Reset/new card; size unverified"
@@ -4041,7 +4041,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Open usage information; size unverified"
@@ -4098,7 +4098,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -4523,7 +4523,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Support CTA; Figma modal button variant not confirmed"
@@ -4580,7 +4580,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -5005,7 +5005,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Support CTA; Figma modal button variant not confirmed"
@@ -5062,7 +5062,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -5487,7 +5487,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Support CTA; Figma modal button variant not confirmed"
@@ -5544,7 +5544,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -5616,7 +5616,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Quick action; exact Figma size unknown"
@@ -5639,7 +5639,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Information action; exact type/size unknown"
@@ -6072,7 +6072,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -6144,7 +6144,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Quick action; exact Figma size unknown"
@@ -6167,7 +6167,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Information action; exact type/size unknown"
@@ -6215,7 +6215,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3254-14282",
             "verification": "partial",
-            "evidence": "docs/component-map.md; HTML annotation Switch.Value does not establish exact match"
+            "evidence": "shared/README.md; HTML annotation Switch.Value does not establish exact match"
           },
           "verification": "partial",
           "notes": "Switch.mob candidate, exact variant unresolved"
@@ -6240,7 +6240,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Месяц; exact row variant unverified"
@@ -6265,7 +6265,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Неделя; exact row variant unverified"
@@ -6290,7 +6290,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Час; exact row variant unverified"
@@ -6315,7 +6315,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Операция; exact row variant unverified"
@@ -6364,7 +6364,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -6389,7 +6389,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -6414,7 +6414,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -6439,7 +6439,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -6464,7 +6464,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -6489,7 +6489,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -6592,7 +6592,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -6664,7 +6664,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Quick action; exact Figma size unknown"
@@ -6687,7 +6687,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Information action; exact type/size unknown"
@@ -6735,7 +6735,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3254-14282",
             "verification": "partial",
-            "evidence": "docs/component-map.md; HTML annotation Switch.Value does not establish exact match"
+            "evidence": "shared/README.md; HTML annotation Switch.Value does not establish exact match"
           },
           "verification": "partial",
           "notes": "Switch.mob candidate, exact variant unresolved"
@@ -6760,7 +6760,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Месяц; exact row variant unverified"
@@ -6785,7 +6785,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Неделя; exact row variant unverified"
@@ -6810,7 +6810,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Час; exact row variant unverified"
@@ -6835,7 +6835,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Операция; exact row variant unverified"
@@ -6884,7 +6884,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -6909,7 +6909,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -6934,7 +6934,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -6959,7 +6959,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -6984,7 +6984,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -7009,7 +7009,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -7112,7 +7112,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -7209,7 +7209,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Quick action; exact Figma size unknown"
@@ -7232,7 +7232,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Information action; exact type/size unknown"
@@ -7665,7 +7665,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -7737,7 +7737,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Quick action; exact Figma size unknown"
@@ -7760,7 +7760,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Information action; exact type/size unknown"
@@ -7808,7 +7808,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3254-14282",
             "verification": "partial",
-            "evidence": "docs/component-map.md; HTML annotation Switch.Value does not establish exact match"
+            "evidence": "shared/README.md; HTML annotation Switch.Value does not establish exact match"
           },
           "verification": "partial",
           "notes": "Switch.mob candidate, exact variant unresolved"
@@ -7857,7 +7857,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -7882,7 +7882,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -7907,7 +7907,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -7932,7 +7932,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -7957,7 +7957,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -7982,7 +7982,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -8085,7 +8085,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -8157,7 +8157,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Quick action; exact Figma size unknown"
@@ -8180,7 +8180,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Information action; exact type/size unknown"
@@ -8768,7 +8768,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Custom modal action; exact Figma variant unknown"
@@ -8825,7 +8825,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -8923,7 +8923,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Reset/new card; size unverified"
@@ -8946,7 +8946,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Open usage information; size unverified"
@@ -9153,7 +9153,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Custom modal action; exact Figma variant unknown"
@@ -9210,7 +9210,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -9282,7 +9282,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Quick action; exact Figma size unknown"
@@ -9305,7 +9305,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Information action; exact type/size unknown"
@@ -9353,7 +9353,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3254-14282",
             "verification": "partial",
-            "evidence": "docs/component-map.md; HTML annotation Switch.Value does not establish exact match"
+            "evidence": "shared/README.md; HTML annotation Switch.Value does not establish exact match"
           },
           "verification": "partial",
           "notes": "Switch.mob candidate, exact variant unresolved"
@@ -9378,7 +9378,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Месяц; exact row variant unverified"
@@ -9403,7 +9403,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Неделя; exact row variant unverified"
@@ -9428,7 +9428,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Час; exact row variant unverified"
@@ -9453,7 +9453,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Limit Операция; exact row variant unverified"
@@ -9502,7 +9502,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -9527,7 +9527,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -9552,7 +9552,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -9577,7 +9577,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -9602,7 +9602,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -9627,7 +9627,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Interactive detail action; exact variant unknown"
@@ -9742,7 +9742,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Close action, variant unknown"
@@ -9799,7 +9799,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -9895,7 +9895,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Карта"
@@ -9920,7 +9920,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Где можно платить"
@@ -9945,7 +9945,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Стоимость выпуска"
@@ -9970,7 +9970,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Доставка"
@@ -9995,7 +9995,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row ФИО"
@@ -10020,7 +10020,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Телефон"
@@ -10045,7 +10045,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Страна"
@@ -10070,7 +10070,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Город"
@@ -10095,7 +10095,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Адрес"
@@ -10164,7 +10164,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Close icon button"
@@ -10210,7 +10210,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Textarea is only a conceptual Input.mobile match, multiline variant unverified"
@@ -10233,7 +10233,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Send-message action"
@@ -10290,7 +10290,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4350",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Figma"
+            "evidence": "shared/README.md; Figma"
           },
           "verification": "partial",
           "notes": "One original navbar instance including title, back/help slots; exact variant pending"
@@ -10386,7 +10386,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Карта"
@@ -10411,7 +10411,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Где можно платить"
@@ -10436,7 +10436,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Стоимость выпуска"
@@ -10461,7 +10461,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Доставка"
@@ -10486,7 +10486,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row ФИО"
@@ -10511,7 +10511,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Телефон"
@@ -10536,7 +10536,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Страна"
@@ -10561,7 +10561,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Город"
@@ -10586,7 +10586,7 @@
             "size": "min 54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2015-12843",
             "verification": "partial",
-            "evidence": "docs/component-map.md; Property 1 option unknown"
+            "evidence": "shared/README.md; Property 1 option unknown"
           },
           "verification": "partial",
           "notes": "Review row Адрес"
@@ -10655,7 +10655,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Close icon button"
@@ -10724,7 +10724,7 @@
             "size": "54 px",
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact Filled variant properties not verified"
+            "evidence": "shared/README.md; exact Filled variant properties not verified"
           },
           "verification": "partial",
           "notes": "Textarea is only a conceptual Input.mobile match, multiline variant unverified"
@@ -10747,7 +10747,7 @@
             "size": null,
             "referenceUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7054",
             "verification": "partial",
-            "evidence": "docs/component-map.md; exact variant not established"
+            "evidence": "shared/README.md; exact variant not established"
           },
           "verification": "partial",
           "notes": "Send-message action"
