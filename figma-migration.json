@@ -167,7 +167,17 @@
           "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2054-7637"
         }
       ],
-      "notes": "Source instance height 68 px including helper; target control 54 px. Verify helper text as a separate slot."
+      "notes": "Source Input / II includes 68px block (54px base plus helper context). Target Input.mobile Active/Focus is 54px radius 12px, label inside border, active border #FFD119; 12px stack gap is between inputs, not label and value. Keep helper separate in context.",
+      "componentRuleIds": [
+        "INPUT_MOBILE"
+      ],
+      "implementationRequirements": {
+        "heightPx": 54,
+        "radiusPx": 12,
+        "labelInsideField": true,
+        "focusOutline": "#FFD119",
+        "stackGapPx": 12
+      }
     },
     {
       "mappingId": "M_INPUT_INVALID",
@@ -201,7 +211,18 @@
           "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2014-9846"
         }
       ],
-      "notes": "Red invalid state. Error text lives under field, number remains editable."
+      "notes": "Target Input.mobile / Invalid height 54px, radius 12px, border #DD4014, background #FFF4F8. Small label and value stay within same border. Error message under field, not a separate card; KNP remains editable. API-specific error text/format unconfirmed.",
+      "componentRuleIds": [
+        "INPUT_MOBILE"
+      ],
+      "implementationRequirements": {
+        "heightPx": 54,
+        "radiusPx": 12,
+        "labelInsideField": true,
+        "invalidOutline": "#DD4014",
+        "invalidBackground": "#FFF4F8",
+        "stackGapPx": 12
+      }
     },
     {
       "mappingId": "M_LINK",
@@ -546,7 +567,13 @@
           "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=I18738-48605;26319-67055"
         }
       ],
-      "notes": "No matching approved Altyn.Base selector component variant; preserve source semantics pending review."
+      "notes": "Source history filter is legacy Altyn Wallet Select / I. Selector composition is documented as Input.mobile → modal → list.mobile only IF this filter opens a Bottom Sheet; actual behavior here is unverified. Do not assign a standalone Altyn.Base select set or change mappingType until flow verified.",
+      "componentRuleIds": [
+        "SELECTOR",
+        "BOTTOM_SHEET",
+        "INPUT_MOBILE"
+      ],
+      "applicability": "conditional_unverified"
     },
     {
       "mappingId": "M_CONFIRM",
@@ -1650,7 +1677,7 @@
       "itemId": "U_HISTORY",
       "sourceNodeId": "I18738:48605;26319:67055",
       "screenId": "08-history",
-      "reason": "Filter Select / I and 76px transaction rows differ from identified Base items.",
+      "reason": "History filter Select / I has no confirmed replacement. The documented Input.mobile → modal → list.mobile pattern applies only after verifying this particular filter opens a Bottom Sheet; 76px transaction rows also differ from Base trans_v2.mobile.",
       "candidateMappingIds": [
         "M_FILTER",
         "M_HISTORY"
@@ -1720,7 +1747,8 @@
     "notes": [
       "Source Figma was read only; no Figma modifications.",
       "Matching component asset existence does not mean semantic/visual equivalence was approved.",
-      "Visual overlay review: figma-migration-review/index.html. Several target candidates remain open."
+      "Visual overlay review: figma-migration-review/index.html. Several target candidates remain open.",
+      "The documented Input.mobile, Bottom Sheet, and selector rules from docs/mobile-screen-layout.md sections 9-12 are attached as componentGuidance; these are rules, not approval of ChBR-specific mapping."
     ]
   },
   "dataContract": {
@@ -1767,5 +1795,265 @@
       "Never mark approved without explicit user approval",
       "Do not edit Figma during annotation stage"
     ]
-  }
+  },
+  "componentGuidance": [
+    {
+      "ruleId": "INPUT_MOBILE",
+      "title": "Input.mobile — label, geometry, states",
+      "sourceDocument": {
+        "path": "docs/mobile-screen-layout.md",
+        "url": "https://github.com/rrpdsgn111126/altyn-prot/blob/main/docs/mobile-screen-layout.md",
+        "section": 9,
+        "sourceBlobSha": "da444f9f10c77863d7ee469a8f08104f22527f5b"
+      },
+      "master": {
+        "name": "Input.mobile",
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "77:12680",
+        "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=77-12680",
+        "componentSetKey": "43304a4f9493c7432147f04ff55e66b8a778bf74"
+      },
+      "status": "documented",
+      "appliesTo": [
+        "M_INPUT_FOCUS",
+        "M_INPUT_INVALID",
+        "M_FILTER (only if selection input is used)"
+      ],
+      "geometry": {
+        "heightPx": 54,
+        "radiusPx": 12,
+        "stackGapPx": 12,
+        "layout": "One outer border wraps label and value. Label stays inside; stack gap is between fields, not within a field."
+      },
+      "states": [
+        {
+          "state": "Enable",
+          "nodeId": "2152:12365",
+          "name": "🎚️ State=Enable, secondary=Off",
+          "label": "16px/24px centered vertically",
+          "value": null
+        },
+        {
+          "state": "Enable + placeholder",
+          "nodeId": "2190:18818",
+          "name": "🎚️ State=Enable + placeholder, secondary=Off",
+          "label": "12px/16px upper",
+          "value": "placeholder 16px/24px below even when not focused"
+        },
+        {
+          "state": "Filled",
+          "nodeId": "2014:9857",
+          "name": "🎚️ State=Filled, secondary=Off",
+          "label": "12px/16px upper",
+          "value": "16px/24px below"
+        },
+        {
+          "state": "Focus / Active",
+          "nodeId": "2054:7637",
+          "name": "🎚️ State=Active/Focus, secondary=Off",
+          "label": "Inside field; active outline",
+          "value": "Depends on filled/focused presentation"
+        },
+        {
+          "state": "Invalid",
+          "nodeId": "2014:9846",
+          "name": "🎚️ State=Invalid, secondary=Off",
+          "label": "Same interior geometry",
+          "value": "error helper below field"
+        },
+        {
+          "state": "Disabled",
+          "nodeId": "2014:10042",
+          "name": "🎚️ State=Read-only / Disabled, secondary=Off",
+          "label": "Same geometry",
+          "value": "not editable"
+        }
+      ],
+      "colors": {
+        "enableOutline": "#E9ECF0",
+        "focusOutline": "#FFD119",
+        "invalidOutline": "#DD4014",
+        "invalidBackground": "#FFF4F8"
+      },
+      "constraints": [
+        "Do not place label as external text above field",
+        "Do not confuse total legacy source 68px block including helper with component height 54px",
+        "Error message stays associated with the field and doesn't change the 54px base geometry"
+      ]
+    },
+    {
+      "ruleId": "BOTTOM_SHEET",
+      "title": "Modal / Bottom Sheet — layout, backgrounds, buttons",
+      "sourceDocument": {
+        "path": "docs/mobile-screen-layout.md",
+        "url": "https://github.com/rrpdsgn111126/altyn-prot/blob/main/docs/mobile-screen-layout.md",
+        "section": 10,
+        "sourceBlobSha": "da444f9f10c77863d7ee469a8f08104f22527f5b"
+      },
+      "sourceComponent": {
+        "name": "modal",
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "920:26457",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=920-26457",
+        "componentKey": null,
+        "variantProperties": {
+          "State": "off"
+        },
+        "verifiedFrom": "documented source; master properties and key not revalidated this turn"
+      },
+      "status": "documented",
+      "appliesTo": [
+        "Reusable selector/choice overlays; no confirmed bottom-sheet instance in current ChBR screen list"
+      ],
+      "geometry": {
+        "backgroundDefault": "#F6F7F8",
+        "backgroundToken": "bg/neutral/secondary",
+        "primaryException": "#FFFFFF",
+        "primaryExceptionExample": "17511:164381",
+        "upperCornerRadiusPx": 12,
+        "handlePx": {
+          "width": 56,
+          "height": 4,
+          "zoneHeight": 20
+        },
+        "horizontalPaddingPx": 16,
+        "titleTypography": {
+          "sizePx": 18,
+          "lineHeightPx": 27,
+          "weight": "Semi Bold",
+          "scope": "documents modal reference only"
+        },
+        "listContainer": {
+          "background": "#FFFFFF",
+          "token": "bg/neutral/primary",
+          "radiusPx": {
+            "documents": 16,
+            "selector": 12
+          },
+          "horizontalPaddingPx": 16
+        },
+        "listRow": {
+          "name": "list.mobile",
+          "nodeId": "2015:12843",
+          "property1": "1",
+          "heightPx": 54,
+          "gapPx": 0,
+          "separator": "#E9ECF0"
+        },
+        "actionArea": {
+          "topGapPx": 24,
+          "slot": "Buttons-vert",
+          "componentName": "Button.mobile",
+          "size": "M",
+          "primaryHeightPx": 44,
+          "primaryVariantNodeId": "2168:7065"
+        },
+        "systemBottomExamplePx": 48
+      },
+      "behavior": [
+        "Anchored to bottom; only inner long content scrolls",
+        "Preserve access to actions and device safe-area",
+        "Keep native handle, Slot, imageWrapper and Buttons-vert; do not rebuild an available original modal instance"
+      ],
+      "constraints": [
+        "Secondary background does not make inner list grey",
+        "Do not generalize 16px document-list radius to selector list",
+        "Only Primary/M measured 44px, other M button types may differ",
+        "No full screen/modal UI inferred for ChBR unless source actually requires one"
+      ]
+    },
+    {
+      "ruleId": "SELECTOR",
+      "title": "Selector — input → bottom sheet → list → chosen value",
+      "sourceDocument": {
+        "path": "docs/mobile-screen-layout.md",
+        "url": "https://github.com/rrpdsgn111126/altyn-prot/blob/main/docs/mobile-screen-layout.md",
+        "section": 11,
+        "sourceBlobSha": "da444f9f10c77863d7ee469a8f08104f22527f5b"
+      },
+      "status": "documented_composition",
+      "mappingType": "composition",
+      "isStandaloneFigmaComponentSet": false,
+      "appliesTo": [
+        "Selection controls when the source interaction specifically opens a Bottom Sheet"
+      ],
+      "components": [
+        {
+          "name": "Input.mobile",
+          "nodeId": "77:12680",
+          "usage": "trigger/search field and Filled selected value"
+        },
+        {
+          "name": "modal",
+          "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+          "nodeId": "920:26457",
+          "usage": "Bottom Sheet"
+        },
+        {
+          "name": "list.mobile",
+          "nodeId": "2015:12843",
+          "variant": "Property 1=1",
+          "usage": "options, 54px rows with gap 0"
+        }
+      ],
+      "examples": [
+        {
+          "name": "country with search",
+          "sourceNodeId": "17511:236855"
+        },
+        {
+          "name": "number selector without search",
+          "sourceNodeId": "17511:164381"
+        },
+        {
+          "name": "Physical Card country list without search",
+          "sourceNodeId": "14348:114250"
+        }
+      ],
+      "behavior": [
+        "Tap selector to open Bottom Sheet",
+        "Search is present only where scenario needs it; uses Input.mobile height 54px with search icon on right",
+        "Options are in a white list container; long list scrolls inside sheet",
+        "Selecting enabled row updates input text and right icon and closes sheet",
+        "Closing without selecting (outside, Escape, swipe handle) preserves last value and input data",
+        "Disabled row not selectable; no-search-results is explicit empty state",
+        "Keyboard navigation, accessible names and focus return are required"
+      ],
+      "iconRules": {
+        "side": "right for option and selected field",
+        "types": {
+          "country": "flag",
+          "bank": "official bank icon",
+          "network": "specific network icon"
+        },
+        "selectedInput": {
+          "component": "Input.mobile",
+          "slot": "Addons / right",
+          "propertyToggle": "sIcon R",
+          "propertySwap": "sIcon.w R",
+          "countryIcon": "Services icons / Flag",
+          "countryVariant": "Round flags",
+          "examples": [
+            "russia",
+            "kazakhstan",
+            "united arab emirates"
+          ],
+          "emptyValue": "sIcon R = false"
+        },
+        "constraints": [
+          "Use bound components, no overlaid emoji/SVG stand-ins for country flag",
+          "Do not invent bank/network logos or backend data"
+        ]
+      },
+      "geometry": {
+        "searchInputHeightPx": 54,
+        "optionRowHeightPx": 54,
+        "optionRowGapPx": 0,
+        "listBackground": "#FFFFFF",
+        "listRadiusPx": 12,
+        "sidePaddingPx": 16
+      },
+      "verificationCaveat": "History filter Select / I in ChBR cannot be assumed to be this Bottom Sheet pattern without checking that specific interaction."
+    }
+  ]
 }
