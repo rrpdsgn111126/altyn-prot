@@ -51,7 +51,7 @@
         },
         {
           "mappingId": "M_STEPS",
-          "reason": "Узел референса 18793:18799 недоступен. Сохранён Step Item; у каждого шага стиль текста совпадает с master."
+          "reason": "Паттерн по референсу 18732:21072. Строки list.mobile представлены Auto Layout-фреймами, слева связанные number icon / S."
         },
         {
           "mappingId": "M_FILTER",
@@ -87,7 +87,7 @@
           "visualReview": true,
           "modalScreenCount": 2,
           "detailsGrouped": true,
-          "numberedListReferenceAvailable": false
+          "numberedListReferenceAvailable": true
         }
       }
     }
@@ -414,17 +414,21 @@
           "visualReference": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3885-60665"
         }
       ],
-      "mappingType": "unmapped",
-      "verificationStatus": "unverified",
+      "mappingType": "composition",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
           "type": "source_instance",
           "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48787"
+        },
+        {
+          "type": "composition_reference",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18732-21072"
         }
       ],
       "notes": "Altyn.Base Step is a 4px progress bar, not instructional Step Item; do not substitute.",
-      "implementationNote": "Сохранены три связанных Step Item из исходного сценария внутри локальной группы. Altyn.Base Step предназначен для прогресса, эквивалентная библиотечная инструкция не подтверждена."
+      "implementationNote": "Паттерн по референсу 18732:21072. Строки list.mobile представлены Auto Layout-фреймами, слева связанные number icon / S."
     },
     {
       "mappingId": "M_QA",
@@ -1525,9 +1529,7 @@
           },
           "reviewStatus": "pending_user",
           "userComments": [],
-          "createdNodeIds": [
-            "18913:22425"
-          ]
+          "createdNodeIds": []
         },
         {
           "annotationId": "02-instruction-02",
@@ -1552,7 +1554,7 @@
           "annotationId": "02-instruction-03",
           "sourceNodeId": "18738:48787",
           "mappingId": "M_STEPS",
-          "targetComponentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
+          "targetComponentKey": null,
           "properties": {
             "sourceRect": {
               "x": 32,
@@ -1564,14 +1566,15 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "I18924:24565;9844:99726;18924:25180"
+            "I18924:24565;9844:99726;18929:22646",
+            "I18924:24565;9844:99726;18929:22649"
           ]
         },
         {
           "annotationId": "02-instruction-04",
           "sourceNodeId": "18738:48788",
           "mappingId": "M_STEPS",
-          "targetComponentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
+          "targetComponentKey": null,
           "properties": {
             "sourceRect": {
               "x": 32,
@@ -1583,14 +1586,15 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "I18924:24565;9844:99726;18924:25181"
+            "I18924:24565;9844:99726;18929:22652",
+            "I18924:24565;9844:99726;18929:22655"
           ]
         },
         {
           "annotationId": "02-instruction-05",
           "sourceNodeId": "18738:48789",
           "mappingId": "M_STEPS",
-          "targetComponentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
+          "targetComponentKey": null,
           "properties": {
             "sourceRect": {
               "x": 32,
@@ -1602,7 +1606,8 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "I18924:24565;9844:99726;18924:25182"
+            "I18924:24565;9844:99726;18929:22658",
+            "I18924:24565;9844:99726;18929:22661"
           ]
         },
         {
@@ -1665,8 +1670,8 @@
       ],
       "targetScreen": {
         "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
-        "nodeId": "18913:22408",
-        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-22408",
+        "nodeId": "18924:24565",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18924-24565",
         "dimensions": {
           "width": 375,
           "height": 920
@@ -1674,41 +1679,6 @@
         "layoutMode": "VERTICAL"
       },
       "implementedElements": {
-        "SYS_STATUS": [
-          {
-            "nodeId": "18913:22409",
-            "name": "Status bar",
-            "type": "INSTANCE",
-            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
-            "componentName": "Status",
-            "variantProperties": {
-              "cutout type": "centered punch hole"
-            },
-            "componentProperties": {
-              "Show camera#332:25": true,
-              "Time#332:24": "9:30",
-              "Date#332:26": "Tue, Jul 19",
-              "Show Battery time#332:23": false,
-              "Show Date#332:22": false
-            }
-          }
-        ],
-        "M_NAV": [
-          {
-            "nodeId": "18913:22425",
-            "name": "navbar",
-            "type": "INSTANCE",
-            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
-            "componentName": "navbar",
-            "variantProperties": {
-              "State": "centr+arrow"
-            },
-            "componentProperties": {
-              "Title#2177:0": true,
-              "right icons#58:0": true
-            }
-          }
-        ],
         "M_QA": [
           {
             "nodeId": "I18924:24565;9844:99726;18924:25177",
@@ -1718,49 +1688,67 @@
         ],
         "M_STEPS": [
           {
-            "nodeId": "I18924:24565;9844:99726;18924:25180",
-            "name": "Step Item",
-            "type": "INSTANCE",
-            "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
-            "componentName": "Step Item",
-            "variantProperties": {
-              "State": "Enable"
-            },
-            "componentProperties": {
-              "Badge#7882:0": true,
-              "Toast#14081:0": false
-            },
-            "textStyleId": "S:60f00e141d2f0db8d2456d18eaad1e33a1b82607,18848:10"
+            "nodeId": "I18924:24565;9844:99726;18929:22646",
+            "name": "list.mobile",
+            "type": "FRAME",
+            "textStyleId": "S:fab79ba95ca0a3ea2268131cd938cc733a3951ef,18848:9",
+            "textColorToken": "Text/Text/Primary",
+            "number": {
+              "nodeId": "I18924:24565;9844:99726;18929:22649",
+              "masterId": "17497:88741",
+              "key": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+              "value": "1",
+              "style": "S:679aaa1fb9f1c327868f2489f6de5eb92f7a4d3c,18848:20",
+              "textToken": "Text/Button/Secondary",
+              "bgToken": "Bg/Button/Secondary/Enable",
+              "size": [
+                24,
+                24
+              ],
+              "centerOffset": 0
+            }
           },
           {
-            "nodeId": "I18924:24565;9844:99726;18924:25181",
-            "name": "Step Item",
-            "type": "INSTANCE",
-            "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
-            "componentName": "Step Item",
-            "variantProperties": {
-              "State": "Enable"
-            },
-            "componentProperties": {
-              "Badge#7882:0": true,
-              "Toast#14081:0": false
-            },
-            "textStyleId": "S:60f00e141d2f0db8d2456d18eaad1e33a1b82607,18848:10"
+            "nodeId": "I18924:24565;9844:99726;18929:22652",
+            "name": "list.mobile",
+            "type": "FRAME",
+            "textStyleId": "S:fab79ba95ca0a3ea2268131cd938cc733a3951ef,18848:9",
+            "textColorToken": "Text/Text/Primary",
+            "number": {
+              "nodeId": "I18924:24565;9844:99726;18929:22655",
+              "masterId": "17497:88741",
+              "key": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+              "value": "2",
+              "style": "S:679aaa1fb9f1c327868f2489f6de5eb92f7a4d3c,18848:20",
+              "textToken": "Text/Button/Secondary",
+              "bgToken": "Bg/Button/Secondary/Enable",
+              "size": [
+                24,
+                24
+              ],
+              "centerOffset": 0
+            }
           },
           {
-            "nodeId": "I18924:24565;9844:99726;18924:25182",
-            "name": "Step Item",
-            "type": "INSTANCE",
-            "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
-            "componentName": "Step Item",
-            "variantProperties": {
-              "State": "Enable"
-            },
-            "componentProperties": {
-              "Badge#7882:0": true,
-              "Toast#14081:0": false
-            },
-            "textStyleId": "S:60f00e141d2f0db8d2456d18eaad1e33a1b82607,18848:10"
+            "nodeId": "I18924:24565;9844:99726;18929:22658",
+            "name": "list.mobile",
+            "type": "FRAME",
+            "textStyleId": "S:fab79ba95ca0a3ea2268131cd938cc733a3951ef,18848:9",
+            "textColorToken": "Text/Text/Primary",
+            "number": {
+              "nodeId": "I18924:24565;9844:99726;18929:22661",
+              "masterId": "17497:88741",
+              "key": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+              "value": "3",
+              "style": "S:679aaa1fb9f1c327868f2489f6de5eb92f7a4d3c,18848:20",
+              "textToken": "Text/Button/Secondary",
+              "bgToken": "Bg/Button/Secondary/Enable",
+              "size": [
+                24,
+                24
+              ],
+              "centerOffset": 0
+            }
           }
         ],
         "M_WARNING": [
@@ -1845,6 +1833,59 @@
               "Button.Hor#920:0": false
             }
           }
+        ],
+        "M_STEP_NUMBER": [
+          {
+            "nodeId": "I18924:24565;9844:99726;18929:22649",
+            "name": "number icon / S",
+            "type": "INSTANCE",
+            "componentKey": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+            "variantProperties": {
+              "Style": "Static",
+              "State": "Enable",
+              "Disable": "no"
+            }
+          },
+          {
+            "nodeId": "I18924:24565;9844:99726;18929:22655",
+            "name": "number icon / S",
+            "type": "INSTANCE",
+            "componentKey": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+            "variantProperties": {
+              "Style": "Static",
+              "State": "Enable",
+              "Disable": "no"
+            }
+          },
+          {
+            "nodeId": "I18924:24565;9844:99726;18929:22661",
+            "name": "number icon / S",
+            "type": "INSTANCE",
+            "componentKey": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+            "variantProperties": {
+              "Style": "Static",
+              "State": "Enable",
+              "Disable": "no"
+            }
+          }
+        ],
+        "M_STEP_GROUP": [
+          {
+            "bg": "Bg/Neutral/Primary",
+            "radius": 12,
+            "side": [
+              16,
+              16
+            ],
+            "vertical": [
+              0,
+              0
+            ],
+            "gap": 0,
+            "height": 384,
+            "nodeId": "I18924:24565;9844:99726;18929:22645",
+            "type": "FRAME"
+          }
         ]
       },
       "linkedChildren": [
@@ -1873,46 +1914,147 @@
           }
         },
         {
-          "nodeId": "I18913:22425;3741:4364",
-          "name": "Chat",
-          "componentKey": "bf0e901e04d768a403450722acef55056202797d",
+          "nodeId": "I18924:24565;9844:99726;18929:22649",
+          "name": "number icon / S",
+          "type": "INSTANCE",
+          "componentKey": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
           "variantProperties": {
-            "Size": "L",
-            "Fill": "no"
+            "Style": "Static",
+            "State": "Enable",
+            "Disable": "no"
+          }
+        },
+        {
+          "nodeId": "I18924:24565;9844:99726;18929:22655",
+          "name": "number icon / S",
+          "type": "INSTANCE",
+          "componentKey": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+          "variantProperties": {
+            "Style": "Static",
+            "State": "Enable",
+            "Disable": "no"
+          }
+        },
+        {
+          "nodeId": "I18924:24565;9844:99726;18929:22661",
+          "name": "number icon / S",
+          "type": "INSTANCE",
+          "componentKey": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+          "variantProperties": {
+            "Style": "Static",
+            "State": "Enable",
+            "Disable": "no"
           }
         }
       ],
       "prototypeLinks": [
         {
-          "fromNodeId": "I18913:22425;3741:4360",
-          "toNodeId": "18913:22139"
-        },
-        {
           "fromNodeId": "I18924:24565;940:26954",
           "toNodeId": "18913:22498"
-        },
-        {
-          "fromNodeId": "18924:25207",
-          "action": "BACK"
         }
       ],
       "numbering": {
-        "requestedReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18793-18799",
-        "referenceStatus": "unavailable",
-        "stepNodeIds": [
-          "I18924:24565;9844:99726;18924:25180",
-          "I18924:24565;9844:99726;18924:25181",
-          "I18924:24565;9844:99726;18924:25182"
+        "referenceNodeId": "18732:21072",
+        "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18732-21072",
+        "referenceStatus": "verified",
+        "groupNodeId": "I18924:24565;9844:99726;18929:22645",
+        "rowNodeIds": [
+          "I18924:24565;9844:99726;18929:22646",
+          "I18924:24565;9844:99726;18929:22652",
+          "I18924:24565;9844:99726;18929:22658"
         ],
-        "verifiedTextStyleMatchesMaster": true
+        "numberComponentNodeIds": [
+          "I18924:24565;9844:99726;18929:22649",
+          "I18924:24565;9844:99726;18929:22655",
+          "I18924:24565;9844:99726;18929:22661"
+        ],
+        "textStyleId": "S:fab79ba95ca0a3ea2268131cd938cc733a3951ef,18848:9",
+        "descriptionToken": "Text/Text/Secondary",
+        "rows": [
+          {
+            "id": "I18924:24565;9844:99726;18929:22646",
+            "height": 160,
+            "top": 6,
+            "bottom": 10,
+            "separator": 1,
+            "textId": "I18924:24565;9844:99726;18929:22651",
+            "text": "На сайте Мультитрансфера выберите страну «Абхазия», валюту RUB и способ «Мультитрансфер». Укажите сумму и нажмите «Начать перевод»",
+            "style": "S:fab79ba95ca0a3ea2268131cd938cc733a3951ef,18848:9",
+            "fill": "Text/Text/Primary",
+            "number": {
+              "nodeId": "I18924:24565;9844:99726;18929:22649",
+              "masterId": "17497:88741",
+              "key": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+              "value": "1",
+              "style": "S:679aaa1fb9f1c327868f2489f6de5eb92f7a4d3c,18848:20",
+              "textToken": "Text/Button/Secondary",
+              "bgToken": "Bg/Button/Secondary/Enable",
+              "size": [
+                24,
+                24
+              ],
+              "centerOffset": 0
+            }
+          },
+          {
+            "id": "I18924:24565;9844:99726;18929:22652",
+            "height": 112,
+            "top": 8,
+            "bottom": 8,
+            "separator": 1,
+            "textId": "I18924:24565;9844:99726;18929:22657",
+            "text": "Получателем укажите себя — ФИО как в Алтыне. Заполните данные отправителя и оплатите перевод",
+            "style": "S:fab79ba95ca0a3ea2268131cd938cc733a3951ef,18848:9",
+            "fill": "Text/Text/Primary",
+            "number": {
+              "nodeId": "I18924:24565;9844:99726;18929:22655",
+              "masterId": "17497:88741",
+              "key": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+              "value": "2",
+              "style": "S:679aaa1fb9f1c327868f2489f6de5eb92f7a4d3c,18848:20",
+              "textToken": "Text/Button/Secondary",
+              "bgToken": "Bg/Button/Secondary/Enable",
+              "size": [
+                24,
+                24
+              ],
+              "centerOffset": 0
+            }
+          },
+          {
+            "id": "I18924:24565;9844:99726;18929:22658",
+            "height": 112,
+            "top": 8,
+            "bottom": 8,
+            "separator": 1,
+            "textId": "I18924:24565;9844:99726;18929:22663",
+            "text": "В Алтыне сохраните контрольный номер перевода (КНП), вернитесь сюда и введите его",
+            "style": "S:fab79ba95ca0a3ea2268131cd938cc733a3951ef,18848:9",
+            "fill": "Text/Text/Primary",
+            "number": {
+              "nodeId": "I18924:24565;9844:99726;18929:22661",
+              "masterId": "17497:88741",
+              "key": "fecd69dd3e415069a9440b1781ca1906cefdb1fb",
+              "value": "3",
+              "style": "S:679aaa1fb9f1c327868f2489f6de5eb92f7a4d3c,18848:20",
+              "textToken": "Text/Button/Secondary",
+              "bgToken": "Bg/Button/Secondary/Enable",
+              "size": [
+                24,
+                24
+              ],
+              "centerOffset": 0
+            }
+          }
+        ]
       },
       "modal": {
-        "referenceNodeId": "18443:138108",
+        "referenceNodeId": "18732:21072",
         "componentNodeId": "18924:24565",
         "contentSlotNodeId": "I18924:24565;9844:99726",
         "viewport": {
           "nodeId": "I18924:24565;9844:99726;18924:25172",
-          "height": 560,
+          "height": 584,
           "overflow": "VERTICAL"
         },
         "contextFrameNodeId": null
@@ -4544,12 +4686,12 @@
       "itemId": "U_STEPS",
       "sourceNodeId": "18738:48787",
       "screenId": "02-instruction",
-      "reason": "Узел референса 18793:18799 недоступен. Сохранён Step Item; у каждого шага стиль текста совпадает с master.",
+      "reason": "Паттерн нумерации проверен по референсу 18732:21072 и применён в модалке.",
       "candidateMappingIds": [
         "M_STEPS"
       ],
       "userComments": [],
-      "status": "open"
+      "status": "resolved"
     },
     {
       "itemId": "U_QA",
@@ -4674,7 +4816,8 @@
       "Visual overlay review: figma-migration-review/index.html. Several target candidates remain open.",
       "The documented Input.mobile, Bottom Sheet, and selector rules from docs/mobile-screen-layout.md sections 9-12 are attached as componentGuidance; these are rules, not approval of ChBR-specific mapping.",
       "Новая секция собрана и проверена через снимки Figma MCP. Согласование результата пользователем ожидается.",
-      "Обновлены модалки инструкции и справки, navbar, Secondary-описания и детали операции. Референс нумерации 18793:18799 недоступен."
+      "Обновлены модалки инструкции и справки, navbar, Secondary-описания и детали операции. Референс нумерации 18793:18799 недоступен.",
+      "Нумерация шагов пересобрана по 18732:21072. Проверены стили Typography, цветовые токены, разделители, отступы и центровка номера."
     ]
   },
   "dataContract": {
