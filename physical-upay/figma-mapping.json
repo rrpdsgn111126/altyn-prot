@@ -32,7 +32,8 @@
     "Country picker is an Input.mobile trigger plus a modal/list.mobile composition, with searchable=false; no standalone Figma Select component.",
     "Do not re-create old stock state or postal code: both are absent from current prototype. Network aliases normalize to #network.",
     "Figma bottom sheets in the current Physical card section use the native Altyn App modal and its slots. The HTML implementations remain separate.",
-    "The screens array describes HTML states. For Figma corrections, use only frames currently present in the target section; do not restore removed states."
+    "The screens array describes HTML states. For Figma corrections, use only frames currently present in the target section; do not restore removed states.",
+    "2026-11-12 Physical Card replaces the YouPay artwork with Altyn physical USD card: the historical cardsBankYouPay mapping is no longer applicable to current screens; exact linked Figma variant must be verified."
   ],
   "figmaComponentCatalog": {
     "nav": {
@@ -182,7 +183,9 @@
       "size": "348 × 212 px source; 300 px instance width",
       "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
       "verification": "verified",
-      "evidence": "Linked instances in Altyn App / Physical card"
+      "evidence": "Linked instances in Altyn App / Physical card",
+      "historicalOnly": true,
+      "historicalNote": "Verified original reference but superseded for Physical Card on 2026-11-12; not for use on new Physical Card screens."
     },
     "stateCardWait": {
       "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
@@ -211,6 +214,19 @@
       "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=2883-44969",
       "verification": "verified",
       "evidence": "Linked instances in Altyn App / Physical card"
+    },
+    "cardsBankPhysicalUSD": {
+      "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+      "figmaComponent": "cards bank",
+      "componentSetId": "6397:64385",
+      "componentId": null,
+      "componentProperties": {},
+      "state": null,
+      "size": "300 px prototype; source component variant to confirm",
+      "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+      "verification": "partial",
+      "evidence": "Reference 14353:22003 shows card structure but is black/virtual with payment system. Desired variant: green physical card, no YouPay, USD balance, Altyn logo; properties and component ID not confirmed.",
+      "changeDate": "2026-11-12"
     }
   },
   "screens": [
@@ -304,22 +320,19 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": false
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant; mask and physical-type label hidden in the catalog"
+          "verification": "partial",
+          "notes": "Linked YouPay variant; mask and physical-type label hidden in the catalog 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "conditions",
@@ -568,22 +581,19 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": false
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant; mask and physical-type label hidden in the catalog"
+          "verification": "partial",
+          "notes": "Linked YouPay variant; mask and physical-type label hidden in the catalog 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "conditions",
@@ -851,22 +861,19 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": false
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant; mask and physical-type label hidden in the catalog"
+          "verification": "partial",
+          "notes": "Linked YouPay variant; mask and physical-type label hidden in the catalog 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "conditions",
@@ -3775,23 +3782,20 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": true,
               "layerBlur": true
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant with the scenario card mask"
+          "verification": "partial",
+          "notes": "Linked YouPay variant with the scenario card mask 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "plastic-tag",
@@ -3956,23 +3960,20 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": true,
               "layerBlur": true
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant with the scenario card mask"
+          "verification": "partial",
+          "notes": "Linked YouPay variant with the scenario card mask 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "plastic-tag",
@@ -5583,22 +5584,19 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": true
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant with the scenario card mask"
+          "verification": "partial",
+          "notes": "Linked YouPay variant with the scenario card mask 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "add-card",
@@ -6114,22 +6112,19 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": true
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant with the scenario card mask"
+          "verification": "partial",
+          "notes": "Linked YouPay variant with the scenario card mask 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "add-card",
@@ -6637,22 +6632,19 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": true
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant with the scenario card mask"
+          "verification": "partial",
+          "notes": "Linked YouPay variant with the scenario card mask 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "add-card",
@@ -7160,22 +7152,19 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": true
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant with the scenario card mask"
+          "verification": "partial",
+          "notes": "Linked YouPay variant with the scenario card mask 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "plastic-tag",
@@ -7716,22 +7705,19 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": true
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant with the scenario card mask"
+          "verification": "partial",
+          "notes": "Linked YouPay variant with the scenario card mask 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "add-card",
@@ -8139,22 +8125,19 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": true
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant with the scenario card mask"
+          "verification": "partial",
+          "notes": "Linked YouPay variant with the scenario card mask 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "add-card",
@@ -8882,23 +8865,20 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": true,
               "layerBlur": true
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant with the scenario card mask"
+          "verification": "partial",
+          "notes": "Linked YouPay variant with the scenario card mask 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "plastic-tag",
@@ -9270,22 +9250,19 @@
             "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
             "figmaComponent": "cards bank",
             "componentSetId": "6397:64385",
-            "componentId": "18870:19967",
-            "componentProperties": {
-              "Theme": "Green",
-              "Payment": "YouPay"
-            },
+            "componentId": null,
+            "componentProperties": {},
             "instanceOverrides": {
               "numberMaskVisible": true
             },
-            "state": "YouPay",
+            "state": null,
             "size": "348 × 212 px source; 300 px instance width",
-            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18870-19967",
-            "verification": "verified",
-            "evidence": "Linked instances in Altyn App / Physical card"
+            "referenceUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=14353-22003",
+            "verification": "partial",
+            "evidence": "Visual intent updated 2026-11-12: use Altyn physical USD card with no YouPay; exact component variant pending Figma verification"
           },
-          "verification": "verified",
-          "notes": "Linked YouPay variant with the scenario card mask"
+          "verification": "partial",
+          "notes": "Linked YouPay variant with the scenario card mask 2026-11-12 new USD physical artwork; old Payment=YouPay mapping superseded; no linked variant asserted."
         },
         {
           "id": "add-card",
@@ -10796,6 +10773,28 @@
       "920:26457",
       "6516:128060",
       "3254:14282"
+    ]
+  },
+  "provisionalProductRules": {
+    "effectiveDate": "2026-11-12",
+    "cardCurrency": "USD",
+    "balanceCurrency": "USD",
+    "issuanceCurrency": "RUB",
+    "issuancePrice": "unknown; show — ₽, do not convert USD demo price",
+    "paymentsBeforeActivation": "unavailable for online and physical payments",
+    "activationFlow": "not specified; do not invent activation screens or buttons",
+    "cardArtwork": {
+      "brand": "Altyn",
+      "physical": true,
+      "showYouPay": false,
+      "balanceCurrency": "USD",
+      "color": "green",
+      "currencyIcon": "green"
+    },
+    "openQuestions": [
+      "Exact Figma cards bank variant for Green/physical/no YouPay/USD balance",
+      "Activation UX and API",
+      "Currency and source of spending limits"
     ]
   }
 }
