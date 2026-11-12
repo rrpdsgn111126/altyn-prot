@@ -1,12 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "purpose": "Read-only Figma component migration annotation and approval before ChatGPT Work implementation",
+  "purpose": "Read-only mapping of Altyn App / ChBR transfer flow to Altyn.Base components; user approval before Work-mode assembly",
   "migration": {
-    "status": "awaiting_source",
+    "status": "annotation_in_review",
     "source": {
-      "fileUrl": null,
-      "fileKey": null,
-      "pageNodeIds": []
+      "fileUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48538",
+      "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+      "pageNodeIds": [
+        "18738:48538"
+      ],
+      "pageName": "Processing",
+      "sectionName": "v2 · Получение перевода через ЧБР — правки после чата 28.10 (#524)"
     },
     "target": {
       "primaryLibrary": {
@@ -14,18 +18,1710 @@
         "fileUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12406",
         "fileKey": "eZfU7lRRxu3GYH2S2KRgMy"
       },
-      "additionalComponentSources": []
+      "additionalComponentSources": [
+        {
+          "name": "Altyn Wallet",
+          "libraryKey": "lk-deced53252f71af2b9575f2b4160f4ac663b49b4eada6305a36af0b3df52a8f2642993654a41fc85e0034df0f24d855e343a22da7fed2536dc6e7d1e4ab7b127",
+          "policy": "Reference only; not automatically a target library"
+        }
+      ]
     }
   },
-  "componentMappings": [],
-  "screenMappings": [],
-  "unresolvedItems": [],
-  "decisions": [],
+  "componentMappings": [
+    {
+      "mappingId": "M_NAV",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48541",
+        "componentKey": "d04899b10a4551eae475eaedf4706fa92b928468",
+        "name": "Navigate top"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "3741:4359",
+        "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+        "name": "navbar",
+        "variantProperties": {
+          "State": "centr+arrow"
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48541"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4359"
+        }
+      ],
+      "notes": "Source 56 px with back and Home; target 54 px. Verify right Home icon and header alignment."
+    },
+    {
+      "mappingId": "M_PRIMARY",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48546",
+        "componentKey": "1042b679bad02d5cc93a7691f52ebbcc20e39efb",
+        "name": "Button / Primary L"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2168:7055",
+        "componentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+        "name": "Button.mobile",
+        "variantProperties": {
+          "Brand": "Altyn",
+          "Type": "Primary",
+          "State": "Enable",
+          "Size": "L",
+          "Lable": "yes"
+        }
+      },
+      "candidates": [],
+      "mappingType": "direct",
+      "verificationStatus": "verified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48546"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7055"
+        }
+      ],
+      "notes": "Source 56 px, target nominal height 54 px; preserve target native height."
+    },
+    {
+      "mappingId": "M_TERTIARY",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48795",
+        "componentKey": "b2126a104fcb1ed090b589904c59f58cd3e29238",
+        "name": "Button / Tertiary L"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2168:7242",
+        "componentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+        "name": "Button.mobile",
+        "variantProperties": {
+          "Brand": "Altyn",
+          "Type": "Tertiary",
+          "State": "Enable",
+          "Size": "L",
+          "Lable": "yes"
+        }
+      },
+      "candidates": [],
+      "mappingType": "direct",
+      "verificationStatus": "verified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48795"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2168-7242"
+        }
+      ],
+      "notes": "Target nominal height 54 px."
+    },
+    {
+      "mappingId": "M_INPUT_FOCUS",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48543",
+        "componentKey": "b7c7bf571a077346675c0714545fdc8f91d4b60d",
+        "name": "Input / II focused"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2054:7637",
+        "componentKey": "023c75806668151c322f39359f446f5f33f68646",
+        "name": "Input.mobile",
+        "variantProperties": {
+          "🎚️ State": "Active/Focus",
+          "secondary": "Off"
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "verified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48543"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2054-7637"
+        }
+      ],
+      "notes": "Source instance height 68 px including helper; target control 54 px. Verify helper text as a separate slot."
+    },
+    {
+      "mappingId": "M_INPUT_INVALID",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48611",
+        "componentKey": "766f80d2c79d6da9e3fe6c3626f0f0a0abccbf9f",
+        "name": "Input / II invalid"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2014:9846",
+        "componentKey": "b309f3e73cb8f7ce738ae632580bbfa4051e4752",
+        "name": "Input.mobile",
+        "variantProperties": {
+          "🎚️ State": "Invalid",
+          "secondary": "Off"
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "verified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48611"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2014-9846"
+        }
+      ],
+      "notes": "Red invalid state. Error text lives under field, number remains editable."
+    },
+    {
+      "mappingId": "M_LINK",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48545",
+        "componentKey": "2e6f04751557772c0a443ab1b856e51f511e9a53",
+        "name": "Link with right arrow"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "3879:58507",
+        "componentKey": "ee6dd0b443301fa4866d4ce4b9a32b936e05b22f",
+        "name": "Link",
+        "variantProperties": {
+          "Size": "14 pt",
+          "Type": "Primary",
+          "State": "Default",
+          "Line": "No",
+          "Icon R": true
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48545"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3879-58507"
+        }
+      ],
+      "notes": "Target 14pt without underline is an inspected candidate; verify label size and icon orientation."
+    },
+    {
+      "mappingId": "M_METHOD",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48587;10075:50210;18738:48565",
+        "componentKey": "7bbc8fdb0daebc0f7f926865e322405c5eef2cdb",
+        "name": "Select Button / M"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2157:9993",
+        "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+        "name": "list.mobile",
+        "variantProperties": {
+          "Property 1": "1",
+          "🎚️ State": "Enable"
+        }
+      },
+      "candidates": [],
+      "mappingType": "composition",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=I18738-48587;10075-50210;18738-48565"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2157-9993"
+        }
+      ],
+      "notes": "Source row 64 px includes bank icon, target list.mobile 54 px. Do not force 1:1 direct replacement."
+    },
+    {
+      "mappingId": "M_METHOD_DISABLED",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48587;10075:50210;18738:48570",
+        "componentKey": "06007607006a452fa0c735170f8c0130cfadbb15",
+        "name": "Select Button/ M Disable"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2296:10600",
+        "componentKey": "b2c4e46d25ddbb4cab5487e6b3d28478d3b00cd3",
+        "name": "list.mobile",
+        "variantProperties": {
+          "Property 1": "1",
+          "🎚️ State": "Disabled"
+        }
+      },
+      "candidates": [],
+      "mappingType": "composition",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=I18738-48587;10075-50210;18738-48570"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2296-10600"
+        }
+      ],
+      "notes": "Source 64px disabled method row; target 54px list row and disabled visual style require comparison."
+    },
+    {
+      "mappingId": "M_STEPS",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48787",
+        "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
+        "name": "Step Item (numbered instruction)"
+      },
+      "figmaTarget": null,
+      "candidates": [
+        {
+          "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+          "nodeId": "3885:60665",
+          "componentKey": "91c3397ebca203fd94447f262017471b584a47a4",
+          "name": "Step",
+          "reason": "Explicitly rejected as functional mismatch: a thin progress indicator",
+          "visualReference": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3885-60665"
+        }
+      ],
+      "mappingType": "unmapped",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48787"
+        }
+      ],
+      "notes": "Altyn.Base Step is a 4px progress bar, not instructional Step Item; do not substitute."
+    },
+    {
+      "mappingId": "M_QA",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48782",
+        "componentKey": "92e90fdcf128af1994a620d545037d0a8d41e41b",
+        "name": "Вопрос - ответ"
+      },
+      "figmaTarget": null,
+      "candidates": [
+        {
+          "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+          "nodeId": null,
+          "componentKey": "ab16ccca6eba2d2ac329a67edb5c0a07bd7c9375",
+          "name": "Answer-block.mobile",
+          "reason": "Library search found component set, exact node/variant not verified",
+          "visualReference": null
+        }
+      ],
+      "mappingType": "unmapped",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48782"
+        }
+      ],
+      "notes": "Used in both instruction and FAQ; candidate Answer-block.mobile library asset needs actual variant, geometry and content verification."
+    },
+    {
+      "mappingId": "M_WARNING",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48790",
+        "componentKey": "bbd971f6df4bb68ddabf0a1fea78458da42f6194",
+        "name": "Toast / S warning"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "4228:12405",
+        "componentKey": "824a32262f825541f1f71ef9fb957f419b71a941",
+        "name": "Notification",
+        "variantProperties": {
+          "Type": "Yellow"
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48790"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12405"
+        }
+      ],
+      "notes": "Source is a Toast / S, target Notification Type=Yellow is a possible replacement, inspect meaning and visual contrast."
+    },
+    {
+      "mappingId": "M_PROCESSING",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48632",
+        "componentKey": "2450be34f221c611d9a4e52565361dccaea9b0cb",
+        "name": "State icon neutral L"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "unmapped",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48632"
+        }
+      ],
+      "notes": "Large neutral/processing illustration 120x120; no verified matching Altyn.Base result."
+    },
+    {
+      "mappingId": "M_SUCCESS",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48718",
+        "componentKey": "f5904271a8eb3ab9de680ee1faffab886f083bd2",
+        "name": "State icon done L"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "unmapped",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48718"
+        }
+      ],
+      "notes": "Large green success illustration 120x120; do not equate to small icon or tag."
+    },
+    {
+      "mappingId": "M_FAILURE",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48741",
+        "componentKey": "8d3fcce84820d626f44f8182ff5b4a351bf29f76",
+        "name": "State icon invalid L"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "unmapped",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48741"
+        }
+      ],
+      "notes": "Large red failure illustration 120x120; no verified matching design-system component."
+    },
+    {
+      "mappingId": "M_HISTORY",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48605;23061:79698;22959:318737;18738:48593;22999:428826;18738:48590",
+        "componentKey": "7f7b50202dab9dbe4d72241c8363722729503667",
+        "name": "Transactions details / incoming"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2747:6132",
+        "componentKey": "3c4cc837562836e3518a03ed5f258b2e5d1ca07b",
+        "name": "trans_v2.mobile",
+        "variantProperties": {
+          "Status": "In"
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=I18738-48605;23061-79698;22959-318737;18738-48593;22999-428826;18738-48590"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2747-6132"
+        }
+      ],
+      "notes": "Source row 76 px, target incoming row 54 px. Additional date headings and grouping must be built separately."
+    },
+    {
+      "mappingId": "M_HISTORY_GROUP",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48605;23061:79698",
+        "componentKey": "3dde7cb0e0734149c6b7462be3bd4bd616bdc531",
+        "name": "Transactions / + (history group)"
+      },
+      "figmaTarget": null,
+      "candidates": [
+        {
+          "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+          "nodeId": "2747:6119",
+          "componentKey": "0ac3ab4a98fd35eefdf907309e12c0a3c4b384a5",
+          "name": "trans_v2.mobile",
+          "reason": "Row component only, not full grouped history",
+          "visualReference": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2747-6119"
+        }
+      ],
+      "mappingType": "composition",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=I18738-48605;23061-79698"
+        }
+      ],
+      "notes": "Original composition including day groups; candidate compose with trans_v2.mobile, native section headers and 16px horizontal padding."
+    },
+    {
+      "mappingId": "M_FILTER",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48605;26319:67055",
+        "componentKey": "ac80cf323e72ead2ae5d7d9bed6310f07121a28e",
+        "name": "Select / I for history filter"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "unmapped",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=I18738-48605;26319-67055"
+        }
+      ],
+      "notes": "No matching approved Altyn.Base selector component variant; preserve source semantics pending review."
+    },
+    {
+      "mappingId": "M_CONFIRM",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48807",
+        "componentKey": null,
+        "name": "Confirmation details panel"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2157:9993",
+        "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+        "name": "list.mobile",
+        "variantProperties": {
+          "Property 1": "1",
+          "🎚️ State": "Enable"
+        }
+      },
+      "candidates": [],
+      "mappingType": "composition",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48807"
+        },
+        {
+          "type": "target_component",
+          "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=2157-9993"
+        }
+      ],
+      "notes": "Source is a custom grouped confirmation panel, not a single list row. Use actual list rows only where semantics fit."
+    },
+    {
+      "mappingId": "M_RECEIPT",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48606;23604:93746",
+        "componentKey": "82bdebd781b7fcd879e847c4438b01edfca21db7",
+        "name": "Details list and receipt"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "composition",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=I18738-48606;23604-93746"
+        }
+      ],
+      "notes": "Source screen is a nested legacy Altyn Wallet instance. Map individual fields and receipt button after validating detail rows."
+    },
+    {
+      "mappingId": "M_LOGO",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48774",
+        "componentKey": null,
+        "name": "ЧБР bank logo placeholder"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "custom",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48774"
+        }
+      ],
+      "notes": "Source section contains a local placeholder; wait for SVG and bank naming approval from partner."
+    },
+    {
+      "mappingId": "M_TABBAR",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48587;18927:170979",
+        "componentKey": "1d0523debced069df60746b56353f9f34f9acfe2",
+        "name": "Menu / 1"
+      },
+      "figmaTarget": null,
+      "candidates": [
+        {
+          "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+          "nodeId": "3337:5823",
+          "componentKey": "9c6ce22fd25d292893c55cdb47a6e234125578e3",
+          "name": "TabBar / Item",
+          "reason": "May be composable with central action",
+          "visualReference": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3337-5823"
+        },
+        {
+          "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+          "nodeId": "3463:10788",
+          "componentKey": "e552802e3eb467a4752c91a4cfbe80b18a875ce9",
+          "name": "TabBar / Center",
+          "reason": "Central action variant",
+          "visualReference": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3463-10788"
+        }
+      ],
+      "mappingType": "composition",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=I18738-48587;18927-170979"
+        }
+      ],
+      "notes": "Source old Altyn Wallet bottom navigation; compare Altyn.Base TabBar / Item and TabBar / Center before recomposition."
+    },
+    {
+      "mappingId": "M_ANNOTATION",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48550",
+        "componentKey": "f0bacb70c47b83a1d0bed67419fe1df2c5bff0c6",
+        "name": "Note / Уточняется"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "custom",
+      "verificationStatus": "verified",
+      "userComments": [],
+      "evidence": [
+        {
+          "type": "source_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48550"
+        }
+      ],
+      "notes": "Local Figma annotation only, excluded from product UI and migration."
+    }
+  ],
+  "screenMappings": [
+    {
+      "screenId": "01-methods",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48587",
+        "name": "1. Пополнить — новый способ"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48587",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#01-methods",
+      "visualDescription": "Список методов пополнения. Новый пункт «Получить перевод» с логотипом ЧБР; есть отключённый метод и нижнее меню.",
+      "dimensions": {
+        "width": 430,
+        "height": 932
+      },
+      "elements": [
+        {
+          "annotationId": "01-methods-01",
+          "sourceNodeId": "I18738:48587;17930:62030",
+          "mappingId": "M_NAV",
+          "targetComponentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 60,
+              "w": 430,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "01-methods-02",
+          "sourceNodeId": "I18738:48587;10075:50210;18738:48565",
+          "mappingId": "M_METHOD",
+          "targetComponentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 132,
+              "w": 398,
+              "h": 64
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "01-methods-03",
+          "sourceNodeId": "I18738:48587;10075:50210;18738:48570",
+          "mappingId": "M_METHOD_DISABLED",
+          "targetComponentKey": "b2c4e46d25ddbb4cab5487e6b3d28478d3b00cd3",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 436,
+              "w": 398,
+              "h": 64
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "01-methods-04",
+          "sourceNodeId": "I18738:48587;18927:170979",
+          "mappingId": "M_TABBAR",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 852,
+              "w": 430,
+              "h": 80
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    },
+    {
+      "screenId": "02-instruction",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48778",
+        "name": "2. Инструкция"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48778",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#02-instruction",
+      "visualDescription": "Заголовок, текст инструкции, три пронумерованных шага, предупреждение и две кнопки: «У меня есть номер перевода» и переход во внешний браузер.",
+      "dimensions": {
+        "width": 430,
+        "height": 932
+      },
+      "elements": [
+        {
+          "annotationId": "02-instruction-01",
+          "sourceNodeId": "18738:48780",
+          "mappingId": "M_NAV",
+          "targetComponentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 60,
+              "w": 430,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "02-instruction-02",
+          "sourceNodeId": "18738:48782",
+          "mappingId": "M_QA",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 132,
+              "w": 398,
+              "h": 92
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "02-instruction-03",
+          "sourceNodeId": "18738:48787",
+          "mappingId": "M_STEPS",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 32,
+              "y": 260,
+              "w": 366,
+              "h": 96
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "02-instruction-04",
+          "sourceNodeId": "18738:48788",
+          "mappingId": "M_STEPS",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 32,
+              "y": 356,
+              "w": 366,
+              "h": 96
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "02-instruction-05",
+          "sourceNodeId": "18738:48789",
+          "mappingId": "M_STEPS",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 32,
+              "y": 452,
+              "w": 366,
+              "h": 96
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "02-instruction-06",
+          "sourceNodeId": "18738:48790",
+          "mappingId": "M_WARNING",
+          "targetComponentKey": "824a32262f825541f1f71ef9fb957f419b71a941",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 568,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "02-instruction-07",
+          "sourceNodeId": "18738:48794",
+          "mappingId": "M_PRIMARY",
+          "targetComponentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 640,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "02-instruction-08",
+          "sourceNodeId": "18738:48795",
+          "mappingId": "M_TERTIARY",
+          "targetComponentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 712,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    },
+    {
+      "screenId": "03-knp",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48539",
+        "name": "3. Ввод КНП"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48539",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#03-knp",
+      "visualDescription": "Поле контрольного номера в фокусе, ссылка «Где найти номер перевода?» и кнопка продолжения.",
+      "dimensions": {
+        "width": 430,
+        "height": 932
+      },
+      "elements": [
+        {
+          "annotationId": "03-knp-01",
+          "sourceNodeId": "18738:48541",
+          "mappingId": "M_NAV",
+          "targetComponentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 60,
+              "w": 430,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "03-knp-02",
+          "sourceNodeId": "18738:48543",
+          "mappingId": "M_INPUT_FOCUS",
+          "targetComponentKey": "023c75806668151c322f39359f446f5f33f68646",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 132,
+              "w": 398,
+              "h": 68
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "03-knp-03",
+          "sourceNodeId": "18738:48545",
+          "mappingId": "M_LINK",
+          "targetComponentKey": "ee6dd0b443301fa4866d4ce4b9a32b936e05b22f",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 240,
+              "w": 398,
+              "h": 24
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "03-knp-04",
+          "sourceNodeId": "18738:48546",
+          "mappingId": "M_PRIMARY",
+          "targetComponentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 280,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    },
+    {
+      "screenId": "03a-errors",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48607",
+        "name": "3a. Ввод КНП — ошибки"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48607",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#03a-errors",
+      "visualDescription": "Невалидный номер с ошибкой под полем; ниже показаны возможные причины. Исправление номера без ухода со страницы.",
+      "dimensions": {
+        "width": 430,
+        "height": 932
+      },
+      "elements": [
+        {
+          "annotationId": "03a-errors-01",
+          "sourceNodeId": "18738:48609",
+          "mappingId": "M_NAV",
+          "targetComponentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 60,
+              "w": 430,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "03a-errors-02",
+          "sourceNodeId": "18738:48611",
+          "mappingId": "M_INPUT_INVALID",
+          "targetComponentKey": "b309f3e73cb8f7ce738ae632580bbfa4051e4752",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 132,
+              "w": 398,
+              "h": 68
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "03a-errors-03",
+          "sourceNodeId": "18738:48620",
+          "mappingId": "M_PRIMARY",
+          "targetComponentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 826,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    },
+    {
+      "screenId": "04-confirm",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48799",
+        "name": "4. Подтверждение — выплата через ЧБР"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48799",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#04-confirm",
+      "visualDescription": "Сводка банка выплаты, отправителя, получателя, номера и расчёта, кнопка «Получить 5 000 ₽».",
+      "dimensions": {
+        "width": 430,
+        "height": 932
+      },
+      "elements": [
+        {
+          "annotationId": "04-confirm-01",
+          "sourceNodeId": "18738:48807",
+          "mappingId": "M_CONFIRM",
+          "targetComponentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 132,
+              "w": 398,
+              "h": 520
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "04-confirm-02",
+          "sourceNodeId": "18738:48833",
+          "mappingId": "M_PRIMARY",
+          "targetComponentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 668,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    },
+    {
+      "screenId": "05-check",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48622",
+        "name": "5. Проверяем перевод"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48622",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#05-check",
+      "visualDescription": "Нейтральная иллюстрация состояния и текст о проверке; кнопки «На главную» и «В историю».",
+      "dimensions": {
+        "width": 430,
+        "height": 932
+      },
+      "elements": [
+        {
+          "annotationId": "05-check-01",
+          "sourceNodeId": "18738:48629",
+          "mappingId": "M_NAV",
+          "targetComponentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 60,
+              "w": 430,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "05-check-02",
+          "sourceNodeId": "18738:48632",
+          "mappingId": "M_PROCESSING",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 155,
+              "y": 116,
+              "w": 120,
+              "h": 120
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "05-check-03",
+          "sourceNodeId": "18738:48638",
+          "mappingId": "M_PRIMARY",
+          "targetComponentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 428,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "05-check-04",
+          "sourceNodeId": "18738:48639",
+          "mappingId": "M_TERTIARY",
+          "targetComponentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 500,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    },
+    {
+      "screenId": "06-success",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48708",
+        "name": "6. Успех"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48708",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#06-success",
+      "visualDescription": "Зелёная иллюстрация успеха, сумма +5 000 ₽, описание зачисления и две кнопки.",
+      "dimensions": {
+        "width": 430,
+        "height": 932
+      },
+      "elements": [
+        {
+          "annotationId": "06-success-01",
+          "sourceNodeId": "18738:48715",
+          "mappingId": "M_NAV",
+          "targetComponentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 60,
+              "w": 430,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "06-success-02",
+          "sourceNodeId": "18738:48718",
+          "mappingId": "M_SUCCESS",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 155,
+              "y": 116,
+              "w": 120,
+              "h": 120
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "06-success-03",
+          "sourceNodeId": "18738:48724",
+          "mappingId": "M_PRIMARY",
+          "targetComponentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 396,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "06-success-04",
+          "sourceNodeId": "18738:48725",
+          "mappingId": "M_TERTIARY",
+          "targetComponentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 468,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    },
+    {
+      "screenId": "07-failure",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48731",
+        "name": "7. Отказ — нужна поддержка"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48731",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#07-failure",
+      "visualDescription": "Красная иллюстрация ошибки, сообщение о невозможности получить перевод, кнопки поддержки и возврата на главную.",
+      "dimensions": {
+        "width": 430,
+        "height": 932
+      },
+      "elements": [
+        {
+          "annotationId": "07-failure-01",
+          "sourceNodeId": "18738:48738",
+          "mappingId": "M_NAV",
+          "targetComponentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 60,
+              "w": 430,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "07-failure-02",
+          "sourceNodeId": "18738:48741",
+          "mappingId": "M_FAILURE",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 155,
+              "y": 116,
+              "w": 120,
+              "h": 120
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "07-failure-03",
+          "sourceNodeId": "18738:48747",
+          "mappingId": "M_PRIMARY",
+          "targetComponentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 428,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "07-failure-04",
+          "sourceNodeId": "18738:48748",
+          "mappingId": "M_TERTIARY",
+          "targetComponentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 500,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    },
+    {
+      "screenId": "08-history",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48605",
+        "name": "8. История — запись"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48605",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#08-history",
+      "visualDescription": "История операций со строкой входящего перевода ЧБР, фильтром и группировкой по дням.",
+      "dimensions": {
+        "width": 430,
+        "height": 932
+      },
+      "elements": [
+        {
+          "annotationId": "08-history-01",
+          "sourceNodeId": "I18738:48605;19040:209483",
+          "mappingId": "M_NAV",
+          "targetComponentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 60,
+              "w": 430,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "08-history-02",
+          "sourceNodeId": "I18738:48605;26319:67055",
+          "mappingId": "M_FILTER",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 215,
+              "y": 132,
+              "w": 139,
+              "h": 48
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "08-history-03",
+          "sourceNodeId": "I18738:48605;23061:79698",
+          "mappingId": "M_HISTORY_GROUP",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 180,
+              "w": 430,
+              "h": 904
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "08-history-04",
+          "sourceNodeId": "I18738:48605;23061:79698;22959:318737;18738:48593;22999:428826;18738:48590",
+          "mappingId": "M_HISTORY",
+          "targetComponentKey": "3c4cc837562836e3518a03ed5f258b2e5d1ca07b",
+          "properties": {
+            "sourceRect": {
+              "x": 32,
+              "y": 236,
+              "w": 366,
+              "h": 76
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    },
+    {
+      "screenId": "09-details",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48606",
+        "name": "9. Детали операции"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48606",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#09-details",
+      "visualDescription": "Сумма, статус, реквизиты, сведения о переводе и банк выплаты ЧБР, кнопка квитанции. Экран длиннее остальных.",
+      "dimensions": {
+        "width": 430,
+        "height": 1135
+      },
+      "elements": [
+        {
+          "annotationId": "09-details-01",
+          "sourceNodeId": "I18738:48606;23604:93728",
+          "mappingId": "M_NAV",
+          "targetComponentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 60,
+              "w": 430,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "09-details-02",
+          "sourceNodeId": "I18738:48606;23604:93746",
+          "mappingId": "M_RECEIPT",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 228,
+              "w": 398,
+              "h": 27
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "09-details-03",
+          "sourceNodeId": "I18738:48606;23604:93767",
+          "mappingId": "M_PRIMARY",
+          "targetComponentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 1023,
+              "w": 398,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    },
+    {
+      "screenId": "10-help",
+      "sourceScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48755",
+        "name": "Где найти номер перевода?"
+      },
+      "sourceScreenshotReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48755",
+      "annotatedScreenshotReference": "figma-migration-review/index.html#10-help",
+      "visualDescription": "Страница-подсказка: откуда взять номер, как он выглядит и какой номер не подходит.",
+      "dimensions": {
+        "width": 430,
+        "height": 932
+      },
+      "elements": [
+        {
+          "annotationId": "10-help-01",
+          "sourceNodeId": "18738:48759",
+          "mappingId": "M_NAV",
+          "targetComponentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+          "properties": {
+            "sourceRect": {
+              "x": 0,
+              "y": 60,
+              "w": 430,
+              "h": 56
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "10-help-02",
+          "sourceNodeId": "18738:48763",
+          "mappingId": "M_QA",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 116,
+              "w": 398,
+              "h": 108
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "10-help-03",
+          "sourceNodeId": "18738:48764",
+          "mappingId": "M_QA",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 240,
+              "w": 398,
+              "h": 108
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        },
+        {
+          "annotationId": "10-help-04",
+          "sourceNodeId": "18738:48765",
+          "mappingId": "M_QA",
+          "targetComponentKey": null,
+          "properties": {
+            "sourceRect": {
+              "x": 16,
+              "y": 364,
+              "w": 398,
+              "h": 88
+            }
+          },
+          "reviewStatus": "pending_user",
+          "userComments": []
+        }
+      ]
+    }
+  ],
+  "unresolvedItems": [
+    {
+      "itemId": "U_CHBR",
+      "sourceNodeId": "18738:48774",
+      "screenId": "01-methods",
+      "reason": "Placeholder bank logo: partner SVG and exact customer-visible bank name missing.",
+      "candidateMappingIds": [
+        "M_LOGO"
+      ],
+      "userComments": [],
+      "status": "open"
+    },
+    {
+      "itemId": "U_STEPS",
+      "sourceNodeId": "18738:48787",
+      "screenId": "02-instruction",
+      "reason": "No verified Altyn.Base instructional numbered Step Item. Target Step is not semantically equivalent.",
+      "candidateMappingIds": [
+        "M_STEPS"
+      ],
+      "userComments": [],
+      "status": "open"
+    },
+    {
+      "itemId": "U_QA",
+      "sourceNodeId": "18738:48782",
+      "screenId": "02-instruction",
+      "reason": "Need confirm Answer-block.mobile equivalence and choose real variant (if usable).",
+      "candidateMappingIds": [
+        "M_QA"
+      ],
+      "userComments": [],
+      "status": "open"
+    },
+    {
+      "itemId": "U_ERRORS",
+      "sourceNodeId": "18738:48611",
+      "screenId": "03a-errors",
+      "reason": "Validation error codes, messages, number format/mask and API loading states are pending product/development.",
+      "candidateMappingIds": [
+        "M_INPUT_INVALID"
+      ],
+      "userComments": [],
+      "status": "open"
+    },
+    {
+      "itemId": "U_CONFIRM",
+      "sourceNodeId": "18738:48807",
+      "screenId": "04-confirm",
+      "reason": "Details composite needs row-level Figma target review.",
+      "candidateMappingIds": [
+        "M_CONFIRM"
+      ],
+      "userComments": [],
+      "status": "open"
+    },
+    {
+      "itemId": "U_STATE",
+      "sourceNodeId": "18738:48632",
+      "screenId": "05-check",
+      "reason": "Processing/success/failure 120x120 illustrations lack verified Altyn.Base equivalents.",
+      "candidateMappingIds": [
+        "M_PROCESSING",
+        "M_SUCCESS",
+        "M_FAILURE"
+      ],
+      "userComments": [],
+      "status": "open"
+    },
+    {
+      "itemId": "U_HISTORY",
+      "sourceNodeId": "I18738:48605;26319:67055",
+      "screenId": "08-history",
+      "reason": "Filter Select / I and 76px transaction rows differ from identified Base items.",
+      "candidateMappingIds": [
+        "M_FILTER",
+        "M_HISTORY"
+      ],
+      "userComments": [],
+      "status": "open"
+    },
+    {
+      "itemId": "U_KNP",
+      "sourceNodeId": "I18738:48606;23604:93746",
+      "screenId": "09-details",
+      "reason": "Whether API returns КНП and whether receipt displays it needs confirmation.",
+      "candidateMappingIds": [
+        "M_RECEIPT"
+      ],
+      "userComments": [],
+      "status": "open"
+    },
+    {
+      "itemId": "U_URL",
+      "sourceNodeId": "18738:48679",
+      "screenId": "02-instruction",
+      "reason": "External Multitransfer public URL and partner permission to mention it in instructions pending.",
+      "candidateMappingIds": [],
+      "userComments": [],
+      "status": "open"
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "D_LABELS",
+      "scope": "all_screens",
+      "sourceNodeId": "18738:48645",
+      "decision": "Use 'Получить перевод' in deposit method; in transaction history use 'ЧБР'; details 'Способ пополнения: Получение перевода · Банк выплаты: ЧБР'. Partner/product approval pending.",
+      "userComment": "",
+      "status": "proposed"
+    },
+    {
+      "decisionId": "D_PARTNER",
+      "scope": "instruction",
+      "sourceNodeId": "18738:48690",
+      "decision": "Mention Мультитрансфер only in instruction, open external browser and return to КНП input after transfer; partner approval and URL missing.",
+      "userComment": "",
+      "status": "proposed"
+    },
+    {
+      "decisionId": "D_ANNOTATION",
+      "scope": "annotation_only",
+      "sourceNodeId": "18738:48550",
+      "decision": "Exclude 'Уточняется', flow labels, diagrams and partner placeholder notes from production UI.",
+      "userComment": "",
+      "status": "proposed"
+    },
+    {
+      "decisionId": "D_LAYOUT",
+      "scope": "target_layout",
+      "sourceNodeId": "18738:48539",
+      "decision": "Source 430x932 iPhone mocks use different system/nav dimensions from Altyn.Base 375x812 baseline; retain content/behaviors but use Altyn.Base component dimensions and documented layout; review responsive logic.",
+      "userComment": "",
+      "status": "proposed"
+    }
+  ],
   "review": {
-    "status": "not_started",
+    "status": "pending_user",
     "approvedByUser": false,
     "approvalDate": null,
-    "notes": []
+    "notes": [
+      "Source Figma was read only; no Figma modifications.",
+      "Matching component asset existence does not mean semantic/visual equivalence was approved.",
+      "Visual overlay review: figma-migration-review/index.html. Several target candidates remain open."
+    ]
   },
   "dataContract": {
     "componentMappings": [
@@ -43,6 +1739,8 @@
       "sourceScreen:{fileKey,nodeId,name}",
       "sourceScreenshotReference",
       "annotatedScreenshotReference",
+      "visualDescription",
+      "dimensions",
       "elements:[{annotationId,sourceNodeId,mappingId,targetComponentKey,properties,reviewStatus,userComments}]"
     ],
     "unresolvedItems": [
@@ -65,7 +1763,7 @@
     "rules": [
       "Do not invent node IDs, component keys, variants, or visual references",
       "Do not treat similarity of appearance as proof of equivalent semantics or states",
-      "Use source prototype as reference for content and behavior; Altyn.Base and documented component rules for target visual properties",
+      "Source Altyn App is reference for flow, content and behaviors; Altyn.Base is canonical target visuals",
       "Never mark approved without explicit user approval",
       "Do not edit Figma during annotation stage"
     ]
