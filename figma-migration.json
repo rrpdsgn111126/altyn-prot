@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "purpose": "Read-only Figma component migration annotation and approval before ChatGPT Work implementation",
+  "migration": {
+    "status": "awaiting_source",
+    "source": {
+      "fileUrl": null,
+      "fileKey": null,
+      "pageNodeIds": []
+    },
+    "target": {
+      "primaryLibrary": {
+        "name": "Altyn.Base",
+        "fileUrl": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=4228-12406",
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy"
+      },
+      "additionalComponentSources": []
+    }
+  },
+  "componentMappings": [],
+  "screenMappings": [],
+  "unresolvedItems": [],
+  "decisions": [],
+  "review": {
+    "status": "not_started",
+    "approvedByUser": false,
+    "approvalDate": null,
+    "notes": []
+  },
+  "dataContract": {
+    "componentMappings": [
+      "mappingId",
+      "figmaSource:{fileKey,nodeId,componentKey,name}",
+      "figmaTarget:{fileKey,nodeId,componentKey,name,variantProperties} | null",
+      "candidates:[{fileKey,nodeId,componentKey,name,reason,visualReference}]",
+      "mappingType:direct|composition|adaptation|custom|unmapped",
+      "verificationStatus:unverified|verified|user_approved|rejected",
+      "userComments:[]",
+      "evidence:[]"
+    ],
+    "screenMappings": [
+      "screenId",
+      "sourceScreen:{fileKey,nodeId,name}",
+      "sourceScreenshotReference",
+      "annotatedScreenshotReference",
+      "elements:[{annotationId,sourceNodeId,mappingId,targetComponentKey,properties,reviewStatus,userComments}]"
+    ],
+    "unresolvedItems": [
+      "itemId",
+      "sourceNodeId",
+      "screenId",
+      "reason",
+      "candidateMappingIds:[]",
+      "userComments:[]",
+      "status:open|resolved|deferred"
+    ],
+    "decisions": [
+      "decisionId",
+      "scope",
+      "sourceNodeId",
+      "decision",
+      "userComment",
+      "status:proposed|approved|rejected"
+    ],
+    "rules": [
+      "Do not invent node IDs, component keys, variants, or visual references",
+      "Do not treat similarity of appearance as proof of equivalent semantics or states",
+      "Use source prototype as reference for content and behavior; Altyn.Base and documented component rules for target visual properties",
+      "Never mark approved without explicit user approval",
+      "Do not edit Figma during annotation stage"
+    ]
+  }
+}
