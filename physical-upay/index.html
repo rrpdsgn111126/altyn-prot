@@ -28,9 +28,13 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 .plastic:before{content:"А";position:absolute;left:-14px;top:-114px;width:300px;font-family:Arial,sans-serif;font-size:290px;font-weight:900;line-height:1;color:#fff;opacity:.14;transform:scaleX(.89);pointer-events:none}
 .plastic .mark{position:absolute;top:21px;left:21px;display:grid;place-items:center;width:33px;height:33px;color:#fff;font-weight:900;font-size:30px;line-height:1;letter-spacing:-3px}
 .plastic .product{position:absolute;right:18px;top:22px;font-size:14px;font-weight:800;letter-spacing:.5px}
-.plastic .kind{position:absolute;top:68px;right:18px;font-size:11px;font-weight:600}
+.plastic .kind{position:absolute;top:27px;right:20px;font-size:11px;line-height:16px;font-weight:500;color:#fff}
 .plastic .number{position:absolute;bottom:19px;left:20px;font-size:15px;font-weight:550;letter-spacing:.7px}
-.plastic .bottom-name{position:absolute;bottom:18px;right:20px;font-size:23px;font-weight:800;letter-spacing:-.8px;color:#fff}
+.plastic .balance{position:absolute;left:20px;top:70px;display:flex;flex-direction:column;gap:3px;max-width:calc(100% - 40px)}
+.plastic .balance-label{font-size:11px;line-height:15px;font-weight:400;color:rgba(255,255,255,.92)}
+.plastic .balance-amount{font-size:31px;line-height:34px;font-weight:600;letter-spacing:-.8px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.plastic .currency-icon{position:absolute;bottom:16px;left:138px;width:23px;height:23px;border-radius:50%;background:#e9f8df;display:grid;place-items:center;color:#218346;font-weight:700;font-size:14px;line-height:23px}
+.card-activation-note{padding:10px 12px;margin:0 0 16px;background:var(--bg);border-radius:12px;color:var(--ink);font-size:13px;line-height:19px}
 .main-box{background:var(--bg);border-radius:12px;padding:0 16px;overflow:hidden}
 .info-row{min-height:54px;padding:8px 0;border-bottom:1px solid #e9ecf0;display:flex;flex-direction:column;justify-content:center;gap:3px}.info-row:last-child{border-bottom:0}
 .info-row .key{font-size:12px;line-height:16px;color:var(--muted)}.info-row .value{font-size:16px;line-height:23px;overflow-wrap:anywhere}
@@ -81,7 +85,6 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 .issued-card-hero{margin:0 -16px;padding:16px 16px 0;background:linear-gradient(to bottom,var(--bg) 0,var(--bg) calc(100% - 32px),white calc(100% - 32px),white 100%)}
 .card-detail .card-chooser{padding:0;background:transparent;position:relative;max-width:300px;margin:0 auto;display:flex;align-items:center;justify-content:center}
 .card-detail .plastic{width:300px;flex-shrink:0}
-.card-detail .plastic:after{content:'Физическая';position:absolute;right:20px;top:27px;font-size:10px;line-height:14px;font-weight:500;color:rgba(255,255,255,.95)}
 .card-production-tag{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;display:flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;border-radius:30px;background:#000;color:#fff;font-size:12px;line-height:18px;padding:5px 11px}
 .awaiting-card .card-chooser{overflow:hidden;border-radius:17px}.awaiting-card .plastic{filter:blur(7px) brightness(.72);transform:scale(1.035)}.awaiting-card .card-production-tag{z-index:5}.awaiting-card .quick-actions{flex-wrap:wrap}.card-production-tag .clock{width:15px;height:15px;display:inline-block;flex:0 0 15px;border-radius:50%;background:#fff;color:#111;text-align:center;font-size:11px;line-height:15px}
 .quick-actions{display:flex;gap:8px;justify-content:center;margin:0 -16px;padding:16px 16px 24px;background:white}
@@ -151,7 +154,8 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 <h3>Тестовые сценарии</h3><p>Панель вне экранов приложения. Данные и статусы симулируются.</p>
 <label>Результат оформления<select id="outcome">
 <option value="success">Успешный выпуск</option><option value="pending">Ожидается выпуск</option><option value="failed">Ошибка выпуска</option><option value="cancelled">Заказ отменён</option><option value="network">Сбой сети</option><option value="conflict">Данные доставки отличаются</option><option value="exists">Карта уже выпущена</option></select></label>
-<div class="two"><label>Цена выпуска<input id="price" value="50 USD"></label><label>Template ID<input id="template" type="number" min="1" value="123"></label></div>
+<div class="two"><label>Стоимость выпуска, ₽<input id="price" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Сумма неизвестна"></label><label>Баланс карты, USD<input id="balance" inputmode="decimal" placeholder="Нет данных"></label></div>
+<label>Template ID<input id="template" type="number" min="1" value="123"></label>
 <label class="check"><input type="checkbox" id="kyc" checked> Полная идентификация пройдена</label>
 <label class="check"><input type="checkbox" id="available" checked> Шаблон доступен</label>
 <button id="fill" type="button">Заполнить тестовые реквизиты</button><button id="reset" class="subtle" type="button">Сбросить</button>
@@ -184,13 +188,13 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:no
 var $=function(x){return document.getElementById(x)};
 var view=$('view'),footer=$('bottom'),modal=$('modal');
 var countryNames={RU:'Россия',KZ:'Казахстан',AE:'ОАЭ'};
-var model={price:'50 USD',templateId:123,outcome:'success',kyc:true,available:true};
+var model={price:'— ₽',balance:'—',templateId:123,outcome:'success',kyc:true,available:true};
 var step='catalog',form={},errors={},notice='',plasticPending=false,limitEnabled=true,busy=false,orderId=null,orderStatus='',requestSnapshot=null,retryNeeded=false,session=0,logEntries=[],supportMessages=[];
 function safe(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function api(method,path,payload){logEntries.push(method+' '+path+(payload?'\n'+JSON.stringify(payload,null,2):''));$('log').textContent=logEntries.slice(-6).join('\n\n')}
 function button(text,action,disabled,secondary){return '<button class="'+(secondary?'secondary':'primary')+'" type="button" data-action="'+action+'"'+(disabled?' disabled':'')+'>'+text+'</button>'}
-function card(issued){return '<div class="plastic" data-figma-id="card-artwork" role="img" aria-label="Зелёная карта YouPay"><span class="mark">A</span>'+(issued?'<span class="number">•••• 2823</span>':'')+'<span class="bottom-name">YouPay</span></div>'}
-function rowToken(key){return ({'Где можно платить':'usage','Тип карты':'type','Стоимость выпуска':'price','Доставка':'delivery','Карта':'card','ФИО получателя':'recipient','Номер телефона':'phone','Страна':'country','Город':'city','Адрес доставки':'address'})[key]||'other'}
+function card(issued){return '<div class="plastic" data-figma-id="card-artwork" role="img" aria-label="Зелёная физическая карта Altyn, валюта USD"><span class="mark" aria-hidden="true">A</span><span class="kind">Физическая</span>'+(issued?'<span class="balance"><span class="balance-label">Баланс, USD</span><span class="balance-amount">'+safe(model.balance)+' $</span></span><span class="number">•••• 2823</span><span class="currency-icon" aria-hidden="true">$</span>':'')+'</div>'}
+function rowToken(key){return ({'Оплата картой':'usage','Валюта карты':'currency','Тип карты':'type','Стоимость выпуска':'price','Доставка':'delivery','Карта':'card','ФИО получателя':'recipient','Номер телефона':'phone','Страна':'country','Город':'city','Адрес доставки':'address'})[key]||'other'}
 function info(key,value,small){return '<div class="info-row" data-figma-id="catalog-'+rowToken(key)+'"><span class="key">'+key+'</span><span class="value'+(small?' sm':'')+'">'+safe(value)+'</span></div>'}
 function line(key,value){return '<div class="summary-row" data-figma-id="review-'+rowToken(key)+'"><span class="key">'+key+'</span><span class="value">'+safe(value)+'</span></div>'}
 function errorBanner(){return notice?'<div class="error-message" data-figma-id="review-error" role="alert">'+safe(notice)+'</div>':''}
@@ -201,8 +205,9 @@ return '<label class="field"><span class="input-mobile'+(value?' is-filled':'')+
 function catalog(){
 return '<div class="stage-inner wide"><div class="card-chooser">'+card(false)+'</div><div class="stage-inner">'
 +'<div class="main-box" data-figma-id="catalog-summary">'
-+info('Где можно платить','Онлайн-оплата доступна сразу после заказа. Пластиковой картой можно пользоваться после получения',true)
-+info('Тип карты','Физическая Upay')
++info('Оплата картой','Онлайн-оплата и оплата пластиковой картой недоступны до активации',true)
++info('Тип карты','Физическая')
++info('Валюта карты','USD')
 +info('Стоимость выпуска',model.price)
 +info('Доставка','Включена в стоимость')
 +'</div>'
@@ -243,7 +248,7 @@ slot.append(picker);
 }
 function review(){
 return '<div class="stage-inner">'
-+'<div class="list-group" data-figma-id="review-card-summary">'+line('Карта','Физическая Upay')+line('Где можно платить','Онлайн-оплата доступна сразу после заказа. Пластиковой картой можно пользоваться после получения')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
++'<div class="list-group" data-figma-id="review-card-summary">'+line('Карта','Физическая')+line('Валюта карты','USD')+line('Оплата картой','Онлайн-оплата и оплата пластиковой картой недоступны до активации')+line('Стоимость выпуска',model.price)+line('Доставка','Включена в стоимость')+'</div>'
 +'<div class="list-group" data-figma-id="review-recipient-summary">'+line('ФИО получателя',form.recipient_name)+line('Номер телефона',form.phone)+line('Страна',countryNames[form.country_code]||'')+line('Город',form.city)+line('Адрес доставки',form.address)+'</div>'
 +errorBanner()
 +'</div>';
@@ -298,6 +303,7 @@ function issued(){
 return '<div class="card-detail">'
 +'<div class="issued-card-hero" data-figma-id="card-hero"><div class="card-chooser">'+card(true)+(plasticPending?'<div class="card-production-tag" data-figma-id="plastic-status-tag">Пластиковая карта скоро будет готова <span class="clock" aria-hidden="true">◷</span></div>':'')+'</div></div>'
 +'<div class="quick-actions" data-figma-id="card-quick-actions"><button class="add-card" type="button" data-action="detail-action" data-title="Добавить карту">Добавить карту</button><button class="how-card" type="button" data-action="open-info">Как пользоваться</button></div>'
++'<div class="card-activation-note" data-figma-id="issued-activation-note">Онлайн-оплата и оплата пластиковой картой недоступны до активации</div>'
 +'<div class="detail-panel" data-figma-id="issued-limit-panel"><div class="limit-row" data-figma-id="issued-limit"><div style="flex:1;min-width:0"><div class="limit-header">'+detailIcon('limits')+'<span class="detail-text" style="font-size:16px">Лимит на операции</span><button type="button" id="limit-switch" role="switch" class="limit-toggle" aria-checked="'+(limitEnabled?'true':'false')+'" aria-label="Лимит на операции" data-action="toggle-limit"></button></div>'
 +(limitEnabled?'<div class="limit-lines"><div class="limit-line" data-figma-id="limit-month"><span>В месяц</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line" data-figma-id="limit-week"><span>В неделю</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line" data-figma-id="limit-hour"><span>В час</span><span class="amount">150 000 <small>из 150 000 ₽</small></span></div><div class="limit-line" data-figma-id="limit-transaction"><span>На операцию</span><span class="amount">150 000 ₽</span></div></div>':'')
 +'</div></div>'
@@ -315,7 +321,7 @@ else if(step==='status')footer.innerHTML='';
 else footer.innerHTML='';
 }
 function updateAnnotations(){
-var steps={catalog:[['navbar','Верхняя навигация'],['cards bank','Зелёная карта YouPay'],['list.mobile','Условия и стоимость'],['Button.mobile','Создать карту']],
+var steps={catalog:[['navbar','Верхняя навигация'],['cards bank · адаптация','Зелёная физическая карта Altyn без значка YouPay'],['list.mobile','Оплата после активации, USD / цена выпуска в ₽'],['Button.mobile','Создать карту']],
 delivery:[['navbar','Верхняя навигация'],['input.mobile','ФИО, телефон, город, адрес'],['Input.mobile + modal + list.mobile','Страна доставки · AltynBase.createSelectField'],['Notification · Type=Yellow','Условия доставки · Altyn.Base 4228:12405'],['Button.mobile','Продолжить']],
 review:[['navbar','Верхняя навигация'],['list.mobile','Данные карты и получателя'],['Button.mobile','Подтвердить']],
 status:isErrorStatus()?[['modal / Pop up','Нижнее модальное окно статуса'],['Button.mobile','Связаться с поддержкой']]:[['cards bank','Размытая карта'],['ToggleButton.mobile','Скоро будет готова'],['Button.mobile','Добавить ещё одну карту и Как пользоваться']],
@@ -371,7 +377,7 @@ poll();
 },600);
 }
 function reset(){++session;step='catalog';form={};errors={};notice='';plasticPending=false;limitEnabled=true;busy=false;orderId=null;orderStatus='';requestSnapshot=null;retryNeeded=false;logEntries=[];supportMessages=[];modal.innerHTML='';modal.dataset.kind='';api('GET','/cards/templates/');render();view.scrollTop=0}
-function openInfo(){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" data-figma-id="info-modal" role="dialog" aria-modal="true" aria-label="Как пользоваться картой"><div class="handle"></div><h2>Как пользоваться картой</h2><h3 data-figma-id="info-online-title">Онлайн-платежи</h3><p data-figma-id="info-online-text">Онлайн-оплата доступна сразу после заказа</p><h3 data-figma-id="info-plastic-title">Пластиковая карта</h3><p data-figma-id="info-plastic-text">Пластиковую карту доставляют отдельно, после получения ей можно пользоваться</p><h3 data-figma-id="info-delivery-title">Данные доставки</h3><p data-figma-id="info-delivery-text">После создания заказа изменить адрес доставки нельзя</p>'+button('Понятно','close-modal')+'</div></div>'}
+function openInfo(){modal.innerHTML='<div class="sheet-back" data-action="close-modal"><div class="sheet" data-figma-id="info-modal" role="dialog" aria-modal="true" aria-label="Как пользоваться картой"><div class="handle"></div><h2>Как пользоваться картой</h2><h3 data-figma-id="info-online-title">Онлайн-платежи</h3><p data-figma-id="info-online-text">Онлайн-оплата доступна только после активации карты</p><h3 data-figma-id="info-plastic-title">Пластиковая карта</h3><p data-figma-id="info-plastic-text">Оплата пластиковой картой доступна после получения и активации</p><h3 data-figma-id="info-delivery-title">Данные доставки</h3><p data-figma-id="info-delivery-text">После создания заказа изменить адрес доставки нельзя</p>'+button('Понятно','close-modal')+'</div></div>'}
 function syncInputMobileState(element){var wrapper=element.closest('.input-mobile');if(wrapper)wrapper.classList.toggle('is-filled',Boolean(element.value))}
 document.addEventListener('input',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key];syncInputMobileState(event.target)}});
 document.addEventListener('change',function(event){var key=event.target.dataset.field;if(key){form[key]=event.target.value;delete errors[key];syncInputMobileState(event.target)}});
@@ -411,7 +417,8 @@ else if(modal.dataset.kind==='status')dismissErrorDialog();
 $('back').addEventListener('click',function(){if(step==='review'&&!retryNeeded)move('delivery');else if(step==='delivery')move('catalog')});
 $('help').addEventListener('click',openInfo);
 $('outcome').addEventListener('change',function(e){model.outcome=e.target.value});
-$('price').addEventListener('input',function(e){model.price=e.target.value||'—';if(step==='catalog'||step==='review')render()});
+$('price').addEventListener('input',function(e){model.price=e.target.value!==''?e.target.value.replace('.',',')+' ₽':'— ₽';if(step==='catalog'||step==='review')render()});
+$('balance').addEventListener('input',function(e){model.balance=e.target.value.trim()||'—';if(step==='issued')render()});
 $('template').addEventListener('change',function(e){var n=Number(e.target.value);model.templateId=Number.isSafeInteger(n)&&n>0?n:123;e.target.value=model.templateId});
 $('kyc').addEventListener('change',function(e){model.kyc=e.target.checked;if(step==='catalog')render()});
 $('available').addEventListener('change',function(e){model.available=e.target.checked;if(step==='catalog')render()});
