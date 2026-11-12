@@ -51,7 +51,7 @@
         },
         {
           "mappingId": "M_STEPS",
-          "reason": "Сохранены три связанных Step Item из исходного сценария внутри локальной группы. Altyn.Base Step предназначен для прогресса, эквивалентная библиотечная инструкция не подтверждена."
+          "reason": "Узел референса 18793:18799 недоступен. Сохранён Step Item; у каждого шага стиль текста совпадает с master."
         },
         {
           "mappingId": "M_FILTER",
@@ -82,7 +82,13 @@
         "sourceBoundsUnchanged": true,
         "reviewedInFigmaScreenshots": true,
         "sourceData": "Amounts, transaction fixtures, KNP and messages copied from the source.",
-        "prototypeScope": "Навигация между связанными экранами присутствует там, где переход однозначен. Ввод, проверка КНП и исход операции показаны состояниями. Внешние действия и API не подключены."
+        "prototypeScope": "Навигация между связанными экранами присутствует там, где переход однозначен. Ввод, проверка КНП и исход операции показаны состояниями. Внешние действия и API не подключены.",
+        "followUp": {
+          "visualReview": true,
+          "modalScreenCount": 2,
+          "detailsGrouped": true,
+          "numberedListReferenceAvailable": false
+        }
       }
     }
   },
@@ -118,7 +124,8 @@
           "url": "https://www.figma.com/design/eZfU7lRRxu3GYH2S2KRgMy/Altyn.Base?node-id=3741-4359"
         }
       ],
-      "notes": "Source 56 px with back and Home; target 54 px. Verify right Home icon and header alignment."
+      "notes": "Source 56 px with back and Home; target 54 px. Verify right Home icon and header alignment.",
+      "implementationNote": "Для инструкции применены Arrowback и Chat с цветовым токеном из 18732:19185; в деталях используется тот же паттерн."
     },
     {
       "mappingId": "M_PRIMARY",
@@ -965,6 +972,50 @@
       "userComments": [],
       "evidence": [],
       "notes": "Связанный Navigation bars из референса Altyn App, 48 px."
+    },
+    {
+      "mappingId": "M_MODAL",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18443:138108"
+      },
+      "figmaTarget": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "61:5034",
+        "componentKey": "7965a968db372177971489fb2691d60835938d57",
+        "name": "modal",
+        "variantProperties": {
+          "State": "off"
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "verified",
+      "userComments": [],
+      "evidence": [],
+      "notes": "Связанный modal в инструкции и справке КНП. Нативные Slot, handle и системная зона. В инструкции используются штатные кнопки M."
+    },
+    {
+      "mappingId": "M_DETAIL_STATUS",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "16085:37458"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "componentKey": "547ba0f9bd5cab04889048b9084d14a2153bd760",
+        "name": "tag 1.0",
+        "variantProperties": {
+          "size": "S",
+          "color": "Yellow"
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "verified",
+      "userComments": [],
+      "evidence": [],
+      "notes": "Связанный tag 1.0 с цветовым токеном успеха из референса."
     }
   ],
   "screenMappings": [
@@ -1494,7 +1545,7 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:22436"
+            "I18924:24565;9844:99726;18924:25177"
           ]
         },
         {
@@ -1513,7 +1564,7 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:22440"
+            "I18924:24565;9844:99726;18924:25180"
           ]
         },
         {
@@ -1532,7 +1583,7 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:22450"
+            "I18924:24565;9844:99726;18924:25181"
           ]
         },
         {
@@ -1551,7 +1602,7 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:22460"
+            "I18924:24565;9844:99726;18924:25182"
           ]
         },
         {
@@ -1570,14 +1621,14 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:22470"
+            "I18924:24565;9844:99726;18924:25200"
           ]
         },
         {
           "annotationId": "02-instruction-07",
           "sourceNodeId": "18738:48794",
           "mappingId": "M_PRIMARY",
-          "targetComponentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+          "targetComponentKey": "01da46687414fbb7e1b9b611eb0c5a680f38a468",
           "properties": {
             "sourceRect": {
               "x": 16,
@@ -1589,14 +1640,14 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:22476"
+            "I18924:24565;940:26954"
           ]
         },
         {
           "annotationId": "02-instruction-08",
           "sourceNodeId": "18738:48795",
           "mappingId": "M_TERTIARY",
-          "targetComponentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+          "targetComponentKey": "c28683a28ad24130e105b59aae991000d965bcf7",
           "properties": {
             "sourceRect": {
               "x": 16,
@@ -1608,7 +1659,7 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:22483"
+            "I18924:24565;940:26955"
           ]
         }
       ],
@@ -1660,14 +1711,14 @@
         ],
         "M_QA": [
           {
-            "nodeId": "18913:22436",
+            "nodeId": "I18924:24565;9844:99726;18924:25177",
             "name": "Как получить перевод",
             "type": "FRAME"
           }
         ],
         "M_STEPS": [
           {
-            "nodeId": "18913:22440",
+            "nodeId": "I18924:24565;9844:99726;18924:25180",
             "name": "Step Item",
             "type": "INSTANCE",
             "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
@@ -1678,10 +1729,11 @@
             "componentProperties": {
               "Badge#7882:0": true,
               "Toast#14081:0": false
-            }
+            },
+            "textStyleId": "S:60f00e141d2f0db8d2456d18eaad1e33a1b82607,18848:10"
           },
           {
-            "nodeId": "18913:22450",
+            "nodeId": "I18924:24565;9844:99726;18924:25181",
             "name": "Step Item",
             "type": "INSTANCE",
             "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
@@ -1692,10 +1744,11 @@
             "componentProperties": {
               "Badge#7882:0": true,
               "Toast#14081:0": false
-            }
+            },
+            "textStyleId": "S:60f00e141d2f0db8d2456d18eaad1e33a1b82607,18848:10"
           },
           {
-            "nodeId": "18913:22460",
+            "nodeId": "I18924:24565;9844:99726;18924:25182",
             "name": "Step Item",
             "type": "INSTANCE",
             "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
@@ -1706,12 +1759,13 @@
             "componentProperties": {
               "Badge#7882:0": true,
               "Toast#14081:0": false
-            }
+            },
+            "textStyleId": "S:60f00e141d2f0db8d2456d18eaad1e33a1b82607,18848:10"
           }
         ],
         "M_WARNING": [
           {
-            "nodeId": "18913:22470",
+            "nodeId": "I18924:24565;9844:99726;18924:25200",
             "name": "Notification",
             "type": "INSTANCE",
             "componentKey": "824a32262f825541f1f71ef9fb957f419b71a941",
@@ -1726,47 +1780,41 @@
         ],
         "M_PRIMARY": [
           {
-            "nodeId": "18913:22476",
+            "nodeId": "I18924:24565;940:26954",
             "name": "Button.mobile",
             "type": "INSTANCE",
-            "componentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+            "componentKey": "01da46687414fbb7e1b9b611eb0c5a680f38a468",
             "componentName": "Button.mobile",
             "variantProperties": {
               "Brand": "Altyn",
               "Type": "Primary",
               "State": "Enable",
-              "Size": "L",
+              "Size": "M",
               "Lable": "yes"
             },
-            "componentProperties": {
-              "Icon R2#2168:121": "16943:52285",
-              "Icon R#2168:0": false
-            }
+            "componentProperties": {}
           }
         ],
         "M_TERTIARY": [
           {
-            "nodeId": "18913:22483",
+            "nodeId": "I18924:24565;940:26955",
             "name": "Button.mobile",
             "type": "INSTANCE",
-            "componentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+            "componentKey": "c28683a28ad24130e105b59aae991000d965bcf7",
             "componentName": "Button.mobile",
             "variantProperties": {
               "Brand": "Altyn",
               "Type": "Tertiary",
               "State": "Enable",
-              "Size": "L",
+              "Size": "M",
               "Lable": "yes"
             },
-            "componentProperties": {
-              "Icon R2#2168:121": "16943:52285",
-              "Icon R#2168:0": false
-            }
+            "componentProperties": {}
           }
         ],
         "SYS_NAV": [
           {
-            "nodeId": "18913:22490",
+            "nodeId": "I18924:24565;61:5026",
             "name": "System navigation",
             "type": "INSTANCE",
             "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
@@ -1776,18 +1824,30 @@
             },
             "componentProperties": {}
           }
+        ],
+        "M_MODAL": [
+          {
+            "nodeId": "18924:24565",
+            "name": "modal",
+            "type": "INSTANCE",
+            "componentKey": "7965a968db372177971489fb2691d60835938d57",
+            "componentName": "modal",
+            "variantProperties": {
+              "State": "off"
+            },
+            "componentProperties": {
+              "Slot#9844:3": true,
+              "Image#940:0": false,
+              "BG#920:3": true,
+              "Buttons.Vert#920:2": true,
+              "Keyboard#920:1": false,
+              "handle#920:4": true,
+              "Button.Hor#920:0": false
+            }
+          }
         ]
       },
       "linkedChildren": [
-        {
-          "nodeId": "I18913:22425;3741:4364",
-          "name": "Home",
-          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
-          "variantProperties": {
-            "Size": "L",
-            "Fill": "no"
-          }
-        },
         {
           "nodeId": "18913:22440",
           "name": "Step Item",
@@ -1811,6 +1871,15 @@
           "variantProperties": {
             "State": "Enable"
           }
+        },
+        {
+          "nodeId": "I18913:22425;3741:4364",
+          "name": "Chat",
+          "componentKey": "bf0e901e04d768a403450722acef55056202797d",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
         }
       ],
       "prototypeLinks": [
@@ -1819,10 +1888,35 @@
           "toNodeId": "18913:22139"
         },
         {
-          "fromNodeId": "18913:22476",
+          "fromNodeId": "I18924:24565;940:26954",
           "toNodeId": "18913:22498"
+        },
+        {
+          "fromNodeId": "18924:25207",
+          "action": "BACK"
         }
-      ]
+      ],
+      "numbering": {
+        "requestedReference": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18793-18799",
+        "referenceStatus": "unavailable",
+        "stepNodeIds": [
+          "I18924:24565;9844:99726;18924:25180",
+          "I18924:24565;9844:99726;18924:25181",
+          "I18924:24565;9844:99726;18924:25182"
+        ],
+        "verifiedTextStyleMatchesMaster": true
+      },
+      "modal": {
+        "referenceNodeId": "18443:138108",
+        "componentNodeId": "18924:24565",
+        "contentSlotNodeId": "I18924:24565;9844:99726",
+        "viewport": {
+          "nodeId": "I18924:24565;9844:99726;18924:25172",
+          "height": 560,
+          "overflow": "VERTICAL"
+        },
+        "contextFrameNodeId": null
+      }
     },
     {
       "screenId": "03-knp",
@@ -3807,8 +3901,6 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:23367",
-            "18913:23385",
             "18913:23403",
             "18913:23421",
             "18913:23439",
@@ -3845,7 +3937,7 @@
         "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-23330",
         "dimensions": {
           "width": 375,
-          "height": 930
+          "height": 812
         },
         "layoutMode": "VERTICAL"
       },
@@ -3897,56 +3989,6 @@
           }
         ],
         "M_RECEIPT": [
-          {
-            "nodeId": "18913:23367",
-            "name": "list.mobile",
-            "type": "INSTANCE",
-            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
-            "componentName": "list.mobile",
-            "variantProperties": {
-              "Property 1": "1",
-              "🎚️ State": "Enable"
-            },
-            "componentProperties": {
-              "Icon.w R#2166:18": "16943:52285",
-              "Icon L#2157:0": false,
-              "IsIcon.w L#2166:9": "16943:52285",
-              "sIcon.w L#4128:10": "15728:4882",
-              "sIcon L#2353:7": false,
-              "badge#2682:7": false,
-              "Switch#2185:48": false,
-              "sIcon.w R#4128:17": "15728:4882",
-              "Icon R#3204:29": false,
-              "sIcon R#4128:24": false,
-              "Radio#2309:0": false,
-              "Label#2157:11": true
-            }
-          },
-          {
-            "nodeId": "18913:23385",
-            "name": "list.mobile",
-            "type": "INSTANCE",
-            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
-            "componentName": "list.mobile",
-            "variantProperties": {
-              "Property 1": "1",
-              "🎚️ State": "Enable"
-            },
-            "componentProperties": {
-              "Icon.w R#2166:18": "16943:52285",
-              "Icon L#2157:0": false,
-              "IsIcon.w L#2166:9": "16943:52285",
-              "sIcon.w L#4128:10": "15728:4882",
-              "sIcon L#2353:7": false,
-              "badge#2682:7": false,
-              "Switch#2185:48": false,
-              "sIcon.w R#4128:17": "15728:4882",
-              "Icon R#3204:29": false,
-              "sIcon R#4128:24": false,
-              "Radio#2309:0": false,
-              "Label#2157:11": true
-            }
-          },
           {
             "nodeId": "18913:23403",
             "name": "list.mobile",
@@ -4180,18 +4222,56 @@
             },
             "componentProperties": {}
           }
+        ],
+        "M_DETAIL_STATUS": [
+          {
+            "nodeId": "18921:22651",
+            "name": "tag 1.0",
+            "type": "INSTANCE",
+            "componentKey": "547ba0f9bd5cab04889048b9084d14a2153bd760",
+            "componentName": "tag 1.0",
+            "variantProperties": {
+              "size": "S",
+              "color": "Yellow"
+            },
+            "componentProperties": {}
+          }
+        ],
+        "M_DETAIL_GROUP": [
+          {
+            "nodeId": "18913:23366",
+            "name": "Реквизиты перевода",
+            "type": "FRAME",
+            "height": 348,
+            "rowNodeIds": [
+              "18913:23403",
+              "18913:23421",
+              "18913:23439",
+              "18913:23457",
+              "18913:23475",
+              "18913:23493"
+            ]
+          },
+          {
+            "nodeId": "18921:22654",
+            "name": "Комиссия и итог",
+            "type": "FRAME",
+            "height": 108,
+            "rowNodeIds": [
+              "18913:23511",
+              "18913:23529"
+            ]
+          }
+        ],
+        "M_DETAIL_DATE": [
+          {
+            "nodeId": "18921:22648",
+            "name": "Дата и время",
+            "type": "TEXT"
+          }
         ]
       },
       "linkedChildren": [
-        {
-          "nodeId": "I18913:23347;3741:4364",
-          "name": "Home",
-          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
-          "variantProperties": {
-            "Size": "L",
-            "Fill": "no"
-          }
-        },
         {
           "nodeId": "18913:23360",
           "name": "INFO icon",
@@ -4205,6 +4285,15 @@
           "variantProperties": {
             "Size": "L"
           }
+        },
+        {
+          "nodeId": "I18913:23347;3741:4364",
+          "name": "Chat",
+          "componentKey": "bf0e901e04d768a403450722acef55056202797d",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
         }
       ],
       "prototypeLinks": [
@@ -4213,7 +4302,11 @@
           "toNodeId": "18913:23071"
         }
       ],
-      "layoutNote": "Строка ID операции увеличена до 72 px для переноса значения на две строки."
+      "layoutNote": "Дата и статус находятся в сводке рядом с суммой. Поля разделены на блоки реквизитов и итогов. Оба блока имеют paddingTop=0, paddingBottom=0; длинная строка ID имеет высоту 78 px.",
+      "compositionReference": {
+        "screenNodeId": "16085:37632",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=16085-37632"
+      }
     },
     {
       "screenId": "10-help",
@@ -4265,7 +4358,7 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:23590"
+            "I18924:25212;9844:99726;18924:25814"
           ]
         },
         {
@@ -4284,7 +4377,7 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:23593"
+            "I18924:25212;9844:99726;18924:25817"
           ]
         },
         {
@@ -4303,7 +4396,7 @@
           "reviewStatus": "pending_user",
           "userComments": [],
           "createdNodeIds": [
-            "18913:23596"
+            "I18924:25212;9844:99726;18924:25820"
           ]
         }
       ],
@@ -4355,24 +4448,24 @@
         ],
         "M_QA": [
           {
-            "nodeId": "18913:23590",
+            "nodeId": "I18924:25212;9844:99726;18924:25814",
             "name": "Где появится номер",
             "type": "FRAME"
           },
           {
-            "nodeId": "18913:23593",
+            "nodeId": "I18924:25212;9844:99726;18924:25817",
             "name": "Как выглядит номер",
             "type": "FRAME"
           },
           {
-            "nodeId": "18913:23596",
+            "nodeId": "I18924:25212;9844:99726;18924:25820",
             "name": "Какой номер не подойдёт",
             "type": "FRAME"
           }
         ],
         "SYS_NAV": [
           {
-            "nodeId": "18913:23599",
+            "nodeId": "I18924:25212;61:5026",
             "name": "System navigation",
             "type": "INSTANCE",
             "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
@@ -4381,6 +4474,27 @@
               "Nav type": "Buttons - 3 Button Nav"
             },
             "componentProperties": {}
+          }
+        ],
+        "M_MODAL": [
+          {
+            "nodeId": "18924:25212",
+            "name": "modal",
+            "type": "INSTANCE",
+            "componentKey": "7965a968db372177971489fb2691d60835938d57",
+            "componentName": "modal",
+            "variantProperties": {
+              "State": "off"
+            },
+            "componentProperties": {
+              "Slot#9844:3": true,
+              "Image#940:0": false,
+              "BG#920:3": true,
+              "Buttons.Vert#920:2": false,
+              "Keyboard#920:1": false,
+              "handle#920:4": true,
+              "Button.Hor#920:0": false
+            }
           }
         ]
       },
@@ -4399,8 +4513,19 @@
         {
           "fromNodeId": "I18913:23579;3741:4360",
           "toNodeId": "18913:22498"
+        },
+        {
+          "fromNodeId": "18924:25823",
+          "action": "BACK"
         }
-      ]
+      ],
+      "modal": {
+        "referenceNodeId": "18443:138108",
+        "componentNodeId": "18924:25212",
+        "contentSlotNodeId": "I18924:25212;9844:99726",
+        "viewport": null,
+        "contextFrameNodeId": "18925:22676"
+      }
     }
   ],
   "unresolvedItems": [
@@ -4419,7 +4544,7 @@
       "itemId": "U_STEPS",
       "sourceNodeId": "18738:48787",
       "screenId": "02-instruction",
-      "reason": "Сохранены три связанных Step Item из исходного сценария внутри локальной группы. Altyn.Base Step предназначен для прогресса, эквивалентная библиотечная инструкция не подтверждена.",
+      "reason": "Узел референса 18793:18799 недоступен. Сохранён Step Item; у каждого шага стиль текста совпадает с master.",
       "candidateMappingIds": [
         "M_STEPS"
       ],
@@ -4548,7 +4673,8 @@
       "Matching component asset existence does not mean semantic/visual equivalence was approved.",
       "Visual overlay review: figma-migration-review/index.html. Several target candidates remain open.",
       "The documented Input.mobile, Bottom Sheet, and selector rules from docs/mobile-screen-layout.md sections 9-12 are attached as componentGuidance; these are rules, not approval of ChBR-specific mapping.",
-      "Новая секция собрана и проверена через снимки Figma MCP. Согласование результата пользователем ожидается."
+      "Новая секция собрана и проверена через снимки Figma MCP. Согласование результата пользователем ожидается.",
+      "Обновлены модалки инструкции и справки, navbar, Secondary-описания и детали операции. Референс нумерации 18793:18799 недоступен."
     ]
   },
   "dataContract": {
