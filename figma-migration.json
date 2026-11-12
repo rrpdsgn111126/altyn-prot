@@ -2,7 +2,7 @@
   "schemaVersion": "1.0.0",
   "purpose": "Read-only mapping of Altyn App / ChBR transfer flow to Altyn.Base components; user approval before Work-mode assembly",
   "migration": {
-    "status": "annotation_in_review",
+    "status": "assembled_pending_review",
     "source": {
       "fileUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48538",
       "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
@@ -25,6 +25,65 @@
           "policy": "Reference only; not automatically a target library"
         }
       ]
+    },
+    "implementation": {
+      "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+      "pageName": "Processing",
+      "sectionNodeId": "18913:22138",
+      "sectionName": "ЧБР · Altyn.Base · Adapted",
+      "sectionUrl": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-22138",
+      "bounds": {
+        "x": -7328,
+        "y": 11641,
+        "width": 3120,
+        "height": 2150
+      },
+      "sourceSectionNodeId": "18738:48538",
+      "gapFromOriginal": 160,
+      "statusReference": {
+        "sectionNodeId": "18395:54663",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18395-54663"
+      },
+      "customOrUnmapped": [
+        {
+          "mappingId": "M_QA",
+          "reason": "Вопрос и ответ собраны в Auto Layout на стилях Typography. Проверенный Answer-block.mobile предназначен для чата и содержит имя отправителя и время."
+        },
+        {
+          "mappingId": "M_STEPS",
+          "reason": "Сохранены три связанных Step Item из исходного сценария внутри локальной группы. Altyn.Base Step предназначен для прогресса, эквивалентная библиотечная инструкция не подтверждена."
+        },
+        {
+          "mappingId": "M_FILTER",
+          "reason": "Связанный исходный Select / I «Отчет PDF» сохранён. В источнике подтверждён ON_HOVER, переход к Bottom Sheet не подтверждён."
+        },
+        {
+          "mappingId": "M_LOGO",
+          "reason": "В обоих местах сохранена исходная связанная иконка ЧБР, финальный SVG и название ожидают подтверждения партнёра."
+        },
+        {
+          "mappingId": "M_DETAIL_ICON",
+          "reason": "Сохранён связанный исходный INFO icon из Altyn Wallet с символом входящего платежа; эквивалент в Altyn.Base не подтверждён."
+        },
+        {
+          "mappingId": "STATUS_WAVE",
+          "reason": "Редактируемый вектор Star из референса со связанными цветовыми переменными; отдельного компонента в референсе нет."
+        },
+        {
+          "mappingId": "M_HISTORY_GROUP",
+          "reason": "Локальная Auto Layout композиция из заголовков дат на Typography и связанных trans_v2.mobile."
+        }
+      ],
+      "validation": {
+        "screenCount": 11,
+        "missingVisibleMainComponents": 0,
+        "clippedTextLayers": 0,
+        "overlappingPageNodes": [],
+        "sourceBoundsUnchanged": true,
+        "reviewedInFigmaScreenshots": true,
+        "sourceData": "Amounts, transaction fixtures, KNP and messages copied from the source.",
+        "prototypeScope": "Навигация между связанными экранами присутствует там, где переход однозначен. Ввод, проверка КНП и исход операции показаны состояниями. Внешние действия и API не подключены."
+      }
     }
   },
   "componentMappings": [
@@ -47,7 +106,7 @@
       },
       "candidates": [],
       "mappingType": "adaptation",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
@@ -247,7 +306,7 @@
       },
       "candidates": [],
       "mappingType": "adaptation",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
@@ -281,7 +340,7 @@
       },
       "candidates": [],
       "mappingType": "composition",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
@@ -315,7 +374,7 @@
       },
       "candidates": [],
       "mappingType": "composition",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
@@ -357,7 +416,8 @@
           "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48787"
         }
       ],
-      "notes": "Altyn.Base Step is a 4px progress bar, not instructional Step Item; do not substitute."
+      "notes": "Altyn.Base Step is a 4px progress bar, not instructional Step Item; do not substitute.",
+      "implementationNote": "Сохранены три связанных Step Item из исходного сценария внутри локальной группы. Altyn.Base Step предназначен для прогресса, эквивалентная библиотечная инструкция не подтверждена."
     },
     {
       "mappingId": "M_QA",
@@ -387,7 +447,8 @@
           "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48782"
         }
       ],
-      "notes": "Used in both instruction and FAQ; candidate Answer-block.mobile library asset needs actual variant, geometry and content verification."
+      "notes": "Used in both instruction and FAQ; candidate Answer-block.mobile library asset needs actual variant, geometry and content verification.",
+      "implementationNote": "Вопрос и ответ собраны в Auto Layout на стилях Typography. Проверенный Answer-block.mobile предназначен для чата и содержит имя отправителя и время."
     },
     {
       "mappingId": "M_WARNING",
@@ -408,7 +469,7 @@
       },
       "candidates": [],
       "mappingType": "adaptation",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
@@ -430,18 +491,28 @@
         "componentKey": "2450be34f221c611d9a4e52565361dccaea9b0cb",
         "name": "State icon neutral L"
       },
-      "figmaTarget": null,
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "4576:60",
+        "componentKey": "87daef3863e3cca72d9815c1a996f79fa3387258",
+        "name": "stopwatch",
+        "variantProperties": {}
+      },
       "candidates": [],
       "mappingType": "unmapped",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
           "type": "source_instance",
           "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48632"
+        },
+        {
+          "type": "status_reference_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18395-54670"
         }
       ],
-      "notes": "Large neutral/processing illustration 120x120; no verified matching Altyn.Base result."
+      "notes": "Использован связанный stopwatch из композиционного референса 18395:54663."
     },
     {
       "mappingId": "M_SUCCESS",
@@ -451,18 +522,28 @@
         "componentKey": "f5904271a8eb3ab9de680ee1faffab886f083bd2",
         "name": "State icon done L"
       },
-      "figmaTarget": null,
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "3670:16954",
+        "componentKey": "627e227f7c582ded90301dda1740b4a88d07b702",
+        "name": "done",
+        "variantProperties": {}
+      },
       "candidates": [],
       "mappingType": "unmapped",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
           "type": "source_instance",
           "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48718"
+        },
+        {
+          "type": "status_reference_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18395-54688"
         }
       ],
-      "notes": "Large green success illustration 120x120; do not equate to small icon or tag."
+      "notes": "Использован связанный done из композиционного референса 18395:54663."
     },
     {
       "mappingId": "M_FAILURE",
@@ -472,18 +553,28 @@
         "componentKey": "8d3fcce84820d626f44f8182ff5b4a351bf29f76",
         "name": "State icon invalid L"
       },
-      "figmaTarget": null,
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "4513:2769",
+        "componentKey": "b40de5679dea13f5e22964d924b95f33ca8c9059",
+        "name": "Error",
+        "variantProperties": {}
+      },
       "candidates": [],
       "mappingType": "unmapped",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
           "type": "source_instance",
           "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48741"
+        },
+        {
+          "type": "status_reference_instance",
+          "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18395-54713"
         }
       ],
-      "notes": "Large red failure illustration 120x120; no verified matching design-system component."
+      "notes": "Использован связанный Error из композиционного референса 18395:54663."
     },
     {
       "mappingId": "M_HISTORY",
@@ -504,7 +595,7 @@
       },
       "candidates": [],
       "mappingType": "adaptation",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
@@ -546,7 +637,8 @@
           "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=I18738-48605;23061-79698"
         }
       ],
-      "notes": "Original composition including day groups; candidate compose with trans_v2.mobile, native section headers and 16px horizontal padding."
+      "notes": "Original composition including day groups; candidate compose with trans_v2.mobile, native section headers and 16px horizontal padding.",
+      "implementationNote": "Локальная Auto Layout композиция из заголовков дат на Typography и связанных trans_v2.mobile."
     },
     {
       "mappingId": "M_FILTER",
@@ -573,7 +665,8 @@
         "BOTTOM_SHEET",
         "INPUT_MOBILE"
       ],
-      "applicability": "conditional_unverified"
+      "applicability": "conditional_unverified",
+      "implementationNote": "Связанный исходный Select / I «Отчет PDF» сохранён. В источнике подтверждён ON_HOVER, переход к Bottom Sheet не подтверждён."
     },
     {
       "mappingId": "M_CONFIRM",
@@ -595,7 +688,7 @@
       },
       "candidates": [],
       "mappingType": "composition",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
@@ -617,10 +710,19 @@
         "componentKey": "82bdebd781b7fcd879e847c4438b01edfca21db7",
         "name": "Details list and receipt"
       },
-      "figmaTarget": null,
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2157:9993",
+        "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+        "name": "list.mobile",
+        "variantProperties": {
+          "Property 1": "1",
+          "🎚️ State": "Enable"
+        }
+      },
       "candidates": [],
       "mappingType": "composition",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
@@ -649,7 +751,8 @@
           "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18738-48774"
         }
       ],
-      "notes": "Source section contains a local placeholder; wait for SVG and bank naming approval from partner."
+      "notes": "Source section contains a local placeholder; wait for SVG and bank naming approval from partner.",
+      "implementationNote": "В обоих местах сохранена исходная связанная иконка ЧБР, финальный SVG и название ожидают подтверждения партнёра."
     },
     {
       "mappingId": "M_TABBAR",
@@ -659,7 +762,13 @@
         "componentKey": "1d0523debced069df60746b56353f9f34f9acfe2",
         "name": "Menu / 1"
       },
-      "figmaTarget": null,
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "3347:10983",
+        "componentKey": "0fe37bfc062a3f83d8c69b61b50e36d9d4728635",
+        "name": "TabBar /1",
+        "variantProperties": {}
+      },
       "candidates": [
         {
           "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
@@ -679,7 +788,7 @@
         }
       ],
       "mappingType": "composition",
-      "verificationStatus": "unverified",
+      "verificationStatus": "verified",
       "userComments": [],
       "evidence": [
         {
@@ -709,6 +818,153 @@
         }
       ],
       "notes": "Local Figma annotation only, excluded from product UI and migration."
+    },
+    {
+      "mappingId": "M_TARIFF",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48587;10075:50210;18738:48579"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "3879:58507",
+        "componentKey": "ee6dd0b443301fa4866d4ce4b9a32b936e05b22f",
+        "name": "Link",
+        "variantProperties": {
+          "Size": "14 pt",
+          "Type": "Primary",
+          "State": "Default",
+          "Line": "No"
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "verified",
+      "userComments": [],
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "mappingId": "M_FILTER_ACTION",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48605;25677:33770"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2168:7075",
+        "componentKey": "c28683a28ad24130e105b59aae991000d965bcf7",
+        "name": "Button.mobile",
+        "variantProperties": {
+          "Brand": "Altyn",
+          "Type": "Tertiary",
+          "State": "Enable",
+          "Size": "M",
+          "Lable": "yes"
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "verified",
+      "userComments": [],
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "mappingId": "M_DOWNLOAD",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48605;25677:33773"
+      },
+      "figmaTarget": {
+        "fileKey": "eZfU7lRRxu3GYH2S2KRgMy",
+        "nodeId": "2168:7134",
+        "componentKey": "343d5daf5fe4b285247bddcb69ce6b862747ea45",
+        "name": "Button.mobile",
+        "variantProperties": {
+          "Brand": "Altyn",
+          "Type": "Tertiary",
+          "State": "Enable",
+          "Size": "M",
+          "Lable": "no"
+        }
+      },
+      "candidates": [],
+      "mappingType": "adaptation",
+      "verificationStatus": "verified",
+      "userComments": [],
+      "evidence": [],
+      "notes": ""
+    },
+    {
+      "mappingId": "M_DETAIL_ICON",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "I18738:48606;23604:93743"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "unmapped",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [],
+      "notes": "Сохранён связанный исходный INFO icon из Altyn Wallet с символом входящего платежа; эквивалент в Altyn.Base не подтверждён."
+    },
+    {
+      "mappingId": "STATUS_WAVE",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18395:54665"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "custom",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [],
+      "notes": "Редактируемый вектор Star из референса со связанными цветовыми переменными; отдельного компонента в референсе нет."
+    },
+    {
+      "mappingId": "ERROR_VARIANTS_NOTE",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18738:48614"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "custom",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [],
+      "notes": "Три альтернативных текста ошибки вынесены за пределы пользовательского фрейма."
+    },
+    {
+      "mappingId": "SYS_STATUS",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18395:54666"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "direct",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [],
+      "notes": "Связанный Status bar из референса Altyn App, 40 px."
+    },
+    {
+      "mappingId": "SYS_NAV",
+      "figmaSource": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18395:54681"
+      },
+      "figmaTarget": null,
+      "candidates": [],
+      "mappingType": "direct",
+      "verificationStatus": "unverified",
+      "userComments": [],
+      "evidence": [],
+      "notes": "Связанный Navigation bars из референса Altyn App, 48 px."
     }
   ],
   "screenMappings": [
@@ -741,7 +997,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22156"
+          ]
         },
         {
           "annotationId": "01-methods-02",
@@ -757,7 +1016,14 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22168",
+            "18913:22193",
+            "18913:22216",
+            "18913:22242",
+            "18913:22310"
+          ]
         },
         {
           "annotationId": "01-methods-03",
@@ -773,13 +1039,16 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22283"
+          ]
         },
         {
           "annotationId": "01-methods-04",
           "sourceNodeId": "I18738:48587;18927:170979",
           "mappingId": "M_TABBAR",
-          "targetComponentKey": null,
+          "targetComponentKey": "0fe37bfc062a3f83d8c69b61b50e36d9d4728635",
           "properties": {
             "sourceRect": {
               "x": 0,
@@ -789,7 +1058,389 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22346"
+          ]
+        }
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:22139",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-22139",
+        "dimensions": {
+          "width": 375,
+          "height": 812
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:22140",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:22156",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": true,
+              "right icons#58:0": true
+            }
+          }
+        ],
+        "M_METHOD": [
+          {
+            "nodeId": "18913:22168",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "18645:49269",
+              "sIcon L#2353:7": true,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": false
+            }
+          },
+          {
+            "nodeId": "18913:22193",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "11669:175523",
+              "sIcon L#2353:7": true,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": false
+            }
+          },
+          {
+            "nodeId": "18913:22216",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "16745:474803",
+              "sIcon L#2353:7": true,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": false
+            }
+          },
+          {
+            "nodeId": "18913:22242",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "11669:187057",
+              "sIcon L#2353:7": true,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": false
+            }
+          },
+          {
+            "nodeId": "18913:22310",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4897",
+              "sIcon L#2353:7": true,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": false
+            }
+          }
+        ],
+        "M_METHOD_DISABLED": [
+          {
+            "nodeId": "18913:22283",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "b2c4e46d25ddbb4cab5487e6b3d28478d3b00cd3",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Disabled"
+            },
+            "componentProperties": {
+              "sIcon.w R#4128:17": "15728:4882",
+              "badge#2682:7": false,
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "Radio#2309:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon R#4128:24": false,
+              "sIcon L#2353:7": true,
+              "Switch#2185:48": false,
+              "Icon R#3204:29": false,
+              "Label#2157:11": true
+            }
+          }
+        ],
+        "M_TARIFF": [
+          {
+            "nodeId": "18913:22335",
+            "name": "Link",
+            "type": "INSTANCE",
+            "componentKey": "ee6dd0b443301fa4866d4ce4b9a32b936e05b22f",
+            "componentName": "Link",
+            "variantProperties": {
+              "Size": "14 pt",
+              "Type": "Primary",
+              "State": "Default",
+              "Line": "No"
+            },
+            "componentProperties": {
+              "Link text#1257:17": "Тарифы и лимиты",
+              "Icon R#1251:7": true,
+              "Icon L#1251:8": false
+            }
+          }
+        ],
+        "M_TABBAR": [
+          {
+            "nodeId": "18913:22346",
+            "name": "TabBar /1",
+            "type": "INSTANCE",
+            "componentKey": "0fe37bfc062a3f83d8c69b61b50e36d9d4728635",
+            "componentName": "TabBar /1",
+            "variantProperties": null,
+            "componentProperties": {}
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:22401",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ],
+        "M_LOGO": [
+          {
+            "nodeId": "I18913:22168;2353:9913",
+            "name": "Services icons / Bank",
+            "componentKey": "9eca9f7766efca52b3928995aff22ae2a0331190",
+            "variantProperties": {
+              "Property 1": "ЧБР"
+            },
+            "type": "INSTANCE"
+          }
+        ]
+      },
+      "linkedChildren": [
+        {
+          "nodeId": "I18913:22156;3741:4364",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        },
+        {
+          "nodeId": "I18913:22168;2353:9913",
+          "name": "Services icons / Bank",
+          "componentKey": "9eca9f7766efca52b3928995aff22ae2a0331190",
+          "variantProperties": {
+            "Property 1": "ЧБР"
+          }
+        },
+        {
+          "nodeId": "I18913:22193;2353:9913",
+          "name": "Services icons / Crypto",
+          "componentKey": "7ec84cf6d4ba5da648f25878fdc0af50d12cf4e9",
+          "variantProperties": {
+            "Name": "USDT"
+          }
+        },
+        {
+          "nodeId": "I18913:22216;2353:9913",
+          "name": "Services icons / Crypto",
+          "componentKey": "1fe059f1145d8afc6270a4012888c41856d86e3d",
+          "variantProperties": {
+            "Name": "USDC"
+          }
+        },
+        {
+          "nodeId": "I18913:22242;2353:9913",
+          "name": "Services icons / Payment system",
+          "componentKey": "49e26856a7ffb83003dc3549161e9fa12c36ea0d",
+          "variantProperties": {
+            "Property 1": "SBP"
+          }
+        },
+        {
+          "nodeId": "I18913:22242;2353:9913;10059:52149",
+          "name": " Payment systems",
+          "componentKey": "671df5001fe59542c793e670d55daab5e042bdfd",
+          "variantProperties": {
+            "Name": "СБП",
+            "Theme": "Color"
+          }
+        },
+        {
+          "nodeId": "I18913:22283;2353:11514",
+          "name": "Services icons / Bank",
+          "componentKey": "543780db7eef7a1345666a643c8545e8b1901696",
+          "variantProperties": {
+            "Name": "Сбер"
+          }
+        },
+        {
+          "nodeId": "I18913:22310;2353:9913",
+          "name": "Services icons / Bank",
+          "componentKey": "106c22292ba92673a547f08d41399d4a0b4fcafc",
+          "variantProperties": {
+            "Name": "МТС Деньги"
+          }
+        },
+        {
+          "nodeId": "I18913:22346;3383:14063",
+          "name": "TabBar / Item",
+          "componentKey": "aa12ba7e0ae0691184e03cf0d0aebf810fcfd449",
+          "variantProperties": {
+            "State": "Default"
+          }
+        },
+        {
+          "nodeId": "I18913:22346;3383:14063;3383:13724",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        },
+        {
+          "nodeId": "I18913:22346;3347:10986",
+          "name": "TabBar / Item",
+          "componentKey": "cd4406ae0f986159703d5893e6c7f8ad35ececf4",
+          "variantProperties": {
+            "State": "Active"
+          }
+        },
+        {
+          "nodeId": "I18913:22346;3463:19502",
+          "name": "TabBar / Center",
+          "componentKey": "5db0c5fa0a800038c3e9ac4be3dd783f2bc8cfc9",
+          "variantProperties": {
+            "State": "Default"
+          }
+        },
+        {
+          "nodeId": "I18913:22346;3383:14110",
+          "name": "TabBar / Item",
+          "componentKey": "aa12ba7e0ae0691184e03cf0d0aebf810fcfd449",
+          "variantProperties": {
+            "State": "Default"
+          }
+        },
+        {
+          "nodeId": "I18913:22346;3347:10989",
+          "name": "TabBar / Item",
+          "componentKey": "aa12ba7e0ae0691184e03cf0d0aebf810fcfd449",
+          "variantProperties": {
+            "State": "Default"
+          }
+        }
+      ],
+      "prototypeLinks": [
+        {
+          "fromNodeId": "18913:22168",
+          "toNodeId": "18913:22408"
         }
       ]
     },
@@ -822,7 +1473,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22425"
+          ]
         },
         {
           "annotationId": "02-instruction-02",
@@ -838,13 +1492,16 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22436"
+          ]
         },
         {
           "annotationId": "02-instruction-03",
           "sourceNodeId": "18738:48787",
           "mappingId": "M_STEPS",
-          "targetComponentKey": null,
+          "targetComponentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
           "properties": {
             "sourceRect": {
               "x": 32,
@@ -854,13 +1511,16 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22440"
+          ]
         },
         {
           "annotationId": "02-instruction-04",
           "sourceNodeId": "18738:48788",
           "mappingId": "M_STEPS",
-          "targetComponentKey": null,
+          "targetComponentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
           "properties": {
             "sourceRect": {
               "x": 32,
@@ -870,13 +1530,16 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22450"
+          ]
         },
         {
           "annotationId": "02-instruction-05",
           "sourceNodeId": "18738:48789",
           "mappingId": "M_STEPS",
-          "targetComponentKey": null,
+          "targetComponentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
           "properties": {
             "sourceRect": {
               "x": 32,
@@ -886,7 +1549,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22460"
+          ]
         },
         {
           "annotationId": "02-instruction-06",
@@ -902,7 +1568,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22470"
+          ]
         },
         {
           "annotationId": "02-instruction-07",
@@ -918,7 +1587,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22476"
+          ]
         },
         {
           "annotationId": "02-instruction-08",
@@ -934,7 +1606,221 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22483"
+          ]
+        }
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:22408",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-22408",
+        "dimensions": {
+          "width": 375,
+          "height": 920
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:22409",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:22425",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": true,
+              "right icons#58:0": true
+            }
+          }
+        ],
+        "M_QA": [
+          {
+            "nodeId": "18913:22436",
+            "name": "Как получить перевод",
+            "type": "FRAME"
+          }
+        ],
+        "M_STEPS": [
+          {
+            "nodeId": "18913:22440",
+            "name": "Step Item",
+            "type": "INSTANCE",
+            "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
+            "componentName": "Step Item",
+            "variantProperties": {
+              "State": "Enable"
+            },
+            "componentProperties": {
+              "Badge#7882:0": true,
+              "Toast#14081:0": false
+            }
+          },
+          {
+            "nodeId": "18913:22450",
+            "name": "Step Item",
+            "type": "INSTANCE",
+            "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
+            "componentName": "Step Item",
+            "variantProperties": {
+              "State": "Enable"
+            },
+            "componentProperties": {
+              "Badge#7882:0": true,
+              "Toast#14081:0": false
+            }
+          },
+          {
+            "nodeId": "18913:22460",
+            "name": "Step Item",
+            "type": "INSTANCE",
+            "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
+            "componentName": "Step Item",
+            "variantProperties": {
+              "State": "Enable"
+            },
+            "componentProperties": {
+              "Badge#7882:0": true,
+              "Toast#14081:0": false
+            }
+          }
+        ],
+        "M_WARNING": [
+          {
+            "nodeId": "18913:22470",
+            "name": "Notification",
+            "type": "INSTANCE",
+            "componentKey": "824a32262f825541f1f71ef9fb957f419b71a941",
+            "componentName": "Notification",
+            "variantProperties": {
+              "Type": "Yellow"
+            },
+            "componentProperties": {
+              "icon.R#4576:1": false
+            }
+          }
+        ],
+        "M_PRIMARY": [
+          {
+            "nodeId": "18913:22476",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Primary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "M_TERTIARY": [
+          {
+            "nodeId": "18913:22483",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Tertiary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:22490",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ]
+      },
+      "linkedChildren": [
+        {
+          "nodeId": "I18913:22425;3741:4364",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        },
+        {
+          "nodeId": "18913:22440",
+          "name": "Step Item",
+          "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
+          "variantProperties": {
+            "State": "Enable"
+          }
+        },
+        {
+          "nodeId": "18913:22450",
+          "name": "Step Item",
+          "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
+          "variantProperties": {
+            "State": "Enable"
+          }
+        },
+        {
+          "nodeId": "18913:22460",
+          "name": "Step Item",
+          "componentKey": "9a009545713b85709bb890ed147ea10c4d3edf0c",
+          "variantProperties": {
+            "State": "Enable"
+          }
+        }
+      ],
+      "prototypeLinks": [
+        {
+          "fromNodeId": "I18913:22425;3741:4360",
+          "toNodeId": "18913:22139"
+        },
+        {
+          "fromNodeId": "18913:22476",
+          "toNodeId": "18913:22498"
         }
       ]
     },
@@ -967,7 +1853,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22515"
+          ]
         },
         {
           "annotationId": "03-knp-02",
@@ -983,7 +1872,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22527"
+          ]
         },
         {
           "annotationId": "03-knp-03",
@@ -999,7 +1891,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22555"
+          ]
         },
         {
           "annotationId": "03-knp-04",
@@ -1015,7 +1910,158 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22564"
+          ]
+        }
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:22498",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-22498",
+        "dimensions": {
+          "width": 375,
+          "height": 812
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:22499",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:22515",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": true,
+              "right icons#58:0": true
+            }
+          }
+        ],
+        "M_INPUT_FOCUS": [
+          {
+            "nodeId": "18913:22527",
+            "name": "Input.mobile",
+            "type": "INSTANCE",
+            "componentKey": "023c75806668151c322f39359f446f5f33f68646",
+            "componentName": "Input.mobile",
+            "variantProperties": {
+              "🎚️ State": "Active/Focus",
+              "secondary": "Off"
+            },
+            "componentProperties": {
+              "Icon.w R2#2184:32": "17323:20303",
+              "Icon.w R#2179:16": "17323:20298",
+              "Icon L#3204:4": false,
+              "Icon R#3204:29": false,
+              "sIcon.w R#2179:8": "15728:4882",
+              "All#3584:0": false,
+              "Label#2194:0": true,
+              "Icon.w L#2179:24": "16978:36750",
+              "vertical#3749:0": false,
+              "Icon R2#2184:40": false,
+              "Helper text#7246:0": false,
+              "sIcon R#2179:0": false
+            }
+          }
+        ],
+        "M_LINK": [
+          {
+            "nodeId": "18913:22555",
+            "name": "Link",
+            "type": "INSTANCE",
+            "componentKey": "ee6dd0b443301fa4866d4ce4b9a32b936e05b22f",
+            "componentName": "Link",
+            "variantProperties": {
+              "Size": "14 pt",
+              "Type": "Primary",
+              "State": "Default",
+              "Line": "No"
+            },
+            "componentProperties": {
+              "Link text#1257:17": "Где найти номер перевода?",
+              "Icon R#1251:7": false,
+              "Icon L#1251:8": false
+            }
+          }
+        ],
+        "M_PRIMARY": [
+          {
+            "nodeId": "18913:22564",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Primary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:22570",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ]
+      },
+      "linkedChildren": [
+        {
+          "nodeId": "I18913:22515;3741:4364",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        }
+      ],
+      "prototypeLinks": [
+        {
+          "fromNodeId": "I18913:22515;3741:4360",
+          "toNodeId": "18913:22408"
+        },
+        {
+          "fromNodeId": "18913:22555",
+          "toNodeId": "18913:23562"
         }
       ]
     },
@@ -1048,7 +2094,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22595"
+          ]
         },
         {
           "annotationId": "03a-errors-02",
@@ -1064,7 +2113,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22607"
+          ]
         },
         {
           "annotationId": "03a-errors-03",
@@ -1080,9 +2132,153 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22632"
+          ]
         }
-      ]
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:22578",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-22578",
+        "dimensions": {
+          "width": 375,
+          "height": 812
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:22579",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:22595",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": true,
+              "right icons#58:0": true
+            }
+          }
+        ],
+        "M_INPUT_INVALID": [
+          {
+            "nodeId": "18913:22607",
+            "name": "Input.mobile",
+            "type": "INSTANCE",
+            "componentKey": "b309f3e73cb8f7ce738ae632580bbfa4051e4752",
+            "componentName": "Input.mobile",
+            "variantProperties": {
+              "🎚️ State": "Invalid",
+              "secondary": "Off"
+            },
+            "componentProperties": {
+              "Icon.w L#2179:24": "16978:36750",
+              "Icon.w R2#2184:32": "17323:20303",
+              "Icon.w R#2179:16": "17323:20298",
+              "sIcon.w R#2179:8": "15728:4882",
+              "All#3584:0": false,
+              "Icon R#3204:29": false,
+              "Icon L#3204:4": false,
+              "sIcon R#2179:0": false,
+              "Label#2194:0": true,
+              "Helper text#7246:0": true,
+              "vertical#3749:0": false,
+              "Icon R2#2184:40": false
+            }
+          }
+        ],
+        "M_PRIMARY": [
+          {
+            "nodeId": "18913:22632",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Primary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "ERROR_VARIANTS_NOTE": [
+          {
+            "nodeId": "18913:22638",
+            "name": "Варианты сообщения под полем",
+            "type": "FRAME"
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:22648",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ]
+      },
+      "linkedChildren": [
+        {
+          "nodeId": "I18913:22595;3741:4364",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        },
+        {
+          "nodeId": "I18913:22607;2014:9856",
+          "name": "Helper text / S",
+          "componentKey": "4151c6c5d4e192a31f0ce421292722dcd04e1484",
+          "variantProperties": {
+            "State": "Error",
+            "Plate": "no"
+          }
+        }
+      ],
+      "prototypeLinks": [
+        {
+          "fromNodeId": "I18913:22595;3741:4360",
+          "toNodeId": "18913:22498"
+        }
+      ],
+      "layoutNote": "Основная ошибка видна под рамкой. Три альтернативных сообщения вынесены в отдельную аннотацию рядом с фреймом."
     },
     {
       "screenId": "04-confirm",
@@ -1113,7 +2309,16 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22685",
+            "18913:22703",
+            "18913:22721",
+            "18913:22739",
+            "18913:22757",
+            "18913:22775",
+            "18913:22793"
+          ]
         },
         {
           "annotationId": "04-confirm-02",
@@ -1129,7 +2334,278 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22811"
+          ]
+        }
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:22656",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-22656",
+        "dimensions": {
+          "width": 375,
+          "height": 812
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:22657",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:22673",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": true,
+              "right icons#58:0": false
+            }
+          }
+        ],
+        "M_CONFIRM": [
+          {
+            "nodeId": "18913:22685",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:22703",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:22721",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:22739",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:22757",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:22775",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:22793",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          }
+        ],
+        "M_PRIMARY": [
+          {
+            "nodeId": "18913:22811",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Primary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:22817",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ]
+      },
+      "linkedChildren": [],
+      "prototypeLinks": [
+        {
+          "fromNodeId": "I18913:22673;3741:4360",
+          "toNodeId": "18913:22498"
+        },
+        {
+          "fromNodeId": "18913:22811",
+          "toNodeId": "18913:22824"
         }
       ]
     },
@@ -1162,13 +2638,16 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22855"
+          ]
         },
         {
           "annotationId": "05-check-02",
           "sourceNodeId": "18738:48632",
           "mappingId": "M_PROCESSING",
-          "targetComponentKey": null,
+          "targetComponentKey": "87daef3863e3cca72d9815c1a996f79fa3387258",
           "properties": {
             "sourceRect": {
               "x": 155,
@@ -1178,7 +2657,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22868"
+          ]
         },
         {
           "annotationId": "05-check-03",
@@ -1194,7 +2676,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22873"
+          ]
         },
         {
           "annotationId": "05-check-04",
@@ -1210,9 +2695,153 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22879"
+          ]
         }
-      ]
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:22824",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-22824",
+        "dimensions": {
+          "width": 375,
+          "height": 812
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "STATUS_WAVE": [
+          {
+            "nodeId": "18913:22834",
+            "name": "Star",
+            "type": "STAR"
+          }
+        ],
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:22839",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:22855",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": true,
+              "right icons#58:0": true
+            }
+          }
+        ],
+        "M_PROCESSING": [
+          {
+            "nodeId": "18913:22868",
+            "name": "stopwatch",
+            "type": "INSTANCE",
+            "componentKey": "87daef3863e3cca72d9815c1a996f79fa3387258",
+            "componentName": "stopwatch",
+            "variantProperties": null,
+            "componentProperties": {}
+          }
+        ],
+        "M_PRIMARY": [
+          {
+            "nodeId": "18913:22873",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Primary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "M_TERTIARY": [
+          {
+            "nodeId": "18913:22879",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Tertiary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:22885",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ]
+      },
+      "linkedChildren": [
+        {
+          "nodeId": "I18913:22855;3741:4364",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        }
+      ],
+      "prototypeLinks": [
+        {
+          "fromNodeId": "18913:22879",
+          "toNodeId": "18913:23071"
+        }
+      ],
+      "compositionReference": {
+        "sectionNodeId": "18395:54663",
+        "screenNodeId": "18395:54664",
+        "illustrationNodeId": "18395:54670",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18395-54664"
+      }
     },
     {
       "screenId": "06-success",
@@ -1243,13 +2872,16 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22944"
+          ]
         },
         {
           "annotationId": "06-success-02",
           "sourceNodeId": "18738:48718",
           "mappingId": "M_SUCCESS",
-          "targetComponentKey": null,
+          "targetComponentKey": "627e227f7c582ded90301dda1740b4a88d07b702",
           "properties": {
             "sourceRect": {
               "x": 155,
@@ -1259,7 +2891,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22957"
+          ]
         },
         {
           "annotationId": "06-success-03",
@@ -1275,7 +2910,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22963"
+          ]
         },
         {
           "annotationId": "06-success-04",
@@ -1291,9 +2929,153 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:22969"
+          ]
         }
-      ]
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:22892",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-22892",
+        "dimensions": {
+          "width": 375,
+          "height": 812
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "STATUS_WAVE": [
+          {
+            "nodeId": "18913:22923",
+            "name": "Star",
+            "type": "STAR"
+          }
+        ],
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:22928",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:22944",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": false,
+              "right icons#58:0": true
+            }
+          }
+        ],
+        "M_SUCCESS": [
+          {
+            "nodeId": "18913:22957",
+            "name": "done",
+            "type": "INSTANCE",
+            "componentKey": "627e227f7c582ded90301dda1740b4a88d07b702",
+            "componentName": "done",
+            "variantProperties": null,
+            "componentProperties": {}
+          }
+        ],
+        "M_PRIMARY": [
+          {
+            "nodeId": "18913:22963",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Primary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "M_TERTIARY": [
+          {
+            "nodeId": "18913:22969",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Tertiary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:22975",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ]
+      },
+      "linkedChildren": [
+        {
+          "nodeId": "I18913:22944;3741:4364",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        }
+      ],
+      "prototypeLinks": [
+        {
+          "fromNodeId": "18913:22969",
+          "toNodeId": "18913:23330"
+        }
+      ],
+      "compositionReference": {
+        "sectionNodeId": "18395:54663",
+        "screenNodeId": "18395:54682",
+        "illustrationNodeId": "18395:54688",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18395-54682"
+      }
     },
     {
       "screenId": "07-failure",
@@ -1324,13 +3106,16 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23034"
+          ]
         },
         {
           "annotationId": "07-failure-02",
           "sourceNodeId": "18738:48741",
           "mappingId": "M_FAILURE",
-          "targetComponentKey": null,
+          "targetComponentKey": "b40de5679dea13f5e22964d924b95f33ca8c9059",
           "properties": {
             "sourceRect": {
               "x": 155,
@@ -1340,7 +3125,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23047"
+          ]
         },
         {
           "annotationId": "07-failure-03",
@@ -1356,7 +3144,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23052"
+          ]
         },
         {
           "annotationId": "07-failure-04",
@@ -1372,9 +3163,149 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23058"
+          ]
         }
-      ]
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:22982",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-22982",
+        "dimensions": {
+          "width": 375,
+          "height": 812
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "STATUS_WAVE": [
+          {
+            "nodeId": "18913:23013",
+            "name": "Star",
+            "type": "STAR"
+          }
+        ],
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:23018",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:23034",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": true,
+              "right icons#58:0": true
+            }
+          }
+        ],
+        "M_FAILURE": [
+          {
+            "nodeId": "18913:23047",
+            "name": "Error",
+            "type": "INSTANCE",
+            "componentKey": "b40de5679dea13f5e22964d924b95f33ca8c9059",
+            "componentName": "Error",
+            "variantProperties": null,
+            "componentProperties": {}
+          }
+        ],
+        "M_PRIMARY": [
+          {
+            "nodeId": "18913:23052",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Primary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "M_TERTIARY": [
+          {
+            "nodeId": "18913:23058",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "b1801d8c0efc6e1ebb432fbcacdbd3176d0d8fa8",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Tertiary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "16943:52285",
+              "Icon R#2168:0": false
+            }
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:23064",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ]
+      },
+      "linkedChildren": [
+        {
+          "nodeId": "I18913:23034;3741:4364",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        }
+      ],
+      "prototypeLinks": [],
+      "compositionReference": {
+        "sectionNodeId": "18395:54663",
+        "screenNodeId": "18395:54707",
+        "illustrationNodeId": "18395:54713",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18395-54707"
+      },
+      "layoutNote": "Две полноширинные кнопки закреплены над системной зоной. Длинная исходная подпись «Написать в поддержку» сохранена."
     },
     {
       "screenId": "08-history",
@@ -1405,13 +3336,16 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23088"
+          ]
         },
         {
           "annotationId": "08-history-02",
           "sourceNodeId": "I18738:48605;26319:67055",
           "mappingId": "M_FILTER",
-          "targetComponentKey": null,
+          "targetComponentKey": "ac80cf323e72ead2ae5d7d9bed6310f07121a28e",
           "properties": {
             "sourceRect": {
               "x": 215,
@@ -1421,7 +3355,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23108"
+          ]
         },
         {
           "annotationId": "08-history-03",
@@ -1437,7 +3374,13 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23125",
+            "18913:23210",
+            "18913:23254",
+            "18913:23280"
+          ]
         },
         {
           "annotationId": "08-history-04",
@@ -1453,7 +3396,364 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23127"
+          ]
+        }
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:23071",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-23071",
+        "dimensions": {
+          "width": 375,
+          "height": 858
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:23072",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:23088",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": true,
+              "right icons#58:0": true
+            }
+          }
+        ],
+        "M_FILTER_ACTION": [
+          {
+            "nodeId": "18913:23100",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "c28683a28ad24130e105b59aae991000d965bcf7",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Tertiary",
+              "State": "Enable",
+              "Size": "M",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "18913:22072",
+              "Icon R#2168:0": true
+            }
+          }
+        ],
+        "M_FILTER": [
+          {
+            "nodeId": "18913:23108",
+            "name": "Select / I",
+            "type": "INSTANCE",
+            "componentKey": "ac80cf323e72ead2ae5d7d9bed6310f07121a28e",
+            "componentName": "Select / I",
+            "variantProperties": {
+              "State": "Enable",
+              "Selected": "yes",
+              "Size": "L"
+            },
+            "componentProperties": {
+              "Text#3204:103": true,
+              "← Addon #3204:54": false
+            }
+          }
+        ],
+        "M_DOWNLOAD": [
+          {
+            "nodeId": "18913:23119",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "343d5daf5fe4b285247bddcb69ce6b862747ea45",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Tertiary",
+              "State": "Enable",
+              "Size": "M",
+              "Lable": "no"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "18443:135418",
+              "Icon R#2168:0": true
+            }
+          }
+        ],
+        "M_HISTORY": [
+          {
+            "nodeId": "18913:23127",
+            "name": "trans_v2.mobile",
+            "type": "INSTANCE",
+            "componentKey": "3c4cc837562836e3518a03ed5f258b2e5d1ca07b",
+            "componentName": "trans_v2.mobile",
+            "variantProperties": {
+              "Status": "In"
+            },
+            "componentProperties": {
+              " Services icon R#2167:1": "18645:49269"
+            }
+          },
+          {
+            "nodeId": "18913:23155",
+            "name": "trans_v2.mobile",
+            "type": "INSTANCE",
+            "componentKey": "3c4cc837562836e3518a03ed5f258b2e5d1ca07b",
+            "componentName": "trans_v2.mobile",
+            "variantProperties": {
+              "Status": "In"
+            },
+            "componentProperties": {
+              " Services icon R#2167:1": "10590:85916"
+            }
+          },
+          {
+            "nodeId": "18913:23183",
+            "name": "trans_v2.mobile",
+            "type": "INSTANCE",
+            "componentKey": "509cfc4a4ed23b8347bfc6253f09d80f47483dbb",
+            "componentName": "trans_v2.mobile",
+            "variantProperties": {
+              "Status": "Out"
+            },
+            "componentProperties": {
+              " Services icon R#2167:1": "15728:4889"
+            }
+          },
+          {
+            "nodeId": "18913:23212",
+            "name": "trans_v2.mobile",
+            "type": "INSTANCE",
+            "componentKey": "509cfc4a4ed23b8347bfc6253f09d80f47483dbb",
+            "componentName": "trans_v2.mobile",
+            "variantProperties": {
+              "Status": "Out"
+            },
+            "componentProperties": {
+              " Services icon R#2167:1": "15728:4882"
+            }
+          },
+          {
+            "nodeId": "18913:23232",
+            "name": "trans_v2.mobile",
+            "type": "INSTANCE",
+            "componentKey": "3c4cc837562836e3518a03ed5f258b2e5d1ca07b",
+            "componentName": "trans_v2.mobile",
+            "variantProperties": {
+              "Status": "In"
+            },
+            "componentProperties": {
+              " Services icon R#2167:1": "15728:4884"
+            }
+          },
+          {
+            "nodeId": "18913:23256",
+            "name": "trans_v2.mobile",
+            "type": "INSTANCE",
+            "componentKey": "3c4cc837562836e3518a03ed5f258b2e5d1ca07b",
+            "componentName": "trans_v2.mobile",
+            "variantProperties": {
+              "Status": "In"
+            },
+            "componentProperties": {
+              " Services icon R#2167:1": "10590:85916"
+            }
+          },
+          {
+            "nodeId": "18913:23282",
+            "name": "trans_v2.mobile",
+            "type": "INSTANCE",
+            "componentKey": "509cfc4a4ed23b8347bfc6253f09d80f47483dbb",
+            "componentName": "trans_v2.mobile",
+            "variantProperties": {
+              "Status": "Out"
+            },
+            "componentProperties": {
+              " Services icon R#2167:1": "15728:4883"
+            }
+          },
+          {
+            "nodeId": "18913:23304",
+            "name": "trans_v2.mobile",
+            "type": "INSTANCE",
+            "componentKey": "509cfc4a4ed23b8347bfc6253f09d80f47483dbb",
+            "componentName": "trans_v2.mobile",
+            "variantProperties": {
+              "Status": "Out"
+            },
+            "componentProperties": {
+              " Services icon R#2167:1": "15728:4882"
+            }
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:23322",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ],
+        "M_HISTORY_GROUP": [
+          {
+            "nodeId": "18913:23125",
+            "name": "Сегодня",
+            "type": "FRAME"
+          },
+          {
+            "nodeId": "18913:23210",
+            "name": "18 апреля 2026 г.",
+            "type": "FRAME"
+          },
+          {
+            "nodeId": "18913:23254",
+            "name": "1 апреля 2026 г.",
+            "type": "FRAME"
+          },
+          {
+            "nodeId": "18913:23280",
+            "name": "27 марта 2026 г.",
+            "type": "FRAME"
+          }
+        ],
+        "M_LOGO": [
+          {
+            "nodeId": "I18913:23127;2747:6134",
+            "name": "Services icons / Bank",
+            "componentKey": "9eca9f7766efca52b3928995aff22ae2a0331190",
+            "variantProperties": {
+              "Property 1": "ЧБР"
+            },
+            "type": "INSTANCE"
+          }
+        ]
+      },
+      "linkedChildren": [
+        {
+          "nodeId": "I18913:23088;3741:4364",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        },
+        {
+          "nodeId": "I18913:23100;2168:7079",
+          "name": "Filter",
+          "componentKey": "dd2e0d5166d4e380a4c7bf2956ed3caf6b395386",
+          "variantProperties": {
+            "Size": "M"
+          }
+        },
+        {
+          "nodeId": "I18913:23119;2168:7136",
+          "name": "FileDownload",
+          "componentKey": "23a9078b9d394715d131b6596447345f22cc4492",
+          "variantProperties": {
+            "Size": "M"
+          }
+        },
+        {
+          "nodeId": "I18913:23127;2747:6134",
+          "name": "Services icons / Bank",
+          "componentKey": "9eca9f7766efca52b3928995aff22ae2a0331190",
+          "variantProperties": {
+            "Property 1": "ЧБР"
+          }
+        },
+        {
+          "nodeId": "I18913:23155;2747:6134",
+          "name": "Services icons / Bank",
+          "componentKey": "4d5f997214275372e8a436ab885e99e6907e918a",
+          "variantProperties": {
+            "Property 1": "Altyn"
+          }
+        },
+        {
+          "nodeId": "I18913:23183;2747:6122",
+          "name": "Services icons / Bank",
+          "componentKey": "17ee74df19dce10e8f07eabc2280469f5b53b4a3",
+          "variantProperties": {
+            "Name": "ВТБ"
+          }
+        },
+        {
+          "nodeId": "I18913:23212;2747:6122",
+          "name": "Services icons / Bank",
+          "componentKey": "543780db7eef7a1345666a643c8545e8b1901696",
+          "variantProperties": {
+            "Name": "Сбер"
+          }
+        },
+        {
+          "nodeId": "I18913:23232;2747:6134",
+          "name": "Services icons / Bank",
+          "componentKey": "a7c7c85b8c5276fb4b8be67740e5a36b2ada5ea9",
+          "variantProperties": {
+            "Name": "Совкомбанк"
+          }
+        },
+        {
+          "nodeId": "I18913:23256;2747:6134",
+          "name": "Services icons / Bank",
+          "componentKey": "4d5f997214275372e8a436ab885e99e6907e918a",
+          "variantProperties": {
+            "Property 1": "Altyn"
+          }
+        },
+        {
+          "nodeId": "I18913:23282;2747:6122",
+          "name": "Services icons / Bank",
+          "componentKey": "364050d83980a1cafddd992ff4b8b8cf3e6b97e5",
+          "variantProperties": {
+            "Name": "TBank"
+          }
+        },
+        {
+          "nodeId": "I18913:23304;2747:6122",
+          "name": "Services icons / Bank",
+          "componentKey": "543780db7eef7a1345666a643c8545e8b1901696",
+          "variantProperties": {
+            "Name": "Сбер"
+          }
+        }
+      ],
+      "prototypeLinks": [
+        {
+          "fromNodeId": "18913:23127",
+          "toNodeId": "18913:23330"
         }
       ]
     },
@@ -1486,13 +3786,16 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23347"
+          ]
         },
         {
           "annotationId": "09-details-02",
           "sourceNodeId": "I18738:48606;23604:93746",
           "mappingId": "M_RECEIPT",
-          "targetComponentKey": null,
+          "targetComponentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
           "properties": {
             "sourceRect": {
               "x": 16,
@@ -1502,7 +3805,19 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23367",
+            "18913:23385",
+            "18913:23403",
+            "18913:23421",
+            "18913:23439",
+            "18913:23457",
+            "18913:23475",
+            "18913:23493",
+            "18913:23511",
+            "18913:23529"
+          ]
         },
         {
           "annotationId": "09-details-03",
@@ -1518,9 +3833,387 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23547"
+          ]
         }
-      ]
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:23330",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-23330",
+        "dimensions": {
+          "width": 375,
+          "height": 930
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:23331",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:23347",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": false,
+              "right icons#58:0": true
+            }
+          }
+        ],
+        "M_DETAIL_ICON": [
+          {
+            "nodeId": "18913:23360",
+            "name": "INFO icon",
+            "type": "INSTANCE",
+            "componentKey": "da25cc7f0d6e3135b620f0ebb5c69001974feb95",
+            "componentName": "INFO icon",
+            "variantProperties": null,
+            "componentProperties": {}
+          }
+        ],
+        "M_RECEIPT": [
+          {
+            "nodeId": "18913:23367",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:23385",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:23403",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:23421",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:23439",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:23457",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:23475",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:23493",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:23511",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          },
+          {
+            "nodeId": "18913:23529",
+            "name": "list.mobile",
+            "type": "INSTANCE",
+            "componentKey": "21ef0d4792d3b27940fe3d827f9f5ab841cb3827",
+            "componentName": "list.mobile",
+            "variantProperties": {
+              "Property 1": "1",
+              "🎚️ State": "Enable"
+            },
+            "componentProperties": {
+              "Icon.w R#2166:18": "16943:52285",
+              "Icon L#2157:0": false,
+              "IsIcon.w L#2166:9": "16943:52285",
+              "sIcon.w L#4128:10": "15728:4882",
+              "sIcon L#2353:7": false,
+              "badge#2682:7": false,
+              "Switch#2185:48": false,
+              "sIcon.w R#4128:17": "15728:4882",
+              "Icon R#3204:29": false,
+              "sIcon R#4128:24": false,
+              "Radio#2309:0": false,
+              "Label#2157:11": true
+            }
+          }
+        ],
+        "M_PRIMARY": [
+          {
+            "nodeId": "18913:23547",
+            "name": "Button.mobile",
+            "type": "INSTANCE",
+            "componentKey": "37aebcd31c74a68b962956ee480d2c649c7a6c22",
+            "componentName": "Button.mobile",
+            "variantProperties": {
+              "Brand": "Altyn",
+              "Type": "Primary",
+              "State": "Enable",
+              "Size": "L",
+              "Lable": "yes"
+            },
+            "componentProperties": {
+              "Icon R2#2168:121": "18285:29296",
+              "Icon R#2168:0": true
+            }
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:23554",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ]
+      },
+      "linkedChildren": [
+        {
+          "nodeId": "I18913:23347;3741:4364",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        },
+        {
+          "nodeId": "18913:23360",
+          "name": "INFO icon",
+          "componentKey": "da25cc7f0d6e3135b620f0ebb5c69001974feb95",
+          "variantProperties": {}
+        },
+        {
+          "nodeId": "I18913:23547;2168:7059",
+          "name": "News",
+          "componentKey": "7ad8add6eec83336d633108685b1e201a3b8210b",
+          "variantProperties": {
+            "Size": "L"
+          }
+        }
+      ],
+      "prototypeLinks": [
+        {
+          "fromNodeId": "I18913:23347;3741:4360",
+          "toNodeId": "18913:23071"
+        }
+      ],
+      "layoutNote": "Строка ID операции увеличена до 72 px для переноса значения на две строки."
     },
     {
       "screenId": "10-help",
@@ -1551,7 +4244,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23579"
+          ]
         },
         {
           "annotationId": "10-help-02",
@@ -1567,7 +4263,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23590"
+          ]
         },
         {
           "annotationId": "10-help-03",
@@ -1583,7 +4282,10 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23593"
+          ]
         },
         {
           "annotationId": "10-help-04",
@@ -1599,7 +4301,104 @@
             }
           },
           "reviewStatus": "pending_user",
-          "userComments": []
+          "userComments": [],
+          "createdNodeIds": [
+            "18913:23596"
+          ]
+        }
+      ],
+      "targetScreen": {
+        "fileKey": "n9eR5MzhUA8BpvjO9ciYgi",
+        "nodeId": "18913:23562",
+        "url": "https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18913-23562",
+        "dimensions": {
+          "width": 375,
+          "height": 812
+        },
+        "layoutMode": "VERTICAL"
+      },
+      "implementedElements": {
+        "SYS_STATUS": [
+          {
+            "nodeId": "18913:23563",
+            "name": "Status bar",
+            "type": "INSTANCE",
+            "componentKey": "b611311e9542168f9c124f4731e98a718c301982",
+            "componentName": "Status",
+            "variantProperties": {
+              "cutout type": "centered punch hole"
+            },
+            "componentProperties": {
+              "Show camera#332:25": true,
+              "Time#332:24": "9:30",
+              "Date#332:26": "Tue, Jul 19",
+              "Show Battery time#332:23": false,
+              "Show Date#332:22": false
+            }
+          }
+        ],
+        "M_NAV": [
+          {
+            "nodeId": "18913:23579",
+            "name": "navbar",
+            "type": "INSTANCE",
+            "componentKey": "3e92e6484a7199742020c6a931ec51dab40045d6",
+            "componentName": "navbar",
+            "variantProperties": {
+              "State": "centr+arrow"
+            },
+            "componentProperties": {
+              "Title#2177:0": true,
+              "right icons#58:0": true
+            }
+          }
+        ],
+        "M_QA": [
+          {
+            "nodeId": "18913:23590",
+            "name": "Где появится номер",
+            "type": "FRAME"
+          },
+          {
+            "nodeId": "18913:23593",
+            "name": "Как выглядит номер",
+            "type": "FRAME"
+          },
+          {
+            "nodeId": "18913:23596",
+            "name": "Какой номер не подойдёт",
+            "type": "FRAME"
+          }
+        ],
+        "SYS_NAV": [
+          {
+            "nodeId": "18913:23599",
+            "name": "System navigation",
+            "type": "INSTANCE",
+            "componentKey": "6117721b5c251e01b7a002a8a84fbc296ac03229",
+            "componentName": "Navigation bars",
+            "variantProperties": {
+              "Nav type": "Buttons - 3 Button Nav"
+            },
+            "componentProperties": {}
+          }
+        ]
+      },
+      "linkedChildren": [
+        {
+          "nodeId": "I18913:23579;3741:4364",
+          "name": "Home",
+          "componentKey": "3463d31ff66451ff3e4367e18ff217384c2fa4c4",
+          "variantProperties": {
+            "Size": "L",
+            "Fill": "no"
+          }
+        }
+      ],
+      "prototypeLinks": [
+        {
+          "fromNodeId": "I18913:23579;3741:4360",
+          "toNodeId": "18913:22498"
         }
       ]
     }
@@ -1620,7 +4419,7 @@
       "itemId": "U_STEPS",
       "sourceNodeId": "18738:48787",
       "screenId": "02-instruction",
-      "reason": "No verified Altyn.Base instructional numbered Step Item. Target Step is not semantically equivalent.",
+      "reason": "Сохранены три связанных Step Item из исходного сценария внутри локальной группы. Altyn.Base Step предназначен для прогресса, эквивалентная библиотечная инструкция не подтверждена.",
       "candidateMappingIds": [
         "M_STEPS"
       ],
@@ -1631,7 +4430,7 @@
       "itemId": "U_QA",
       "sourceNodeId": "18738:48782",
       "screenId": "02-instruction",
-      "reason": "Need confirm Answer-block.mobile equivalence and choose real variant (if usable).",
+      "reason": "Вопрос и ответ собраны в Auto Layout на стилях Typography. Проверенный Answer-block.mobile предназначен для чата и содержит имя отправителя и время.",
       "candidateMappingIds": [
         "M_QA"
       ],
@@ -1653,31 +4452,31 @@
       "itemId": "U_CONFIRM",
       "sourceNodeId": "18738:48807",
       "screenId": "04-confirm",
-      "reason": "Details composite needs row-level Figma target review.",
+      "reason": "Семь полей собраны на связанных list.mobile в одной группе, разделитель последней строки отключён.",
       "candidateMappingIds": [
         "M_CONFIRM"
       ],
       "userComments": [],
-      "status": "open"
+      "status": "resolved"
     },
     {
       "itemId": "U_STATE",
       "sourceNodeId": "18738:48632",
       "screenId": "05-check",
-      "reason": "Processing/success/failure 120x120 illustrations lack verified Altyn.Base equivalents.",
+      "reason": "Во всех трёх статусных экранах установлены подтверждённые иллюстрации Altyn.Base из референса 18395:54663.",
       "candidateMappingIds": [
         "M_PROCESSING",
         "M_SUCCESS",
         "M_FAILURE"
       ],
       "userComments": [],
-      "status": "open"
+      "status": "resolved"
     },
     {
       "itemId": "U_HISTORY",
       "sourceNodeId": "I18738:48605;26319:67055",
       "screenId": "08-history",
-      "reason": "History filter Select / I has no confirmed replacement. The documented Input.mobile → modal → list.mobile pattern applies only after verifying this particular filter opens a Bottom Sheet; 76px transaction rows also differ from Base trans_v2.mobile.",
+      "reason": "Связанный исходный Select / I «Отчет PDF» сохранён. В источнике подтверждён ON_HOVER, переход к Bottom Sheet не подтверждён.",
       "candidateMappingIds": [
         "M_FILTER",
         "M_HISTORY"
@@ -1748,7 +4547,8 @@
       "Source Figma was read only; no Figma modifications.",
       "Matching component asset existence does not mean semantic/visual equivalence was approved.",
       "Visual overlay review: figma-migration-review/index.html. Several target candidates remain open.",
-      "The documented Input.mobile, Bottom Sheet, and selector rules from docs/mobile-screen-layout.md sections 9-12 are attached as componentGuidance; these are rules, not approval of ChBR-specific mapping."
+      "The documented Input.mobile, Bottom Sheet, and selector rules from docs/mobile-screen-layout.md sections 9-12 are attached as componentGuidance; these are rules, not approval of ChBR-specific mapping.",
+      "Новая секция собрана и проверена через снимки Figma MCP. Согласование результата пользователем ожидается."
     ]
   },
   "dataContract": {
