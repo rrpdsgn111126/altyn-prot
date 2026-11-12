@@ -246,6 +246,8 @@ MobileScreen (flex column; min-height: viewport)
 
 **UX-тексты:** заголовок модалки называет действие или содержание и не дублирует бессмысленно Navbar. Для заголовков, кнопок, пустых состояний и ошибок соблюдать [ux-writing-guidelines.md](./ux-writing-guidelines.md).
 
+**Нумерованная инструкция в Bottom Sheet ЧБР.** В [референсе Мультитрансфера](https://www.figma.com/design/n9eR5MzhUA8BpvjO9ciYgi/Altyn-App?node-id=18732-21072) шаги сгруппированы в белом контейнере `Bg/Neutral/Primary` с радиусом 12 px, горизонтальными полями 16 px, верхним и нижним полями 0 px и gap 0. Строки повторяют Auto Layout `list.mobile`, разделители видны между строками. Слева — связанный `number icon / S` (24 × 24 px), отцентрированный по вертикали, в слоте 32 px. От слота до текста — 16 px. Текст шагов использует стиль `list.mobile` 16/24 и `Text/Text/Primary`, вводное описание — `Text/Text/Secondary`. Между отдельными блоками в слоте модалки — 24 px.
+
 ## 11. Выбор из списка — селектор с Bottom Sheet
 
 Примеры в Altyn App:
